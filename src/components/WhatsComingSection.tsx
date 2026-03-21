@@ -25,7 +25,12 @@ const cards = [
   },
 ];
 
-const filmImages = [filmScene1, filmScene2, filmScene3, workshopScene];
+const filmImages = [
+  { src: filmScene1, alt: "A scene from The Tooth Fairy's Magical Mission animated short film" },
+  { src: filmScene2, alt: "The Tooth Fairy on a midnight journey in The Tooth Fairy's Magical Mission" },
+  { src: filmScene3, alt: "A magical moment from The Tooth Fairy's Magical Mission animated film" },
+  { src: workshopScene, alt: "Inside the Wiggly Tooth Workshop where virtues are catalogued" },
+];
 
 const WhatsComingSection = () => {
   return (
@@ -78,8 +83,8 @@ const WhatsComingSection = () => {
                 className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-card group"
               >
                 <img
-                  src={img}
-                  alt={`Film scene ${index + 1}`}
+                  src={img.src}
+                  alt={img.alt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-night-sky/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

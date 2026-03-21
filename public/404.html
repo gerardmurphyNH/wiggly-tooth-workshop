@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Tooth Fairy's Magical Mission</title>
+    <script>
+      // GitHub Pages SPA redirect: preserve path and query string, redirect to index
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      var redirect = '/?p=' + encodeURIComponent(path.slice(1)) + (search ? '&q=' + encodeURIComponent(search.slice(1)) : '') + hash;
+      window.location.replace(redirect);
+    </script>
+  </head>
+  <body></body>
+</html>

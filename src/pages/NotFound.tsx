@@ -5,7 +5,9 @@ const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
+    document.title = "Page Not Found | Wiggly Tooth Workshop";
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    return () => { document.title = "The Tooth Fairy's Magical Mission | Animated Film & Children's Book"; };
   }, [location.pathname]);
 
   return (

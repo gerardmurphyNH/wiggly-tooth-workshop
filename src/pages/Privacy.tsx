@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { CONTACT_EMAIL } from "@/lib/config";
 
 const Privacy = () => {
+  useEffect(() => {
+    document.title = "Privacy Policy | Wiggly Tooth Workshop";
+    return () => { document.title = "The Tooth Fairy's Magical Mission | Animated Film & Children's Book"; };
+  }, []);
+
   return (
     <main className="min-h-screen bg-background">
       <div className="container px-6 py-12 max-w-2xl mx-auto">
