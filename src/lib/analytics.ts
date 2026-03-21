@@ -28,46 +28,52 @@ export const trackEvent = (
 };
 
 // ============================================
-// CONVERSION EVENT - Lead Form Submission
+// CONVERSION EVENT 1 — Email Signup
 // ============================================
 export const trackSignupSuccess = (virtue?: string): void => {
-  // This is the primary conversion event
+  // generate_lead is a GA4 recommended event — mark this as a conversion in GA4
   trackEvent("generate_lead", {
+    event_category: "conversion",
+    event_label: "workshop_signup",
     virtue: virtue || "none",
     currency: "USD",
-    value: 1, // Assign a value for conversion tracking
+    value: 1,
   });
-  // Also track as custom event for backwards compatibility
+  // Secondary custom event for filtering in reports
   trackEvent("signup_success", {
+    event_category: "engagement",
     virtue: virtue || "none",
   });
 };
 
-// Track form interactions
 export const trackFormStart = (): void => {
   trackEvent("form_start", {
+    event_category: "engagement",
     form_name: "workshop_signup",
   });
 };
 
 export const trackFormError = (errorType: string): void => {
   trackEvent("form_error", {
+    event_category: "engagement",
     form_name: "workshop_signup",
     error_type: errorType,
   });
 };
 
 // ============================================
-// QUIZ TRACKING
+// CONVERSION EVENT 2 — Virtue Quiz
 // ============================================
 export const trackQuizStart = (): void => {
   trackEvent("quiz_start", {
+    event_category: "engagement",
     quiz_name: "virtue_quiz",
   });
 };
 
 export const trackQuizAnswer = (questionNumber: number, answer: string): void => {
   trackEvent("quiz_answer", {
+    event_category: "engagement",
     quiz_name: "virtue_quiz",
     question_number: questionNumber,
     answer_virtue: answer,
@@ -75,7 +81,10 @@ export const trackQuizAnswer = (questionNumber: number, answer: string): void =>
 };
 
 export const trackQuizCompletion = (virtue: string): void => {
+  // quiz_completion — mark this as a conversion in GA4
   trackEvent("quiz_completion", {
+    event_category: "conversion",
+    event_label: "virtue_quiz",
     quiz_name: "virtue_quiz",
     result_virtue: virtue,
   });
@@ -83,7 +92,57 @@ export const trackQuizCompletion = (virtue: string): void => {
 
 export const trackQuizReset = (): void => {
   trackEvent("quiz_reset", {
+    event_category: "engagement",
     quiz_name: "virtue_quiz",
+  });
+};
+
+// ============================================
+// CONVERSION EVENT 3 — Coloring Page Download
+// ============================================
+export const trackColoringPageDownload = (): void => {
+  // file_download is a GA4 recommended event — mark this as a conversion in GA4
+  trackEvent("file_download", {
+    event_category: "conversion",
+    event_label: "coloring_page",
+    file_name: "tooth-fairy-coloring-page.pdf",
+    file_extension: "pdf",
+    link_text: "Download coloring page",
+  });
+  // Secondary custom event for filtering
+  trackEvent("coloring_page_download", {
+    event_category: "conversion",
+    file_name: "coloring-page.pdf",
+  });
+};
+
+// ============================================
+// SOCIAL FOLLOW TRACKING
+// ============================================
+export const trackSocialFollow = (platform: string, location: string): void => {
+  trackEvent("social_follow", {
+    event_category: "engagement",
+    platform,
+    link_location: location,
+  });
+};
+
+// ============================================
+// CTA & BUTTON TRACKING
+// ============================================
+export const trackCTAClick = (location: string): void => {
+  trackEvent("cta_click", {
+    event_category: "engagement",
+    cta_type: "join_workshop",
+    cta_location: location,
+  });
+};
+
+export const trackButtonClick = (buttonName: string, location: string): void => {
+  trackEvent("button_click", {
+    event_category: "engagement",
+    button_name: buttonName,
+    button_location: location,
   });
 };
 
@@ -92,34 +151,8 @@ export const trackQuizReset = (): void => {
 // ============================================
 export const trackFAQOpen = (question: string): void => {
   trackEvent("faq_open", {
+    event_category: "engagement",
     faq_question: question,
-  });
-};
-
-// ============================================
-// BUTTON CLICK TRACKING
-// ============================================
-export const trackButtonClick = (buttonName: string, location: string): void => {
-  trackEvent("button_click", {
-    button_name: buttonName,
-    button_location: location,
-  });
-};
-
-// Track CTA clicks that scroll to signup
-export const trackCTAClick = (location: string): void => {
-  trackEvent("cta_click", {
-    cta_type: "join_workshop",
-    cta_location: location,
-  });
-};
-
-// ============================================
-// MISC TRACKING
-// ============================================
-export const trackColoringPageDownload = (): void => {
-  trackEvent("coloring_page_download", {
-    file_name: "coloring-page.pdf",
   });
 };
 

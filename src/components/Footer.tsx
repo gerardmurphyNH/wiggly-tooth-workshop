@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Sparkles } from "lucide-react";
+import { trackSocialFollow } from "@/lib/analytics";
 
 const InstagramIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -55,6 +56,7 @@ const Footer = () => {
               href="https://www.instagram.com/wigglytoothworkshop/"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackSocialFollow("instagram", "footer")}
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               aria-label="Follow us on Instagram"
             >
@@ -65,6 +67,7 @@ const Footer = () => {
               href="https://www.tiktok.com/@wigglytoothworkshop"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackSocialFollow("tiktok", "footer")}
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               aria-label="Follow us on TikTok"
             >

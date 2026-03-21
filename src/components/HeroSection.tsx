@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import heroFairy from "@/assets/hero-fairy.png";
-import { trackCTAClick, trackEvent } from "@/lib/analytics";
+import { trackCTAClick, trackSocialFollow } from "@/lib/analytics";
 
 const InstagramIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -97,7 +97,7 @@ const HeroSection = () => {
                 href="https://www.instagram.com/wigglytoothworkshop/"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackEvent("social_click", { platform: "instagram", location: "hero" })}
+                onClick={() => trackSocialFollow("instagram", "hero")}
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-starlight/10 border border-starlight/20 text-starlight/80 hover:text-starlight hover:bg-starlight/20 hover:border-starlight/40 transition-all text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 aria-label="Follow Wiggly Tooth Workshop on Instagram"
               >
@@ -108,7 +108,7 @@ const HeroSection = () => {
                 href="https://www.tiktok.com/@wigglytoothworkshop"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackEvent("social_click", { platform: "tiktok", location: "hero" })}
+                onClick={() => trackSocialFollow("tiktok", "hero")}
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-starlight/10 border border-starlight/20 text-starlight/80 hover:text-starlight hover:bg-starlight/20 hover:border-starlight/40 transition-all text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 aria-label="Follow Wiggly Tooth Workshop on TikTok"
               >

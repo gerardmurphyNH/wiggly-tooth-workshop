@@ -5,6 +5,7 @@
       "name": "wiggly-tooth-workshop",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
+      "cwd": "/Users/francisgmurphy/Projects/wigglytoothworkshop-site",
       "port": 8080,
       "autoPort": true
     }
