@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Footer from "@/components/Footer";
 
 const steps = [
   {
@@ -69,17 +70,17 @@ const FirstToothWhatToDo = () => {
   return (
     <>
       <Helmet>
-        <title>Your Child's First Lost Tooth — What To Do | Wiggly Tooth Workshop</title>
+        <title>Your Child's First Lost Tooth: What To Do | Wiggly Tooth Workshop</title>
         <meta
           name="description"
           content="Your child just lost their first tooth. Here's what to do next — from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow."
         />
         <link rel="canonical" href="https://wigglytoothworkshop.com/first-tooth-what-to-do" />
-        <meta property="og:title" content="Your Child's First Lost Tooth — What To Do" />
+        <meta property="og:title" content="Your Child's First Lost Tooth: What To Do" />
         <meta property="og:description" content="Your child just lost their first tooth. Here's what to do next — from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow." />
         <meta property="og:url" content="https://wigglytoothworkshop.com/first-tooth-what-to-do" />
         <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
-        <meta name="twitter:title" content="Your Child's First Lost Tooth — What To Do" />
+        <meta name="twitter:title" content="Your Child's First Lost Tooth: What To Do" />
         <meta name="twitter:description" content="Your child just lost their first tooth. Here's what to do next — from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow." />
         <script type="application/ld+json">{`
           {
@@ -97,14 +98,14 @@ const FirstToothWhatToDo = () => {
                   {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "Your Child's First Lost Tooth — What To Do",
+                    "name": "Your Child's First Lost Tooth: What To Do",
                     "item": "https://wigglytoothworkshop.com/first-tooth-what-to-do"
                   }
                 ]
               },
               {
                 "@type": "Article",
-                "headline": "Your Child's First Lost Tooth — What To Do",
+                "headline": "Your Child's First Lost Tooth: What To Do",
                 "description": "Your child just lost their first tooth. Here's what to do next — from keeping the tooth safe for the Tooth Fairy, to answering the questions that will definitely follow.",
                 "url": "https://wigglytoothworkshop.com/first-tooth-what-to-do",
                 "publisher": {
@@ -375,6 +376,7 @@ const FirstToothWhatToDo = () => {
         </section>
 
       </main>
+      <Footer />
     </>
   );
 };

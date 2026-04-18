@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Footer from "@/components/Footer";
 
 const faqs = [
   {
@@ -376,6 +377,7 @@ const ToothFairyStoryExplained = () => {
         </section>
 
       </main>
+      <Footer />
     </>
   );
 };

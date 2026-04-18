@@ -3,22 +3,23 @@ import { Link } from "react-router-dom";
 import { Download, Sparkles, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackColoringPageDownload } from "@/lib/analytics";
+import Footer from "@/components/Footer";
 
 const ColoringPage = () => {
   return (
     <>
       <Helmet>
-        <title>Free Tooth Fairy Coloring Page — Printable PDF for Kids | Wiggly Tooth Workshop</title>
+        <title>Free Tooth Fairy Coloring Page | Wiggly Tooth Workshop</title>
         <meta
           name="description"
           content="Download a free tooth fairy coloring page for kids — a printable PDF straight from the Wiggly Tooth Workshop. Perfect for ages 3–10. Print, color, and keep the magic alive."
         />
         <link rel="canonical" href="https://wigglytoothworkshop.com/coloring-page" />
-        <meta property="og:title" content="Free Tooth Fairy Coloring Page — Printable PDF for Kids" />
+        <meta property="og:title" content="Free Tooth Fairy Coloring Page | Wiggly Tooth Workshop" />
         <meta property="og:description" content="A free printable tooth fairy coloring page for kids from the Wiggly Tooth Workshop. Download the PDF and bring the magic to life with color." />
         <meta property="og:url" content="https://wigglytoothworkshop.com/coloring-page" />
         <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
-        <meta name="twitter:title" content="Free Tooth Fairy Coloring Page — Printable PDF for Kids" />
+        <meta name="twitter:title" content="Free Tooth Fairy Coloring Page | Wiggly Tooth Workshop" />
         <meta name="twitter:description" content="A free printable tooth fairy coloring page for kids from the Wiggly Tooth Workshop. Download the PDF and bring the magic to life with color." />
         <script type="application/ld+json">{`
           {
@@ -186,6 +187,7 @@ const ColoringPage = () => {
         </section>
 
       </main>
+      <Footer />
     </>
   );
 };
