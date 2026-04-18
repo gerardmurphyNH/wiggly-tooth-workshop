@@ -126,6 +126,46 @@
     }
     </script>
 
+    <!-- JSON-LD Structured Data: Organization (AEO — helps AI engines identify the brand) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Wiggly Tooth Workshop",
+      "url": "https://wigglytoothworkshop.com/",
+      "logo": "https://wigglytoothworkshop.com/favicon-512.png",
+      "description": "Wiggly Tooth Workshop is the creative studio behind The Tooth Fairy's Magical Mission — an animated short film, children's book, and ToothSafe product for kids and families.",
+      "email": "hello@wigglytoothworkshop.com",
+      "sameAs": [
+        "https://www.instagram.com/wigglytoothworkshop/",
+        "https://www.tiktok.com/@wigglytoothworkshop"
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: Movie (AEO — describes the animated film as a creative work) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Movie",
+      "name": "The Tooth Fairy's Magical Mission",
+      "description": "An animated short film following Arlo, CeCe, and the Tooth Fairy through a magical story world where every lost tooth holds a virtue — bravery, kindness, creativity, or patience.",
+      "genre": ["Animation", "Children's Film", "Family"],
+      "audience": {
+        "@type": "PeopleAudience",
+        "suggestedMinAge": 3,
+        "suggestedMaxAge": 10
+      },
+      "productionCompany": {
+        "@type": "Organization",
+        "name": "Wiggly Tooth Workshop",
+        "url": "https://wigglytoothworkshop.com/"
+      },
+      "url": "https://wigglytoothworkshop.com/",
+      "image": "https://wigglytoothworkshop.com/og-image.png"
+    }
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8M7LNF6VW7"></script>
     <script>
