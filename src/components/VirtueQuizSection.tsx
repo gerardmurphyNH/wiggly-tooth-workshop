@@ -17,25 +17,25 @@ const virtues: Record<Virtue, VirtueResult> = {
   bravery: {
     title: "Bravery",
     icon: Shield,
-    description: "Your tooth carries the courage to face the unknown. It will help someone take a leap of faith when they're afraid.",
+    description: "Your tooth holds bravery. The Tooth Fairy will use it to help someone face something scary — maybe today, maybe tomorrow.",
     color: "from-primary to-accent",
   },
   kindness: {
     title: "Kindness",
     icon: Heart,
-    description: "Your tooth holds gentle compassion. It will help someone show love to a stranger or friend in need.",
+    description: "Your tooth holds kindness. The Tooth Fairy will use it to reach someone who needs a moment of care.",
     color: "from-accent to-fairy-glow",
   },
   creativity: {
     title: "Creativity",
     icon: Lightbulb,
-    description: "Your tooth sparkles with imagination. It will inspire someone to dream up something wonderful.",
+    description: "Your tooth holds creativity. The Tooth Fairy will use it to help someone find a new idea when they feel stuck.",
     color: "from-primary to-workshop-gold",
   },
   patience: {
     title: "Patience",
     icon: Clock,
-    description: "Your tooth holds calm persistence. It will help someone wait for the right moment with grace.",
+    description: "Your tooth holds patience. The Tooth Fairy will use it to help someone wait through something hard.",
     color: "from-fairy-glow to-accent",
   },
 };
@@ -112,20 +112,20 @@ const VirtueQuizSection = () => {
       <div className="container px-6">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
-            Discover Your Tooth's Gift
+            What's in Your Tooth?
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            What virtue is in your tooth?
+            What quality is in your tooth?
           </h2>
           <p className="text-muted-foreground mb-8">
-            Every tooth carries something special - a virtue that belongs to you. 
-            Take a quick peek to see what gift your tooth might hold.
+            Every tooth holds a quality that grew in you. Answer two questions
+            to find out which one might be yours.
           </p>
 
           {!showQuiz ? (
             <Button variant="magical" size="lg" onClick={handleStartQuiz}>
               <Sparkles className="w-4 h-4" />
-              Discover Your Virtue
+              Find Out Your Quality
             </Button>
           ) : result ? (
             /* Result Card */

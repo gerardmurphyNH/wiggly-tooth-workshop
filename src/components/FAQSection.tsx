@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "Why does the Tooth Fairy leave money?",
-    answer: "It's her thank-you. You grew something real — a good quality that took years. The coin is how she says: I see what you grew. The world needed it. It isn't a payment. It's a thank-you for something genuinely valuable.",
+    answer: "It's her thank-you. You grew something real — a good quality that took years. The money she leaves is how she says: I see what you grew. The world needed it. It isn't a payment. It's a thank-you.",
   },
   {
     question: "Why does the Tooth Fairy come at night?",

@@ -10,7 +10,7 @@ const explainerLinks = [
   },
   {
     question: "Why does the Tooth Fairy take teeth?",
-    teaser: "Because every tooth you've ever grown holds a trace of everything you learned while it was growing. That trace is something the world can use.",
+    teaser: "Because every tooth holds a good quality that grew in you — bravery, kindness, creativity, patience. Those don't disappear when the tooth falls out. The Tooth Fairy takes them to where they're needed.",
     to: "/why-does-the-tooth-fairy-take-teeth",
     label: "Read the full answer",
   },
@@ -22,7 +22,7 @@ const explainerLinks = [
   },
   {
     question: "Where does the Tooth Fairy tradition come from?",
-    teaser: "The tradition exists in almost every culture on earth. The exchange has always been the same: a child loses something, a ritual marks the moment, and something is given back.",
+    teaser: "The tradition exists in almost every culture on earth. For thousands of years, children have lost teeth and found something left behind. The details vary. The reason doesn't.",
     to: "/tooth-fairy-story-explained",
     label: "Read the full answer",
   },
@@ -39,14 +39,12 @@ const ToothFairyExplainerSection = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             What Does the Tooth Fairy Really Do?
           </h2>
-          <p className="text-foreground max-w-2xl mx-auto leading-relaxed mb-2">
-            The Tooth Fairy collects teeth because every tooth holds good qualities — bravery,
-            kindness, creativity, patience — that grew during childhood. She draws those out at
-            her workshop and uses them to help fix small problems in the world. The coin is her
-            thank-you for what you grew.
-          </p>
-          <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed text-sm">
-            Every child asks. Here are the real answers.
+          <p className="text-foreground max-w-2xl mx-auto leading-relaxed">
+            Most people know the Tooth Fairy takes teeth and leaves money behind. But very few
+            know why. Every tooth holds good qualities — bravery, kindness, creativity,
+            patience — that grew in you while it was there. She draws those out at her workshop
+            and uses them to help fix small problems in the world. The money she leaves is her
+            thank-you.
           </p>
         </div>
 

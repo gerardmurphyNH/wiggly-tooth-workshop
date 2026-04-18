@@ -71,7 +71,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-starlight/80 mb-8 leading-relaxed font-body">
-            A magical story world for curious kids is coming to life. Follow Arlo, CeCe, and the Tooth Fairy through an animated film, a children's book, and ToothSafe - and be here from the very beginning.
+            You know she takes the teeth. You know she leaves money. But very few people know what actually happens next. Follow Arlo and CeCe as they find out — an animated film, a children's book, and ToothSafe, all coming Summer 2026.
           </p>
 
           {/* Primary CTA */}
@@ -117,7 +117,7 @@ const HeroSection = () => {
               </a>
             </div>
             <p className="text-xs text-starlight/40 mt-2.5 text-center md:text-left">
-              Behind-the-scenes magic, sneak peeks, and Tooth Fairy fun
+              Behind-the-scenes work, first looks, and Tooth Fairy stories
             </p>
           </div>
         </div>

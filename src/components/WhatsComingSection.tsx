@@ -9,19 +9,19 @@ const cards = [
     icon: Film,
     title: "Animated Short Film",
     label: "Coming Summer 2026",
-    description: "Join a curious child on a midnight journey to discover what the Tooth Fairy really does with all those tiny teeth.",
+    description: "Follow Arlo and CeCe as they find out what the Tooth Fairy really does with teeth — and why it matters more than anyone told them.",
   },
   {
     icon: BookOpen,
     title: "The Book",
     label: "Coming soon",
-    description: "A beautifully illustrated children's book that answers the questions every child wonders about.",
+    description: "A children's book that answers the big question: what actually happens to your tooth after the Tooth Fairy takes it?",
   },
   {
     icon: Package,
     title: "ToothSafe",
     label: "Coming soon",
-    description: "A special place to keep your tooth safe for the Tooth Fairy - designed by the workshop itself.",
+    description: "A safe, beautiful place to leave your tooth for the Tooth Fairy. Made for the moment when it matters.",
   },
 ];
 
@@ -41,7 +41,7 @@ const WhatsComingSection = () => {
             What's Coming
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A world of wonder is being crafted in the workshop
+            A film, a book, and a keepsake — all telling the same story
           </p>
         </div>
 
@@ -74,7 +74,7 @@ const WhatsComingSection = () => {
         {/* Film teaser gallery */}
         <div className="mb-8">
           <h3 className="font-display text-xl font-semibold text-foreground text-center mb-6">
-            Peek into the magic
+            Scenes from the film
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {filmImages.map((img, index) => (
