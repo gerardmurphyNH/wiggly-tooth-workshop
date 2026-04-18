@@ -241,15 +241,13 @@ const ToothFairyStoryExplained = () => {
                 </p>
                 <p>
                   The Tooth Fairy tradition turns that moment into something meaningful.
-                  Instead of just losing something, the child is <em>giving</em> something —
-                  to someone who wants it, who values it, who will use it for something good.
-                  Instead of something just disappearing, it goes somewhere.
-                  Instead of change being something that happens to you,
-                  it becomes something you participate in.
+                  The child isn't just losing a tooth. They're <em>giving</em> something to someone
+                  who wants it, who values it, who will do something good with it. The tooth
+                  doesn't just disappear — it goes somewhere. And that changes how the whole
+                  thing feels.
                 </p>
                 <p>
-                  That shift — from passive loss to meaningful exchange — is the real magic
-                  of the tradition. And it's been working on children for a very long time.
+                  That's the real magic of the tradition. And it has been working for a very long time.
                 </p>
               </div>
             </div>

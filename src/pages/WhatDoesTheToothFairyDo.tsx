@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "Can I visit the Tooth Fairy's workshop?",
     answer:
-      "Not usually — the workshop exists in a place between sleeping and dreaming. But Arlo and CeCe find their way there in The Tooth Fairy's Magical Mission, and they discover it looks a bit like a library, if libraries sparkled.",
+      "Not usually. The workshop exists in a place between sleeping and dreaming. But Arlo and CeCe find their way there in The Tooth Fairy's Magical Mission, and they discover it looks a bit like a library, if libraries sparkled.",
   },
   {
     question: "How does the Tooth Fairy know whose tooth is whose?",
@@ -235,7 +235,7 @@ const WhatDoesTheToothFairyDo = () => {
                   how to look.
                 </p>
                 <p>
-                  That trace — that residue of experience and growth — is what the Tooth Fairy calls a virtue.
+                  That trace is what the Tooth Fairy calls a virtue.
                   And it's exactly what the world keeps running short of.
                 </p>
               </div>
@@ -247,10 +247,10 @@ const WhatDoesTheToothFairyDo = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  The extraction process is delicate. The Tooth Fairy uses tools that look a little
-                  like a watchmaker's instruments — very fine, very precise — and she works under a
-                  lamp that casts a warm gold light. The virtue comes out looking a bit like a spark:
-                  small, warm, and very much alive.
+                  The extraction process is delicate. The Tooth Fairy uses tools that look like
+                  something from a watchmaker's bench — small, precise, each one made for a single
+                  job. She works under a lamp that casts a warm gold light. The virtue comes out
+                  looking a bit like a spark: small, warm, and very much alive.
                 </p>
                 <p>
                   Once extracted, each virtue is carefully labeled and stored. Bravery in one jar.
@@ -281,8 +281,7 @@ const WhatDoesTheToothFairyDo = () => {
                 </p>
                 <p>
                   The Tooth Fairy doesn't make announcements about this. She doesn't take credit.
-                  She just works, night after night, keeping a kind of invisible balance that most
-                  people never notice — and that the world couldn't function without.
+                  She just works, night after night, keeping a balance the world quietly depends on.
                 </p>
                 <p>
                   Your tooth is part of that. Whatever virtue was in it is out there now,

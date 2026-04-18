@@ -24,12 +24,12 @@ const faqs = [
   {
     question: "If she's real, why doesn't she just show herself?",
     answer:
-      "Partly because she works better that way. A visitor in the night who leaves a coin is mysterious. A visitor you can see and talk to is just a person. The mystery is part of what makes the tradition feel larger than itself. And the Tooth Fairy has always understood that.",
+      "Partly because she works better that way. A visitor who leaves a coin in the night is mysterious. A visitor you can see and talk to is just a person. The mystery matters. And the Tooth Fairy has always known that.",
   },
   {
     question: "What if I stay up and wait for her?",
     answer:
-      "She knows. She waits. The Tooth Fairy is patient — she has been doing this for centuries. She'll come when the time is right, and not a moment before. Most children who try to wait up for her fall asleep eventually. That's the plan.",
+      "She knows. She waits. The Tooth Fairy is patient — she has been doing this for centuries. She'll come when the time is right. Most children who try to stay up fall asleep eventually. She counts on it.",
   },
   {
     question: "Does the Tooth Fairy exist in other countries too?",
@@ -233,9 +233,9 @@ const IsTheToothFairyReal = () => {
                   And she moves quietly enough that even light sleepers rarely wake up.
                 </p>
                 <p>
-                  Most things that matter work this way. Gravity doesn't announce itself.
-                  The wind doesn't explain where it's going. Important systems are usually
-                  invisible — until you know how to look.
+                  Most important things work quietly. Gravity doesn't announce itself.
+                  The wind doesn't explain where it's going.
+                  The Tooth Fairy fits right in.
                 </p>
               </div>
             </div>
@@ -258,8 +258,7 @@ const IsTheToothFairyReal = () => {
                 </p>
                 <p>
                   These aren't the clues of something imaginary.
-                  They're the clues of something that works very hard not to be noticed.
-                  There's a difference.
+                  They're the clues of something that works very hard not to be seen.
                 </p>
               </div>
             </div>
@@ -270,17 +269,17 @@ const IsTheToothFairyReal = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  If you're at the age where you're starting to ask harder questions —
-                  that's a good thing. Asking hard questions is one of the ways you grow.
+                  If you're starting to ask harder questions, that's a good thing.
+                  It means you're paying attention.
                 </p>
                 <p>
-                  The Tooth Fairy works in ways that don't require you to see her to believe in her.
-                  She works through the people who love you, through traditions passed down
-                  for generations, through the real magic of feeling like something cares
-                  about you enough to notice when you've lost something.
+                  You don't have to see the Tooth Fairy to know she's real. She works through
+                  the people who love you, through traditions older than anyone can remember,
+                  through the fact that someone always notices when you've lost something —
+                  and always does something about it.
                 </p>
                 <p>
-                  That's real. Whatever form it takes, that part is real.
+                  That part doesn't require belief. It just requires looking.
                 </p>
               </div>
             </div>

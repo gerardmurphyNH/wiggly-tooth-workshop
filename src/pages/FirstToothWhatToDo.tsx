@@ -199,7 +199,7 @@ const FirstToothWhatToDo = () => {
             </h1>
             <p className="text-lg text-starlight/80 mb-8 leading-relaxed max-w-2xl mx-auto">
               It's out. They're grinning with a gap in their smile.
-              Now what? Here's everything you need to know — and everything they'll want to know.
+              Here's what to do next — and what to tell them when the questions start.
             </p>
           </div>
         </section>
@@ -255,8 +255,8 @@ const FirstToothWhatToDo = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Children ask this question at some point — and it's a good one.
-                The answer, in full, is on the pages below. But the short version:
+                Children always ask this one. The full answer is on the pages below,
+                but here's the short version:
               </p>
               <p>
                 The Tooth Fairy takes every tooth to her workshop. Inside each tooth

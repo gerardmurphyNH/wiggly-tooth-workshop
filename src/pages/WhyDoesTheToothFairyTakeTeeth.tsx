@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "Why does she leave money instead of something else?",
     answer:
-      "The coin is a trade — an acknowledgment that what you gave her had real value. It's the Tooth Fairy's way of saying: I see what you've grown. I'm grateful for it. Thank you.",
+      "The coin is a trade. What you gave her had real value, and she knows it. It's her way of saying: I see what you grew. Thank you.",
   },
   {
     question: "Is the exchange fair?",
@@ -202,9 +202,9 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
                   the Tooth Fairy can sense.
                 </p>
                 <p>
-                  And then, at just the right moment, it falls out. Ready to be collected.
-                  That timing isn't accidental — it's part of the system. The tooth falls when
-                  it's full. When it has grown alongside you long enough to hold something real.
+                  And then, at just the right moment, it falls out. That timing isn't a coincidence.
+                  The tooth falls when it's ready — when it has grown alongside you long enough
+                  to hold something real.
                 </p>
               </div>
             </div>
@@ -247,8 +247,8 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
                   And now it's out in the world, doing what it was always meant to do.
                 </p>
                 <p>
-                  The coin is small compared to what you gave her. But it's sincere.
-                  It means: <em>I see what you've grown. The world needed this. Thank you.</em>
+                  The coin is small compared to what you gave her. But it means something.
+                  <em>I see what you grew. The world needed it. Thank you.</em>
                 </p>
               </div>
             </div>
