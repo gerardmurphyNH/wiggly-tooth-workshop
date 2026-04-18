@@ -265,9 +265,10 @@ const ToothFairyStoryExplained = () => {
                 </p>
                 <p>
                   In the world of <em>The Tooth Fairy's Magical Mission</em>,
-                  every lost tooth holds a virtue — bravery, kindness, creativity, or patience —
-                  grown during years of childhood. The Tooth Fairy collects these not to hoard them,
-                  but to carefully lift them out and return them to a world that always needs more.
+                  every lost tooth holds a good quality — bravery, kindness, creativity, or
+                  patience — grown during years of childhood. The Tooth Fairy collects them not
+                  to hoard them, but to carefully lift them out and use them to help fix the
+                  small problems the world keeps running into.
                 </p>
                 <p>
                   It's a story that takes the oldest tradition in childhood and asks:

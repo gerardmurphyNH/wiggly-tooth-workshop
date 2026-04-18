@@ -9,15 +9,15 @@ import { trackFAQOpen } from "@/lib/analytics";
 const faqs = [
   {
     question: "Why does the Tooth Fairy take my teeth?",
-    answer: "Every tooth you lose holds something special - a memory, a moment of bravery, a flash of kindness. The Tooth Fairy collects these tiny treasures because they contain the virtues of childhood. And those virtues? They're exactly what the world needs.",
+    answer: "Every tooth you lose holds something special — a moment of bravery, a flash of kindness, a stretch of patience. The Tooth Fairy collects teeth because every tooth holds good qualities that grew during childhood. Bravery, kindness, creativity, patience. And those are exactly what the world needs.",
   },
   {
     question: "What does the Tooth Fairy do with my teeth?",
-    answer: "In her workshop, the Tooth Fairy carefully extracts the virtue from each tooth. These virtues are then woven into the fabric of the world - helping someone be a little braver, a little kinder, a little more patient. Your tooth might help a firefighter stay calm, or a shy kid make a new friend.",
+    answer: "She takes them to her workshop — a large, careful place full of small tools and warm lamplight. There she draws the good quality out of each tooth and uses it to help fix small problems in the world. Your bravery might help a firefighter stay calm. Your kindness might reach a shy kid trying to make a new friend.",
   },
   {
     question: "Why does the Tooth Fairy leave money?",
-    answer: "It's a trade, really. You're giving something precious - a piece of yourself that took time and care to grow. The coin is the Tooth Fairy's way of saying 'thank you' for trusting her with something so important.",
+    answer: "It's her thank-you. You grew something real — a good quality that took years. The coin is how she says: I see what you grew. The world needed it. It isn't a payment. It's a thank-you for something genuinely valuable.",
   },
   {
     question: "Why does the Tooth Fairy come at night?",
@@ -29,11 +29,11 @@ const faqs = [
   },
   {
     question: "Is the Tooth Fairy real?",
-    answer: "Yes, the Tooth Fairy is real. She just does her work in ways most people don't see. Like many important things, she works quietly, at night, fixing small problems and keeping the world in balance. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it because every tooth holds memories and virtues you've grown while becoming yourself. She uses those to help make the world a little better, then leaves something behind as a thank-you. You may never see her, but the clues are there. And that's exactly how she likes it.",
+    answer: "Yes. She just does her work in ways most people don't see. She works quietly, at night, drawing good qualities out of children's teeth and using them to help fix small problems in the world. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it. She leaves a thank-you behind. You may never see her — but the clues are there, if you know where to look.",
   },
   {
     question: "How many teeth does the Tooth Fairy have?",
-    answer: "Millions! The Tooth Fairy's workshop is full of them - sorted by virtue, organized by year, catalogued by country. It looks a bit like a library, if libraries sparkled.",
+    answer: "Millions. The Tooth Fairy's workshop is full of them — sorted by quality, organized by year, grouped by where they came from. It looks a bit like a library, if libraries sparkled.",
   },
   {
     question: "What if I swallow my tooth?",
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     question: "Who are Arlo and CeCe?",
-    answer: "Arlo and CeCe are the two young characters at the heart of The Tooth Fairy's Magical Mission. They're curious, imaginative kids who find themselves caught up in the Tooth Fairy's world — discovering what really happens to lost teeth, why virtues matter, and what goes on inside the workshop when nobody is watching. They're the kind of characters who ask the questions every kid wonders about, and aren't afraid to follow the answer wherever it leads.",
+    answer: "Arlo and CeCe are the two young characters at the heart of The Tooth Fairy's Magical Mission. They're curious, imaginative kids who find themselves caught up in the Tooth Fairy's world — discovering what really happens to lost teeth, why good qualities matter, and what goes on inside the workshop when nobody is watching. They're the kind of characters who ask the questions every kid wonders about, and aren't afraid to follow the answer wherever it leads.",
   },
   {
     question: "What is ToothSafe?",

@@ -62,7 +62,7 @@ const faqs = [
   {
     question: "Should I keep my child's baby teeth?",
     answer:
-      "Many families do. Some keep all of them, some keep just the first. Baby teeth are a physical record of childhood — small, surprising, and gone before you know it. If you want to keep them, the Tooth Fairy understands. The virtues inside a kept tooth stay with the family.",
+      "Many families do. Some keep all of them, some keep just the first. Baby teeth are a physical record of childhood — small, surprising, and gone before you know it. If you want to keep them, the Tooth Fairy understands. The qualities inside a kept tooth stay with the family.",
   },
 ];
 
@@ -260,14 +260,14 @@ const FirstToothWhatToDo = () => {
               </p>
               <p>
                 The Tooth Fairy takes every tooth to her workshop. Inside each tooth
-                is something she calls a virtue — bravery, kindness, creativity, or patience —
-                grown during the years the tooth was in your child's mouth.
-                She carefully lifts that virtue out and sends it back into the world
-                to help people who need it.
+                is a good quality — bravery, kindness, creativity, or patience — that grew
+                during the years the tooth was there. She carefully lifts that quality out
+                and uses it to help fix small problems in the world: helping someone find
+                courage, or bringing patience to a difficult moment.
               </p>
               <p>
                 Then she leaves a coin as a thank-you. Because what she took was
-                genuinely valuable. And she knows it.
+                genuinely valuable — and she knows it.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">

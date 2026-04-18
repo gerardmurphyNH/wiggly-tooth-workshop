@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 const explainerLinks = [
   {
     question: "What does the Tooth Fairy do with teeth?",
-    teaser: "She takes them to her workshop and extracts the virtues inside — bravery, kindness, creativity, patience. Then she sends those virtues back into the world.",
+    teaser: "She takes them to her workshop, draws out the good qualities inside — bravery, kindness, creativity, patience — and uses them to help fix small problems in the world.",
     to: "/what-does-the-tooth-fairy-do-with-teeth",
     label: "Read the full answer",
   },
@@ -39,9 +39,14 @@ const ToothFairyExplainerSection = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             What Does the Tooth Fairy Really Do?
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Every child asks. Here are the real answers — the ones that hold up to the questions
-            curious kids actually ask.
+          <p className="text-foreground max-w-2xl mx-auto leading-relaxed mb-2">
+            The Tooth Fairy collects teeth because every tooth holds good qualities — bravery,
+            kindness, creativity, patience — that grew during childhood. She draws those out at
+            her workshop and uses them to help fix small problems in the world. The coin is her
+            thank-you for what you grew.
+          </p>
+          <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed text-sm">
+            Every child asks. Here are the real answers.
           </p>
         </div>
 

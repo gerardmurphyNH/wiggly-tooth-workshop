@@ -19,10 +19,10 @@ const Index = () => {
         <link rel="canonical" href="https://wigglytoothworkshop.com/" />
         <meta property="og:url" content="https://wigglytoothworkshop.com/" />
         <meta property="og:title" content="The Tooth Fairy's Magical Mission" />
-        <meta property="og:description" content="Every tooth holds a memory. Every tooth holds a virtue. And in the Tooth Fairy's hands, these tiny treasures help quietly fix the world." />
+        <meta property="og:description" content="Every tooth holds a memory. Every tooth holds a good quality. And in the Tooth Fairy's hands, these tiny treasures help quietly fix the world." />
         <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
         <meta name="twitter:title" content="The Tooth Fairy's Magical Mission" />
-        <meta name="twitter:description" content="Every tooth holds a memory. Every tooth holds a virtue. And in the Tooth Fairy's hands, these tiny treasures help quietly fix the world." />
+        <meta name="twitter:description" content="Every tooth holds a memory. Every tooth holds a good quality. And in the Tooth Fairy's hands, these tiny treasures help quietly fix the world." />
         <meta name="twitter:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
       </Helmet>
       <main className="min-h-screen">

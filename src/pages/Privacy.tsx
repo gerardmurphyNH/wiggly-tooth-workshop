@@ -41,7 +41,7 @@ const Privacy = () => {
             <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
               <li>Your email address (required)</li>
               <li>Your first name (optional)</li>
-              <li>Your quiz result / virtue (optional, if you took the quiz)</li>
+              <li>Your quiz result / quality (optional, if you took the quiz)</li>
             </ul>
           </section>
 

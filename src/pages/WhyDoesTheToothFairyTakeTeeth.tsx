@@ -24,17 +24,17 @@ const faqs = [
   {
     question: "What if I want to keep my tooth?",
     answer:
-      "The Tooth Fairy understands. Some families keep teeth as keepsakes, and she respects that. If there's no tooth under the pillow, she simply moves on. The virtues in a kept tooth aren't lost — they stay with the family.",
+      "The Tooth Fairy understands. Some families keep teeth as keepsakes, and she respects that. If there's no tooth under the pillow, she simply moves on. The qualities in a kept tooth aren't lost — they stay with the family.",
   },
   {
     question: "Why does she leave money instead of something else?",
     answer:
-      "The coin is a trade. What you gave her had real value, and she knows it. It's her way of saying: I see what you grew. Thank you.",
+      "The coin is her thank-you. What you gave her had real value, and she knows it. It's her way of saying: I see what you grew. The world needed it.",
   },
   {
     question: "Is the exchange fair?",
     answer:
-      "That depends on how you think about it. You give her something that took years to grow, packed with memories and virtues. She gives you a coin. But the coin isn't the point. The point is that what was in your tooth is now out in the world, doing something good. Most people would say that's more than fair.",
+      "That depends on how you think about it. You give her something that took years to grow, packed with memories and qualities. She gives you a coin. But the coin isn't the point. The point is that what was in your tooth is now out in the world, doing something good. Most people would say that's more than fair.",
   },
 ];
 
@@ -45,15 +45,15 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
         <title>Why Does the Tooth Fairy Take Teeth? | Wiggly Tooth Workshop</title>
         <meta
           name="description"
-          content="Why does the Tooth Fairy take teeth instead of leaving them? Because every tooth holds a virtue grown over years of childhood — and those virtues are exactly what the world needs."
+          content="Why does the Tooth Fairy take teeth instead of leaving them? Because every tooth holds a quality grown over years of childhood — and those qualities are exactly what the world needs."
         />
         <link rel="canonical" href="https://wigglytoothworkshop.com/why-does-the-tooth-fairy-take-teeth" />
         <meta property="og:title" content="Why Does the Tooth Fairy Take Teeth?" />
-        <meta property="og:description" content="Every tooth holds a virtue grown over years of childhood — bravery, kindness, creativity, patience. The Tooth Fairy takes them because those virtues are exactly what the world needs." />
+        <meta property="og:description" content="Every tooth holds a quality grown over years of childhood — bravery, kindness, creativity, patience. The Tooth Fairy takes them because those qualities are exactly what the world needs." />
         <meta property="og:url" content="https://wigglytoothworkshop.com/why-does-the-tooth-fairy-take-teeth" />
         <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
         <meta name="twitter:title" content="Why Does the Tooth Fairy Take Teeth?" />
-        <meta name="twitter:description" content="Every tooth holds a virtue grown over years of childhood — bravery, kindness, creativity, patience. The Tooth Fairy takes them because those virtues are exactly what the world needs." />
+        <meta name="twitter:description" content="Every tooth holds a quality grown over years of childhood — bravery, kindness, creativity, patience. The Tooth Fairy takes them because those qualities are exactly what the world needs." />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
@@ -78,7 +78,7 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
               {
                 "@type": "Article",
                 "headline": "Why Does the Tooth Fairy Take Teeth?",
-                "description": "Every tooth holds a virtue grown over years of childhood — bravery, kindness, creativity, patience. The Tooth Fairy takes them because those virtues are exactly what the world needs.",
+                "description": "Every tooth holds a quality grown over years of childhood — bravery, kindness, creativity, patience. The Tooth Fairy takes them because those qualities are exactly what the world needs.",
                 "url": "https://wigglytoothworkshop.com/why-does-the-tooth-fairy-take-teeth",
                 "publisher": {
                   "@type": "Organization",
@@ -98,7 +98,7 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
                     "name": "Why does the Tooth Fairy take teeth?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Every tooth you lose holds something special — a memory, a moment of bravery, a flash of kindness. The Tooth Fairy collects these tiny treasures because they contain the virtues of childhood. And those virtues are exactly what the world needs."
+                      "text": "Every tooth you lose holds something special — a memory, a moment of bravery, a flash of kindness. The Tooth Fairy collects these tiny treasures because they contain the qualities of childhood. And those qualities are exactly what the world needs."
                     }
                   },
                   {
@@ -114,7 +114,7 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
                     "name": "Why does the Tooth Fairy leave money?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "The coin is a trade — an acknowledgment that what you gave her had real value. It's the Tooth Fairy's way of saying: I see what you've grown. I'm grateful for it. Thank you."
+                      "text": "The coin is her thank-you — a sign that what you gave her had real value. It's the Tooth Fairy's way of saying: I see what you've grown. The world needed it. Thank you."
                     }
                   }
                 ]
@@ -170,12 +170,12 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
                 The Short Answer
               </span>
               <p className="text-foreground text-lg leading-relaxed">
-                The Tooth Fairy takes teeth because every tooth you lose holds something special —
-                a memory, a moment of bravery, a flash of kindness. Each tooth was growing inside you
-                while you were becoming yourself, and it carries a trace of everything you learned
-                during that time. The Tooth Fairy calls this a <strong>virtue</strong>.
-                She collects them because the world constantly needs more of these — and children
-                are the only ones who can grow them.
+                The Tooth Fairy takes teeth because every tooth holds <strong>good qualities</strong>
+                — bravery, kindness, creativity, patience — that grew in you while the tooth was
+                growing. She collects them because the world constantly needs more of these, and
+                children are the only ones who can grow them. She draws those qualities out at her
+                workshop and uses them to help fix small problems in the world: helping someone find
+                courage, or bringing patience to a moment when it's running out.
               </p>
             </div>
           </div>
@@ -223,11 +223,12 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
                   Each of those moments left a small trace. Not visible, but real —
                   like the way a book absorbs the smell of the room where it was read.
                   Your teeth carry the record of your childhood. And childhood, as it turns out,
-                  is where virtues come from.
+                  is where qualities come from.
                 </p>
                 <p>
                   Bravery. Kindness. Creativity. Patience. These are the four the Tooth Fairy
-                  finds most often. And she uses every one.
+                  finds most often. She uses every one — to fix something in the world that
+                  needs exactly what you grew.
                 </p>
               </div>
             </div>
@@ -260,8 +261,8 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Adult teeth stay in. They're not meant to fall. And in a way, that makes
-                  sense — adults have already grown their virtues. The Tooth Fairy's work happens
-                  in childhood, when everything is new, and when the best virtues are grown.
+                  sense — adults have already grown their qualities. The Tooth Fairy's work happens
+                  in childhood, when everything is new, and when the best qualities are grown.
                 </p>
                 <p>
                   That's why the Tooth Fairy visits children specifically. And why she comes

@@ -17,22 +17,22 @@ const categories = [
       {
         question: "Why does the Tooth Fairy take my teeth?",
         answer:
-          "Every tooth you lose holds something special — a memory, a moment of bravery, a flash of kindness. The Tooth Fairy collects these tiny treasures because they contain the virtues of childhood: bravery, kindness, creativity, and patience. And those virtues are exactly what the world needs.",
+          "Every tooth you lose holds something special — a memory, a moment of bravery, a flash of kindness. The Tooth Fairy collects these tiny treasures because they contain the qualities of childhood: bravery, kindness, creativity, and patience. And those qualities are exactly what the world needs.",
       },
       {
         question: "Why does she want teeth specifically?",
         answer:
-          "Teeth grow slowly, over years. They're there during your first day of school, your first brave moment, your first time being really kind to someone. That time leaves a trace — a virtue — that only shows up in something that grew with you. Hair grows too fast. Fingernails don't hold memory the same way. A tooth that's been growing for years holds years.",
+          "Teeth grow slowly, over years. They're there during your first day of school, your first brave moment, your first time being really kind to someone. That time leaves a trace — a quality — that only shows up in something that grew with you. Hair grows too fast. Fingernails don't hold memory the same way. A tooth that's been growing for years holds years.",
       },
       {
         question: "Why does the Tooth Fairy only take children's teeth?",
         answer:
-          "Adult teeth don't fall out naturally — they're meant to stay. Baby teeth fall away at exactly the right moment, carrying the full record of early childhood. That's when the collection happens. By the time you're an adult, your virtues are already grown and out in the world.",
+          "Adult teeth don't fall out naturally — they're meant to stay. Baby teeth fall away at exactly the right moment, carrying the full record of early childhood. That's when the collection happens. By the time you're an adult, your qualities are already grown and out in the world.",
       },
       {
         question: "Why does the Tooth Fairy leave money?",
         answer:
-          "It's a trade. You gave her something that took years to grow, packed with real virtues. The coin is her way of saying: I see what you've grown. I'm grateful for it. The amount isn't the point — the acknowledgment is.",
+          "It's her thank-you. You gave her something that took years to grow, packed with good qualities. The coin is her way of saying: I see what you grew. The world needed it. The amount isn't the point — the thank-you is.",
       },
     ],
   },
@@ -42,20 +42,20 @@ const categories = [
       {
         question: "What does the Tooth Fairy do with all the teeth?",
         answer:
-          "She takes them to her workshop — an enormous place that looks a bit like a library, if libraries sparkled. There she carefully lifts the virtue out of each tooth. Bravery in one jar. Kindness in another. Creativity in a third. Patience in the fourth. Then she sends those virtues back out into the world to help people who need them.",
+          "She takes them to her workshop — an enormous place that looks a bit like a library, if libraries sparkled. There she carefully lifts the quality out of each tooth. Bravery in one jar. Kindness in another. Creativity in a third. Patience in the fourth. Then she sends those qualities back out into the world to help people who need them.",
       },
       {
         question: "Does the Tooth Fairy keep the teeth?",
         answer:
-          "The workshop has millions of them — sorted by virtue, organized by year, sorted by where they came from. Some say the collection goes back centuries. The teeth are kept after the virtue is taken out, carefully stored as a record.",
+          "The workshop has millions of them — sorted by quality, organized by year, sorted by where they came from. Some say the collection goes back centuries. The teeth are kept after the quality is taken out, carefully stored as a record.",
       },
       {
-        question: "Where do the virtues go after she collects them?",
+        question: "Where do the qualities go after she collects them?",
         answer:
-          "They're woven back into the world — distributed to moments that need them. A firefighter who needs to stay calm. A shy child trying to make a new friend. A parent who has run out of patience. The Tooth Fairy doesn't announce this. She just does the work, quietly, every night.",
+          "She uses them to fix small problems in the world — the kind that need exactly the right quality at the right moment. A firefighter who needs to stay calm. A shy child finding the courage to try something new. A parent who has run out of patience on a long day. The Tooth Fairy doesn't announce this. She just does the work, quietly, every night.",
       },
       {
-        question: "What are the four virtues?",
+        question: "What are the four qualities?",
         answer:
           "Bravery, kindness, creativity, and patience. These are the four that teeth most commonly hold. Every child grows a little of each one, though different teeth tend to carry different amounts depending on what was happening in your life when that tooth was growing.",
       },
@@ -107,12 +107,12 @@ const categories = [
       {
         question: "What if I want to keep my tooth?",
         answer:
-          "The Tooth Fairy understands. Some families keep teeth as keepsakes, and she respects that. If there's no tooth under the pillow, she moves on to the next child. The virtues in a kept tooth stay with the family.",
+          "The Tooth Fairy understands. Some families keep teeth as keepsakes, and she respects that. If there's no tooth under the pillow, she moves on to the next child. The qualities in a kept tooth stay with the family.",
       },
       {
         question: "What if my tooth has a cavity?",
         answer:
-          "The virtue is in the tooth itself, not in its condition. A tooth with a cavity still holds something real. The Tooth Fairy doesn't judge — she just collects.",
+          "The quality is in the tooth itself, not in its condition. A tooth with a cavity still holds something real. The Tooth Fairy doesn't judge — she just collects.",
       },
     ],
   },
@@ -122,7 +122,7 @@ const categories = [
       {
         question: "Is the Tooth Fairy real?",
         answer:
-          "Yes. She just does her work in ways most people don't see. Like many important things, she works quietly, at night, keeping a kind of balance that the world depends on. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it. The clues are there — if you know where to look.",
+          "Yes. She just does her work in ways most people don't see. She works quietly, at night, drawing good qualities out of children's teeth and using them to help fix small problems in the world. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it. The clues are there — if you know where to look.",
       },
       {
         question: "Has anyone ever seen the Tooth Fairy?",
@@ -304,7 +304,7 @@ const ToothFairyFAQ = () => {
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { to: "/what-does-the-tooth-fairy-do-with-teeth", label: "What does she do with the teeth?", desc: "The workshop, the virtues, the whole story" },
+                { to: "/what-does-the-tooth-fairy-do-with-teeth", label: "What does she do with the teeth?", desc: "The workshop, the qualities, the whole story" },
                 { to: "/why-does-the-tooth-fairy-take-teeth", label: "Why does she take teeth?", desc: "The reason behind the tradition" },
                 { to: "/is-the-tooth-fairy-real", label: "Is the Tooth Fairy real?", desc: "A serious answer to a serious question" },
                 { to: "/tooth-fairy-story-explained", label: "The Tooth Fairy tradition", desc: "History, culture, and meaning" },

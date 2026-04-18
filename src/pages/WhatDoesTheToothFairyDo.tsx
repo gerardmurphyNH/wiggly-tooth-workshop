@@ -14,10 +14,10 @@ const faqs = [
   {
     question: "Does the Tooth Fairy keep all the teeth forever?",
     answer:
-      "Not exactly. Once the virtue is taken out, the tooth stays in the workshop — carefully kept as a record. Some say there are rows and rows of tiny labeled jars, one for each child, each one marked with a name and a year.",
+      "Not exactly. Once the quality is drawn out, the tooth stays in the workshop — carefully kept as a record. Some say there are rows and rows of tiny labeled jars, one for each child, each one marked with a name and a year.",
   },
   {
-    question: "What happens if a tooth has more than one virtue in it?",
+    question: "What happens if a tooth has more than one quality in it?",
     answer:
       "That happens more often than you'd think. A tooth that grew in while you were learning to ride a bike might hold both bravery and patience. The Tooth Fairy sorts these carefully — she has been doing this for a very long time.",
   },
@@ -34,12 +34,12 @@ const faqs = [
   {
     question: "What if my tooth has a cavity?",
     answer:
-      "The virtue is in the tooth itself, not in its condition. A tooth with a cavity still holds something real. The Tooth Fairy doesn't judge — she just collects.",
+      "The quality is in the tooth itself, not in its condition. A tooth with a cavity still holds something real. The Tooth Fairy doesn't judge — she just collects.",
   },
   {
-    question: "What are the four virtues?",
+    question: "What are the four good qualities?",
     answer:
-      "Bravery, kindness, creativity, and patience. These are the four that teeth most commonly hold. Every child grows a little of each one, though different teeth tend to carry different amounts.",
+      "Bravery, kindness, creativity, and patience. These are the four that teeth most commonly hold. Every child grows a little of each one, though different teeth tend to carry different amounts depending on what was happening in your life when they were growing.",
   },
 ];
 
@@ -50,15 +50,15 @@ const WhatDoesTheToothFairyDo = () => {
         <title>What Does the Tooth Fairy Do With Teeth? | Wiggly Tooth Workshop</title>
         <meta
           name="description"
-          content="What does the Tooth Fairy do with all those teeth? She takes them to her workshop, extracts the virtues inside, and quietly uses them to make the world better."
+          content="What does the Tooth Fairy do with all those teeth? She takes them to her workshop, draws out the good qualities inside — bravery, kindness, creativity, patience — and uses them to quietly fix the world."
         />
         <link rel="canonical" href="https://wigglytoothworkshop.com/what-does-the-tooth-fairy-do-with-teeth" />
         <meta property="og:title" content="What Does the Tooth Fairy Do With Teeth?" />
-        <meta property="og:description" content="The Tooth Fairy takes every lost tooth to her workshop, where she extracts the virtues inside — bravery, kindness, creativity, patience — and uses them to quietly fix the world." />
+        <meta property="og:description" content="The Tooth Fairy takes every lost tooth to her workshop, where she draws out the good qualities inside — bravery, kindness, creativity, patience — and uses them to quietly fix the world." />
         <meta property="og:url" content="https://wigglytoothworkshop.com/what-does-the-tooth-fairy-do-with-teeth" />
         <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
         <meta name="twitter:title" content="What Does the Tooth Fairy Do With Teeth?" />
-        <meta name="twitter:description" content="The Tooth Fairy takes every lost tooth to her workshop, where she extracts the virtues inside — bravery, kindness, creativity, patience — and uses them to quietly fix the world." />
+        <meta name="twitter:description" content="The Tooth Fairy takes every lost tooth to her workshop, where she draws out the good qualities inside — bravery, kindness, creativity, patience — and uses them to quietly fix the world." />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
@@ -83,7 +83,7 @@ const WhatDoesTheToothFairyDo = () => {
               {
                 "@type": "Article",
                 "headline": "What Does the Tooth Fairy Do With Teeth?",
-                "description": "The Tooth Fairy takes every lost tooth to her workshop, where she carefully extracts the virtues inside — bravery, kindness, creativity, patience — and uses them to quietly help the world.",
+                "description": "The Tooth Fairy takes every lost tooth to her workshop, where she carefully draws out the good qualities inside — bravery, kindness, creativity, patience — and uses them to quietly fix the world.",
                 "url": "https://wigglytoothworkshop.com/what-does-the-tooth-fairy-do-with-teeth",
                 "publisher": {
                   "@type": "Organization",
@@ -103,7 +103,7 @@ const WhatDoesTheToothFairyDo = () => {
                     "name": "What does the Tooth Fairy do with all the teeth she collects?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "The Tooth Fairy takes every tooth to her workshop, where she carefully extracts the virtue inside — bravery, kindness, creativity, or patience. These virtues are then woven back into the world to help people who need them."
+                      "text": "The Tooth Fairy takes every tooth to her workshop, where she carefully draws out the good quality inside — bravery, kindness, creativity, or patience. She uses these qualities to help fix small problems in the world: helping someone find courage, bringing patience to a difficult moment, or lighting the way for someone who needs kindness."
                     }
                   },
                   {
@@ -111,12 +111,12 @@ const WhatDoesTheToothFairyDo = () => {
                     "name": "Does the Tooth Fairy keep all the teeth forever?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Not exactly. The teeth are processed in the workshop — the virtue is carefully extracted, and then the tooth becomes part of the archive. Some say the workshop has rows and rows of tiny jars, each one labeled with a child's name and the year."
+                      "text": "Not exactly. The teeth are processed in the workshop — the quality is carefully drawn out, and then the tooth becomes part of the record. Some say the workshop has rows and rows of tiny jars, each one labeled with a child's name and the year."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "What are the four virtues the Tooth Fairy extracts?",
+                    "name": "What are the four good qualities the Tooth Fairy collects?",
                     "acceptedAnswer": {
                       "@type": "Answer",
                       "text": "Bravery, kindness, creativity, and patience. These are the four that teeth most commonly hold. Every child grows a little of each one, though different teeth tend to carry different amounts."
@@ -175,11 +175,10 @@ const WhatDoesTheToothFairyDo = () => {
                 The Short Answer
               </span>
               <p className="text-foreground text-lg leading-relaxed">
-                The Tooth Fairy takes every lost tooth to her workshop, where she carefully lifts out
-                the <strong>virtue</strong> hiding inside. A virtue is a piece of something good that
-                grew in you while your tooth was growing — bravery, or kindness, or creativity, or
-                patience. She takes those out, one by one, and sends them back into the world to help
-                people who need them most.
+                The Tooth Fairy takes every lost tooth to her workshop, where she carefully draws out
+                the <strong>good quality</strong> hiding inside. A good quality is something you grew
+                while your tooth was growing — bravery, or kindness, or creativity, or patience.
+                She draws those out, one by one, and uses them to help fix small problems in the world.
               </p>
               <p className="text-muted-foreground mt-4 leading-relaxed">
                 Your tooth might help a child find the courage to try something new. Or remind
@@ -207,7 +206,7 @@ const WhatDoesTheToothFairyDo = () => {
                 </p>
                 <p>
                   Inside, the workshop looks a bit like a library — if libraries sparkled.
-                  There are rows upon rows of tiny shelves, each one holding teeth sorted by virtue,
+                  There are rows upon rows of tiny shelves, each one holding teeth sorted by quality,
                   organized by year, and sorted by where they came from. At the center of it all is a
                   long wooden workbench, worn smooth by centuries of use, where the Tooth Fairy does
                   her most careful work.
@@ -225,7 +224,7 @@ const WhatDoesTheToothFairyDo = () => {
 
             <div>
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Why Teeth Hold Virtues
+                Why Teeth Hold Good Qualities
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -241,56 +240,56 @@ const WhatDoesTheToothFairyDo = () => {
                   how to look.
                 </p>
                 <p>
-                  That trace is what the Tooth Fairy calls a virtue.
-                  And it's exactly what the world keeps running short of.
+                  The Tooth Fairy calls this a good quality. And the world keeps running short of them.
                 </p>
               </div>
             </div>
 
             <div>
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-                How the Virtue Is Extracted
+                The Workshop's Careful Work
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  The extraction process is delicate. The Tooth Fairy uses tools that look like
-                  something from a watchmaker's bench — small, precise, each one made for a single
-                  job. She works under a lamp that casts a warm gold light. The virtue comes out
-                  looking a bit like a spark: small, warm, and very much alive.
+                  The work is delicate. The Tooth Fairy uses tools that look like something from a
+                  watchmaker's bench — small, precise, each one made for a single job. She works
+                  under a lamp that casts a warm gold light, bending close over each tooth.
+                  When a quality comes out it looks a bit like a spark: small, warm, and very
+                  much alive.
                 </p>
                 <p>
-                  Once extracted, each virtue is carefully labeled and stored. Bravery in one jar.
-                  Kindness in another. Creativity in a third. Patience in the fourth —
-                  the jar that always takes the longest to fill.
+                  Once drawn out, each quality is carefully labeled and stored in its own jar.
+                  Bravery in one. Kindness in another. Creativity in a third. Patience in the
+                  fourth — the jar that always takes the longest to fill.
                 </p>
                 <p>
-                  The virtues don't expire. They don't go stale. They sit there, waiting,
-                  until they're needed.
+                  The qualities don't expire. They don't go stale. They wait on the shelf until
+                  they're needed somewhere in the world.
                 </p>
               </div>
             </div>
 
             <div>
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Where the Virtues Go
+                Where the Qualities Go
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   This is the part the Tooth Fairy doesn't advertise. The collection is only half the job.
                 </p>
                 <p>
-                  The virtues extracted from children's teeth are quietly distributed back into
-                  the world — woven into moments when they're most needed.
-                  A firefighter who needs to stay calm in a dangerous moment.
-                  A shy kid trying to make a new friend.
-                  A parent who has run out of patience on a long afternoon.
+                  The qualities drawn from children's teeth are quietly sent back into the world —
+                  used to help fix the small problems that keep coming up. A firefighter who needs
+                  to stay calm in a dangerous moment. A shy kid finding the courage to try something
+                  new. A parent who has run out of patience on a long afternoon.
                 </p>
                 <p>
                   The Tooth Fairy doesn't make announcements about this. She doesn't take credit.
-                  She just works, night after night, keeping a balance the world quietly depends on.
+                  She just does the work, night after night, quietly fixing what the world
+                  keeps running short of.
                 </p>
                 <p>
-                  Your tooth is part of that. Whatever virtue was in it is out there now,
+                  Your tooth is part of that. Whatever quality was in it is out there now,
                   doing something useful. Helping someone. Being something good.
                 </p>
               </div>

@@ -29,7 +29,7 @@ const filmImages = [
   { src: filmScene1, alt: "Arlo and CeCe discover the Tooth Fairy's world in The Tooth Fairy's Magical Mission animated short film" },
   { src: filmScene2, alt: "The Tooth Fairy flying on a midnight journey — scene from The Tooth Fairy's Magical Mission children's animated film" },
   { src: filmScene3, alt: "A magical moment inside the Tooth Fairy's workshop — from The Tooth Fairy's Magical Mission animated film for kids" },
-  { src: workshopScene, alt: "Inside the Wiggly Tooth Workshop where lost teeth are sorted by virtue — scene from The Tooth Fairy's Magical Mission" },
+  { src: workshopScene, alt: "Inside the Wiggly Tooth Workshop where lost teeth are sorted by their good qualities — scene from The Tooth Fairy's Magical Mission" },
 ];
 
 const WhatsComingSection = () => {

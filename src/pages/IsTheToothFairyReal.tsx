@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "Does the Tooth Fairy exist in other countries too?",
     answer:
-      "Yes, though she goes by different names and traditions. In France she's La Petite Souris — a little mouse. In some parts of Asia, children throw their teeth onto the roof or under the floorboards. The Tooth Fairy's workshop has teeth catalogued from all over the world. The tradition is older and wider than most people realize.",
+      "Yes, though she goes by different names and traditions. In France she's La Petite Souris — a little mouse. In some parts of Asia, children throw their teeth onto the roof or under the floorboards. The Tooth Fairy's workshop has teeth from all over the world. The tradition is older and wider than most people realize.",
   },
   {
     question: "My parents say they put the coin there. Is that true?",
@@ -103,7 +103,7 @@ const IsTheToothFairyReal = () => {
                     "name": "Is the Tooth Fairy real?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Yes, the Tooth Fairy is real. She just does her work in ways most people don't see. Like many important things, she works quietly, at night, fixing small problems and keeping the world in balance. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it because every tooth holds memories and virtues you've grown while becoming yourself. You may never see her, but the clues are there. And that's exactly how she likes it."
+                      "text": "Yes, the Tooth Fairy is real. She just does her work in ways most people don't see. She works quietly, at night, drawing good qualities out of children's teeth and using them to help fix small problems in the world — helping someone find courage when they need it, or bringing patience to a moment that's running out. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it. The clues are there if you know where to look."
                     }
                   },
                   {
@@ -177,14 +177,14 @@ const IsTheToothFairyReal = () => {
               <p className="text-foreground text-2xl font-display font-bold mb-4">Yes.</p>
               <p className="text-foreground text-lg leading-relaxed">
                 The Tooth Fairy is real. She just does her work in ways most people don't see.
-                Like many important things, she works quietly, at night, fixing small problems
-                and keeping the world in balance.
+                She works quietly, at night, drawing good qualities out of teeth and using them
+                to help fix small problems in the world.
               </p>
               <p className="text-muted-foreground mt-4 leading-relaxed">
                 When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it
-                because every tooth holds memories and virtues you've grown while becoming yourself.
-                She uses those to help make the world a little better, then leaves something behind
-                as a thank-you. You may never see her. But the clues are there.
+                because every tooth holds good qualities you grew while becoming yourself —
+                bravery, kindness, creativity, patience. She uses those to help fix the world,
+                then leaves a thank-you behind. You may never see her. But the clues are there.
                 And that's exactly how she likes it.
               </p>
             </div>
