@@ -71,7 +71,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-starlight/80 mb-8 leading-relaxed font-body">
-            You know she takes the teeth. You know she leaves money. But very few people know what actually happens next. Follow Arlo and CeCe as they find out — an animated film, a children's book, and ToothSafe, all coming Summer 2026.
+            You know she takes the teeth. You know she leaves money. But very few people know what actually happens next. Follow Arlo and CeCe as they find out. An animated film, a children's book, and ToothSafe, all coming Summer 2026.
           </p>
 
           {/* Primary CTA */}

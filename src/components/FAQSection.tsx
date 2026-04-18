@@ -9,15 +9,15 @@ import { trackFAQOpen } from "@/lib/analytics";
 const faqs = [
   {
     question: "Why does the Tooth Fairy take my teeth?",
-    answer: "Every tooth you lose holds something special — a moment of bravery, a flash of kindness, a stretch of patience. The Tooth Fairy collects teeth because every tooth holds good qualities that grew during childhood. Bravery, kindness, creativity, patience. And those are exactly what the world needs.",
+    answer: "Every tooth you lose holds something special. A moment of bravery. A flash of kindness. A stretch of patience. The Tooth Fairy collects teeth because every tooth holds good qualities that grew during childhood. Bravery, kindness, creativity, patience. And those are exactly what the world needs.",
   },
   {
     question: "What does the Tooth Fairy do with my teeth?",
-    answer: "She takes them to her workshop — a large, careful place full of small tools and warm lamplight. There she draws the good quality out of each tooth and uses it to help fix small problems in the world. Your bravery might help a firefighter stay calm. Your kindness might reach a shy kid trying to make a new friend.",
+    answer: "She takes them to her workshop, a large, careful place full of small tools and warm lamplight. There she draws the good quality out of each tooth and uses it to help fix small problems in the world. Your bravery might help a firefighter stay calm. Your kindness might reach a shy kid trying to make a new friend.",
   },
   {
     question: "Why does the Tooth Fairy leave money?",
-    answer: "It's her thank-you. You grew something real — a good quality that took years. The money she leaves is how she says: I see what you grew. The world needed it. It isn't a payment. It's a thank-you.",
+    answer: "It's her thank-you. You grew something real, a good quality that took years. The money she leaves is how she says: I see what you grew. The world needed it. It isn't a payment. It's a thank-you.",
   },
   {
     question: "Why does the Tooth Fairy come at night?",
@@ -29,11 +29,11 @@ const faqs = [
   },
   {
     question: "Is the Tooth Fairy real?",
-    answer: "Yes. She just does her work in ways most people don't see. She works quietly, at night, drawing good qualities out of children's teeth and using them to help fix small problems in the world. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it. She leaves a thank-you behind. You may never see her — but the clues are there, if you know where to look.",
+    answer: "Yes. She just does her work in ways most people don't see. She works quietly, at night, drawing good qualities out of children's teeth and using them to help fix small problems in the world. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it. She leaves a thank-you behind. You may never see her, but the clues are there, if you know where to look.",
   },
   {
     question: "How many teeth does the Tooth Fairy have?",
-    answer: "Millions. The Tooth Fairy's workshop is full of them — sorted by quality, organized by year, grouped by where they came from. It looks a bit like a library, if libraries sparkled.",
+    answer: "Millions. The Tooth Fairy's workshop is full of them, sorted by quality, organized by year, grouped by where they came from. It looks a bit like a library, if libraries sparkled.",
   },
   {
     question: "What if I swallow my tooth?",
@@ -41,23 +41,23 @@ const faqs = [
   },
   {
     question: "Who are Arlo and CeCe?",
-    answer: "Arlo and CeCe are the two young characters at the heart of The Tooth Fairy's Magical Mission. They're curious, imaginative kids who find themselves caught up in the Tooth Fairy's world — discovering what really happens to lost teeth, why good qualities matter, and what goes on inside the workshop when nobody is watching. They're the kind of characters who ask the questions every kid wonders about, and aren't afraid to follow the answer wherever it leads.",
+    answer: "Arlo and CeCe are the two young characters at the heart of The Tooth Fairy's Magical Mission. They're curious, imaginative kids who find themselves caught up in the Tooth Fairy's world, discovering what really happens to lost teeth, why good qualities matter, and what goes on inside the workshop when nobody is watching. They're the kind of characters who ask the questions every kid wonders about, and aren't afraid to follow the answer wherever it leads.",
   },
   {
     question: "What is ToothSafe?",
-    answer: "ToothSafe is a beautifully designed keepsake box for lost teeth — created by the Wiggly Tooth Workshop so kids have a special, safe place to leave their tooth for the Tooth Fairy. It's designed to make the whole tooth fairy experience feel more magical and intentional. ToothSafe is currently in development and will be available for early access to Workshop members first.",
+    answer: "ToothSafe is a beautifully designed keepsake box for lost teeth, created by the Wiggly Tooth Workshop so kids have a special, safe place to leave their tooth for the Tooth Fairy. It's designed to make the whole tooth fairy experience feel more magical and intentional. ToothSafe is currently in development and will be available for early access to Workshop members first.",
   },
   {
     question: "What is the Wiggly Tooth Workshop?",
-    answer: "The Wiggly Tooth Workshop is the creative studio behind The Tooth Fairy's Magical Mission — an animated short film, children's book, and ToothSafe product all built around the same magical story world. The Workshop is dedicated to making stories and objects for kids that feel genuinely crafted, imaginative, and worth keeping. It's being developed in collaboration with Peter H. Reynolds and FableVision Studios.",
+    answer: "The Wiggly Tooth Workshop is the creative studio behind The Tooth Fairy's Magical Mission: an animated short film, children's book, and ToothSafe product all built around the same magical story world. The Workshop is dedicated to making stories and objects for kids that feel genuinely crafted, imaginative, and worth keeping. It's being developed in collaboration with Peter H. Reynolds and FableVision Studios.",
   },
   {
     question: "When does The Tooth Fairy's Magical Mission come out?",
-    answer: "The animated short film is in production and scheduled for Summer 2026. The children's book and ToothSafe product will follow. The best way to stay up to date — and get early access before anything goes public — is to join the Workshop mailing list at wigglytoothworkshop.com.",
+    answer: "The animated short film is in production and scheduled for Summer 2026. The children's book and ToothSafe product will follow. The best way to stay up to date and get early access before anything goes public is to join the Workshop mailing list at wigglytoothworkshop.com.",
   },
   {
     question: "Is there a free tooth fairy coloring page I can print?",
-    answer: "Yes! The Wiggly Tooth Workshop has a free printable tooth fairy coloring page available as a PDF download — no sign-up required. It's designed for kids ages 3–10 and features original artwork from the world of The Tooth Fairy's Magical Mission. You can download it at wigglytoothworkshop.com/coloring-page.",
+    answer: "Yes! The Wiggly Tooth Workshop has a free printable tooth fairy coloring page available as a PDF download. No sign-up required. It's designed for kids ages 3–10 and features original artwork from the world of The Tooth Fairy's Magical Mission. You can download it at wigglytoothworkshop.com/coloring-page.",
   },
 ];
 

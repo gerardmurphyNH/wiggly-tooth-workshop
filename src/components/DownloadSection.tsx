@@ -23,7 +23,7 @@ const DownloadSection = () => {
           </h2>
           <p className="text-muted-foreground mb-8">
             While you wait for the film and the book, here's something to color.
-            Free, fun, and straight from the workshop — a printable PDF for kids ages 3–10.
+            Free, fun, and straight from the workshop. A printable PDF for kids ages 3–10.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button variant="magical" size="lg" asChild>

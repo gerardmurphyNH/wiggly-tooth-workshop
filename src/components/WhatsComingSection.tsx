@@ -9,7 +9,7 @@ const cards = [
     icon: Film,
     title: "Animated Short Film",
     label: "Coming Summer 2026",
-    description: "Follow Arlo and CeCe as they find out what the Tooth Fairy really does with teeth — and why it matters more than anyone told them.",
+    description: "Follow Arlo and CeCe as they find out what the Tooth Fairy really does with teeth, and why it matters more than anyone told them.",
   },
   {
     icon: BookOpen,
@@ -27,9 +27,9 @@ const cards = [
 
 const filmImages = [
   { src: filmScene1, alt: "Arlo and CeCe discover the Tooth Fairy's world in The Tooth Fairy's Magical Mission animated short film" },
-  { src: filmScene2, alt: "The Tooth Fairy flying on a midnight journey — scene from The Tooth Fairy's Magical Mission children's animated film" },
-  { src: filmScene3, alt: "A magical moment inside the Tooth Fairy's workshop — from The Tooth Fairy's Magical Mission animated film for kids" },
-  { src: workshopScene, alt: "Inside the Wiggly Tooth Workshop where lost teeth are sorted by their good qualities — scene from The Tooth Fairy's Magical Mission" },
+  { src: filmScene2, alt: "The Tooth Fairy flying on a midnight journey, from The Tooth Fairy's Magical Mission children's animated film" },
+  { src: filmScene3, alt: "A magical moment inside the Tooth Fairy's workshop, from The Tooth Fairy's Magical Mission animated film for kids" },
+  { src: workshopScene, alt: "Inside the Wiggly Tooth Workshop where lost teeth are sorted by their good qualities, from The Tooth Fairy's Magical Mission" },
 ];
 
 const WhatsComingSection = () => {
@@ -41,7 +41,7 @@ const WhatsComingSection = () => {
             What's Coming
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A film, a book, and a keepsake — all telling the same story
+            A film, a book, and a keepsake. All telling the same story.
           </p>
         </div>
 

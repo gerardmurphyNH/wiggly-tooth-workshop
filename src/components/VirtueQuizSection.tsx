@@ -17,7 +17,7 @@ const virtues: Record<Virtue, VirtueResult> = {
   bravery: {
     title: "Bravery",
     icon: Shield,
-    description: "Your tooth holds bravery. The Tooth Fairy will use it to help someone face something scary — maybe today, maybe tomorrow.",
+    description: "Your tooth holds bravery. The Tooth Fairy will use it to help someone face something scary. Maybe today. Maybe tomorrow.",
     color: "from-primary to-accent",
   },
   kindness: {

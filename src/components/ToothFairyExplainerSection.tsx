@@ -4,19 +4,19 @@ import { ArrowRight } from "lucide-react";
 const explainerLinks = [
   {
     question: "What does the Tooth Fairy do with teeth?",
-    teaser: "She takes them to her workshop, draws out the good qualities inside — bravery, kindness, creativity, patience — and uses them to help fix small problems in the world.",
+    teaser: "She takes them to her workshop, draws out the good qualities inside (bravery, kindness, creativity, patience), and uses them to help fix small problems in the world.",
     to: "/what-does-the-tooth-fairy-do-with-teeth",
     label: "Read the full answer",
   },
   {
     question: "Why does the Tooth Fairy take teeth?",
-    teaser: "Because every tooth holds a good quality that grew in you — bravery, kindness, creativity, patience. Those don't disappear when the tooth falls out. The Tooth Fairy takes them to where they're needed.",
+    teaser: "Because every tooth holds a good quality that grew in you: bravery, kindness, creativity, patience. Those don't disappear when the tooth falls out. The Tooth Fairy takes them to where they're needed.",
     to: "/why-does-the-tooth-fairy-take-teeth",
     label: "Read the full answer",
   },
   {
     question: "Is the Tooth Fairy real?",
-    teaser: "Yes. She just does her work in ways most people don't see. The clues are there — if you know where to look.",
+    teaser: "Yes. She just does her work in ways most people don't see. The clues are there, if you know where to look.",
     to: "/is-the-tooth-fairy-real",
     label: "Read the full answer",
   },
@@ -41,8 +41,8 @@ const ToothFairyExplainerSection = () => {
           </h2>
           <p className="text-foreground max-w-2xl mx-auto leading-relaxed">
             Most people know the Tooth Fairy takes teeth and leaves money behind. But very few
-            know why. Every tooth holds good qualities — bravery, kindness, creativity,
-            patience — that grew in you while it was there. She draws those out at her workshop
+            know why. Every tooth holds good qualities (bravery, kindness, creativity,
+            patience) that grew in you while it was there. She draws those out at her workshop
             and uses them to help fix small problems in the world. The money she leaves is her
             thank-you.
           </p>

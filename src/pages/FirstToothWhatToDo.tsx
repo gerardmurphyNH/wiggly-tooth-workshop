@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 
 const steps = [
   {
-    title: "Stay calm — even if there's a little blood",
+    title: "Stay calm, even if there's a little blood",
     body: "A tiny bit of blood is completely normal when a baby tooth comes out. Rinse with cold water and press a clean cloth gently against the spot for a minute or two. It stops quickly.",
   },
   {
@@ -21,7 +21,7 @@ const steps = [
   },
   {
     title: "Let the child decide how much they want to know",
-    body: "Some children want to know everything — what the Tooth Fairy does, why she comes, where the tooth goes. Others just want to know the coin will be there in the morning. Both are fine. Follow their lead.",
+    body: "Some children want to know everything: what the Tooth Fairy does, why she comes, where the tooth goes. Others just want to know the coin will be there in the morning. Both are fine. Follow their lead.",
   },
   {
     title: "Make something of the moment",
@@ -29,7 +29,7 @@ const steps = [
   },
   {
     title: "Be ready for the morning-after questions",
-    body: "Did she come? How did she get in? Why did she take it? These are good questions. The answers — the real ones — are on the pages below.",
+    body: "Did she come? How did she get in? Why did she take it? These are good questions. The real answers are on the pages below.",
   },
 ];
 
@@ -37,32 +37,32 @@ const faqs = [
   {
     question: "What age do children usually lose their first tooth?",
     answer:
-      "Most children lose their first tooth between ages 5 and 7, though anywhere from 4 to 8 is completely normal. The bottom front teeth (lower central incisors) usually come out first — the same ones that came in first when they were a baby.",
+      "Most children lose their first tooth between ages 5 and 7, though anywhere from 4 to 8 is completely normal. The bottom front teeth (lower central incisors) usually come out first, the same ones that came in first when they were a baby.",
   },
   {
     question: "Should I pull out a loose tooth or wait?",
     answer:
-      "It's almost always better to wait. A tooth will come out when it's ready — and a tooth that comes out on its own is much less uncomfortable than one that's pulled too early. If it's very loose and hanging by a thread, a gentle wiggle is fine. If it's just loose, let it wiggle itself out.",
+      "It's almost always better to wait. A tooth will come out when it's ready, and a tooth that comes out on its own is much less uncomfortable than one that's pulled too early. If it's very loose and hanging by a thread, a gentle wiggle is fine. If it's just loose, let it wiggle itself out.",
   },
   {
     question: "What if my child swallows their tooth by accident?",
     answer:
-      "It happens, and it's nothing to worry about medically. The Tooth Fairy also understands — just leave a note explaining what happened. She's been doing this long enough to have encountered every possible situation, and she appreciates the honesty.",
+      "It happens, and it's nothing to worry about medically. The Tooth Fairy also understands. Just leave a note explaining what happened. She's been doing this long enough to have encountered every possible situation, and she appreciates the honesty.",
   },
   {
     question: "How much does the Tooth Fairy leave?",
     answer:
-      "This varies a lot between families. The average in the United States is around $4–5 per tooth, though it ranges from coins to $20 for a first tooth. There's no official amount — the Tooth Fairy adjusts for circumstances. What matters is that it feels like a proper thank-you.",
+      "This varies a lot between families. The average in the United States is around $4–5 per tooth, though it ranges from coins to $20 for a first tooth. There's no official amount; the Tooth Fairy adjusts for circumstances. What matters is that it feels like a proper thank-you.",
   },
   {
     question: "What if the Tooth Fairy doesn't come the first night?",
     answer:
-      "It happens. The Tooth Fairy visits millions of children — sometimes she runs a little behind schedule. If the tooth is still there in the morning, just reassure your child that the Fairy will come the next night. She always finds a way.",
+      "It happens. The Tooth Fairy visits millions of children. Sometimes she runs a little behind schedule. If the tooth is still there in the morning, just reassure your child that the Fairy will come the next night. She always finds a way.",
   },
   {
     question: "Should I keep my child's baby teeth?",
     answer:
-      "Many families do. Some keep all of them, some keep just the first. Baby teeth are a physical record of childhood — small, surprising, and gone before you know it. If you want to keep them, the Tooth Fairy understands. The qualities inside a kept tooth stay with the family.",
+      "Many families do. Some keep all of them, some keep just the first. Baby teeth are a physical record of childhood: small, surprising, and gone before you know it. If you want to keep them, the Tooth Fairy understands. The qualities inside a kept tooth stay with the family.",
   },
 ];
 
@@ -73,15 +73,15 @@ const FirstToothWhatToDo = () => {
         <title>Your Child's First Lost Tooth: What To Do | Wiggly Tooth Workshop</title>
         <meta
           name="description"
-          content="Your child just lost their first tooth. Here's what to do next — from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow."
+          content="Your child just lost their first tooth. Here's what to do next, from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow."
         />
         <link rel="canonical" href="https://wigglytoothworkshop.com/first-tooth-what-to-do" />
         <meta property="og:title" content="Your Child's First Lost Tooth: What To Do" />
-        <meta property="og:description" content="Your child just lost their first tooth. Here's what to do next — from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow." />
+        <meta property="og:description" content="Your child just lost their first tooth. Here's what to do next, from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow." />
         <meta property="og:url" content="https://wigglytoothworkshop.com/first-tooth-what-to-do" />
         <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
         <meta name="twitter:title" content="Your Child's First Lost Tooth: What To Do" />
-        <meta name="twitter:description" content="Your child just lost their first tooth. Here's what to do next — from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow." />
+        <meta name="twitter:description" content="Your child just lost their first tooth. Here's what to do next, from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow." />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
@@ -106,7 +106,7 @@ const FirstToothWhatToDo = () => {
               {
                 "@type": "Article",
                 "headline": "Your Child's First Lost Tooth: What To Do",
-                "description": "Your child just lost their first tooth. Here's what to do next — from keeping the tooth safe for the Tooth Fairy, to answering the questions that will definitely follow.",
+                "description": "Your child just lost their first tooth. Here's what to do next, from keeping the tooth safe for the Tooth Fairy, to answering the questions that will definitely follow.",
                 "url": "https://wigglytoothworkshop.com/first-tooth-what-to-do",
                 "publisher": {
                   "@type": "Organization",
@@ -131,7 +131,7 @@ const FirstToothWhatToDo = () => {
                     "name": "What age do children usually lose their first tooth?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Most children lose their first tooth between ages 5 and 7, though anywhere from 4 to 8 is completely normal. The bottom front teeth usually come out first — the same ones that came in first as a baby."
+                      "text": "Most children lose their first tooth between ages 5 and 7, though anywhere from 4 to 8 is completely normal. The bottom front teeth usually come out first, the same ones that came in first as a baby."
                     }
                   },
                   {
@@ -139,7 +139,7 @@ const FirstToothWhatToDo = () => {
                     "name": "Should I pull out a loose tooth or wait?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "It's almost always better to wait. A tooth will come out when it's ready — and a tooth that comes out on its own is much less uncomfortable than one that's pulled too early. If it's very loose and hanging by a thread, a gentle wiggle is fine."
+                      "text": "It's almost always better to wait. A tooth will come out when it's ready, and a tooth that comes out on its own is much less uncomfortable than one that's pulled too early. If it's very loose and hanging by a thread, a gentle wiggle is fine."
                     }
                   },
                   {
@@ -155,7 +155,7 @@ const FirstToothWhatToDo = () => {
                     "name": "What if the Tooth Fairy doesn't come the first night?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "It happens. The Tooth Fairy visits millions of children — sometimes she runs a little behind schedule. If the tooth is still there in the morning, reassure your child that the Fairy will come the next night. She always finds a way."
+                      "text": "It happens. The Tooth Fairy visits millions of children. Sometimes she runs a little behind schedule. If the tooth is still there in the morning, reassure your child that the Fairy will come the next night. She always finds a way."
                     }
                   }
                 ]
@@ -194,12 +194,12 @@ const FirstToothWhatToDo = () => {
               The First One
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-starlight mb-6 leading-tight">
-              Your Child's First Lost Tooth —<br />
+              Your Child's First Lost Tooth<br />
               <span className="text-primary">What Happens Next</span>
             </h1>
             <p className="text-lg text-starlight/80 mb-8 leading-relaxed max-w-2xl mx-auto">
               It's out. They're grinning with a gap in their smile.
-              Here's what to do next — and what to tell them when the questions start.
+              Here's what to do next, and what to tell them when the questions start.
             </p>
           </div>
         </section>
@@ -212,7 +212,7 @@ const FirstToothWhatToDo = () => {
                 What To Do Right Now
               </span>
               <p className="text-foreground text-lg leading-relaxed">
-                Keep the tooth safe. Put it somewhere the Tooth Fairy can find it —
+                Keep the tooth safe. Put it somewhere the Tooth Fairy can find it:
                 under the pillow, in a small pouch, or in a special tooth box near the bed.
                 Then tell your child the truth: that tooth held something real,
                 and the Tooth Fairy is coming to collect it tonight.
@@ -260,14 +260,14 @@ const FirstToothWhatToDo = () => {
               </p>
               <p>
                 The Tooth Fairy takes every tooth to her workshop. Inside each tooth
-                is a good quality — bravery, kindness, creativity, or patience — that grew
+                is a good quality (bravery, kindness, creativity, or patience) that grew
                 during the years the tooth was there. She carefully lifts that quality out
                 and uses it to help fix small problems in the world: helping someone find
                 courage, or bringing patience to a difficult moment.
               </p>
               <p>
                 Then she leaves a coin as a thank-you. Because what she took was
-                genuinely valuable — and she knows it.
+                genuinely valuable, and she knows it.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -360,7 +360,7 @@ const FirstToothWhatToDo = () => {
             </h2>
             <p className="text-starlight/70 mb-8 leading-relaxed">
               <em>The Tooth Fairy's Magical Mission</em> is an animated short film and children's
-              book that answers every question your child will ever ask about the Tooth Fairy —
+              book that answers every question your child will ever ask about the Tooth Fairy,
               in the most magical way possible. Coming Summer 2026.
             </p>
             <Button variant="hero" size="lg" asChild>

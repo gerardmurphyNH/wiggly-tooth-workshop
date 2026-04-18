@@ -14,12 +14,12 @@ const faqs = [
   {
     question: "Has anyone ever seen the Tooth Fairy?",
     answer:
-      "Very few people. The Tooth Fairy works in the quiet hours, when most children are deeply asleep. Some have caught a glimpse — a movement at the edge of a dream, a small light near the window. But she's fast, and she's careful, and she prefers it that way.",
+      "Very few people. The Tooth Fairy works in the quiet hours, when most children are deeply asleep. Some have caught a glimpse: a movement at the edge of a dream, a small light near the window. But she's fast, and she's careful, and she prefers it that way.",
   },
   {
     question: "How does she get in without waking anyone up?",
     answer:
-      "Fairies are very small — about the size of your hand — and they can slip through the tiniest spaces: a crack in a window, a gap under a door, even the space between moonbeams. Your house is never as sealed as you think.",
+      "Fairies are very small, about the size of your hand, and they can slip through the tiniest spaces: a crack in a window, a gap under a door, even the space between moonbeams. Your house is never as sealed as you think.",
   },
   {
     question: "If she's real, why doesn't she just show herself?",
@@ -29,17 +29,17 @@ const faqs = [
   {
     question: "What if I stay up and wait for her?",
     answer:
-      "She knows. She waits. The Tooth Fairy is patient — she has been doing this for centuries. She'll come when the time is right. Most children who try to stay up fall asleep eventually. She counts on it.",
+      "She knows. She waits. The Tooth Fairy is patient; she has been doing this for centuries. She'll come when the time is right. Most children who try to stay up fall asleep eventually. She counts on it.",
   },
   {
     question: "Does the Tooth Fairy exist in other countries too?",
     answer:
-      "Yes, though she goes by different names and traditions. In France she's La Petite Souris — a little mouse. In some parts of Asia, children throw their teeth onto the roof or under the floorboards. The Tooth Fairy's workshop has teeth from all over the world. The tradition is older and wider than most people realize.",
+      "Yes, though she goes by different names and traditions. In France she's La Petite Souris, a little mouse. In some parts of Asia, children throw their teeth onto the roof or under the floorboards. The Tooth Fairy's workshop has teeth from all over the world. The tradition is older and wider than most people realize.",
   },
   {
     question: "My parents say they put the coin there. Is that true?",
     answer:
-      "Parents help. They always have. The Tooth Fairy works in ways that are hard to do alone — especially in houses where she can't always make it on the right night. Parents are her helpers. The coin still means the same thing.",
+      "Parents help. They always have. The Tooth Fairy works in ways that are hard to do alone, especially in houses where she can't always make it on the right night. Parents are her helpers. The coin still means the same thing.",
   },
 ];
 
@@ -50,15 +50,15 @@ const IsTheToothFairyReal = () => {
         <title>Is the Tooth Fairy Real? | Wiggly Tooth Workshop</title>
         <meta
           name="description"
-          content="Is the Tooth Fairy real? Yes. She just does her work in ways most people don't see. Here's the honest answer — and why the mystery is part of the magic."
+          content="Is the Tooth Fairy real? Yes. She just does her work in ways most people don't see. Here's the honest answer, and why the mystery is part of the magic."
         />
         <link rel="canonical" href="https://wigglytoothworkshop.com/is-the-tooth-fairy-real" />
         <meta property="og:title" content="Is the Tooth Fairy Real?" />
-        <meta property="og:description" content="Is the Tooth Fairy real? Yes. She just does her work in ways most people don't see. Like many important things, she works quietly — and the clues are there if you know where to look." />
+        <meta property="og:description" content="Is the Tooth Fairy real? Yes. She just does her work in ways most people don't see. Like many important things, she works quietly. The clues are there if you know where to look." />
         <meta property="og:url" content="https://wigglytoothworkshop.com/is-the-tooth-fairy-real" />
         <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
         <meta name="twitter:title" content="Is the Tooth Fairy Real?" />
-        <meta name="twitter:description" content="Is the Tooth Fairy real? Yes. She just does her work in ways most people don't see. Like many important things, she works quietly — and the clues are there if you know where to look." />
+        <meta name="twitter:description" content="Is the Tooth Fairy real? Yes. She just does her work in ways most people don't see. Like many important things, she works quietly. The clues are there if you know where to look." />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
@@ -83,7 +83,7 @@ const IsTheToothFairyReal = () => {
               {
                 "@type": "Article",
                 "headline": "Is the Tooth Fairy Real?",
-                "description": "Yes. The Tooth Fairy is real. She just does her work in ways most people don't see. Like many important things, she works quietly — and the clues are there if you know where to look.",
+                "description": "Yes. The Tooth Fairy is real. She just does her work in ways most people don't see. Like many important things, she works quietly. The clues are there if you know where to look.",
                 "url": "https://wigglytoothworkshop.com/is-the-tooth-fairy-real",
                 "publisher": {
                   "@type": "Organization",
@@ -103,7 +103,7 @@ const IsTheToothFairyReal = () => {
                     "name": "Is the Tooth Fairy real?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Yes, the Tooth Fairy is real. She just does her work in ways most people don't see. She works quietly, at night, drawing good qualities out of children's teeth and using them to help fix small problems in the world — helping someone find courage when they need it, or bringing patience to a moment that's running out. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it. The clues are there if you know where to look."
+                      "text": "Yes, the Tooth Fairy is real. She just does her work in ways most people don't see. She works quietly, at night, drawing good qualities out of children's teeth and using them to help fix small problems in the world: helping someone find courage when they need it, or bringing patience to a moment that's running out. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it. The clues are there if you know where to look."
                     }
                   },
                   {
@@ -111,7 +111,7 @@ const IsTheToothFairyReal = () => {
                     "name": "Has anyone ever seen the Tooth Fairy?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Very few people. The Tooth Fairy works in the quiet hours, when most children are deeply asleep. Some have caught a glimpse — a movement at the edge of a dream, a small light near the window. But she's fast, and she's careful, and she prefers it that way."
+                      "text": "Very few people. The Tooth Fairy works in the quiet hours, when most children are deeply asleep. Some have caught a glimpse: a movement at the edge of a dream, a small light near the window. But she's fast, and she's careful, and she prefers it that way."
                     }
                   },
                   {
@@ -182,7 +182,7 @@ const IsTheToothFairyReal = () => {
               </p>
               <p className="text-muted-foreground mt-4 leading-relaxed">
                 When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it
-                because every tooth holds good qualities you grew while becoming yourself —
+                because every tooth holds good qualities you grew while becoming yourself:
                 bravery, kindness, creativity, patience. She uses those to help fix the world,
                 then leaves a thank-you behind. You may never see her. But the clues are there.
                 And that's exactly how she likes it.
@@ -205,7 +205,7 @@ const IsTheToothFairyReal = () => {
                   the tooth disappears, and something appears in its place.
                 </p>
                 <p>
-                  That exchange happens on schedule — usually within a night or two of a tooth
+                  That exchange happens on schedule, usually within a night or two of a tooth
                   being lost. It happens in houses all over the world, in different countries,
                   different climates, different time zones. Think about how many children lose
                   teeth every single night. She finds every one.
@@ -223,12 +223,12 @@ const IsTheToothFairyReal = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  The Tooth Fairy is small — about the size of your hand — and she works in
+                  The Tooth Fairy is small, about the size of your hand, and she works in
                   the quiet hours of the night, when most people are deeply asleep.
                   She's very good at her job. She has had centuries of practice.
                 </p>
                 <p>
-                  She can slip through the tiniest spaces — a crack in a window frame,
+                  She can slip through the tiniest spaces: a crack in a window frame,
                   a gap under a door. She doesn't need much room.
                   And she moves quietly enough that even light sleepers rarely wake up.
                 </p>
@@ -250,7 +250,7 @@ const IsTheToothFairyReal = () => {
                   You just need to pay attention to what she leaves behind.
                 </p>
                 <p>
-                  The coin is the obvious one. But there's also the absence of the tooth —
+                  The coin is the obvious one. But there's also the absence of the tooth,
                   the fact that it went somewhere specific, not just disappeared.
                   There's the timing, which is never random. There's the fact that
                   children all over the world have been part of this same exchange
@@ -275,7 +275,7 @@ const IsTheToothFairyReal = () => {
                 <p>
                   You don't have to see the Tooth Fairy to know she's real. She works through
                   the people who love you, through traditions older than anyone can remember,
-                  through the fact that someone always notices when you've lost something —
+                  through the fact that someone always notices when you've lost something,
                   and always does something about it.
                 </p>
                 <p>

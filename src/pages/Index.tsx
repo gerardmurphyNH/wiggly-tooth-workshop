@@ -9,6 +9,7 @@ import DownloadSection from "@/components/DownloadSection";
 import SignupSection from "@/components/SignupSection";
 import Footer from "@/components/Footer";
 import ToothFairyExplainerSection from "@/components/ToothFairyExplainerSection";
+import TeacherResourcesCallout from "@/components/TeacherResourcesCallout";
 
 const Index = () => {
   return (
@@ -31,9 +32,10 @@ const Index = () => {
         <CredibilitySection />
         <ToothSafeSection />
         <VirtueQuizSection />
+        <DownloadSection />
+        <TeacherResourcesCallout />
         <ToothFairyExplainerSection />
         <FAQSection />
-        <DownloadSection />
         <SignupSection />
         <Footer />
       </main>

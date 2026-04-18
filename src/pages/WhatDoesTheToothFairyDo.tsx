@@ -14,12 +14,12 @@ const faqs = [
   {
     question: "Does the Tooth Fairy keep all the teeth forever?",
     answer:
-      "Not exactly. Once the quality is drawn out, the tooth stays in the workshop — carefully kept as a record. Some say there are rows and rows of tiny labeled jars, one for each child, each one marked with a name and a year.",
+      "Not exactly. Once the quality is drawn out, the tooth stays in the workshop, carefully kept as a record. Some say there are rows and rows of tiny labeled jars, one for each child, each one marked with a name and a year.",
   },
   {
     question: "What happens if a tooth has more than one quality in it?",
     answer:
-      "That happens more often than you'd think. A tooth that grew in while you were learning to ride a bike might hold both bravery and patience. The Tooth Fairy sorts these carefully — she has been doing this for a very long time.",
+      "That happens more often than you'd think. A tooth that grew in while you were learning to ride a bike might hold both bravery and patience. The Tooth Fairy sorts these carefully; she has been doing this for a very long time.",
   },
   {
     question: "Can I visit the Tooth Fairy's workshop?",
@@ -29,12 +29,12 @@ const faqs = [
   {
     question: "How does the Tooth Fairy know whose tooth is whose?",
     answer:
-      "Teeth carry a kind of fingerprint — not a visible one, but something the Tooth Fairy can sense. Every tooth knows where it came from.",
+      "Teeth carry a kind of fingerprint, not a visible one, but something the Tooth Fairy can sense. Every tooth knows where it came from.",
   },
   {
     question: "What if my tooth has a cavity?",
     answer:
-      "The quality is in the tooth itself, not in its condition. A tooth with a cavity still holds something real. The Tooth Fairy doesn't judge — she just collects.",
+      "The quality is in the tooth itself, not in its condition. A tooth with a cavity still holds something real. The Tooth Fairy doesn't judge. She just collects.",
   },
   {
     question: "What are the four good qualities?",
@@ -50,15 +50,15 @@ const WhatDoesTheToothFairyDo = () => {
         <title>What Does the Tooth Fairy Do With Teeth? | Wiggly Tooth Workshop</title>
         <meta
           name="description"
-          content="What does the Tooth Fairy do with all those teeth? She takes them to her workshop, draws out the good qualities inside — bravery, kindness, creativity, patience — and uses them to quietly fix the world."
+          content="What does the Tooth Fairy do with all those teeth? She takes them to her workshop, draws out the good qualities inside (bravery, kindness, creativity, patience) and uses them to quietly fix the world."
         />
         <link rel="canonical" href="https://wigglytoothworkshop.com/what-does-the-tooth-fairy-do-with-teeth" />
         <meta property="og:title" content="What Does the Tooth Fairy Do With Teeth?" />
-        <meta property="og:description" content="The Tooth Fairy takes every lost tooth to her workshop, where she draws out the good qualities inside — bravery, kindness, creativity, patience — and uses them to quietly fix the world." />
+        <meta property="og:description" content="The Tooth Fairy takes every lost tooth to her workshop, where she draws out the good qualities inside (bravery, kindness, creativity, patience) and uses them to quietly fix the world." />
         <meta property="og:url" content="https://wigglytoothworkshop.com/what-does-the-tooth-fairy-do-with-teeth" />
         <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
         <meta name="twitter:title" content="What Does the Tooth Fairy Do With Teeth?" />
-        <meta name="twitter:description" content="The Tooth Fairy takes every lost tooth to her workshop, where she draws out the good qualities inside — bravery, kindness, creativity, patience — and uses them to quietly fix the world." />
+        <meta name="twitter:description" content="The Tooth Fairy takes every lost tooth to her workshop, where she draws out the good qualities inside (bravery, kindness, creativity, patience) and uses them to quietly fix the world." />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
@@ -83,7 +83,7 @@ const WhatDoesTheToothFairyDo = () => {
               {
                 "@type": "Article",
                 "headline": "What Does the Tooth Fairy Do With Teeth?",
-                "description": "The Tooth Fairy takes every lost tooth to her workshop, where she carefully draws out the good qualities inside — bravery, kindness, creativity, patience — and uses them to quietly fix the world.",
+                "description": "The Tooth Fairy takes every lost tooth to her workshop, where she carefully draws out the good qualities inside (bravery, kindness, creativity, patience) and uses them to quietly fix the world.",
                 "url": "https://wigglytoothworkshop.com/what-does-the-tooth-fairy-do-with-teeth",
                 "publisher": {
                   "@type": "Organization",
@@ -103,7 +103,7 @@ const WhatDoesTheToothFairyDo = () => {
                     "name": "What does the Tooth Fairy do with all the teeth she collects?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "The Tooth Fairy takes every tooth to her workshop, where she carefully draws out the good quality inside — bravery, kindness, creativity, or patience. She uses these qualities to help fix small problems in the world: helping someone find courage, bringing patience to a difficult moment, or lighting the way for someone who needs kindness."
+                      "text": "The Tooth Fairy takes every tooth to her workshop, where she carefully draws out the good quality inside: bravery, kindness, creativity, or patience. She uses these qualities to help fix small problems in the world: helping someone find courage, bringing patience to a difficult moment, or lighting the way for someone who needs kindness."
                     }
                   },
                   {
@@ -111,7 +111,7 @@ const WhatDoesTheToothFairyDo = () => {
                     "name": "Does the Tooth Fairy keep all the teeth forever?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Not exactly. The teeth are processed in the workshop — the quality is carefully drawn out, and then the tooth becomes part of the record. Some say the workshop has rows and rows of tiny jars, each one labeled with a child's name and the year."
+                      "text": "Not exactly. The teeth are processed in the workshop; the quality is carefully drawn out, and then the tooth becomes part of the record. Some say the workshop has rows and rows of tiny jars, each one labeled with a child's name and the year."
                     }
                   },
                   {
@@ -177,7 +177,7 @@ const WhatDoesTheToothFairyDo = () => {
               <p className="text-foreground text-lg leading-relaxed">
                 The Tooth Fairy takes every lost tooth to her workshop, where she carefully draws out
                 the <strong>good quality</strong> hiding inside. A good quality is something you grew
-                while your tooth was growing — bravery, or kindness, or creativity, or patience.
+                while your tooth was growing: bravery, or kindness, or creativity, or patience.
                 She draws those out, one by one, and uses them to help fix small problems in the world.
               </p>
               <p className="text-muted-foreground mt-4 leading-relaxed">
@@ -199,7 +199,7 @@ const WhatDoesTheToothFairyDo = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  The Tooth Fairy's workshop is enormous — much bigger than you'd expect from someone
+                  The Tooth Fairy's workshop is enormous, much bigger than you'd expect from someone
                   so small. It's built into the side of a hill that exists somewhere between the waking
                   world and the dreaming one, in a place where starlight falls at a slightly different
                   angle than anywhere else.
@@ -229,7 +229,7 @@ const WhatDoesTheToothFairyDo = () => {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Every tooth you've ever grown holds something more than calcium and enamel.
-                  It holds <em>time</em>. Each tooth was growing inside you while you were becoming yourself —
+                  It holds <em>time</em>. Each tooth was growing inside you while you were becoming yourself,
                   learning to walk, learning to share, learning to be brave when something was scary.
                 </p>
                 <p>
@@ -252,7 +252,7 @@ const WhatDoesTheToothFairyDo = () => {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   The work is delicate. The Tooth Fairy uses tools that look like something from a
-                  watchmaker's bench — small, precise, each one made for a single job. She works
+                  watchmaker's bench: small, precise, each one made for a single job. She works
                   under a lamp that casts a warm gold light, bending close over each tooth.
                   When a quality comes out it looks a bit like a spark: small, warm, and very
                   much alive.
@@ -260,7 +260,7 @@ const WhatDoesTheToothFairyDo = () => {
                 <p>
                   Once drawn out, each quality is carefully labeled and stored in its own jar.
                   Bravery in one. Kindness in another. Creativity in a third. Patience in the
-                  fourth — the jar that always takes the longest to fill.
+                  fourth, the jar that always takes the longest to fill.
                 </p>
                 <p>
                   The qualities don't expire. They don't go stale. They wait on the shelf until
@@ -278,7 +278,7 @@ const WhatDoesTheToothFairyDo = () => {
                   This is the part the Tooth Fairy doesn't advertise. The collection is only half the job.
                 </p>
                 <p>
-                  The qualities drawn from children's teeth are quietly sent back into the world —
+                  The qualities drawn from children's teeth are quietly sent back into the world,
                   used to help fix the small problems that keep coming up. A firefighter who needs
                   to stay calm in a dangerous moment. A shy kid finding the courage to try something
                   new. A parent who has run out of patience on a long afternoon.
@@ -301,14 +301,14 @@ const WhatDoesTheToothFairyDo = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  If you've just lost a tooth and you're wondering what happens to it now —
+                  If you've just lost a tooth and you're wondering what happens to it now,
                   this is what happens. The Tooth Fairy takes it somewhere safe. She takes care
                   of it. She uses what's inside it for something important.
                 </p>
                 <p>
                   You don't need to worry about your tooth. It's in good hands.
                   And the coin under your pillow? That's her way of saying thank you for
-                  something real — something you grew yourself, that turned out to be
+                  something real, something you grew yourself, that turned out to be
                   exactly what the world needed.
                 </p>
               </div>

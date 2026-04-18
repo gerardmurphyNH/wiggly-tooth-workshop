@@ -121,6 +121,71 @@ export const trackColoringPageDownload = (): void => {
 };
 
 // ============================================
+// TEACHER RESOURCES DOWNLOADS
+// ============================================
+export const trackTeacherWorksheetDownload = (): void => {
+  trackEvent("file_download", {
+    event_category: "conversion",
+    event_label: "teacher_worksheet",
+    file_name: "tooth-fairy-worksheet.pdf",
+    file_extension: "pdf",
+  });
+  trackEvent("teacher_resources_worksheet_download", {
+    event_category: "conversion",
+  });
+};
+
+export const trackTeacherGuideDownload = (): void => {
+  trackEvent("file_download", {
+    event_category: "conversion",
+    event_label: "teacher_guide",
+    file_name: "tooth-fairy-teacher-guide.pdf",
+    file_extension: "pdf",
+  });
+  trackEvent("teacher_resources_guide_download", {
+    event_category: "conversion",
+  });
+};
+
+export const trackTeacherColoringDownload = (): void => {
+  trackEvent("file_download", {
+    event_category: "conversion",
+    event_label: "teacher_coloring",
+    file_name: "tooth-fairy-coloring-page.pdf",
+    file_extension: "pdf",
+  });
+  trackEvent("teacher_resources_coloring_download", {
+    event_category: "conversion",
+  });
+};
+
+export const trackTeacherBundleDownload = (): void => {
+  trackEvent("file_download", {
+    event_category: "conversion",
+    event_label: "teacher_bundle",
+    file_name: "tooth-fairy-activity-bundle.zip",
+    file_extension: "zip",
+  });
+  trackEvent("teacher_resources_bundle_download", {
+    event_category: "conversion",
+  });
+};
+
+export const trackTeacherSignupSubmit = (): void => {
+  trackEvent("teacher_resources_signup_submit", {
+    event_category: "conversion",
+    form_name: "teacher_resources_signup",
+  });
+};
+
+export const trackTeacherResourcesPageClick = (location: string): void => {
+  trackEvent("teacher_resources_page_click", {
+    event_category: "engagement",
+    click_location: location,
+  });
+};
+
+// ============================================
 // SOCIAL FOLLOW TRACKING
 // ============================================
 export const trackSocialFollow = (platform: string, location: string): void => {

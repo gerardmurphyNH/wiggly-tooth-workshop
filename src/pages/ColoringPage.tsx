@@ -12,7 +12,7 @@ const ColoringPage = () => {
         <title>Free Tooth Fairy Coloring Page | Wiggly Tooth Workshop</title>
         <meta
           name="description"
-          content="Download a free tooth fairy coloring page for kids — a printable PDF straight from the Wiggly Tooth Workshop. Perfect for ages 3–10. Print, color, and keep the magic alive."
+          content="Download a free tooth fairy coloring page for kids: a printable PDF straight from the Wiggly Tooth Workshop. Perfect for ages 3–10. Print, color, and keep the magic alive."
         />
         <link rel="canonical" href="https://wigglytoothworkshop.com/coloring-page" />
         <meta property="og:title" content="Free Tooth Fairy Coloring Page | Wiggly Tooth Workshop" />
@@ -100,7 +100,7 @@ const ColoringPage = () => {
               <span className="text-primary">Coloring Page</span>
             </h1>
             <p className="text-lg text-starlight/80 mb-10 leading-relaxed">
-              A printable tooth fairy coloring page for kids — straight from the Wiggly Tooth Workshop.
+              A printable tooth fairy coloring page for kids, straight from the Wiggly Tooth Workshop.
               Print it, color it, and keep the magic alive while you wait for the film.
             </p>
             <Button variant="hero" size="xl" asChild>
@@ -128,13 +128,13 @@ const ColoringPage = () => {
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 This free tooth fairy coloring page is designed for children ages 3–10 and
-                features original artwork from the world of <em>The Tooth Fairy's Magical Mission</em> —
+                features original artwork from the world of <em>The Tooth Fairy's Magical Mission</em>,
                 an animated short film and children's book in development from the Wiggly Tooth Workshop.
               </p>
               <p>
                 The coloring page depicts the Tooth Fairy at work in her workshop, surrounded by
                 tiny teeth and the warm glow of fairy magic. It's a fun, imaginative activity
-                for kids who love the tooth fairy — and a gentle introduction to the story world
+                for kids who love the tooth fairy, and a gentle introduction to the story world
                 of Arlo, CeCe, and the Tooth Fairy's Magical Mission.
               </p>
             </div>
@@ -147,7 +147,7 @@ const ColoringPage = () => {
                 "Click the download button above to save the PDF to your device.",
                 "Open the PDF in any PDF viewer (Adobe Acrobat, Preview, or your browser).",
                 "Print on standard letter-size paper (8.5\" × 11\") or A4.",
-                "Use crayons, colored pencils, or markers — whatever you love most.",
+                "Use crayons, colored pencils, or markers. Whatever you love most.",
                 "Share your finished artwork with us on Instagram @wigglytoothworkshop!",
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -170,7 +170,7 @@ const ColoringPage = () => {
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
               The coloring page is just the beginning. <em>The Tooth Fairy's Magical Mission</em> is
-              an animated short film, children's book, and ToothSafe product for kids and families —
+              an animated short film, children's book, and ToothSafe product for kids and families,
               all coming from the Wiggly Tooth Workshop. Join the Workshop to get early access and
               behind-the-scenes updates.
             </p>

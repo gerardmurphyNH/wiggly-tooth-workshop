@@ -17,22 +17,22 @@ const categories = [
       {
         question: "Why does the Tooth Fairy take my teeth?",
         answer:
-          "Every tooth you lose holds something special — a memory, a moment of bravery, a flash of kindness. The Tooth Fairy collects these tiny treasures because they contain the qualities of childhood: bravery, kindness, creativity, and patience. And those qualities are exactly what the world needs.",
+          "Every tooth you lose holds something special: a memory, a moment of bravery, a flash of kindness. The Tooth Fairy collects these tiny treasures because they contain the qualities of childhood: bravery, kindness, creativity, and patience. And those qualities are exactly what the world needs.",
       },
       {
         question: "Why does she want teeth specifically?",
         answer:
-          "Teeth grow slowly, over years. They're there during your first day of school, your first brave moment, your first time being really kind to someone. That time leaves a trace — a quality — that only shows up in something that grew with you. Hair grows too fast. Fingernails don't hold memory the same way. A tooth that's been growing for years holds years.",
+          "Teeth grow slowly, over years. They're there during your first day of school, your first brave moment, your first time being really kind to someone. That time leaves a trace, a quality, that only shows up in something that grew with you. Hair grows too fast. Fingernails don't hold memory the same way. A tooth that's been growing for years holds years.",
       },
       {
         question: "Why does the Tooth Fairy only take children's teeth?",
         answer:
-          "Adult teeth don't fall out naturally — they're meant to stay. Baby teeth fall away at exactly the right moment, carrying the full record of early childhood. That's when the collection happens. By the time you're an adult, your qualities are already grown and out in the world.",
+          "Adult teeth don't fall out naturally; they're meant to stay. Baby teeth fall away at exactly the right moment, carrying the full record of early childhood. That's when the collection happens. By the time you're an adult, your qualities are already grown and out in the world.",
       },
       {
         question: "Why does the Tooth Fairy leave money?",
         answer:
-          "It's her thank-you. You gave her something that took years to grow, packed with good qualities. The coin is her way of saying: I see what you grew. The world needed it. The amount isn't the point — the thank-you is.",
+          "It's her thank-you. You gave her something that took years to grow, packed with good qualities. The coin is her way of saying: I see what you grew. The world needed it. The amount isn't the point. The thank-you is.",
       },
     ],
   },
@@ -42,17 +42,17 @@ const categories = [
       {
         question: "What does the Tooth Fairy do with all the teeth?",
         answer:
-          "She takes them to her workshop — an enormous place that looks a bit like a library, if libraries sparkled. There she carefully lifts the quality out of each tooth. Bravery in one jar. Kindness in another. Creativity in a third. Patience in the fourth. Then she sends those qualities back out into the world to help people who need them.",
+          "She takes them to her workshop, an enormous place that looks a bit like a library, if libraries sparkled. There she carefully lifts the quality out of each tooth. Bravery in one jar. Kindness in another. Creativity in a third. Patience in the fourth. Then she sends those qualities back out into the world to help people who need them.",
       },
       {
         question: "Does the Tooth Fairy keep the teeth?",
         answer:
-          "The workshop has millions of them — sorted by quality, organized by year, sorted by where they came from. Some say the collection goes back centuries. The teeth are kept after the quality is taken out, carefully stored as a record.",
+          "The workshop has millions of them, sorted by quality, organized by year, sorted by where they came from. Some say the collection goes back centuries. The teeth are kept after the quality is taken out, carefully stored as a record.",
       },
       {
         question: "Where do the qualities go after she collects them?",
         answer:
-          "She uses them to fix small problems in the world — the kind that need exactly the right quality at the right moment. A firefighter who needs to stay calm. A shy child finding the courage to try something new. A parent who has run out of patience on a long day. The Tooth Fairy doesn't announce this. She just does the work, quietly, every night.",
+          "She uses them to fix small problems in the world: the kind that need exactly the right quality at the right moment. A firefighter who needs to stay calm. A shy child finding the courage to try something new. A parent who has run out of patience on a long day. The Tooth Fairy doesn't announce this. She just does the work, quietly, every night.",
       },
       {
         question: "What are the four qualities?",
@@ -67,27 +67,27 @@ const categories = [
       {
         question: "Why does the Tooth Fairy come at night?",
         answer:
-          "Fairies work best in the quiet hours, when dreams are deep and imaginations are wide open. There's also something about starlight that helps her fly faster. She visits thousands of children each night — timing is everything.",
+          "Fairies work best in the quiet hours, when dreams are deep and imaginations are wide open. There's also something about starlight that helps her fly faster. She visits thousands of children each night. Timing is everything.",
       },
       {
         question: "How does the Tooth Fairy get into your house?",
         answer:
-          "Fairies are very small — about the size of your hand — and they can slip through the tiniest spaces: a crack in a window, a gap under a door, even the space between moonbeams. Your house is never as sealed as you think.",
+          "Fairies are very small, about the size of your hand, and they can slip through the tiniest spaces: a crack in a window, a gap under a door, even the space between moonbeams. Your house is never as sealed as you think.",
       },
       {
         question: "How does she know whose tooth is whose?",
         answer:
-          "Teeth carry a kind of fingerprint — not a visible one, but something the Tooth Fairy can sense. Every tooth knows where it came from.",
+          "Teeth carry a kind of fingerprint, not a visible one, but something the Tooth Fairy can sense. Every tooth knows where it came from.",
       },
       {
         question: "How does she carry so many teeth in one night?",
         answer:
-          "Her bag is much bigger on the inside than on the outside — a well-known property of fairy equipment. She also doesn't visit every child on the same night. She works efficiently, and she's been doing this for a very long time.",
+          "Her bag is much bigger on the inside than on the outside. A well-known property of fairy equipment. She also doesn't visit every child on the same night. She works efficiently, and she's been doing this for a very long time.",
       },
       {
         question: "What if I stay up to try to catch her?",
         answer:
-          "She knows, and she waits. The Tooth Fairy is patient — she has been doing this for centuries. She'll come when the time is right, and not a moment before. Most children who try to wait up fall asleep eventually. She counts on it.",
+          "She knows, and she waits. The Tooth Fairy is patient; she has been doing this for centuries. She'll come when the time is right, and not a moment before. Most children who try to wait up fall asleep eventually. She counts on it.",
       },
     ],
   },
@@ -97,12 +97,12 @@ const categories = [
       {
         question: "What if I swallow my tooth by accident?",
         answer:
-          "Don't worry — it happens. Just leave a note under your pillow explaining what happened. The Tooth Fairy has been doing this long enough to have encountered every possible situation. She appreciates the honesty.",
+          "Don't worry. It happens. Just leave a note under your pillow explaining what happened. The Tooth Fairy has been doing this long enough to have encountered every possible situation. She appreciates the honesty.",
       },
       {
         question: "What if the Tooth Fairy doesn't come the first night?",
         answer:
-          "She visits millions of children — sometimes she runs a little behind schedule. If the tooth is still there in the morning, leave it one more night. She always finds a way.",
+          "She visits millions of children. Sometimes she runs a little behind schedule. If the tooth is still there in the morning, leave it one more night. She always finds a way.",
       },
       {
         question: "What if I want to keep my tooth?",
@@ -112,7 +112,7 @@ const categories = [
       {
         question: "What if my tooth has a cavity?",
         answer:
-          "The quality is in the tooth itself, not in its condition. A tooth with a cavity still holds something real. The Tooth Fairy doesn't judge — she just collects.",
+          "The quality is in the tooth itself, not in its condition. A tooth with a cavity still holds something real. The Tooth Fairy doesn't judge. She just collects.",
       },
     ],
   },
@@ -122,22 +122,22 @@ const categories = [
       {
         question: "Is the Tooth Fairy real?",
         answer:
-          "Yes. She just does her work in ways most people don't see. She works quietly, at night, drawing good qualities out of children's teeth and using them to help fix small problems in the world. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it. The clues are there — if you know where to look.",
+          "Yes. She just does her work in ways most people don't see. She works quietly, at night, drawing good qualities out of children's teeth and using them to help fix small problems in the world. When you lose a tooth, it doesn't disappear by accident. The Tooth Fairy takes it. The clues are there, if you know where to look.",
       },
       {
         question: "Has anyone ever seen the Tooth Fairy?",
         answer:
-          "Very few people. She works in the quiet hours, when most children are deeply asleep. Some have caught a glimpse — a movement at the edge of a dream, a small light near the window. But she's fast, and she's careful.",
+          "Very few people. She works in the quiet hours, when most children are deeply asleep. Some have caught a glimpse: a movement at the edge of a dream, a small light near the window. But she's fast, and she's careful.",
       },
       {
         question: "Does the Tooth Fairy exist in other countries?",
         answer:
-          "Yes, though she goes by different names. In France she's La Petite Souris — a small mouse. In parts of Asia, children throw teeth onto roofs or under floors. In the Middle East, teeth are sometimes thrown toward the sun. The tradition exists everywhere, in some form. The Tooth Fairy's workshop has teeth from all over the world.",
+          "Yes, though she goes by different names. In France she's La Petite Souris, a small mouse. In parts of Asia, children throw teeth onto roofs or under floors. In the Middle East, teeth are sometimes thrown toward the sun. The tradition exists everywhere, in some form. The Tooth Fairy's workshop has teeth from all over the world.",
       },
       {
         question: "My parents say they put the coin there. Is that true?",
         answer:
-          "Parents help. They always have. The Tooth Fairy works through the people who love you — especially on nights when she can't get there in time. The coin still means the same thing.",
+          "Parents help. They always have. The Tooth Fairy works through the people who love you, especially on nights when she can't get there in time. The coin still means the same thing.",
       },
     ],
   },
@@ -147,12 +147,12 @@ const categories = [
       {
         question: "Who are Arlo and CeCe?",
         answer:
-          "Arlo and CeCe are the two young characters at the heart of The Tooth Fairy's Magical Mission. They're curious, imaginative kids who discover what really happens to lost teeth — and what goes on inside the workshop when nobody is watching. They're the kind of characters who ask the questions every kid wonders about, and aren't afraid to follow the answer wherever it leads.",
+          "Arlo and CeCe are the two young characters at the heart of The Tooth Fairy's Magical Mission. They're curious, imaginative kids who discover what really happens to lost teeth, and what goes on inside the workshop when nobody is watching. They're the kind of characters who ask the questions every kid wonders about, and aren't afraid to follow the answer wherever it leads.",
       },
       {
         question: "What is the Wiggly Tooth Workshop?",
         answer:
-          "The Wiggly Tooth Workshop is the creative studio behind The Tooth Fairy's Magical Mission — an animated short film, children's book, and ToothSafe product all built around the same story world. It's being developed in collaboration with Peter H. Reynolds and FableVision Studios.",
+          "The Wiggly Tooth Workshop is the creative studio behind The Tooth Fairy's Magical Mission: an animated short film, children's book, and ToothSafe product all built around the same story world. It's being developed in collaboration with Peter H. Reynolds and FableVision Studios.",
       },
       {
         question: "When does The Tooth Fairy's Magical Mission come out?",
@@ -162,7 +162,7 @@ const categories = [
       {
         question: "What is ToothSafe?",
         answer:
-          "ToothSafe is a beautifully designed keepsake box for lost teeth — created by the Wiggly Tooth Workshop so kids have a special, safe place to leave their tooth for the Tooth Fairy. It's designed to make the whole experience feel more magical and intentional. ToothSafe is currently in development and will be available for early access to Workshop members first.",
+          "ToothSafe is a beautifully designed keepsake box for lost teeth, created by the Wiggly Tooth Workshop so kids have a special, safe place to leave their tooth for the Tooth Fairy. It's designed to make the whole experience feel more magical and intentional. ToothSafe is currently in development and will be available for early access to Workshop members first.",
       },
     ],
   },
@@ -178,15 +178,15 @@ const ToothFairyFAQ = () => {
         <title>Tooth Fairy FAQ — Every Question Answered | Wiggly Tooth Workshop</title>
         <meta
           name="description"
-          content="Every question about the Tooth Fairy, answered. Why she takes teeth, what she does with them, how she gets in, is she real, and more — the complete Tooth Fairy FAQ."
+          content="Every question about the Tooth Fairy, answered. Why she takes teeth, what she does with them, how she gets in, is she real, and more. The complete Tooth Fairy FAQ."
         />
         <link rel="canonical" href="https://wigglytoothworkshop.com/tooth-fairy-faq" />
         <meta property="og:title" content="Tooth Fairy FAQ — Every Question Answered" />
-        <meta property="og:description" content="Every question about the Tooth Fairy, answered. Why she takes teeth, what she does with them, how she gets in, is she real — the complete FAQ." />
+        <meta property="og:description" content="Every question about the Tooth Fairy, answered. Why she takes teeth, what she does with them, how she gets in, is she real. The complete FAQ." />
         <meta property="og:url" content="https://wigglytoothworkshop.com/tooth-fairy-faq" />
         <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
         <meta name="twitter:title" content="Tooth Fairy FAQ — Every Question Answered" />
-        <meta name="twitter:description" content="Every question about the Tooth Fairy, answered. Why she takes teeth, what she does with them, how she gets in, is she real — the complete FAQ." />
+        <meta name="twitter:description" content="Every question about the Tooth Fairy, answered. Why she takes teeth, what she does with them, how she gets in, is she real. The complete FAQ." />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
@@ -258,7 +258,7 @@ const ToothFairyFAQ = () => {
               Tooth Fairy FAQ
             </h1>
             <p className="text-lg text-starlight/80 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Every question children (and parents) ask about the Tooth Fairy — answered honestly,
+              Every question children (and parents) ask about the Tooth Fairy, answered honestly,
               completely, and with the magic intact.
             </p>
           </div>
@@ -308,7 +308,7 @@ const ToothFairyFAQ = () => {
                 { to: "/why-does-the-tooth-fairy-take-teeth", label: "Why does she take teeth?", desc: "The reason behind the tradition" },
                 { to: "/is-the-tooth-fairy-real", label: "Is the Tooth Fairy real?", desc: "A serious answer to a serious question" },
                 { to: "/tooth-fairy-story-explained", label: "The Tooth Fairy tradition", desc: "History, culture, and meaning" },
-                { to: "/first-tooth-what-to-do", label: "First lost tooth — what to do", desc: "A practical guide for families" },
+                { to: "/first-tooth-what-to-do", label: "First lost tooth: what to do", desc: "A practical guide for families" },
                 { to: "/coloring-page", label: "Free coloring page", desc: "A printable PDF for ages 3–10" },
               ].map((link) => (
                 <Link
@@ -347,7 +347,7 @@ const ToothFairyFAQ = () => {
               Still have questions?
             </h2>
             <p className="text-starlight/70 mb-8 leading-relaxed">
-              <em>The Tooth Fairy's Magical Mission</em> answers them all — in the most
+              <em>The Tooth Fairy's Magical Mission</em> answers them all, in the most
               magical way possible. An animated short film and children's book coming
               Summer 2026 from the Wiggly Tooth Workshop.
             </p>
