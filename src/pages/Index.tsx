@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import HeroSection from "@/components/HeroSection";
 import WhatsComingSection from "@/components/WhatsComingSection";
 import CredibilitySection from "@/components/CredibilitySection";
@@ -10,17 +11,31 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
-      <HeroSection />
-      <WhatsComingSection />
-      <CredibilitySection />
-      <ToothSafeSection />
-      <VirtueQuizSection />
-      <FAQSection />
-      <DownloadSection />
-      <SignupSection />
-      <Footer />
-    </main>
+    <>
+      <Helmet>
+        <title>The Tooth Fairy's Magical Mission | Animated Film & Children's Book</title>
+        <meta name="description" content="Discover the magic behind every tooth! Join the Workshop for updates on the animated short film (Summer 2026), children's book, and ToothSafe." />
+        <link rel="canonical" href="https://wigglytoothworkshop.com/" />
+        <meta property="og:url" content="https://wigglytoothworkshop.com/" />
+        <meta property="og:title" content="The Tooth Fairy's Magical Mission" />
+        <meta property="og:description" content="Every tooth holds a memory. Every tooth holds a virtue. And in the Tooth Fairy's hands, these tiny treasures help quietly fix the world." />
+        <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
+        <meta name="twitter:title" content="The Tooth Fairy's Magical Mission" />
+        <meta name="twitter:description" content="Every tooth holds a memory. Every tooth holds a virtue. And in the Tooth Fairy's hands, these tiny treasures help quietly fix the world." />
+        <meta name="twitter:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
+      </Helmet>
+      <main className="min-h-screen">
+        <HeroSection />
+        <WhatsComingSection />
+        <CredibilitySection />
+        <ToothSafeSection />
+        <VirtueQuizSection />
+        <FAQSection />
+        <DownloadSection />
+        <SignupSection />
+        <Footer />
+      </main>
+    </>
   );
 };
 

@@ -1,15 +1,17 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { CONTACT_EMAIL } from "@/lib/config";
+import { Helmet } from "react-helmet-async";
 
 const Privacy = () => {
-  useEffect(() => {
-    document.title = "Privacy Policy | Wiggly Tooth Workshop";
-    return () => { document.title = "The Tooth Fairy's Magical Mission | Animated Film & Children's Book"; };
-  }, []);
-
   return (
+    <>
+      <Helmet>
+        <title>Privacy Policy | Wiggly Tooth Workshop</title>
+        <meta name="description" content="Privacy policy for Wiggly Tooth Workshop. Learn how we collect, store, and use your information when you join the Workshop mailing list." />
+        <link rel="canonical" href="https://wigglytoothworkshop.com/privacy" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
     <main className="min-h-screen bg-background">
       <div className="container px-6 py-12 max-w-2xl mx-auto">
         <Link
@@ -121,6 +123,7 @@ const Privacy = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 

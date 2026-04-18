@@ -1,15 +1,17 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { CONTACT_EMAIL } from "@/lib/config";
+import { Helmet } from "react-helmet-async";
 
 const Terms = () => {
-  useEffect(() => {
-    document.title = "Terms of Use | Wiggly Tooth Workshop";
-    return () => { document.title = "The Tooth Fairy's Magical Mission | Animated Film & Children's Book"; };
-  }, []);
-
   return (
+    <>
+      <Helmet>
+        <title>Terms of Use | Wiggly Tooth Workshop</title>
+        <meta name="description" content="Terms of use for wigglytoothworkshop.com. Information about downloadable content, intellectual property, and the Wiggly Tooth Workshop project." />
+        <link rel="canonical" href="https://wigglytoothworkshop.com/terms" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
     <main className="min-h-screen bg-background">
       <div className="container px-6 py-12 max-w-2xl mx-auto">
         <Link
@@ -105,6 +107,7 @@ const Terms = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 

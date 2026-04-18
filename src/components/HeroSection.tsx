@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
-import heroFairy from "@/assets/hero-fairy.png";
+import heroFairy from "@/assets/hero-fairy.webp";
 import { trackCTAClick, trackSocialFollow } from "@/lib/analytics";
 
 const InstagramIcon = () => (

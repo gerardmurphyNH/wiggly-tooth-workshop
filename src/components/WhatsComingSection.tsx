@@ -1,8 +1,8 @@
 import { Film, BookOpen, Package } from "lucide-react";
-import filmScene1 from "@/assets/film-scene-1.png";
-import filmScene2 from "@/assets/film-scene-2.png";
-import filmScene3 from "@/assets/film-scene-3.png";
-import workshopScene from "@/assets/workshop-scene.png";
+import filmScene1 from "@/assets/film-scene-1.webp";
+import filmScene2 from "@/assets/film-scene-2.webp";
+import filmScene3 from "@/assets/film-scene-3.webp";
+import workshopScene from "@/assets/workshop-scene.webp";
 
 const cards = [
   {
