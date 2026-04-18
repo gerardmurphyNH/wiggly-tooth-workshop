@@ -42,12 +42,12 @@ const categories = [
       {
         question: "What does the Tooth Fairy do with all the teeth?",
         answer:
-          "She takes them to her workshop — an enormous place that looks a bit like a library, if libraries sparkled. There she carefully extracts the virtue from each tooth. Bravery in one jar. Kindness in another. Creativity in a third. Patience in the fourth. Then she sends those virtues back out into the world to help people who need them.",
+          "She takes them to her workshop — an enormous place that looks a bit like a library, if libraries sparkled. There she carefully lifts the virtue out of each tooth. Bravery in one jar. Kindness in another. Creativity in a third. Patience in the fourth. Then she sends those virtues back out into the world to help people who need them.",
       },
       {
         question: "Does the Tooth Fairy keep the teeth?",
         answer:
-          "The workshop has millions of them — sorted by virtue, organized by year, catalogued by country. Some say the archive goes back centuries. The teeth are kept after the virtue is extracted, carefully stored as a record.",
+          "The workshop has millions of them — sorted by virtue, organized by year, sorted by where they came from. Some say the collection goes back centuries. The teeth are kept after the virtue is taken out, carefully stored as a record.",
       },
       {
         question: "Where do the virtues go after she collects them?",
@@ -87,7 +87,7 @@ const categories = [
       {
         question: "What if I stay up to try to catch her?",
         answer:
-          "She knows, and she waits. The Tooth Fairy is patient — she has been doing this for centuries. She'll come when the time is right, and not a moment before. Most children who try to wait up fall asleep eventually. That's the plan.",
+          "She knows, and she waits. The Tooth Fairy is patient — she has been doing this for centuries. She'll come when the time is right, and not a moment before. Most children who try to wait up fall asleep eventually. She counts on it.",
       },
     ],
   },

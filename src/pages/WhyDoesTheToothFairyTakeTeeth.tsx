@@ -260,8 +260,8 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Adult teeth stay in. They're not meant to fall. And in a way, that makes
-                  sense — adults have already grown their virtues. The work of extraction happens
-                  in childhood, when everything is new and being learned for the first time.
+                  sense — adults have already grown their virtues. The Tooth Fairy's work happens
+                  in childhood, when everything is new, and when the best virtues are grown.
                 </p>
                 <p>
                   That's why the Tooth Fairy visits children specifically. And why she comes

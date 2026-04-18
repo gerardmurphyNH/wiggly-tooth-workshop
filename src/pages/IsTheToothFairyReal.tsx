@@ -207,8 +207,8 @@ const IsTheToothFairyReal = () => {
                 <p>
                   That exchange happens on schedule — usually within a night or two of a tooth
                   being lost. It happens in houses all over the world, in different countries,
-                  different climates, different time zones. The scale of the operation alone
-                  is remarkable.
+                  different climates, different time zones. Think about how many children lose
+                  teeth every single night. She finds every one.
                 </p>
                 <p>
                   Something is doing this work. Something has been doing it for centuries.

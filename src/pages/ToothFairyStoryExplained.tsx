@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "Is the Tooth Fairy the same in every country?",
     answer:
-      "The tradition exists all over the world, but it takes different forms. In France and other parts of Europe, it's La Petite Souris — a small mouse who takes the tooth. In parts of Asia, children throw their lower teeth onto the roof and upper teeth under the floor. In the Middle East, teeth are sometimes thrown toward the sun. The Tooth Fairy's workshop has teeth catalogued from all of these traditions.",
+      "The tradition exists all over the world, but it takes different forms. In France and other parts of Europe, it's La Petite Souris — a small mouse who takes the tooth. In parts of Asia, children throw their lower teeth onto the roof and upper teeth under the floor. In the Middle East, teeth are sometimes thrown toward the sun. The Tooth Fairy's workshop has teeth from all of these traditions.",
   },
   {
     question: "How old is the Tooth Fairy tradition?",
@@ -106,7 +106,7 @@ const ToothFairyStoryExplained = () => {
                     "name": "Is the Tooth Fairy the same in every country?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "The tradition exists all over the world, but takes different forms. In France and parts of Europe it's La Petite Souris — a small mouse. In parts of Asia, children throw teeth toward the roof or floor. In the Middle East, teeth are sometimes thrown toward the sun. The Tooth Fairy's workshop has teeth catalogued from all of these traditions."
+                      "text": "The tradition exists all over the world, but takes different forms. In France and parts of Europe it's La Petite Souris — a small mouse. In parts of Asia, children throw teeth toward the roof or floor. In the Middle East, teeth are sometimes thrown toward the sun. The Tooth Fairy's workshop has teeth from all of these traditions."
                     }
                   }
                 ]
@@ -183,9 +183,10 @@ const ToothFairyStoryExplained = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Customs around lost teeth are among the oldest childhood traditions in the world.
-                  Thousands of years ago, in cultures that never had contact with each other,
-                  people developed their own rituals for what to do when a child's tooth fell out.
+                  For as long as there have been children, there have been lost teeth — and people
+                  trying to explain where they go. Thousands of years ago, in cultures that never
+                  had contact with each other, people developed their own rituals for what to do
+                  when a child's tooth fell out.
                 </p>
                 <p>
                   In Norse and Northern European traditions from the 10th century,
@@ -222,9 +223,9 @@ const ToothFairyStoryExplained = () => {
                   to children who are asking very reasonable questions.
                 </p>
                 <p>
-                  Over the following decades, the tradition spread and solidified.
-                  By mid-century, the Tooth Fairy had become one of the most recognized
-                  childhood figures in the English-speaking world.
+                  Over the following decades, the tradition spread and grew. By the time most
+                  grandparents today were children, the Tooth Fairy was already part of the story
+                  — a figure everyone seemed to know, even if no one quite agreed on the details.
                 </p>
               </div>
             </div>
@@ -266,7 +267,7 @@ const ToothFairyStoryExplained = () => {
                   In the world of <em>The Tooth Fairy's Magical Mission</em>,
                   every lost tooth holds a virtue — bravery, kindness, creativity, or patience —
                   grown during years of childhood. The Tooth Fairy collects these not to hoard them,
-                  but to extract them carefully and return them to a world that constantly needs more.
+                  but to carefully lift them out and return them to a world that always needs more.
                 </p>
                 <p>
                   It's a story that takes the oldest tradition in childhood and asks:

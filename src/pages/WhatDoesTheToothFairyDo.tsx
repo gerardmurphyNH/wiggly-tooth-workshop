@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "Does the Tooth Fairy keep all the teeth forever?",
     answer:
-      "Not exactly. The teeth are processed in the workshop — the virtue is carefully extracted, and then the tooth becomes part of the archive. Some say the workshop has rows and rows of tiny jars, each one labeled with a child's name and the year.",
+      "Not exactly. Once the virtue is taken out, the tooth stays in the workshop — carefully kept as a record. Some say there are rows and rows of tiny labeled jars, one for each child, each one marked with a name and a year.",
   },
   {
     question: "What happens if a tooth has more than one virtue in it?",
@@ -175,14 +175,16 @@ const WhatDoesTheToothFairyDo = () => {
                 The Short Answer
               </span>
               <p className="text-foreground text-lg leading-relaxed">
-                The Tooth Fairy takes every lost tooth to her workshop, where she carefully extracts
-                the <strong>virtue</strong> inside it — bravery, kindness, creativity, or patience.
-                Those virtues are then quietly woven back into the world, helping people who need them
-                most. Your tooth might help a child find the courage to try something new. Or remind
-                someone to be patient when things are hard.
+                The Tooth Fairy takes every lost tooth to her workshop, where she carefully lifts out
+                the <strong>virtue</strong> hiding inside. A virtue is a piece of something good that
+                grew in you while your tooth was growing — bravery, or kindness, or creativity, or
+                patience. She takes those out, one by one, and sends them back into the world to help
+                people who need them most.
               </p>
               <p className="text-muted-foreground mt-4 leading-relaxed">
-                That's why the Tooth Fairy collects teeth. Not to keep them. To <em>use</em> what's inside them.
+                Your tooth might help a child find the courage to try something new. Or remind
+                someone to be patient when things are hard. That's why the Tooth Fairy collects teeth.
+                Not to keep them. To <em>use</em> what's inside them.
               </p>
             </div>
           </div>
@@ -206,13 +208,17 @@ const WhatDoesTheToothFairyDo = () => {
                 <p>
                   Inside, the workshop looks a bit like a library — if libraries sparkled.
                   There are rows upon rows of tiny shelves, each one holding teeth sorted by virtue,
-                  organized by year, and catalogued by country. At the center of it all is a long
-                  wooden workbench, worn smooth by centuries of use, where the Tooth Fairy does her
-                  most careful work.
+                  organized by year, and sorted by where they came from. At the center of it all is a
+                  long wooden workbench, worn smooth by centuries of use, where the Tooth Fairy does
+                  her most careful work.
                 </p>
                 <p>
-                  Every night, after her rounds, she returns with her collection. And then the real
-                  work begins.
+                  It smells like warm wood and something faintly sweet. And if you stopped and
+                  listened, you'd hear the small, careful sounds of very important work being done.
+                </p>
+                <p>
+                  Every night, after her rounds, she comes back with what she's collected. And then
+                  the real work begins.
                 </p>
               </div>
             </div>

@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "How much does the Tooth Fairy leave?",
     answer:
-      "This varies a lot between families. The average in the United States is around $4–5 per tooth, though it ranges from coins to $20 for a first tooth. There's no official amount — the Tooth Fairy adjusts for circumstances. What matters more than the amount is that the exchange feels meaningful.",
+      "This varies a lot between families. The average in the United States is around $4–5 per tooth, though it ranges from coins to $20 for a first tooth. There's no official amount — the Tooth Fairy adjusts for circumstances. What matters is that it feels like a proper thank-you.",
   },
   {
     question: "What if the Tooth Fairy doesn't come the first night?",
@@ -262,7 +262,7 @@ const FirstToothWhatToDo = () => {
                 The Tooth Fairy takes every tooth to her workshop. Inside each tooth
                 is something she calls a virtue — bravery, kindness, creativity, or patience —
                 grown during the years the tooth was in your child's mouth.
-                She carefully extracts that virtue and sends it back out into the world
+                She carefully lifts that virtue out and sends it back into the world
                 to help people who need it.
               </p>
               <p>
