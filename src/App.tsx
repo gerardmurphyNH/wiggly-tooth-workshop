@@ -17,6 +17,7 @@ import ToothFairyStoryExplained from "./pages/ToothFairyStoryExplained";
 import FirstToothWhatToDo from "./pages/FirstToothWhatToDo";
 import ToothFairyFAQ from "./pages/ToothFairyFAQ";
 import TeacherPrintables from "./pages/TeacherPrintables";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/privacy" element={<Privacy />} />

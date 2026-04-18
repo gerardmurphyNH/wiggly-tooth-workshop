@@ -9,7 +9,7 @@ const DownloadSection = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="py-20 md:py-28 bg-secondary/30">
       <div className="container px-6">
         <div className="max-w-xl mx-auto text-center">
           <div className="w-16 h-16 mx-auto rounded-2xl bg-secondary flex items-center justify-center mb-6">

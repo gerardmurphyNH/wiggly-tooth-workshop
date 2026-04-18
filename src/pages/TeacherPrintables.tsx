@@ -30,6 +30,7 @@ import {
   trackTeacherColoringDownload,
   trackTeacherBundleDownload,
   trackTeacherSignupSubmit,
+  trackTeacherResourcesPageClick,
 } from "@/lib/analytics";
 import { GOOGLE_SHEETS_ENDPOINT, CONTACT_EMAIL } from "@/lib/config";
 
@@ -374,16 +375,18 @@ const TeacherPrintables = () => {
             ))}
           </div>
           <div className="container px-6 relative z-10 text-center max-w-2xl mx-auto">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 text-starlight/60 hover:text-starlight transition-colors mb-8 text-sm"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to the Workshop
-            </Link>
-            <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full mb-5">
-              Free for Teachers &amp; Parents
-            </span>
+            <div className="flex flex-col items-center gap-4 mb-8">
+              <Link
+                to="/"
+                className="inline-flex items-center gap-2 text-starlight/60 hover:text-starlight transition-colors text-sm"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Back to the Workshop
+              </Link>
+              <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full">
+                Free for Teachers &amp; Parents
+              </span>
+            </div>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-starlight mb-5 leading-tight">
               Free Tooth Fairy Printables<br />
               <span className="text-primary">for Grades 1 and 2</span>
@@ -408,8 +411,11 @@ const TeacherPrintables = () => {
               <Button
                 variant="outline"
                 size="xl"
-                className="border-starlight/30 text-starlight/80 hover:bg-starlight/10 hover:text-starlight"
-                onClick={() => document.getElementById("resources")?.scrollIntoView({ behavior: "smooth" })}
+                className="border-starlight/60 text-starlight hover:bg-starlight/10"
+                onClick={() => {
+                  trackTeacherResourcesPageClick("hero_view_resources");
+                  document.getElementById("resources")?.scrollIntoView({ behavior: "smooth" });
+                }}
               >
                 View individual resources
               </Button>
@@ -688,10 +694,13 @@ const TeacherPrintables = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-starlight/30 text-starlight/80 hover:bg-starlight/10 hover:text-starlight"
+                className="border-starlight/60 text-starlight hover:bg-starlight/10"
                 asChild
               >
-                <Link to="/#signup">
+                <Link
+                  to="/#signup"
+                  onClick={() => trackTeacherResourcesPageClick("closing_cta_join_workshop")}
+                >
                   <Sparkles className="w-4 h-4" />
                   Join the Workshop
                 </Link>
