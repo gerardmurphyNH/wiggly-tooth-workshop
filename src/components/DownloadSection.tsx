@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Download, Palette } from "lucide-react";
 import { trackColoringPageDownload } from "@/lib/analytics";
@@ -22,20 +23,27 @@ const DownloadSection = () => {
           </h2>
           <p className="text-muted-foreground mb-8">
             While you wait for the film and the book, here's something to color.
-            It's free, it's fun, and it's straight from the workshop.
+            Free, fun, and straight from the workshop — a printable PDF for kids ages 3–10.
           </p>
-          <Button variant="magical" size="lg" asChild>
-            <a
-              href="/downloads/coloring-page.pdf"
-              download="tooth-fairy-coloring-page.pdf"
-              onClick={handleDownload}
-            >
-              <Download className="w-4 h-4" />
-              Download coloring page
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button variant="magical" size="lg" asChild>
+              <a
+                href="/downloads/coloring-page.pdf"
+                download="tooth-fairy-coloring-page.pdf"
+                onClick={handleDownload}
+              >
+                <Download className="w-4 h-4" />
+                Download coloring page
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/coloring-page">
+                Learn more
+              </Link>
+            </Button>
+          </div>
           <p className="mt-4 text-xs text-muted-foreground">
-            PDF format • Free for personal use
+            PDF format · Free for personal use · No sign-up required
           </p>
         </div>
       </div>
