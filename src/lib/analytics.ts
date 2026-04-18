@@ -16,12 +16,16 @@ export const trackEvent = (
   parameters?: Record<string, string | number | boolean>
 ): void => {
   if (!isGAConfigured()) {
-    console.log("[Analytics] Event (GA not configured):", eventName, parameters);
+    console.log("[Analytics] GA not configured — event dropped:", eventName, parameters);
     return;
   }
 
   try {
     window.gtag("event", eventName, parameters);
+    // Log in dev so you can verify events fire without opening GA4 DebugView
+    if (import.meta.env.DEV) {
+      console.log("[Analytics] ✓ Event sent:", eventName, parameters);
+    }
   } catch (error) {
     console.error("[Analytics] Error tracking event:", error);
   }
@@ -31,18 +35,18 @@ export const trackEvent = (
 // CONVERSION EVENT 1 — Email Signup
 // ============================================
 export const trackSignupSuccess = (virtue?: string): void => {
-  // generate_lead is a GA4 recommended event — mark this as a conversion in GA4
+  // sign_up is the GA4 standard event — already marked as a key event in the GA4 property
+  trackEvent("sign_up", {
+    method: "workshop_form",
+    virtue: virtue || "none",
+  });
+  // generate_lead is a GA4 recommended event for lead generation
   trackEvent("generate_lead", {
     event_category: "conversion",
     event_label: "workshop_signup",
     virtue: virtue || "none",
     currency: "USD",
     value: 1,
-  });
-  // Secondary custom event for filtering in reports
-  trackEvent("signup_success", {
-    event_category: "engagement",
-    virtue: virtue || "none",
   });
 };
 
