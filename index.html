@@ -3,6 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Restore SPA path from GitHub Pages 404 redirect (see public/404.html) -->
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var p = params.get('p');
+        if (p) {
+          var q = params.get('q');
+          window.history.replaceState(
+            null, '',
+            '/' + decodeURIComponent(p) +
+            (q ? '?' + decodeURIComponent(q) : '') +
+            window.location.hash
+          );
+        }
+      })();
+    </script>
     <title>The Tooth Fairy's Magical Mission | Animated Film & Children's Book</title>
     <meta name="description" content="Discover the magic behind every tooth! Join the Workshop for updates on the animated short film (Summer 2026), children's book, and ToothSafe." />
     <meta name="author" content="Wiggly Tooth Workshop" />
