@@ -442,7 +442,7 @@ const TeacherPrintables = () => {
                 className="inline-flex items-center gap-2 text-starlight/60 hover:text-starlight transition-colors text-sm"
               >
                 <ArrowLeft className="w-4 h-4" />
-                Back to the Workshop
+                Back to Wiggly Tooth Workshop
               </Link>
               <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full">
                 Free for Teachers &amp; Parents

@@ -85,16 +85,18 @@ const ColoringPage = () => {
             ))}
           </div>
           <div className="container px-6 relative z-10 text-center max-w-2xl mx-auto">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 text-starlight/60 hover:text-starlight transition-colors mb-8 text-sm"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to the Workshop
-            </Link>
-            <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full mb-5">
+                          <div className="flex flex-col items-center gap-4 mb-8">
+                <Link
+                  to="/"
+                  className="inline-flex items-center gap-2 text-starlight/60 hover:text-starlight transition-colors text-sm"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  Back to Wiggly Tooth Workshop
+                </Link>
+                <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full">
               Free Download
             </span>
+                          </div>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-starlight mb-6 leading-tight">
               Free Tooth Fairy<br />
               <span className="text-primary">Coloring Page</span>
