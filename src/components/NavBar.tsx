@@ -40,6 +40,11 @@ const NavBar = () => {
   const scrollToSignup = () => {
     setMobileOpen(false);
     trackEvent("cta_click", { type: "join_workshop", location: "nav" });
+    if (location.pathname !== "/") {
+      // On a sub-page — navigate to homepage signup section via plain anchor
+      window.location.href = "/#signup";
+      return;
+    }
     const el = document.getElementById("signup");
     if (el) {
       const offset = 72;
