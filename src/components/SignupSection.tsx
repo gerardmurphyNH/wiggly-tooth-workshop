@@ -73,21 +73,21 @@ const SignupSection = () => {
     setIsLoading(true);
 
     try {
-      await fetch(GOOGLE_SHEETS_ENDPOINT, {
-        method: "POST",
-        mode: "no-cors", // Apps Script requires no-cors
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          firstName: firstName || "",
-          virtue: virtue || "",
-          timestamp: new Date().toISOString(),
-        }),
+      // Use GET with URL params — Apps Script POST triggers a cross-origin redirect
+      // that no-cors mode can't follow reliably. GET avoids this entirely.
+      const params = new URLSearchParams({
+        email,
+        firstName: firstName || "",
+        virtue: virtue || "",
+        timestamp: new Date().toISOString(),
       });
 
-      // no-cors mode always returns opaque response, so we assume success
+      await fetch(`${GOOGLE_SHEETS_ENDPOINT}?${params.toString()}`, {
+        method: "GET",
+        mode: "no-cors",
+      });
+
+      // no-cors always returns an opaque response; treat fetch completing as success
       setIsSubmitted(true);
       trackSignupSuccess(virtue || undefined);
     } catch (err) {
