@@ -66,7 +66,7 @@ const Terms = () => {
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               This site does not currently offer any products or services for purchase.
-              The film, book, and ToothSafe products mentioned are in development and will
+              The book and ToothSafe mentioned on this site are in development and will
               be announced when available.
             </p>
           </section>
@@ -77,8 +77,8 @@ const Terms = () => {
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               All content on this site, including text, images, and designs, is the property
-              of Wiggly Tooth Workshop unless otherwise noted. The animated short film is
-              being developed in collaboration with Peter H. Reynolds and FableVision Studios.
+              of Wiggly Tooth Workshop unless otherwise noted. The animated short film was
+              made in collaboration with Peter H. Reynolds and FableVision Studios.
             </p>
           </section>
 

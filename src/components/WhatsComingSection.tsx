@@ -7,21 +7,21 @@ import workshopScene from "@/assets/workshop-scene.png";
 const cards = [
   {
     icon: Film,
-    title: "Animated Short Film",
-    label: "Coming Summer 2026",
-    description: "Join a curious child on a midnight journey to discover what the Tooth Fairy really does with all those tiny teeth.",
+    title: "The Short Film",
+    label: "Watch now",
+    description: "CeCe and Arlo discover what the Tooth Fairy really does — and the answer turns out to be more interesting than anyone expected.",
   },
   {
     icon: BookOpen,
     title: "The Book",
-    label: "Coming soon",
-    description: "A beautifully illustrated children's book that answers the questions every child wonders about.",
+    label: "In the workshop",
+    description: "An illustrated version of the story, for reading slowly. The kind of book that gets re-read.",
   },
   {
     icon: Package,
-    title: "ToothSafe",
-    label: "Coming soon",
-    description: "A special place to keep your tooth safe for the Tooth Fairy - designed by the workshop itself.",
+    title: "The ToothSafe",
+    label: "In the workshop",
+    description: "CeCe's invention: a small keeper designed to hold a tooth safely until the Tooth Fairy arrives.",
   },
 ];
 
@@ -32,11 +32,14 @@ const WhatsComingSection = () => {
     <section className="py-20 md:py-28 bg-background">
       <div className="container px-6">
         <div className="text-center mb-16">
+          <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
+            The World
+          </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            What's Coming
+            There's more to the story
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A world of wonder is being crafted in the workshop
+            The short film is where it starts. A book and the ToothSafe follow.
           </p>
         </div>
 
@@ -69,7 +72,7 @@ const WhatsComingSection = () => {
         {/* Film teaser gallery */}
         <div className="mb-8">
           <h3 className="font-display text-xl font-semibold text-foreground text-center mb-6">
-            Peek into the magic
+            From the film
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {filmImages.map((img, index) => (
@@ -89,7 +92,7 @@ const WhatsComingSection = () => {
         </div>
 
         <p className="text-center text-xs text-muted-foreground">
-          Animated short film in development in collaboration with Peter H. Reynolds and FableVision Studios.
+          An animated short film in collaboration with Peter H. Reynolds and FableVision Studios.
         </p>
       </div>
     </section>

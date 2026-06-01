@@ -115,6 +115,30 @@ export const trackCTAClick = (location: string): void => {
 };
 
 // ============================================
+// VIDEO TRACKING
+// ============================================
+export const trackVideoPlay = (videoId: string): void => {
+  trackEvent("video_start", {
+    video_id: videoId,
+    video_title: "The Tooth Fairy's Magical Mission",
+  });
+};
+
+export const trackVideoProgress = (videoId: string, percent: number): void => {
+  trackEvent("video_progress", {
+    video_id: videoId,
+    video_percent: percent,
+  });
+};
+
+export const trackVideoComplete = (videoId: string): void => {
+  trackEvent("video_complete", {
+    video_id: videoId,
+    video_title: "The Tooth Fairy's Magical Mission",
+  });
+};
+
+// ============================================
 // MISC TRACKING
 // ============================================
 export const trackColoringPageDownload = (): void => {
@@ -123,7 +147,7 @@ export const trackColoringPageDownload = (): void => {
   });
 };
 
-// Type declaration for gtag
+// Type declarations
 declare global {
   interface Window {
     gtag: (
@@ -132,5 +156,23 @@ declare global {
       params?: Record<string, unknown>
     ) => void;
     dataLayer: unknown[];
+    // YouTube IFrame Player API
+    YT: {
+      Player: new (
+        element: HTMLIFrameElement | string,
+        config: {
+          events: {
+            onStateChange?: (e: { data: number }) => void;
+            onReady?: (e: unknown) => void;
+          };
+        }
+      ) => {
+        getCurrentTime: () => number;
+        getDuration: () => number;
+        destroy: () => void;
+      };
+      PlayerState: { PLAYING: 1; PAUSED: 2; ENDED: 0; BUFFERING: 3 };
+    };
+    onYouTubeIframeAPIReady: () => void;
   }
 }

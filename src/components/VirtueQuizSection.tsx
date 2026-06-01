@@ -108,18 +108,14 @@ const VirtueQuizSection = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section id="quiz" className="py-16 md:py-20 bg-secondary/30">
       <div className="container px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
-            Discover Your Tooth's Gift
-          </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            What virtue is in your tooth?
+            Which virtue is in yours?
           </h2>
           <p className="text-muted-foreground mb-8">
-            Every tooth carries something special - a virtue that belongs to you. 
-            Take a quick peek to see what gift your tooth might hold.
+            Two quick questions. The answer might surprise you.
           </p>
 
           {!showQuiz ? (
