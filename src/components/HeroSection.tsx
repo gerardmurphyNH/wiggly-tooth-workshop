@@ -204,7 +204,7 @@ const HeroSection = () => {
             asChild
           >
             <a
-              href={YOUTUBE_CHANNEL_URL}
+              href={YOUTUBE_VIDEO_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackEvent("social_click", { platform: "youtube", location: "hero" })}
