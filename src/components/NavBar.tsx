@@ -17,6 +17,7 @@ const navLinks = [
   { label: "For Parents", href: "/for-parents" },
   { label: "For Teachers", href: "/for-teachers" },
   { label: "Printables", href: "/printables" },
+  { label: "News", href: "/news" },
 ];
 
 const NavBar = () => {

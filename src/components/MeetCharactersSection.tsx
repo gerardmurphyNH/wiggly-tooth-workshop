@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import filmScene1 from "@/assets/film-scene-1.png";
 import filmScene2 from "@/assets/film-scene-2.png";
 import filmScene3 from "@/assets/film-scene-3.png";
@@ -57,6 +58,28 @@ const MeetCharactersSection = () => {
           >
             Watch The Tooth Fairy's Magical Mission on YouTube →
           </a>
+        </div>
+
+        {/* World Premiere callout */}
+        <div className="max-w-xl mx-auto mt-10">
+          <Link
+            to="/tooth-fairy-film-premiere"
+            className="group flex flex-col sm:flex-row items-center gap-4 p-5 rounded-2xl bg-[hsl(244_45%_15%)] border border-primary/25 hover:border-primary/50 transition-all hover:shadow-magical"
+            onClick={() => trackEvent("premiere_click", { location: "characters_section" })}
+          >
+            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-lg">
+              🎬
+            </div>
+            <div className="text-center sm:text-left flex-1">
+              <p className="text-xs font-semibold uppercase tracking-wide text-primary mb-0.5">
+                World Premiere · June 7, 2026 · Dedham, MA
+              </p>
+              <p className="text-sm text-starlight/80 group-hover:text-starlight transition-colors">
+                Join us for the world premiere at TLC Studios — free, all ages welcome.
+              </p>
+            </div>
+            <span className="text-primary text-sm font-medium flex-shrink-0">RSVP →</span>
+          </Link>
         </div>
       </div>
     </section>

@@ -15,6 +15,8 @@ import HowMuchDoesTheToothFairyLeave from "./pages/HowMuchDoesTheToothFairyLeave
 import Printables from "./pages/Printables";
 import ForTeachers from "./pages/ForTeachers";
 import ForParents from "./pages/ForParents";
+import News from "./pages/News";
+import Premiere from "./pages/Premiere";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +38,8 @@ const App = () => (
             <Route path="/printables" element={<Printables />} />
             <Route path="/for-teachers" element={<ForTeachers />} />
             <Route path="/for-parents" element={<ForParents />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/tooth-fairy-film-premiere" element={<Premiere />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

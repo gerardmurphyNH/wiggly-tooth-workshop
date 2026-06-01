@@ -27,7 +27,7 @@ const Footer = () => {
     <footer className="py-12 bg-background border-t border-border">
       <div className="container px-6">
         {/* Top grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-3">
@@ -130,6 +130,41 @@ const Footer = () => {
                 >
                   Teacher &amp; classroom resources
                 </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* News */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-foreground mb-4">
+              News
+            </h4>
+            <ul className="space-y-2.5">
+              <li>
+                <Link
+                  to="/news"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  News from the Workshop
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/tooth-fairy-film-premiere"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  World Premiere — June 7
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://www.reynoldstlc.org/blog/elevating-the-tooth-fairy-story-to-a-sense-of-mission"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Reynolds Center feature
+                </a>
               </li>
             </ul>
           </div>
