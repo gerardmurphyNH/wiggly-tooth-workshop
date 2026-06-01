@@ -1,23 +1,27 @@
+import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
-import WhatsComingSection from "@/components/WhatsComingSection";
-import CredibilitySection from "@/components/CredibilitySection";
-import ToothSafeSection from "@/components/ToothSafeSection";
+import WorldIntroSection from "@/components/WorldIntroSection";
+import MeetCharactersSection from "@/components/MeetCharactersSection";
 import VirtueQuizSection from "@/components/VirtueQuizSection";
+import KidsColoringSection from "@/components/KidsColoringSection";
+import ToothSafeSection from "@/components/ToothSafeSection";
 import FAQSection from "@/components/FAQSection";
-import DownloadSection from "@/components/DownloadSection";
+import ParentTeacherSection from "@/components/ParentTeacherSection";
 import SignupSection from "@/components/SignupSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
+      <NavBar />
       <HeroSection />
-      <WhatsComingSection />
-      <CredibilitySection />
-      <ToothSafeSection />
+      <WorldIntroSection />
       <VirtueQuizSection />
+      <MeetCharactersSection />
+      <KidsColoringSection />
+      <ToothSafeSection />
       <FAQSection />
-      <DownloadSection />
+      <ParentTeacherSection />
       <SignupSection />
       <Footer />
     </main>

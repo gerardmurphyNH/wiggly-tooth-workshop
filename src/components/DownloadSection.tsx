@@ -21,8 +21,8 @@ const DownloadSection = () => {
             Tooth Fairy Coloring Page
           </h2>
           <p className="text-muted-foreground mb-8">
-            While you wait for the film and the book, here's something to color.
-            It's free, it's fun, and it's straight from the workshop.
+            A page from the workshop, free to print and color. Good for quiet
+            afternoons.
           </p>
           <Button variant="magical" size="lg" asChild>
             <a

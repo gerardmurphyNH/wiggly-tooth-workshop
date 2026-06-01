@@ -43,7 +43,7 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-secondary/30">
+    <section className="py-20 md:py-28 bg-background">
       <div className="container px-6">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">

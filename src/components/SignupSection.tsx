@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Sparkles, Check, Mail, AlertCircle } from "lucide-react";
+import { Sparkles, Check, AlertCircle } from "lucide-react";
 import { useVirtue } from "@/context/VirtueContext";
 import { GOOGLE_SHEETS_ENDPOINT, CONTACT_EMAIL } from "@/lib/config";
 import { trackSignupSuccess, trackFormStart, trackFormError } from "@/lib/analytics";
@@ -122,19 +122,19 @@ const SignupSection = () => {
 
       <div className="container px-6 relative z-10">
         <div className="max-w-xl mx-auto text-center">
-          <div className="w-16 h-16 mx-auto rounded-full bg-primary/20 flex items-center justify-center mb-6 float">
-            <Mail className="w-8 h-8 text-primary" />
+          <div className="w-16 h-16 mx-auto rounded-full bg-primary/30 flex items-center justify-center mb-6 float">
+            <Sparkles className="w-8 h-8 text-primary" />
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-starlight mb-4">
             Join the Workshop
           </h2>
-          <p className="text-starlight/60 text-sm mb-4">Join early and get:</p>
+          <p className="text-starlight/60 text-sm mb-4">Workshop members receive:</p>
           <ul className="text-left max-w-xs mx-auto mb-8 space-y-2.5">
             {[
-              "Early launch news for the film, book, and ToothSafe",
-              "Behind-the-scenes sketches and story moments",
-              "First access to ToothSafe before public release",
-              "Occasional signed artwork and workshop surprises",
+              "New CeCe and Arlo stories as they're made",
+              "Free printables and classroom resources",
+              "Word when the ToothSafe is ready",
+              "Occasional sketches and quiet notes from the workshop",
             ].map((benefit) => (
               <li key={benefit} className="flex items-start gap-2.5 text-sm text-starlight/70">
                 <Sparkles className="w-3.5 h-3.5 text-primary mt-0.5 flex-shrink-0" />
@@ -144,16 +144,15 @@ const SignupSection = () => {
           </ul>
 
           {isSubmitted ? (
-            <div className="p-8 rounded-3xl bg-night-sky/80 backdrop-blur-sm border border-starlight/20 animate-fade-in-up">
+            <div className="p-8 rounded-3xl bg-night-sky/80 backdrop-blur-sm border border-starlight/30 animate-fade-in-up">
               <div className="w-12 h-12 mx-auto rounded-full bg-primary flex items-center justify-center mb-4">
                 <Check className="w-6 h-6 text-primary-foreground" />
               </div>
               <h3 className="font-display text-xl font-semibold text-starlight mb-2">
-                You're in the Workshop!
+                You're in the Workshop.
               </h3>
               <p className="text-starlight/70 text-sm">
-                Thank you for joining. We'll send you updates when there's
-                something wonderful to share.
+                We'll write when there's something worth sharing.
               </p>
             </div>
           ) : (
@@ -167,7 +166,7 @@ const SignupSection = () => {
                   onFocus={handleFormInteraction}
                   required
                   aria-label="Email address"
-                  className="h-14 px-6 rounded-full bg-starlight/10 border-starlight/20 text-starlight placeholder:text-starlight/40 focus:border-primary focus:ring-primary"
+                  className="h-14 px-6 rounded-full bg-starlight/10 border-starlight/30 text-starlight placeholder:text-starlight/40 focus:border-primary focus:ring-primary"
                 />
                 <Input
                   type="text"
@@ -176,7 +175,7 @@ const SignupSection = () => {
                   onChange={(e) => setFirstName(e.target.value)}
                   onFocus={handleFormInteraction}
                   aria-label="First name (optional)"
-                  className="h-14 px-6 rounded-full bg-starlight/10 border-starlight/20 text-starlight placeholder:text-starlight/40 focus:border-primary focus:ring-primary"
+                  className="h-14 px-6 rounded-full bg-starlight/10 border-starlight/30 text-starlight placeholder:text-starlight/40 focus:border-primary focus:ring-primary"
                 />
                 {/* Honeypot field - hidden from users, visible to bots */}
                 <input
@@ -236,7 +235,7 @@ const SignupSection = () => {
             </form>
           )}
 
-          <p className="mt-6 text-xs text-starlight/40">
+          <p className="mt-6 text-xs text-starlight/50">
             We respect your privacy. Unsubscribe anytime.
           </p>
         </div>
