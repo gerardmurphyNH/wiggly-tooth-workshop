@@ -79,6 +79,7 @@ const SignupSection = () => {
         email,
         firstName: firstName || "",
         virtue: virtue || "",
+        source: "wigglytoothworkshop.com",
         timestamp: new Date().toISOString(),
       });
 
