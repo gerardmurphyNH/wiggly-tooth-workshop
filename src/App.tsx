@@ -17,6 +17,14 @@ import ForTeachers from "./pages/ForTeachers";
 import ForParents from "./pages/ForParents";
 import News from "./pages/News";
 import Premiere from "./pages/Premiere";
+import ColoringPage from "./pages/ColoringPage";
+import WhyDoesTheToothFairyTakeTeeth from "./pages/WhyDoesTheToothFairyTakeTeeth";
+import ToothFairyStoryExplained from "./pages/ToothFairyStoryExplained";
+import FirstToothWhatToDo from "./pages/FirstToothWhatToDo";
+import ToothFairyFAQ from "./pages/ToothFairyFAQ";
+import TeacherPrintables from "./pages/TeacherPrintables";
+import ToothFairyLetter from "./pages/ToothFairyLetter";
+import WhatToSayToothFairy from "./pages/WhatToSayToothFairy";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +48,14 @@ const App = () => (
             <Route path="/for-parents" element={<ForParents />} />
             <Route path="/news" element={<News />} />
             <Route path="/tooth-fairy-film-premiere" element={<Premiere />} />
+            <Route path="/coloring-page" element={<ColoringPage />} />
+            <Route path="/why-does-the-tooth-fairy-take-teeth" element={<WhyDoesTheToothFairyTakeTeeth />} />
+            <Route path="/tooth-fairy-story-explained" element={<ToothFairyStoryExplained />} />
+            <Route path="/first-tooth-what-to-do" element={<FirstToothWhatToDo />} />
+            <Route path="/tooth-fairy-faq" element={<ToothFairyFAQ />} />
+            <Route path="/tooth-fairy-printables" element={<TeacherPrintables />} />
+            <Route path="/tooth-fairy-letter" element={<ToothFairyLetter />} />
+            <Route path="/what-to-say-when-child-asks-if-tooth-fairy-is-real" element={<WhatToSayToothFairy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

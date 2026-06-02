@@ -147,6 +147,56 @@ export const trackColoringPageDownload = (): void => {
   });
 };
 
+// ============================================
+// TEACHER PRINTABLES TRACKING
+// ============================================
+export const trackTeacherWorksheetDownload = (): void => {
+  trackEvent("teacher_resource_download", { resource_type: "worksheet" });
+};
+
+export const trackTeacherGuideDownload = (): void => {
+  trackEvent("teacher_resource_download", { resource_type: "guide" });
+};
+
+export const trackTeacherColoringDownload = (): void => {
+  trackEvent("teacher_resource_download", { resource_type: "coloring_page" });
+};
+
+export const trackTeacherBundleDownload = (): void => {
+  trackEvent("teacher_resource_download", { resource_type: "bundle" });
+};
+
+export const trackTeacherSignupSubmit = (): void => {
+  trackEvent("teacher_signup_submit");
+};
+
+export const trackTeacherResourcesPageClick = (location: string): void => {
+  trackEvent("teacher_resources_click", { click_location: location });
+};
+
+// ============================================
+// TOOTH FAIRY LETTER TRACKING
+// ============================================
+export const trackToothFairyLetterPdfDownload = (): void => {
+  trackEvent("letter_download", { file_type: "pdf" });
+};
+
+export const trackToothFairyLetterImageDownload = (): void => {
+  trackEvent("letter_download", { file_type: "image" });
+};
+
+export const trackToothFairyLetterExamplePdfDownload = (): void => {
+  trackEvent("letter_example_download", { file_type: "pdf" });
+};
+
+export const trackToothFairyLetterExampleImageDownload = (): void => {
+  trackEvent("letter_example_download", { file_type: "image" });
+};
+
+export const trackToothFairyGuideDownload = (): void => {
+  trackEvent("tooth_fairy_guide_download");
+};
+
 // Type declarations
 declare global {
   interface Window {
