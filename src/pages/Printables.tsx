@@ -20,11 +20,11 @@ const printables = [
   {
     id: "letter",
     title: "Tooth Fairy Letter Template",
-    description: "A printable letter from the Tooth Fairy for your child — personalize with their name, tooth number, and virtue. Coming soon.",
+    description: "A printable letter from the Tooth Fairy for your child — personalize with their name, tooth number, and virtue.",
     icon: FileText,
-    href: null,
+    href: "/tooth-fairy-letter",
     download: null,
-    label: "Coming soon",
+    label: "Get the letter template",
     onDownload: () => {},
   },
 ];
