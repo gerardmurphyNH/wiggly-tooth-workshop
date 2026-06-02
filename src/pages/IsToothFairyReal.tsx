@@ -1,47 +1,31 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { YOUTUBE_VIDEO_URL } from "@/lib/config";
-import { trackCTAClick } from "@/lib/analytics";
+import { trackCTAClick, trackEvent } from "@/lib/analytics";
 
-const faqs = [
+const exploreLinks = [
   {
-    question: "Has anyone ever seen the Tooth Fairy?",
-    answer:
-      "Very few people. The Tooth Fairy works in the quiet hours, when most children are deeply asleep. Some have caught a glimpse: a movement at the edge of a dream, a small light near the window. But she's fast, and she's careful, and she prefers it that way.",
+    to: "/what-does-the-tooth-fairy-do-with-teeth",
+    label: "What Does the Tooth Fairy Do With Teeth?",
+    desc: "Inside the workshop, and what happens after she visits.",
   },
   {
-    question: "How does she get in without waking anyone up?",
-    answer:
-      "Fairies are very small — about the size of your hand — and they can slip through the tiniest spaces: a crack in a window, a gap under a door, even the space between moonbeams.",
+    to: "/why-does-the-tooth-fairy-take-teeth",
+    label: "Why Does the Tooth Fairy Take Teeth?",
+    desc: "The reason behind a tradition older than anyone remembers.",
   },
   {
-    question: "If she's real, why doesn't she just show herself?",
-    answer:
-      "Partly because she works better that way. A visitor who leaves money in the night is mysterious. A visitor you can see and talk to is just a person. The mystery matters. And the Tooth Fairy has always known that.",
+    to: "/tooth-fairy-story-explained",
+    label: "The Tooth Fairy Story, Explained",
+    desc: "The full mythology, from beginning to present.",
   },
   {
-    question: "What if I stay up and wait for her?",
-    answer:
-      "She knows. She waits. The Tooth Fairy is patient — she has been doing this for centuries. She'll come when the time is right. Most children who try to stay up fall asleep eventually. She counts on it.",
-  },
-  {
-    question: "Does the Tooth Fairy exist in other countries too?",
-    answer:
-      "Yes, though she goes by different names and traditions. In France she's La Petite Souris, a little mouse. In some parts of Asia, children throw their teeth onto the roof or under the floorboards. The Tooth Fairy's workshop has teeth from all over the world. The tradition is older and wider than most people realize.",
-  },
-  {
-    question: "My parents say they left the money there. Is that true?",
-    answer:
-      "Parents help. They always have. The Tooth Fairy works in ways that are hard to do alone, especially in houses where she can't always make it on the right night. Parents are her helpers. The money still means the same thing.",
+    to: "/tooth-fairy-faq",
+    label: "Tooth Fairy Questions, Answered",
+    desc: "Every question children (and parents) ask.",
   },
 ];
 
@@ -51,224 +35,344 @@ const IsToothFairyReal = () => {
       <NavBar />
 
       <main>
-        {/* Hero */}
-        <section className="night-sky-section py-20 md:py-28 relative overflow-hidden">
+
+        {/* ── Hero ── */}
+        <section className="night-sky-section py-24 md:py-36 relative overflow-hidden">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {Array.from({ length: 15 }, (_, i) => (
+            {Array.from({ length: 20 }, (_, i) => (
               <div
                 key={i}
                 className="absolute w-1 h-1 bg-starlight rounded-full sparkle"
                 style={{
                   left: `${(i * 17 + 7) % 100}%`,
-                  top: `${(i * 23 + 11) % 100}%`,
-                  animationDelay: `${(i * 0.13) % 2}s`,
+                  top: `${(i * 23 + 11) % 85}%`,
+                  animationDelay: `${(i * 0.15) % 2}s`,
                 }}
               />
             ))}
           </div>
-          <div className="container px-6 relative z-10 text-center max-w-3xl mx-auto">
-            <div className="flex flex-col items-center gap-4 mb-8">
-              <Link
-                to="/"
-                className="inline-flex items-center gap-2 text-starlight/60 hover:text-starlight transition-colors text-sm"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back to Wiggly Tooth Workshop
-              </Link>
-              <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/20 px-3 py-1 rounded-full">
-                The Serious Question
-              </span>
-            </div>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-starlight mb-6 leading-tight">
+
+          <div className="container px-6 relative z-10 max-w-3xl mx-auto text-center">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-starlight/50 hover:text-starlight/80 transition-colors text-sm mb-12"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Wiggly Tooth Workshop
+            </Link>
+
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary/80 mb-6">
+              A question worth asking
+            </p>
+
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-starlight leading-tight mb-8">
               Is the Tooth Fairy
               <br />
               <span className="text-primary">Real?</span>
             </h1>
-            <p className="text-lg text-starlight/80 mb-8 leading-relaxed max-w-2xl mx-auto">
-              This question deserves a real answer. Here it is.
+
+            <p className="text-starlight/60 text-lg md:text-xl leading-relaxed max-w-xl mx-auto">
+              Some questions stay with us long after childhood ends.
+              This is one of them.
             </p>
           </div>
         </section>
 
-        {/* The Answer */}
-        <section className="py-12 md:py-16 bg-secondary/30">
+        {/* ── Opening ── */}
+        <section className="py-20 md:py-28 bg-background">
           <div className="container px-6 max-w-2xl mx-auto">
-            <div className="magical-card p-8">
-              <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
-                The Answer
-              </span>
-              <p className="text-foreground text-2xl font-display font-bold mb-4">Yes.</p>
-              <p className="text-foreground text-lg leading-relaxed">
-                The Tooth Fairy is real. She just does her work in ways most
-                people don't see. She works quietly, at night, drawing good
-                qualities out of teeth and using them to help fix small problems
-                in the world.
+
+            <div className="space-y-6 text-foreground/80 text-lg leading-relaxed mb-14">
+              <p>
+                Is the Tooth Fairy real? Why does she collect teeth? What
+                happens to them after they disappear beneath the pillow?
               </p>
-              <p className="text-muted-foreground mt-4 leading-relaxed">
-                When you lose a tooth, it doesn't disappear by accident. The
-                Tooth Fairy takes it because every tooth holds good qualities
-                you grew while becoming yourself: bravery, kindness, creativity,
-                patience. She uses those to help the world, then leaves a
-                thank-you behind. You may never see her. But the clues are
-                there. And that's exactly how she likes it.
+              <p>
+                These aren't small questions. They're the kind that open up
+                something larger — about what children are really doing when
+                they grow, and what that growing is quietly worth.
               </p>
             </div>
-          </div>
-        </section>
 
-        {/* Main content */}
-        <section className="py-12 md:py-16 bg-background">
-          <div className="container px-6 max-w-2xl mx-auto space-y-12">
-            <div>
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-                The Evidence
-              </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  The strongest evidence for the Tooth Fairy is the simplest
-                  one: the tooth disappears, and something appears in its place.
-                </p>
-                <p>
-                  That exchange happens on schedule, usually within a night or
-                  two of a tooth being lost. It happens in houses all over the
-                  world, in different countries, different climates, different
-                  time zones. Think about how many children lose teeth every
-                  single night. She finds every one.
-                </p>
-                <p>
-                  Something is doing this work. Something has been doing it for
-                  centuries. And it isn't random.
-                </p>
-              </div>
-            </div>
+            {/* Pull quote */}
+            <figure className="my-14 pl-6 border-l-4 border-primary">
+              <blockquote className="font-display text-2xl md:text-3xl font-bold text-foreground leading-snug">
+                "Every lost tooth carries something worth keeping."
+              </blockquote>
+            </figure>
 
-            <div>
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Why You Never See Her
-              </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  The Tooth Fairy is small — about the size of your hand — and
-                  she works in the quiet hours of the night, when most people
-                  are deeply asleep. She's very good at her job. She has had
-                  centuries of practice.
-                </p>
-                <p>
-                  She can slip through the tiniest spaces: a crack in a window
-                  frame, a gap under a door. She doesn't need much room. And she
-                  moves quietly enough that even light sleepers rarely wake up.
-                </p>
-                <p>
-                  Most important things work quietly. Gravity doesn't announce
-                  itself. The wind doesn't explain where it's going. The Tooth
-                  Fairy fits right in.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-                What the Clues Tell Us
-              </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  If you want to find the Tooth Fairy, you don't need to stay up
-                  all night. You just need to pay attention to what she leaves
-                  behind.
-                </p>
-                <p>
-                  The money is the obvious one. But there's also the absence of
-                  the tooth — the fact that it went somewhere specific, not just
-                  disappeared. There's the timing, which is never random.
-                  There's the fact that children all over the world have been
-                  part of this same exchange for as long as anyone can remember.
-                </p>
-                <p>
-                  These aren't the clues of something imaginary. They're the
-                  clues of something that works very hard not to be seen.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-                For Kids Who Are Starting to Wonder
-              </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  If you're starting to ask harder questions, that's a good
-                  thing. It means you're paying attention.
-                </p>
-                <p>
-                  You don't have to see the Tooth Fairy to know she's real. She
-                  works through the people who love you, through traditions older
-                  than anyone can remember, through the fact that someone always
-                  notices when you've lost something, and always does something
-                  about it.
-                </p>
-                <p>That part doesn't require belief. It just requires looking.</p>
-              </div>
+            <div className="space-y-6 text-foreground/80 text-lg leading-relaxed">
+              <p>
+                Childhood is full of invisible work. Every time a child tries
+                something frightening, a small piece of courage takes shape.
+                Every moment of patience, every act of kindness, every
+                afternoon spent building something from nothing — all of it
+                accumulates. Not in any place you can point to. But somewhere.
+              </p>
+              <p>
+                Teeth grow slowly, over years, through all of it. A first loose
+                tooth arrives after a childhood of small acts — fears faced,
+                kindness offered, persistence practiced in quiet rooms. When it
+                finally falls, it doesn't leave empty.
+              </p>
+              <p>
+                Maybe that's the part we've been forgetting to notice.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="py-12 md:py-16 bg-secondary/30">
+        {/* ── What if teeth hold more ── */}
+        <section className="py-20 md:py-28 bg-secondary/30">
           <div className="container px-6 max-w-2xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
-              More questions about this
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8 leading-tight">
+              What If Teeth Hold More
+              <br className="hidden sm:block" /> Than Memories?
             </h2>
-            <Accordion type="single" collapsible className="space-y-3">
-              {faqs.map((faq, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="magical-card border-0 data-[state=open]:shadow-magical transition-shadow"
-                >
-                  <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:text-primary transition-colors hover:no-underline px-0">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed pt-2">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </section>
 
-        {/* Related pages */}
-        <section className="py-12 md:py-16 bg-background">
-          <div className="container px-6 max-w-2xl mx-auto">
-            <h2 className="font-display text-xl font-bold text-foreground mb-6 text-center">
-              Keep exploring
-            </h2>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="space-y-6 text-foreground/80 text-lg leading-relaxed mb-10">
+              <p>
+                There's an old idea at the heart of the Tooth Fairy story — one
+                that most people overlook because they're too focused on the
+                coin.
+              </p>
+              <p>
+                Baby teeth don't just hold the shape of a child's smile. Over
+                the years they form, they quietly absorb the qualities a child
+                brings into the world. Not as wishes. Not as magic. But as
+                something real and earned.
+              </p>
+            </div>
+
+            {/* Qualities list */}
+            <div className="my-10 grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                {
-                  to: "/what-does-the-tooth-fairy-do-with-teeth",
-                  label: "What does she do with the teeth?",
-                  desc: "Inside the Tooth Fairy's workshop",
-                },
-                {
-                  to: "/why-does-the-tooth-fairy-take-teeth",
-                  label: "Why does she take teeth?",
-                  desc: "The reason behind the tradition",
-                },
-                {
-                  to: "/what-to-say-when-child-asks-if-tooth-fairy-is-real",
-                  label: "What to say when they ask",
-                  desc: "A gentle answer for parents",
-                },
-                {
-                  to: "/tooth-fairy-faq",
-                  label: "All Tooth Fairy questions answered",
-                  desc: "The complete FAQ",
-                },
-              ].map((link) => (
+                { quality: "Bravery", from: "from trying something scary" },
+                { quality: "Patience", from: "from learning slowly" },
+                { quality: "Creativity", from: "from building and imagining" },
+                { quality: "Kindness", from: "from choosing to help" },
+                { quality: "Resilience", from: "from trying again after failing" },
+                { quality: "Curiosity", from: "from asking questions that matter" },
+              ].map(({ quality, from }) => (
+                <div
+                  key={quality}
+                  className="flex items-start gap-3 p-4 rounded-xl bg-background border border-border"
+                >
+                  <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <div>
+                    <span className="font-display font-semibold text-foreground">
+                      {quality}
+                    </span>
+                    <span className="text-muted-foreground text-sm"> — {from}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-foreground/80 text-lg leading-relaxed">
+              These qualities are real. Children grow them every day. And when a
+              tooth finally lets go, it doesn't leave empty.
+            </p>
+          </div>
+        </section>
+
+        {/* ── Why does she collect ── */}
+        <section className="py-20 md:py-28 bg-background">
+          <div className="container px-6 max-w-2xl mx-auto">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8 leading-tight">
+              Why Does the Tooth Fairy
+              <br className="hidden sm:block" /> Collect Teeth?
+            </h2>
+
+            <div className="space-y-6 text-foreground/80 text-lg leading-relaxed mb-10">
+              <p>
+                The Tooth Fairy doesn't collect teeth because they are rare or
+                valuable.
+              </p>
+              <p>
+                She collects them because what's inside them matters.
+              </p>
+              <p>
+                She works carefully with what children leave behind —
+                drawing out the qualities that grew inside each tooth and
+                finding quiet ways to put them back into the world where
+                they're needed most.
+              </p>
+            </div>
+
+            {/* Pull quote, smaller */}
+            <figure className="my-10 py-6 px-8 rounded-2xl bg-secondary/40 border border-border text-center">
+              <blockquote className="font-display text-xl md:text-2xl font-semibold text-foreground leading-snug italic">
+                "Not as miracles. Not as wishes granted.
+                <br className="hidden md:block" />
+                As small, invisible nudges."
+              </blockquote>
+            </figure>
+
+            <div className="space-y-6 text-foreground/80 text-lg leading-relaxed">
+              <p>
+                A person who finds a little more courage than they expected. A
+                moment of patience that prevents something from falling apart.
+                An unexpected kindness that arrives at exactly the right time.
+              </p>
+              <p>
+                The Tooth Fairy doesn't change the world dramatically. She
+                tends to it — gently, precisely, while it sleeps.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Hidden work ── */}
+        <section className="py-20 md:py-28 bg-secondary/30 relative overflow-hidden">
+          {/* Subtle star accents */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+            {Array.from({ length: 8 }, (_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-primary rounded-full sparkle"
+                style={{
+                  left: `${(i * 23 + 11) % 100}%`,
+                  top: `${(i * 31 + 7) % 100}%`,
+                  animationDelay: `${(i * 0.3) % 2}s`,
+                }}
+              />
+            ))}
+          </div>
+
+          <div className="container px-6 max-w-2xl mx-auto relative z-10">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8 leading-tight">
+              The Hidden Work of
+              <br className="hidden sm:block" /> the Tooth Fairy
+            </h2>
+
+            <div className="space-y-6 text-foreground/80 text-lg leading-relaxed">
+              <p>
+                Most people only notice the coin left behind.
+              </p>
+              <p>
+                They don't stop to wonder about the tooth that disappeared —
+                where it went, what it carried, or why someone took such care to
+                leave something in its place.
+              </p>
+              <p>
+                The Tooth Fairy's work is ancient and mostly unseen. She works
+                while the world sleeps, when the noise has stopped and things
+                can finally settle. Small corrections. Quiet contributions. Acts
+                of balance too subtle to announce but too important to leave
+                undone.
+              </p>
+              <p>
+                She is less like a magical entertainer and more like a careful
+                keeper of something most of us forget to notice: that children,
+                simply by growing, make the world better.
+              </p>
+              <p>
+                Every child who faces something frightening and tries anyway.
+                Every child who learns to be patient, to share, to imagine, to
+                keep going. All of that is real. All of it accumulates. None of
+                it disappears — even when the tooth does.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── So is she real ── */}
+        <section className="py-24 md:py-36 night-sky-section relative overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {Array.from({ length: 16 }, (_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-starlight rounded-full sparkle"
+                style={{
+                  left: `${(i * 19 + 5) % 100}%`,
+                  top: `${(i * 27 + 9) % 90}%`,
+                  animationDelay: `${(i * 0.18) % 2}s`,
+                }}
+              />
+            ))}
+          </div>
+
+          <div className="container px-6 max-w-2xl mx-auto relative z-10">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-starlight mb-10 text-center">
+              So... Is the Tooth Fairy Real?
+            </h2>
+
+            <div className="space-y-6 text-starlight/75 text-lg leading-relaxed mb-12 text-center max-w-xl mx-auto">
+              <p>
+                Maybe the real magic was never about coins under pillows.
+              </p>
+              <p>
+                Maybe it was always about recognizing that children leave
+                something good behind as they grow.
+              </p>
+            </div>
+
+            {/* Verse-style list */}
+            <div className="my-10 space-y-3 text-center">
+              {[
+                "Every act of bravery.",
+                "Every moment of kindness.",
+                "Every new idea.",
+                "Every time a child tries again after failing.",
+              ].map((line) => (
+                <p
+                  key={line}
+                  className="font-display text-lg md:text-xl font-semibold text-starlight"
+                >
+                  {line}
+                </p>
+              ))}
+            </div>
+
+            <div className="space-y-6 text-starlight/75 text-lg leading-relaxed text-center max-w-xl mx-auto mb-12">
+              <p>
+                Those things matter. They ripple outward in ways that can't
+                always be traced back to their source. The world becomes better,
+                quietly, because children keep growing through it.
+              </p>
+              <p>
+                The Tooth Fairy simply helps make sure none of that goodness
+                goes to waste.
+              </p>
+            </div>
+
+            {/* Final pull quote */}
+            <figure className="text-center my-10">
+              <blockquote className="font-display text-2xl md:text-3xl font-bold text-primary leading-snug">
+                "Every lost tooth carries something worth keeping."
+              </blockquote>
+            </figure>
+
+            <p className="text-center text-starlight/60 text-lg">
+              So — is she real?
+              <br />
+              Look at what children bring into the world every day.
+              <br />
+              <em>Then decide.</em>
+            </p>
+          </div>
+        </section>
+
+        {/* ── Continue exploring ── */}
+        <section className="py-20 md:py-28 bg-background">
+          <div className="container px-6 max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <Sparkles className="w-6 h-6 text-primary mx-auto mb-4" />
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+                Continue Exploring the Workshop
+              </h2>
+              <p className="text-muted-foreground">
+                There is more to the Tooth Fairy's world than one question can hold.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              {exploreLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
+                  onClick={() => trackEvent("explore_click", { page: link.to, source: "is_tooth_fairy_real" })}
                   className="magical-card group hover:shadow-magical transition-all duration-300 hover:-translate-y-0.5"
                 >
                   <p className="font-display font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
@@ -278,52 +382,49 @@ const IsToothFairyReal = () => {
                 </Link>
               ))}
             </div>
+
+            {/* Watch the film card */}
+            <a
+              href={YOUTUBE_VIDEO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("social_click", { platform: "youtube", location: "is_tooth_fairy_real" })}
+              className="block w-full rounded-2xl bg-[hsl(244_45%_15%)] border border-primary/25 hover:border-primary/50 p-6 text-center transition-all hover:shadow-magical group"
+            >
+              <Sparkles className="w-5 h-5 text-primary mx-auto mb-3" />
+              <p className="font-display font-semibold text-starlight group-hover:text-primary transition-colors mb-1">
+                Watch the Animated Short Film
+              </p>
+              <p className="text-sm text-starlight/60">
+                See the Tooth Fairy's world come to life — free on YouTube.
+              </p>
+            </a>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-16 md:py-20 night-sky-section relative overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {Array.from({ length: 10 }, (_, i) => (
-              <div
-                key={i}
-                className="absolute w-1 h-1 bg-starlight rounded-full sparkle"
-                style={{
-                  left: `${(i * 19 + 5) % 100}%`,
-                  top: `${(i * 31 + 9) % 100}%`,
-                  animationDelay: `${(i * 0.2) % 2}s`,
-                }}
-              />
-            ))}
-          </div>
-          <div className="container px-6 max-w-2xl mx-auto text-center relative z-10">
-            <Sparkles className="w-8 h-8 text-primary mx-auto mb-4" />
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-starlight mb-4">
-              Watch the short film
-            </h2>
-            <p className="text-starlight/70 mb-8 leading-relaxed">
-              <em>The Tooth Fairy's Magical Mission</em> takes Arlo deeper into
-              the Tooth Fairy's world than any child has ever gone. Now on
-              YouTube — free to watch.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" asChild>
-                <a href={YOUTUBE_VIDEO_URL} target="_blank" rel="noopener noreferrer">
-                  <Sparkles className="w-4 h-4" />
-                  Watch the film
-                </a>
-              </Button>
-              <Button variant="workshop" size="lg" asChild>
+        {/* ── Join the Workshop ── */}
+        <section className="py-16 bg-secondary/30">
+          <div className="container px-6 max-w-xl mx-auto text-center">
+            <div className="magical-card">
+              <Sparkles className="w-6 h-6 text-primary mx-auto mb-3" />
+              <h2 className="font-display text-xl font-semibold text-foreground mb-2">
+                Join the Workshop
+              </h2>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+                A quiet place for new stories, free printables, and the
+                continuing world of the Tooth Fairy. For families who still
+                believe there's more to discover.
+              </p>
+              <Button variant="magical" size="sm" asChild>
                 <a href="/#signup" onClick={() => trackCTAClick("is_tooth_fairy_real")}>
+                  <Sparkles className="w-3.5 h-3.5" />
                   Join the Workshop
                 </a>
               </Button>
             </div>
-            <p className="mt-4 text-xs text-starlight/50">
-              Free · No spam · Unsubscribe anytime
-            </p>
           </div>
         </section>
+
       </main>
 
       <Footer />
