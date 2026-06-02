@@ -3,6 +3,7 @@ import { ArrowLeft, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import VirtueQuizSection from "@/components/VirtueQuizSection";
 import { YOUTUBE_VIDEO_URL } from "@/lib/config";
 import { trackCTAClick, trackEvent } from "@/lib/analytics";
 
@@ -88,7 +89,7 @@ const IsToothFairyReal = () => {
               </p>
               <p>
                 These aren't small questions. They're the kind that open up
-                something larger — about what children are really doing when
+                something larger - about what children are really doing when
                 they grow, and what that growing is quietly worth.
               </p>
             </div>
@@ -105,12 +106,12 @@ const IsToothFairyReal = () => {
                 Childhood is full of invisible work. Every time a child tries
                 something frightening, a small piece of courage takes shape.
                 Every moment of patience, every act of kindness, every
-                afternoon spent building something from nothing — all of it
+                afternoon spent building something from nothing - all of it
                 accumulates. Not in any place you can point to. But somewhere.
               </p>
               <p>
                 Teeth grow slowly, over years, through all of it. A first loose
-                tooth arrives after a childhood of small acts — fears faced,
+                tooth arrives after a childhood of small acts - fears faced,
                 kindness offered, persistence practiced in quiet rooms. When it
                 finally falls, it doesn't leave empty.
               </p>
@@ -131,9 +132,9 @@ const IsToothFairyReal = () => {
 
             <div className="space-y-6 text-foreground/80 text-lg leading-relaxed mb-10">
               <p>
-                There's an old idea at the heart of the Tooth Fairy story — one
+                There's an old idea at the heart of the Tooth Fairy story - one
                 that most people overlook because they're too focused on the
-                coin.
+                coin or bill left behind.
               </p>
               <p>
                 Baby teeth don't just hold the shape of a child's smile. Over
@@ -162,7 +163,7 @@ const IsToothFairyReal = () => {
                     <span className="font-display font-semibold text-foreground">
                       {quality}
                     </span>
-                    <span className="text-muted-foreground text-sm"> — {from}</span>
+                    <span className="text-muted-foreground text-sm"> - {from}</span>
                   </div>
                 </div>
               ))}
@@ -174,6 +175,9 @@ const IsToothFairyReal = () => {
             </p>
           </div>
         </section>
+
+        {/* ── Virtue quiz ── */}
+        <VirtueQuizSection />
 
         {/* ── Why does she collect ── */}
         <section className="py-20 md:py-28 bg-background">
@@ -192,7 +196,7 @@ const IsToothFairyReal = () => {
                 She collects them because what's inside them matters.
               </p>
               <p>
-                She works carefully with what children leave behind —
+                She works carefully with what children leave behind -
                 drawing out the qualities that grew inside each tooth and
                 finding quiet ways to put them back into the world where
                 they're needed most.
@@ -216,7 +220,7 @@ const IsToothFairyReal = () => {
               </p>
               <p>
                 The Tooth Fairy doesn't change the world dramatically. She
-                tends to it — gently, precisely, while it sleeps.
+                tends to it - gently, precisely, while it sleeps.
               </p>
             </div>
           </div>
@@ -247,10 +251,10 @@ const IsToothFairyReal = () => {
 
             <div className="space-y-6 text-foreground/80 text-lg leading-relaxed">
               <p>
-                Most people only notice the coin left behind.
+                Most people only notice the coin or bill left behind.
               </p>
               <p>
-                They don't stop to wonder about the tooth that disappeared —
+                They don't stop to wonder about the tooth that disappeared -
                 where it went, what it carried, or why someone took such care to
                 leave something in its place.
               </p>
@@ -270,7 +274,7 @@ const IsToothFairyReal = () => {
                 Every child who faces something frightening and tries anyway.
                 Every child who learns to be patient, to share, to imagine, to
                 keep going. All of that is real. All of it accumulates. None of
-                it disappears — even when the tooth does.
+                it disappears - even when the tooth does.
               </p>
             </div>
           </div>
@@ -299,7 +303,7 @@ const IsToothFairyReal = () => {
 
             <div className="space-y-6 text-starlight/75 text-lg leading-relaxed mb-12 text-center max-w-xl mx-auto">
               <p>
-                Maybe the real magic was never about coins under pillows.
+                Maybe the real magic was never about coins and bills under pillows.
               </p>
               <p>
                 Maybe it was always about recognizing that children leave
@@ -344,7 +348,7 @@ const IsToothFairyReal = () => {
             </figure>
 
             <p className="text-center text-starlight/60 text-lg">
-              So — is she real?
+              So - is she real?
               <br />
               Look at what children bring into the world every day.
               <br />
@@ -395,7 +399,7 @@ const IsToothFairyReal = () => {
                 Watch the Animated Short Film
               </p>
               <p className="text-sm text-starlight/60">
-                See the Tooth Fairy's world come to life — free on YouTube.
+                See the Tooth Fairy's world come to life - free on YouTube.
               </p>
             </a>
           </div>
