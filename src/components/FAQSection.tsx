@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "Why does the Tooth Fairy leave money?",
-    answer: "It's a trade, really. You're giving something precious - a piece of yourself that took time and care to grow. The coin is the Tooth Fairy's way of saying 'thank you' for trusting her with something so important.",
+    answer: "It's a trade, really. You're giving something precious - a piece of yourself that took time and care to grow. The money is the Tooth Fairy's way of saying 'thank you' for trusting her with something so important.",
   },
   {
     question: "Why does the Tooth Fairy come at night?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "How does the Tooth Fairy get in my house?",
-    answer: "Fairies are very small - about the size of your hand - and they can slip through the tiniest spaces: a crack in a window, a gap under a door, even the space between moonbeams. Your house is never as sealed as you think.",
+    answer: "Fairies are very small - about the size of your hand - and they can slip through the tiniest spaces: a crack in a window, a gap under a door, even the space between moonbeams.",
   },
   {
     question: "Is the Tooth Fairy real?",

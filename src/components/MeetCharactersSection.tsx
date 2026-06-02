@@ -16,13 +16,13 @@ const MeetCharactersSection = () => {
             The short film
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-5">
-            CeCe had a question nobody could answer.
+            The boy who had to know the truth about the Tooth Fairy.
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed">
-            When her tooth falls out one quiet evening, she and her little
-            brother Arlo decide to find out the truth. What they discover is
-            stranger, more beautiful, and more useful than either of them
-            expected — and it changes how they see every tiny tooth that came
+            When his tooth falls out one quiet evening, a curious boy named
+            Arlo decides to write a letter to find out the truth. What he
+            discovers is stranger, more beautiful, and more useful than he
+            expected — and it changes how he sees every tiny tooth that came
             before it.
           </p>
         </div>

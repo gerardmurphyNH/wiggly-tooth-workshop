@@ -49,7 +49,7 @@ const WorldIntroSection = () => {
             </p>
             <p className="text-muted-foreground text-base leading-relaxed">
               A tooth from a child who faced something scary holds courage. One
-              from a child who shared when it cost them something holds kindness.
+              from a child who shared something holds kindness.
               The Tooth Fairy takes these qualities and puts them back into the
               world, quietly, where they're needed most.
             </p>
@@ -74,13 +74,6 @@ const WorldIntroSection = () => {
           ))}
         </div>
 
-        {/* Closing note */}
-        <div className="max-w-xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 text-muted-foreground text-sm">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span>Each tooth carries exactly one — just at different strengths</span>
-          </div>
-        </div>
       </div>
     </section>
   );
