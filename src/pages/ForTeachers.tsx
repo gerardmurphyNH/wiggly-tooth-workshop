@@ -66,7 +66,7 @@ const ForTeachers = () => {
                 prompts: [
                   "What do you think the Tooth Fairy does with the teeth she collects?",
                   "If your tooth held a special quality, what quality would you want it to have?",
-                  "How did CeCe feel when she found out what the Tooth Fairy really does?",
+                  "How did Arlo feel when he found out what the Tooth Fairy really does?",
                 ],
               },
               {
