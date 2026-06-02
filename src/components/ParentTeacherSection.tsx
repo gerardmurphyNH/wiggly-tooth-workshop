@@ -7,7 +7,7 @@ const parentLinks = [
   {
     href: "/is-the-tooth-fairy-real",
     label: "Is the Tooth Fairy real?",
-    description: "A thoughtful answer — for when the question finally comes",
+    description: "A thoughtful answer - for when the question finally comes",
     icon: HelpCircle,
   },
   {
@@ -21,6 +21,18 @@ const parentLinks = [
     label: "How much does the Tooth Fairy leave?",
     description: "Ranges, context, and what actually lands well with kids",
     icon: BookOpen,
+  },
+  {
+    href: "/tooth-fairy-letter",
+    label: "Tooth Fairy letter template",
+    description: "A printable letter from the Tooth Fairy, free to use",
+    icon: Download,
+  },
+  {
+    href: "/what-to-say-when-child-asks-if-tooth-fairy-is-real",
+    label: "What to say when they ask",
+    description: "A gentle guide for the conversation that eventually comes",
+    icon: HelpCircle,
   },
 ];
 

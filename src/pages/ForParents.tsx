@@ -70,10 +70,22 @@ const ForParents = () => {
               description: "Ranges, averages, and what actually lands well with kids.",
             },
             {
+              href: "/tooth-fairy-letter",
+              icon: Download,
+              title: "Tooth Fairy letter template",
+              description: "A printable letter from the Tooth Fairy, free to use.",
+            },
+            {
+              href: "/what-to-say-when-child-asks-if-tooth-fairy-is-real",
+              icon: HelpCircle,
+              title: "What to say when they ask",
+              description: "A gentle guide for the conversation that eventually comes.",
+            },
+            {
               href: "/printables",
               icon: Download,
               title: "Free printables",
-              description: "Coloring pages, letter templates, and more — all free.",
+              description: "Coloring pages and more, all free.",
             },
           ].map((item) => (
             <Link

@@ -144,26 +144,60 @@ const IsToothFairyReal = () => {
               </p>
             </div>
 
-            {/* Qualities list */}
-            <div className="my-10 grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {/* Virtue categories */}
+            <div className="my-10 space-y-6">
               {[
-                { quality: "Bravery", from: "from trying something scary" },
-                { quality: "Patience", from: "from learning slowly" },
-                { quality: "Creativity", from: "from building and imagining" },
-                { quality: "Kindness", from: "from choosing to help" },
-                { quality: "Resilience", from: "from trying again after failing" },
-                { quality: "Curiosity", from: "from asking questions that matter" },
-              ].map(({ quality, from }) => (
+                {
+                  name: "Spark Virtues",
+                  tagline: "The qualities that help ideas begin.",
+                  pill: "bg-amber-100 text-amber-800",
+                  border: "border-amber-200",
+                  virtues: ["Curiosity", "Creativity", "Imagination", "Wonder", "Ingenuity", "Discovery", "Inspiration"],
+                },
+                {
+                  name: "Heart Virtues",
+                  tagline: "The qualities that help people care for one another.",
+                  pill: "bg-rose-100 text-rose-800",
+                  border: "border-rose-200",
+                  virtues: ["Kindness", "Compassion", "Empathy", "Friendship", "Generosity", "Gratitude", "Forgiveness", "Love"],
+                },
+                {
+                  name: "Strong Virtues",
+                  tagline: "The qualities that help children face difficult things.",
+                  pill: "bg-blue-100 text-blue-800",
+                  border: "border-blue-200",
+                  virtues: ["Bravery", "Courage", "Resilience", "Confidence", "Determination", "Perseverance", "Hope", "Boldness"],
+                },
+                {
+                  name: "Steady Virtues",
+                  tagline: "The qualities that help keep the world balanced.",
+                  pill: "bg-violet-100 text-violet-800",
+                  border: "border-violet-200",
+                  virtues: ["Patience", "Honesty", "Thoughtfulness", "Responsibility", "Fairness", "Calmness", "Focus", "Self-Control"],
+                },
+                {
+                  name: "Light Virtues",
+                  tagline: "The qualities that brighten the world around us.",
+                  pill: "bg-yellow-100 text-yellow-800",
+                  border: "border-yellow-200",
+                  virtues: ["Joy", "Humor", "Optimism", "Playfulness", "Cheerfulness", "Encouragement"],
+                },
+              ].map(({ name, tagline, pill, border, virtues }) => (
                 <div
-                  key={quality}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-background border border-border"
+                  key={name}
+                  className={`p-5 rounded-2xl bg-background border ${border}`}
                 >
-                  <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <div>
-                    <span className="font-display font-semibold text-foreground">
-                      {quality}
-                    </span>
-                    <span className="text-muted-foreground text-sm"> - {from}</span>
+                  <p className="font-display font-semibold text-foreground mb-0.5">{name}</p>
+                  <p className="text-muted-foreground text-sm mb-3 italic">{tagline}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {virtues.map((v) => (
+                      <span
+                        key={v}
+                        className={`text-xs font-medium px-2.5 py-1 rounded-full ${pill}`}
+                      >
+                        {v}
+                      </span>
+                    ))}
                   </div>
                 </div>
               ))}
