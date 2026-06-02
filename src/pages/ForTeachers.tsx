@@ -158,10 +158,10 @@ const ForTeachers = () => {
             <div className="magical-card flex flex-col gap-3">
               <h3 className="font-display font-semibold text-foreground">Tooth Fairy Letter Template</h3>
               <p className="text-muted-foreground text-sm">
-                A printable letter for the Tooth Fairy activity. More printables coming soon.
+                A printable letter for the Tooth Fairy activity — free to download and use in the classroom.
               </p>
-              <Link to="/printables" className="text-sm font-medium text-primary hover:underline">
-                See all printables →
+              <Link to="/tooth-fairy-letter" className="text-sm font-medium text-primary hover:underline">
+                Get the letter template →
               </Link>
             </div>
           </div>

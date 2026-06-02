@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="50" fill="#3d3d8f"/>
+  <!-- Tooth shape -->
+  <path d="M35 28 C35 22 42 18 50 18 C58 18 65 22 65 28 C65 36 68 48 68 58 C68 66 64 72 59 72 C55 72 52 68 50 62 C48 68 45 72 41 72 C36 72 32 66 32 58 C32 48 35 36 35 28 Z" fill="white" opacity="0.95"/>
+  <!-- Gold sparkle -->
+  <path d="M50 30 L52 38 L60 38 L54 43 L56 51 L50 46 L44 51 L46 43 L40 38 L48 38 Z" fill="#F5B731" opacity="0.9"/>
+</svg>
