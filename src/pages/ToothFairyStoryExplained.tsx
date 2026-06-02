@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,80 +41,6 @@ const faqs = [
 const ToothFairyStoryExplained = () => {
   return (
     <>
-      <Helmet>
-        <title>The Tooth Fairy Story, Explained | Wiggly Tooth Workshop</title>
-        <meta
-          name="description"
-          content="Where does the Tooth Fairy come from? What's the real story behind the tradition? The history of the Tooth Fairy, and why it matters more than most people realize."
-        />
-        <link rel="canonical" href="https://wigglytoothworkshop.com/tooth-fairy-story-explained" />
-        <meta property="og:title" content="The Tooth Fairy Story, Explained" />
-        <meta property="og:description" content="Where does the Tooth Fairy come from? What's the real story behind the tradition? The history of the Tooth Fairy, and why it matters more than most people realize." />
-        <meta property="og:url" content="https://wigglytoothworkshop.com/tooth-fairy-story-explained" />
-        <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
-        <meta name="twitter:title" content="The Tooth Fairy Story, Explained" />
-        <meta name="twitter:description" content="Where does the Tooth Fairy come from? What's the real story behind the tradition? The history of the Tooth Fairy, and why it matters more than most people realize." />
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Wiggly Tooth Workshop",
-                    "item": "https://wigglytoothworkshop.com/"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "The Tooth Fairy Story, Explained",
-                    "item": "https://wigglytoothworkshop.com/tooth-fairy-story-explained"
-                  }
-                ]
-              },
-              {
-                "@type": "Article",
-                "headline": "The Tooth Fairy Story, Explained",
-                "description": "Where does the Tooth Fairy come from? What's the real story behind the tradition? The history and meaning of the Tooth Fairy, and why it matters.",
-                "url": "https://wigglytoothworkshop.com/tooth-fairy-story-explained",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Wiggly Tooth Workshop",
-                  "url": "https://wigglytoothworkshop.com/"
-                },
-                "author": {
-                  "@type": "Organization",
-                  "name": "Wiggly Tooth Workshop"
-                }
-              },
-              {
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "Where does the Tooth Fairy come from?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Customs around lost teeth date back thousands of years across many cultures. Norse and Northern European traditions from the 10th century mention a tooth fee. In France, it's La Petite Souris, a small mouse. The modern English-speaking Tooth Fairy became widespread in the early 20th century, shaped by generations of parents answering the question every child eventually asks: what happens to my tooth now?"
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Is the Tooth Fairy the same in every country?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "The tradition exists all over the world, but takes different forms. In France and parts of Europe it's La Petite Souris, a small mouse. In parts of Asia, children throw teeth toward the roof or floor. In the Middle East, teeth are sometimes thrown toward the sun. The Tooth Fairy's workshop has teeth from all of these traditions."
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        `}</script>
-      </Helmet>
 
       <div className="min-h-screen bg-background">
         <NavBar />

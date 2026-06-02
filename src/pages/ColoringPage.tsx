@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Download, Sparkles, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,64 +8,6 @@ import Footer from "@/components/Footer";
 const ColoringPage = () => {
   return (
     <>
-      <Helmet>
-        <title>Free Tooth Fairy Coloring Page | Wiggly Tooth Workshop</title>
-        <meta
-          name="description"
-          content="Download a free tooth fairy coloring page for kids: a printable PDF straight from the Wiggly Tooth Workshop. Perfect for ages 3–10. Print, color, and keep the magic alive."
-        />
-        <link rel="canonical" href="https://wigglytoothworkshop.com/coloring-page" />
-        <meta property="og:title" content="Free Tooth Fairy Coloring Page | Wiggly Tooth Workshop" />
-        <meta property="og:description" content="A free printable tooth fairy coloring page for kids from the Wiggly Tooth Workshop. Download the PDF and bring the magic to life with color." />
-        <meta property="og:url" content="https://wigglytoothworkshop.com/coloring-page" />
-        <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
-        <meta name="twitter:title" content="Free Tooth Fairy Coloring Page | Wiggly Tooth Workshop" />
-        <meta name="twitter:description" content="A free printable tooth fairy coloring page for kids from the Wiggly Tooth Workshop. Download the PDF and bring the magic to life with color." />
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Wiggly Tooth Workshop",
-                    "item": "https://wigglytoothworkshop.com/"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Free Tooth Fairy Coloring Page",
-                    "item": "https://wigglytoothworkshop.com/coloring-page"
-                  }
-                ]
-              },
-              {
-                "@type": "DigitalDocument",
-                "name": "Tooth Fairy Coloring Page",
-                "description": "A free printable tooth fairy coloring page PDF for kids, from the Wiggly Tooth Workshop. Inspired by The Tooth Fairy's Magical Mission animated short film.",
-                "encodingFormat": "application/pdf",
-                "url": "https://wigglytoothworkshop.com/downloads/coloring-page.pdf",
-                "inLanguage": "en",
-                "isAccessibleForFree": true,
-                "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Wiggly Tooth Workshop",
-                  "url": "https://wigglytoothworkshop.com/"
-                },
-                "audience": {
-                  "@type": "PeopleAudience",
-                  "suggestedMinAge": 3,
-                  "suggestedMaxAge": 10
-                }
-              }
-            ]
-          }
-        `}</script>
-      </Helmet>
 
       <div className="min-h-screen bg-background">
         <NavBar />

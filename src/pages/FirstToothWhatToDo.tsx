@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -70,101 +69,6 @@ const faqs = [
 const FirstToothWhatToDo = () => {
   return (
     <>
-      <Helmet>
-        <title>Your Child's First Lost Tooth: What To Do | Wiggly Tooth Workshop</title>
-        <meta
-          name="description"
-          content="Your child just lost their first tooth. Here's what to do next, from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow."
-        />
-        <link rel="canonical" href="https://wigglytoothworkshop.com/first-tooth-what-to-do" />
-        <meta property="og:title" content="Your Child's First Lost Tooth: What To Do" />
-        <meta property="og:description" content="Your child just lost their first tooth. Here's what to do next, from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow." />
-        <meta property="og:url" content="https://wigglytoothworkshop.com/first-tooth-what-to-do" />
-        <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
-        <meta name="twitter:title" content="Your Child's First Lost Tooth: What To Do" />
-        <meta name="twitter:description" content="Your child just lost their first tooth. Here's what to do next, from keeping it safe for the Tooth Fairy, to answering the questions that will definitely follow." />
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Wiggly Tooth Workshop",
-                    "item": "https://wigglytoothworkshop.com/"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Your Child's First Lost Tooth: What To Do",
-                    "item": "https://wigglytoothworkshop.com/first-tooth-what-to-do"
-                  }
-                ]
-              },
-              {
-                "@type": "Article",
-                "headline": "Your Child's First Lost Tooth: What To Do",
-                "description": "Your child just lost their first tooth. Here's what to do next, from keeping the tooth safe for the Tooth Fairy, to answering the questions that will definitely follow.",
-                "url": "https://wigglytoothworkshop.com/first-tooth-what-to-do",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Wiggly Tooth Workshop",
-                  "url": "https://wigglytoothworkshop.com/"
-                },
-                "author": {
-                  "@type": "Organization",
-                  "name": "Wiggly Tooth Workshop"
-                },
-                "audience": {
-                  "@type": "PeopleAudience",
-                  "suggestedMinAge": 4,
-                  "suggestedMaxAge": 10
-                }
-              },
-              {
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "What age do children usually lose their first tooth?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Most children lose their first tooth between ages 5 and 7, though anywhere from 4 to 8 is completely normal. The bottom front teeth usually come out first, the same ones that came in first as a baby."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Should I pull out a loose tooth or wait?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "It's almost always better to wait. A tooth will come out when it's ready, and a tooth that comes out on its own is much less uncomfortable than one that's pulled too early. If it's very loose and hanging by a thread, a gentle wiggle is fine."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What if my child swallows their tooth by accident?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "It happens, and it's nothing to worry about medically. Just leave a note for the Tooth Fairy explaining what happened. She's been doing this long enough to have encountered every possible situation, and she appreciates the honesty."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What if the Tooth Fairy doesn't come the first night?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "It happens. The Tooth Fairy visits millions of children. Sometimes she runs a little behind schedule. If the tooth is still there in the morning, reassure your child that the Fairy will come the next night. She always finds a way."
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        `}</script>
-      </Helmet>
 
       <div className="min-h-screen bg-background">
         <NavBar />

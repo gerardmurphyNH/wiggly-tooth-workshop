@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -175,57 +174,6 @@ const allFaqs = categories.flatMap((c) => c.faqs);
 const ToothFairyFAQ = () => {
   return (
     <>
-      <Helmet>
-        <title>Tooth Fairy FAQ — Every Question Answered | Wiggly Tooth Workshop</title>
-        <meta
-          name="description"
-          content="Every question about the Tooth Fairy, answered. Why she takes teeth, what she does with them, how she gets in, is she real, and more. The complete Tooth Fairy FAQ."
-        />
-        <link rel="canonical" href="https://wigglytoothworkshop.com/tooth-fairy-faq" />
-        <meta property="og:title" content="Tooth Fairy FAQ — Every Question Answered" />
-        <meta property="og:description" content="Every question about the Tooth Fairy, answered. Why she takes teeth, what she does with them, how she gets in, is she real. The complete FAQ." />
-        <meta property="og:url" content="https://wigglytoothworkshop.com/tooth-fairy-faq" />
-        <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
-        <meta name="twitter:title" content="Tooth Fairy FAQ — Every Question Answered" />
-        <meta name="twitter:description" content="Every question about the Tooth Fairy, answered. Why she takes teeth, what she does with them, how she gets in, is she real. The complete FAQ." />
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Wiggly Tooth Workshop",
-                    "item": "https://wigglytoothworkshop.com/"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Tooth Fairy FAQ",
-                    "item": "https://wigglytoothworkshop.com/tooth-fairy-faq"
-                  }
-                ]
-              },
-              {
-                "@type": "FAQPage",
-                "mainEntity": ${JSON.stringify(
-                  allFaqs.slice(0, 10).map((faq) => ({
-                    "@type": "Question",
-                    name: faq.question,
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: faq.answer,
-                    },
-                  }))
-                )}
-              }
-            ]
-          }
-        `}</script>
-      </Helmet>
 
       <div className="min-h-screen bg-background">
         <NavBar />

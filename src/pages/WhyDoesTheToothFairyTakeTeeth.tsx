@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,88 +41,6 @@ const faqs = [
 const WhyDoesTheToothFairyTakeTeeth = () => {
   return (
     <>
-      <Helmet>
-        <title>Why Does the Tooth Fairy Take Teeth? | Wiggly Tooth Workshop</title>
-        <meta
-          name="description"
-          content="Why does the Tooth Fairy take teeth instead of leaving them? Because every tooth holds a quality grown over years of childhood, and those qualities are exactly what the world needs."
-        />
-        <link rel="canonical" href="https://wigglytoothworkshop.com/why-does-the-tooth-fairy-take-teeth" />
-        <meta property="og:title" content="Why Does the Tooth Fairy Take Teeth?" />
-        <meta property="og:description" content="Every tooth holds a quality grown over years of childhood: bravery, kindness, creativity, patience. The Tooth Fairy takes them because those qualities are exactly what the world needs." />
-        <meta property="og:url" content="https://wigglytoothworkshop.com/why-does-the-tooth-fairy-take-teeth" />
-        <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
-        <meta name="twitter:title" content="Why Does the Tooth Fairy Take Teeth?" />
-        <meta name="twitter:description" content="Every tooth holds a quality grown over years of childhood: bravery, kindness, creativity, patience. The Tooth Fairy takes them because those qualities are exactly what the world needs." />
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Wiggly Tooth Workshop",
-                    "item": "https://wigglytoothworkshop.com/"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Why Does the Tooth Fairy Take Teeth?",
-                    "item": "https://wigglytoothworkshop.com/why-does-the-tooth-fairy-take-teeth"
-                  }
-                ]
-              },
-              {
-                "@type": "Article",
-                "headline": "Why Does the Tooth Fairy Take Teeth?",
-                "description": "Every tooth holds a quality grown over years of childhood: bravery, kindness, creativity, patience. The Tooth Fairy takes them because those qualities are exactly what the world needs.",
-                "url": "https://wigglytoothworkshop.com/why-does-the-tooth-fairy-take-teeth",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Wiggly Tooth Workshop",
-                  "url": "https://wigglytoothworkshop.com/"
-                },
-                "author": {
-                  "@type": "Organization",
-                  "name": "Wiggly Tooth Workshop"
-                }
-              },
-              {
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "Why does the Tooth Fairy take teeth?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Every tooth you lose holds something special: a memory, a moment of bravery, a flash of kindness. The Tooth Fairy collects these tiny treasures because they contain the qualities of childhood. And those qualities are exactly what the world needs."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Why does the Tooth Fairy take baby teeth specifically?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Baby teeth fall away naturally at exactly the moment when a child is ready for something bigger. That timing isn't an accident. The baby teeth carry the record of early childhood: years of growth, learning, and becoming. Adult teeth are permanent and aren't part of the collection."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Why does the Tooth Fairy leave money?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "The money she leaves is her thank-you: a sign that what you gave her had real value. It's the Tooth Fairy's way of saying: I see what you've grown. The world needed it. Thank you."
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        `}</script>
-      </Helmet>
 
       <div className="min-h-screen bg-background">
         <NavBar />

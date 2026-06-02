@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -43,96 +42,6 @@ const faqs = [
 const WhatToSayToothFairy = () => {
   return (
     <>
-      <Helmet>
-        <title>What to Say When Your Child Asks If the Tooth Fairy Is Real | Wiggly Tooth Workshop</title>
-        <meta
-          name="description"
-          content="A thoughtful way to answer when your child asks if the Tooth Fairy is real — without breaking the magic, lying awkwardly, or making growing up feel like a loss."
-        />
-        <link rel="canonical" href="https://wigglytoothworkshop.com/what-to-say-when-child-asks-if-tooth-fairy-is-real" />
-        <meta property="og:title" content="What to Say When Your Child Asks If the Tooth Fairy Is Real" />
-        <meta property="og:description" content="A thoughtful way to answer when your child asks if the Tooth Fairy is real — without breaking the magic, lying awkwardly, or making growing up feel like a loss." />
-        <meta property="og:url" content="https://wigglytoothworkshop.com/what-to-say-when-child-asks-if-tooth-fairy-is-real" />
-        <meta property="og:image" content="https://wigglytoothworkshop.com/og-image.jpg" />
-        <meta name="twitter:title" content="What to Say When Your Child Asks If the Tooth Fairy Is Real" />
-        <meta name="twitter:description" content="A thoughtful way to answer when your child asks if the Tooth Fairy is real — without breaking the magic, lying awkwardly, or making growing up feel like a loss." />
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Wiggly Tooth Workshop",
-                    "item": "https://wigglytoothworkshop.com/"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "What to Say When Your Child Asks If the Tooth Fairy Is Real",
-                    "item": "https://wigglytoothworkshop.com/what-to-say-when-child-asks-if-tooth-fairy-is-real"
-                  }
-                ]
-              },
-              {
-                "@type": "Article",
-                "headline": "What to Say When Your Child Asks If the Tooth Fairy Is Real",
-                "description": "A thoughtful way to answer when your child asks if the Tooth Fairy is real — without breaking the magic, lying awkwardly, or making growing up feel like a loss.",
-                "url": "https://wigglytoothworkshop.com/what-to-say-when-child-asks-if-tooth-fairy-is-real",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Wiggly Tooth Workshop",
-                  "url": "https://wigglytoothworkshop.com/"
-                },
-                "author": {
-                  "@type": "Organization",
-                  "name": "Wiggly Tooth Workshop"
-                }
-              },
-              {
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "What do I say when my child asks if the Tooth Fairy is real?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "You don't have to give a blunt yes or no. Instead, you can widen the meaning: the Tooth Fairy tradition exists because people have always known there is something important about the moment a child loses a tooth. It marks real growth. The qualities your child has been building — kindness, courage, creativity, wonder — are real, and worth celebrating. That meaning doesn't disappear when children start asking bigger questions."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Should I tell my child the Tooth Fairy is real?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "It depends on what your child is really asking. Some children want reassurance. Others are ready for a more grown-up answer. You can preserve wonder without forcing literal belief — a thoughtful answer often means more to a child than a quick confirmation either way."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What age do kids stop believing in the Tooth Fairy?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Many children begin questioning the Tooth Fairy between ages 7 and 9, though every child is different. Some ask earlier, especially if they have older siblings or friends who have already had the conversation."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How do I keep an older child from ruining the Tooth Fairy for younger siblings?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Invite them into the tradition. Let them know that growing up sometimes means becoming one of the people who helps keep wonder alive for someone else. Most children respond well to being trusted with that — it gives them a new role instead of just taking something away."
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        `}</script>
-      </Helmet>
 
       <div className="min-h-screen bg-background">
         <NavBar />
