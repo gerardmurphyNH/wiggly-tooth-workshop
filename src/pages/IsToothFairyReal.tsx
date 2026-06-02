@@ -72,8 +72,7 @@ const IsToothFairyReal = () => {
             </h1>
 
             <p className="text-starlight/60 text-lg md:text-xl leading-relaxed max-w-xl mx-auto">
-              Some questions stay with us long after childhood ends.
-              This is one of them.
+              There's a real answer. It's more interesting than you've been told.
             </p>
           </div>
         </section>
