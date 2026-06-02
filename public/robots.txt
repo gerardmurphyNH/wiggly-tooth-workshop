@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://tooth-safe.com/sitemap.xml
+Sitemap: https://wigglytoothworkshop.com/sitemap.xml
