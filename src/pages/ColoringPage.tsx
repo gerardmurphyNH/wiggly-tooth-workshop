@@ -10,7 +10,11 @@ import {
 import { trackColoringPageDownload } from "@/lib/analytics";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 
+const PAGE_URL = "https://wigglytoothworkshop.com/coloring-page";
+const SITE_URL = "https://wigglytoothworkshop.com/";
+const CERT_ABS = "https://wigglytoothworkshop.com/downloads/coloring-page.jpg";
 const PREVIEW_IMG = "/downloads/coloring-page.jpg";
 const PDF_URL = "/downloads/coloring-page.pdf";
 const JPG_URL = "/downloads/coloring-page.jpg";
@@ -48,39 +52,39 @@ const faqs = [
 const ColoringPage = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Structured data — image + FAQ for SEO / Google Images / AEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "BreadcrumbList",
-                itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Wiggly Tooth Workshop", item: "https://wigglytoothworkshop.com/" },
-                  { "@type": "ListItem", position: 2, name: "Tooth Fairy Coloring Page", item: "https://wigglytoothworkshop.com/coloring-page" },
-                ],
-              },
-              {
-                "@type": "ImageObject",
-                contentUrl: "https://wigglytoothworkshop.com/downloads/coloring-page.jpg",
-                url: "https://wigglytoothworkshop.com/downloads/coloring-page.jpg",
-                name: "Free Printable Tooth Fairy Coloring Page",
-                description: PREVIEW_ALT,
-                creditText: "Wiggly Tooth Workshop",
-                license: "https://wigglytoothworkshop.com/coloring-page",
-              },
-              {
-                "@type": "FAQPage",
-                mainEntity: faqs.map((f) => ({
-                  "@type": "Question",
-                  name: f.question,
-                  acceptedAnswer: { "@type": "Answer", text: f.answer },
-                })),
-              },
-            ],
-          }),
+      <PageSeo
+        title="Free Printable Tooth Fairy Coloring Page (PDF & JPG) | Wiggly Tooth Workshop"
+        description="Download a free printable Tooth Fairy coloring page for kids - the Tooth Fairy flying through a starry night sky. PDF or JPG, free for home and classroom. No sign-up."
+        canonical={PAGE_URL}
+        image={CERT_ABS}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Wiggly Tooth Workshop", item: SITE_URL },
+                { "@type": "ListItem", position: 2, name: "Tooth Fairy Coloring Page", item: PAGE_URL },
+              ],
+            },
+            {
+              "@type": "ImageObject",
+              contentUrl: CERT_ABS,
+              url: CERT_ABS,
+              name: "Free Printable Tooth Fairy Coloring Page",
+              description: PREVIEW_ALT,
+              creditText: "Wiggly Tooth Workshop",
+              license: PAGE_URL,
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
+            },
+          ],
         }}
       />
 

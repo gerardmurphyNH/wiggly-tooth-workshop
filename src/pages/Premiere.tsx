@@ -176,21 +176,21 @@ const Premiere = () => {
         <section className="pb-12 md:pb-16 bg-background">
           <div className="container px-6 max-w-2xl mx-auto">
             <p className="text-foreground text-lg leading-relaxed mb-6">
-              We were also joined by Andreas Branigan, the voice of Arlo, who met
-              young fans and celebrated the film he helped bring to life.
+              We were also joined by Andreas Branigan, the voice of Arlo, who came
+              to celebrate the film he helped bring to life.
             </p>
             <figure>
               <img
                 src={premiereThumbsup}
-                alt="Andreas Branigan, the voice of Arlo in The Tooth Fairy's Magical Mission, with a young fan in front of the film's title screen at the Dedham premiere"
+                alt="Gerard Murphy and Andreas Branigan, the voice of Arlo, together after the premiere of The Tooth Fairy's Magical Mission in Dedham"
                 width={1400}
                 height={1050}
                 loading="lazy"
                 className="w-full rounded-2xl shadow-magical"
               />
               <figcaption className="text-center text-sm text-muted-foreground mt-3">
-                Andreas Branigan - the voice of Arlo - with one of the Workshop's
-                youngest fans.
+                Gerard Murphy with Andreas Branigan - the voice of Arlo - after the
+                premiere.
               </figcaption>
             </figure>
           </div>

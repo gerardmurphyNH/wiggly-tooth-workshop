@@ -490,7 +490,7 @@ const FirstToothTradition = () => {
                 { to: "/is-the-tooth-fairy-real", label: "Is the Tooth Fairy real?", desc: "A thoughtful answer for when the question comes." },
                 { to: "/why-does-the-tooth-fairy-take-teeth", label: "Why does the Tooth Fairy take teeth?", desc: "The reason behind the tradition." },
                 { to: "/what-does-the-tooth-fairy-do-with-teeth", label: "What does she do with the teeth?", desc: "Inside the Tooth Fairy's workshop." },
-                { to: "/how-much-does-the-tooth-fairy-leave", label: "Why the Tooth Fairy leaves money", desc: "What the gift really means." },
+                { to: "/why-does-the-tooth-fairy-leave-money", label: "Why the Tooth Fairy leaves money", desc: "What the gift really means." },
                 { to: "/tooth-fairy-letter", label: "Tooth Fairy letter template", desc: "A free printable letter to go with the certificate." },
                 { to: "/coloring-page", label: "Free coloring page", desc: "A printable scene to color and keep." },
               ].map((link) => (

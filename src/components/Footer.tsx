@@ -48,14 +48,12 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2.5">
               <li>
-                <a
-                  href={YOUTUBE_CHANNEL_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/watch"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   Watch the Short Film
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -87,6 +85,14 @@ const Footer = () => {
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   How much does the Tooth Fairy leave?
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/why-does-the-tooth-fairy-leave-money"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Why does the Tooth Fairy leave money?
                 </Link>
               </li>
               <li>

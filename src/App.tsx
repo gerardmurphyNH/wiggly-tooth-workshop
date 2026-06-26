@@ -26,6 +26,8 @@ import TeacherPrintables from "./pages/TeacherPrintables";
 import ToothFairyLetter from "./pages/ToothFairyLetter";
 import WhatToSayToothFairy from "./pages/WhatToSayToothFairy";
 import FirstToothTradition from "./pages/FirstToothTradition";
+import WhyDoesTheToothFairyLeaveMoney from "./pages/WhyDoesTheToothFairyLeaveMoney";
+import Watch from "./pages/Watch";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +60,8 @@ const App = () => (
             <Route path="/tooth-fairy-letter" element={<ToothFairyLetter />} />
             <Route path="/what-to-say-when-child-asks-if-tooth-fairy-is-real" element={<WhatToSayToothFairy />} />
             <Route path="/first-tooth-tradition" element={<FirstToothTradition />} />
+            <Route path="/why-does-the-tooth-fairy-leave-money" element={<WhyDoesTheToothFairyLeaveMoney />} />
+            <Route path="/watch" element={<Watch />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

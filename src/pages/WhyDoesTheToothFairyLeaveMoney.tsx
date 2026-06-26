@@ -1,0 +1,261 @@
+import { Link } from "react-router-dom";
+import { Sparkles, ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
+import { YOUTUBE_VIDEO_URL } from "@/lib/config";
+import { trackCTAClick, trackEvent } from "@/lib/analytics";
+
+const PAGE_URL = "https://wigglytoothworkshop.com/why-does-the-tooth-fairy-leave-money";
+const SITE_URL = "https://wigglytoothworkshop.com/";
+
+const faqs = [
+  {
+    question: "Why does the Tooth Fairy leave money?",
+    answer:
+      "The money isn't a payment for the tooth. It's a thank-you. The Tooth Fairy leaves something behind to acknowledge that the tooth mattered - that the quality the child grew inside it was real, and that it's now off helping the world somewhere. The gift is the gesture, not the price.",
+  },
+  {
+    question: "Is the money a payment for the tooth?",
+    answer:
+      "No. A payment would mean the tooth was bought and sold. That's not what's happening. The Tooth Fairy isn't buying anything - she's saying thank you for something a child gave freely, and acknowledging the courage, kindness, or patience that grew inside it.",
+  },
+  {
+    question: "How much does the Tooth Fairy usually leave?",
+    answer:
+      "Most families land somewhere between a few coins and a few dollars, with first teeth often getting a little extra. The exact amount matters far less than the gesture. You can read more on our page about how much the Tooth Fairy leaves.",
+  },
+  {
+    question: "Why does the Tooth Fairy sometimes leave coins instead of bills?",
+    answer:
+      "Coins often feel more magical to a young child - they have weight, they catch the light, they jingle. A single special coin left with care can mean more than a larger bill left in silence. The Tooth Fairy tends to choose what feels meaningful over what's worth most.",
+  },
+  {
+    question: "Does the Tooth Fairy always leave money?",
+    answer:
+      "Not always, and it doesn't have to be money at all. A small note, a tiny token, or a keepsake can carry the same thank-you. What matters is that something is left behind to mark that the visit happened and the tooth was received with care.",
+  },
+];
+
+const WhyDoesTheToothFairyLeaveMoney = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <PageSeo
+        title="Why Does the Tooth Fairy Leave Money? | Wiggly Tooth Workshop"
+        description="Why does the Tooth Fairy leave money? It isn't a payment for the tooth - it's a thank-you for the quality the child grew inside it. Here's what the gift really means."
+        canonical={PAGE_URL}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Wiggly Tooth Workshop", item: SITE_URL },
+                { "@type": "ListItem", position: 2, name: "Why Does the Tooth Fairy Leave Money?", item: PAGE_URL },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline: "Why Does the Tooth Fairy Leave Money?",
+              description:
+                "The money the Tooth Fairy leaves isn't a payment - it's a thank-you for the quality a child grew inside their tooth.",
+              url: PAGE_URL,
+              mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+              publisher: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: SITE_URL },
+              author: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: SITE_URL },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
+            },
+          ],
+        }}
+      />
+      <NavBar />
+      <main className="container px-6 py-16 max-w-2xl mx-auto">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Wiggly Tooth Workshop
+        </Link>
+
+        <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full mb-5">
+          The Big Question
+        </span>
+
+        <h1 className="font-display text-4xl font-bold text-foreground mb-6 leading-tight">
+          Why Does the Tooth Fairy Leave Money?
+        </h1>
+
+        <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+          It's the question every child eventually asks, usually right after the
+          first coin appears. The answer is gentler than you might expect.
+        </p>
+
+        {/* Direct answer */}
+        <div className="mb-10 p-6 rounded-2xl bg-secondary/40 border border-border">
+          <p className="text-foreground text-lg leading-relaxed">
+            <span className="font-display font-bold">The short answer:</span> the
+            money isn't a payment for the tooth. It's a thank-you - a quiet way of
+            saying the tooth mattered, and that the quality the child grew inside
+            it is now off helping the world.
+          </p>
+        </div>
+
+        <div className="space-y-6">
+          <h2 className="font-display text-2xl font-bold text-foreground">
+            A thank-you, not a payment
+          </h2>
+          <p className="text-foreground leading-relaxed">
+            A payment would mean the tooth was bought - traded for cash like
+            anything else. That's not what's happening here. When a child loses a
+            tooth, they're giving up something that quietly held a piece of who
+            they're becoming: their bravery, their kindness, their patience. The
+            Tooth Fairy doesn't buy that. She receives it, with care, and leaves
+            something behind to say thank you.
+          </p>
+
+          <h2 className="font-display text-2xl font-bold text-foreground">
+            Why something is always left behind
+          </h2>
+          <p className="text-foreground leading-relaxed">
+            The gift is really an acknowledgment. It says: I was here, your tooth
+            was received, and the work you did growing that quality was real and
+            worth something. For a child, finding a coin where a tooth used to be
+            is proof that the exchange meant something to someone else, too.
+          </p>
+          <p className="text-foreground leading-relaxed">
+            That's why what's left behind matters more than how much. A coin
+            chosen with care, a tiny note, a small keepsake - any of these can
+            carry the same thank-you.
+          </p>
+
+          <h2 className="font-display text-2xl font-bold text-foreground">
+            Coins, bills, and what actually lands
+          </h2>
+          <p className="text-foreground leading-relaxed">
+            Coins often feel more magical to a young child than bills. They have
+            weight and shine, they catch the light, and a single special coin can
+            mean more than a larger amount left in silence. If you want the gift
+            to feel like it came from the Tooth Fairy, lean into the small,
+            thoughtful details rather than the dollar amount.
+          </p>
+
+          <h2 className="font-display text-2xl font-bold text-foreground">
+            Beyond the money
+          </h2>
+          <p className="text-foreground leading-relaxed">
+            Some families add a little more to the moment - a{" "}
+            <Link to="/tooth-fairy-letter" className="text-primary hover:underline">
+              printable letter from the Tooth Fairy
+            </Link>{" "}
+            naming the quality she noticed, or a{" "}
+            <Link to="/first-tooth-tradition" className="text-primary hover:underline">
+              first tooth keepsake certificate
+            </Link>{" "}
+            for the very first one. The money marks the visit; these turn it into
+            something worth keeping.
+          </p>
+        </div>
+
+        {/* Film CTA */}
+        <div className="my-10 p-6 rounded-2xl bg-secondary/50 border border-border text-center">
+          <Sparkles className="w-6 h-6 text-primary mx-auto mb-3" />
+          <p className="font-display font-semibold text-foreground mb-2">
+            See where the tooth really goes
+          </p>
+          <p className="text-muted-foreground text-sm mb-4">
+            Watch <em>The Tooth Fairy's Magical Mission</em> - a short film about
+            what the Tooth Fairy does with the teeth she collects, and why she
+            leaves something behind.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button variant="magical" size="sm" asChild>
+              <a
+                href={YOUTUBE_VIDEO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("social_click", { platform: "youtube", location: "why_leave_money" })}
+              >
+                Watch the Short Film
+              </a>
+            </Button>
+            <Button variant="workshop" size="sm" asChild>
+              <a href="/#signup" onClick={() => trackCTAClick("why_leave_money")}>
+                Join the Workshop
+              </a>
+            </Button>
+          </div>
+        </div>
+
+        {/* FAQ */}
+        <div className="mt-12">
+          <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+            Common questions
+          </h2>
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((faq, i) => (
+              <AccordionItem
+                key={i}
+                value={`item-${i}`}
+                className="magical-card border-0 data-[state=open]:shadow-magical transition-shadow"
+              >
+                <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:text-primary transition-colors hover:no-underline px-0">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pt-2">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+
+        {/* Related */}
+        <div className="mt-12 pt-8 border-t border-border">
+          <h3 className="font-display text-lg font-semibold text-foreground mb-4">
+            More from the Workshop
+          </h3>
+          <ul className="space-y-2">
+            <li>
+              <Link to="/how-much-does-the-tooth-fairy-leave" className="text-sm text-primary hover:underline">
+                How much does the Tooth Fairy leave? →
+              </Link>
+            </li>
+            <li>
+              <Link to="/why-does-the-tooth-fairy-take-teeth" className="text-sm text-primary hover:underline">
+                Why does the Tooth Fairy take teeth? →
+              </Link>
+            </li>
+            <li>
+              <Link to="/what-does-the-tooth-fairy-do-with-teeth" className="text-sm text-primary hover:underline">
+                What does the Tooth Fairy do with teeth? →
+              </Link>
+            </li>
+            <li>
+              <Link to="/is-the-tooth-fairy-real" className="text-sm text-primary hover:underline">
+                Is the Tooth Fairy real? →
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default WhyDoesTheToothFairyLeaveMoney;
