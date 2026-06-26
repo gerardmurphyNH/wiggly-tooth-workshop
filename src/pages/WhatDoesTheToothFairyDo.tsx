@@ -3,8 +3,32 @@ import { Sparkles, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 import { YOUTUBE_CHANNEL_URL } from "@/lib/config";
 import { trackCTAClick } from "@/lib/analytics";
+
+const faqs = [
+  {
+    question: "What does the Tooth Fairy do with the teeth she collects?",
+    answer:
+      "She draws out the quality that grew inside each tooth - courage, kindness, creativity, patience - and weaves it back into the world in small, quiet ways. The tooth is just the container; the quality is what she's really after.",
+  },
+  {
+    question: "What happens to baby teeth after the Tooth Fairy takes them?",
+    answer:
+      "Each baby tooth is carried back to her workshop, where its quality is gently drawn out, logged, and catalogued by virtue and by year. Particularly rare teeth are kept in the archive; the rest are returned to the earth once their quality has been used. Nothing is wasted.",
+  },
+  {
+    question: "Why does the Tooth Fairy keep and catalogue the teeth?",
+    answer:
+      "Because every tooth holds a record of a real moment a child grew through. Sorting them by virtue lets her find exactly the right quality when some corner of the world is running low on it.",
+  },
+  {
+    question: "Why does she leave money behind?",
+    answer:
+      "The coin or bill is a thank-you and an acknowledgment - the work you did while growing that tooth was real, it mattered, and it's going to help somebody.",
+  },
+];
 
 const FilmCTA = () => (
   <div className="my-8 p-6 rounded-2xl bg-secondary/50 border border-border text-center">
@@ -33,6 +57,57 @@ const FilmCTA = () => (
 const WhatDoesTheToothFairyDo = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSeo
+        title="What Does the Tooth Fairy Do With Teeth? | Wiggly Tooth Workshop"
+        description="What does the Tooth Fairy do with teeth? She draws out the quality grown inside each one, then weaves it quietly back into the world. Here's where baby teeth go."
+        canonical="https://wigglytoothworkshop.com/what-does-the-tooth-fairy-do-with-teeth"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Wiggly Tooth Workshop",
+                  item: "https://wigglytoothworkshop.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "What Does the Tooth Fairy Do With Teeth?",
+                  item: "https://wigglytoothworkshop.com/what-does-the-tooth-fairy-do-with-teeth",
+                },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline: "What Does the Tooth Fairy Do With Teeth?",
+              description:
+                "Inside the Tooth Fairy's workshop: how baby teeth are collected, the qualities inside them drawn out, and what happens to the teeth afterward.",
+              mainEntityOfPage:
+                "https://wigglytoothworkshop.com/what-does-the-tooth-fairy-do-with-teeth",
+              publisher: {
+                "@type": "Organization",
+                name: "Wiggly Tooth Workshop",
+                url: "https://wigglytoothworkshop.com/",
+              },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            },
+          ],
+        }}
+      />
       <NavBar />
       <main className="container px-6 py-16 max-w-2xl mx-auto">
         <Link
@@ -112,6 +187,30 @@ const WhatDoesTheToothFairyDo = () => {
             rare or very concentrated virtue — are preserved in the archive. Most teeth
             are returned to the earth eventually, once their virtue has been extracted.
             Nothing is wasted.
+          </p>
+
+          <h2 className="font-display text-2xl font-bold text-foreground">
+            What happens to baby teeth?
+          </h2>
+          <p className="text-foreground leading-relaxed">
+            Once a baby tooth leaves the pillow, the Tooth Fairy carries it back to her
+            workshop. There, she gently draws out the quality that grew inside it while
+            it was yours — the bravery, the kindness, the patience — and that quality is
+            what goes to work in the world. The tooth itself was only ever holding it
+            safe.
+          </p>
+          <p className="text-foreground leading-relaxed">
+            The tooth is then carefully kept. Each one is logged and catalogued by
+            virtue, by year, and by the child it came from, so the workshop always knows
+            exactly what it has and where it came from. Baby teeth aren't tossed aside;
+            they're treated like what they are — small records of a child growing up.
+          </p>
+          <p className="text-foreground leading-relaxed">
+            The rarest teeth stay in the archive for good. The rest rest quietly until
+            their quality has been fully used, and then they're returned, softly, to the
+            earth. So the honest answer to "what happens to baby teeth" is this: the
+            quality inside them is set loose to help someone, and the teeth themselves
+            are looked after with more care than most people would guess.
           </p>
         </div>
 

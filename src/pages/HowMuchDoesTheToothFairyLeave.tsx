@@ -3,8 +3,32 @@ import { Sparkles, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 import { YOUTUBE_CHANNEL_URL } from "@/lib/config";
 import { trackCTAClick } from "@/lib/analytics";
+
+const faqs = [
+  {
+    question: "How much does the Tooth Fairy usually leave per tooth?",
+    answer:
+      "Recent American surveys put the average somewhere between $3 and $6 per tooth, with first teeth often getting a premium. Some families give $10 or $20 for a first tooth; some give less. All of these are fine - consistency matters more than the exact amount.",
+  },
+  {
+    question: "Should the first tooth get more than the rest?",
+    answer:
+      "Many parents give more for the first tooth - it's a milestone and it takes courage. In the Wiggly Tooth Workshop telling, first teeth hold the most concentrated quality, which is why the Tooth Fairy values them most highly.",
+  },
+  {
+    question: "Why does the Tooth Fairy leave money?",
+    answer:
+      "The money isn't a payment for the tooth. It's a thank-you for the quality you grew inside it - your bravery, your kindness, your patience. It's the Tooth Fairy's way of saying the tooth mattered, the growing was real, and what was inside is now off to help someone.",
+  },
+  {
+    question: "Does the amount really matter to children?",
+    answer:
+      "Less than you'd think. A small note, a few coins with some heft and jingle, or a tiny certificate often lands better than a larger bill left in silence. The ritual is what children remember.",
+  },
+];
 
 const FilmCTA = () => (
   <div className="my-8 p-6 rounded-2xl bg-secondary/50 border border-border text-center">
@@ -34,6 +58,57 @@ const FilmCTA = () => (
 const HowMuchDoesTheToothFairyLeave = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSeo
+        title="How Much Does the Tooth Fairy Leave? | Wiggly Tooth Workshop"
+        description="How much does the Tooth Fairy leave? Most families give around $3-$6 per tooth, more for the first. Here are the typical ranges and why she leaves money at all."
+        canonical="https://wigglytoothworkshop.com/how-much-does-the-tooth-fairy-leave"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Wiggly Tooth Workshop",
+                  item: "https://wigglytoothworkshop.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "How Much Does the Tooth Fairy Leave?",
+                  item: "https://wigglytoothworkshop.com/how-much-does-the-tooth-fairy-leave",
+                },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline: "How Much Does the Tooth Fairy Leave?",
+              description:
+                "Typical Tooth Fairy amounts per tooth, the first-tooth question, and why the Tooth Fairy leaves money at all.",
+              mainEntityOfPage:
+                "https://wigglytoothworkshop.com/how-much-does-the-tooth-fairy-leave",
+              publisher: {
+                "@type": "Organization",
+                name: "Wiggly Tooth Workshop",
+                url: "https://wigglytoothworkshop.com/",
+              },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            },
+          ],
+        }}
+      />
       <NavBar />
       <main className="container px-6 py-16 max-w-2xl mx-auto">
         <Link
@@ -118,6 +193,29 @@ const HowMuchDoesTheToothFairyLeave = () => {
             If you're looking for something tangible, the ToothSafe from Wiggly Tooth
             Workshop is designed to make the whole ritual — the leaving, the waiting,
             the finding — feel special.
+          </p>
+
+          <h2 className="font-display text-2xl font-bold text-foreground">
+            Why does the Tooth Fairy leave money?
+          </h2>
+          <p className="text-foreground leading-relaxed">
+            The money isn't a payment, and the tooth isn't really being bought. What the
+            Tooth Fairy is thanking you for is the quality you grew inside that tooth -
+            the bravery, the kindness, the patience that gathered there while it was
+            yours. The coin under the pillow is her way of saying that the tooth
+            mattered.
+          </p>
+          <p className="text-foreground leading-relaxed">
+            Think of it as a small token of exchange rather than a price. You gave her
+            something that took years to grow, and she gives a little something back so
+            the trade feels real on both sides. It's an acknowledgment: the growing was
+            worth noticing, and what was inside is now off to help someone, somewhere.
+          </p>
+          <p className="text-foreground leading-relaxed">
+            That's also why the exact amount matters less than the gesture. A few coins
+            left with care says the same thing a larger bill does - I see what you grew,
+            and the world needed it. The money is just how she leaves a thank-you a child
+            can hold.
           </p>
         </div>
 

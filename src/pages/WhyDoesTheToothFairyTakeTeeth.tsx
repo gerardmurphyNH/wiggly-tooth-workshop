@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 
 const faqs = [
   {
@@ -41,6 +42,57 @@ const faqs = [
 const WhyDoesTheToothFairyTakeTeeth = () => {
   return (
     <>
+      <PageSeo
+        title="Why Does the Tooth Fairy Take Teeth? | Wiggly Tooth Workshop"
+        description="The Tooth Fairy takes teeth because each one holds a quality you grew - bravery, kindness, patience - and the world quietly needs more of it. Here's why."
+        canonical="https://wigglytoothworkshop.com/why-does-the-tooth-fairy-take-teeth"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Wiggly Tooth Workshop",
+                  item: "https://wigglytoothworkshop.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Why Does the Tooth Fairy Take Teeth?",
+                  item: "https://wigglytoothworkshop.com/why-does-the-tooth-fairy-take-teeth",
+                },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline: "Why Does the Tooth Fairy Take Teeth?",
+              description:
+                "Why the Tooth Fairy collects baby teeth: each one holds a quality a child grew, and she uses those qualities to quietly help the world.",
+              mainEntityOfPage:
+                "https://wigglytoothworkshop.com/why-does-the-tooth-fairy-take-teeth",
+              publisher: {
+                "@type": "Organization",
+                name: "Wiggly Tooth Workshop",
+                url: "https://wigglytoothworkshop.com/",
+              },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.slice(0, 4).map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            },
+          ],
+        }}
+      />
 
       <div className="min-h-screen bg-background">
         <NavBar />

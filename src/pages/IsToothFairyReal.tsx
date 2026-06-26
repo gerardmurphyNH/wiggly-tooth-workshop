@@ -1,11 +1,44 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 import VirtueQuizSection from "@/components/VirtueQuizSection";
 import { YOUTUBE_VIDEO_URL } from "@/lib/config";
 import { trackCTAClick, trackEvent } from "@/lib/analytics";
+
+const PAGE_URL = "https://wigglytoothworkshop.com/is-the-tooth-fairy-real";
+const SITE_URL = "https://wigglytoothworkshop.com/";
+
+const faqs = [
+  {
+    question: "Is the Tooth Fairy real?",
+    answer:
+      "Yes. The Tooth Fairy is real - she just works in ways most people never see. She visits at night, takes the tooth a child has lost, and draws out the quality that grew inside it while it was theirs: courage, kindness, patience, creativity. Those qualities are real, and so is what she does with them. You may never catch sight of her, but the evidence is left behind every time.",
+  },
+  {
+    question: "Why does the Tooth Fairy take teeth?",
+    answer:
+      "Not because the teeth themselves are valuable, but because of what's inside them. Every tooth quietly absorbs the qualities a child grows - bravery from facing something scary, kindness from helping, patience from waiting. The Tooth Fairy collects those qualities and uses them to gently help keep the world in balance.",
+  },
+  {
+    question: "Why doesn't the Tooth Fairy let anyone see her?",
+    answer:
+      "Partly because she works better unseen, and partly because the mystery is part of how the tradition works. A visitor who leaves something in the night is wondrous; a visitor you can watch is just a person. Most important things - courage, kindness, the wind - work quietly. The Tooth Fairy fits right in.",
+  },
+  {
+    question: "What do I tell my child when they ask if the Tooth Fairy is real?",
+    answer:
+      "You don't have to settle it in a single sentence. A gentle answer is to ask what they think, then lean into what's true underneath the story: the courage, kindness, and creativity the Tooth Fairy looks for are real qualities your child really is growing. The wonder and the honesty can both stay.",
+  },
+];
 
 const exploreLinks = [
   {
@@ -33,6 +66,41 @@ const exploreLinks = [
 const IsToothFairyReal = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSeo
+        title="Is the Tooth Fairy Real? | Wiggly Tooth Workshop"
+        description="Is the Tooth Fairy real? Yes - she just works in ways most people never see. Discover what she really does with the teeth she collects, and why every lost tooth matters."
+        canonical={PAGE_URL}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Wiggly Tooth Workshop", item: SITE_URL },
+                { "@type": "ListItem", position: 2, name: "Is the Tooth Fairy Real?", item: PAGE_URL },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline: "Is the Tooth Fairy Real?",
+              description:
+                "Yes, the Tooth Fairy is real - she just works in ways most people never see. What she really does with children's lost teeth, and why it matters.",
+              url: PAGE_URL,
+              mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+              publisher: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: SITE_URL },
+              author: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: SITE_URL },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
+            },
+          ],
+        }}
+      />
       <NavBar />
 
       <main>
@@ -82,7 +150,7 @@ const IsToothFairyReal = () => {
         <section className="py-20 md:py-28 bg-background">
           <div className="container px-6 max-w-2xl mx-auto">
 
-            <div className="space-y-6 text-foreground/80 text-lg leading-relaxed mb-14">
+            <div className="space-y-6 text-foreground/80 text-lg leading-relaxed mb-10">
               <p>
                 Is the Tooth Fairy real? Why does she collect teeth? What
                 happens to them after they disappear beneath the pillow?
@@ -91,6 +159,20 @@ const IsToothFairyReal = () => {
                 These aren't small questions. They're the kind that open up
                 something larger - about what children are really doing when
                 they grow, and what that growing is quietly worth.
+              </p>
+            </div>
+
+            {/* Direct answer — for readers (and search) who want it plainly */}
+            <div className="mb-14 p-6 rounded-2xl bg-secondary/40 border border-border">
+              <p className="text-foreground text-lg leading-relaxed">
+                <span className="font-display font-bold text-foreground">
+                  The short answer: yes.
+                </span>{" "}
+                The Tooth Fairy is real - she just works in ways most people
+                never see. She takes each lost tooth for the quality that grew
+                inside it - courage, kindness, patience, creativity - and uses
+                it to quietly help the world. You may never see her, but every
+                tooth she collects leaves the evidence behind.
               </p>
             </div>
 
@@ -388,6 +470,31 @@ const IsToothFairyReal = () => {
               <br />
               <em>Then decide.</em>
             </p>
+          </div>
+        </section>
+
+        {/* ── FAQ ── */}
+        <section className="py-16 md:py-20 bg-secondary/30">
+          <div className="container px-6 max-w-2xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+              Common questions
+            </h2>
+            <Accordion type="single" collapsible className="space-y-3">
+              {faqs.map((faq, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`item-${i}`}
+                  className="magical-card border-0 data-[state=open]:shadow-magical transition-shadow"
+                >
+                  <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:text-primary transition-colors hover:no-underline px-0">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pt-2">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </section>
 

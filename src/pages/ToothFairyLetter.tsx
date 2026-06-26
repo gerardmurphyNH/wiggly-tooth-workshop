@@ -191,6 +191,11 @@ const faqs = [
       "This works especially well for children around ages 5–8, when losing teeth still feels magical and the ideas of courage, kindness, and curiosity are just starting to become meaningful. Older children who still enjoy the tradition may appreciate a more detailed version.",
   },
   {
+    question: "What should my child's first Tooth Fairy letter say?",
+    answer:
+      "A first Tooth Fairy letter is a keepsake, so it helps to slow down and make it personal. Thank your child for their very first lost tooth, tell them it's a moment worth remembering, and name one real quality you've watched growing in them - the courage it took, the kindness they showed, the patience they're learning. You can use the printable template above and simply fill the blanks with that first-tooth moment in mind.",
+  },
+  {
     question: "Can teachers use this Tooth Fairy letter?",
     answer:
       "Yes. Teachers can use the letter idea alongside the free Tooth Fairy worksheet and teacher guide to create a small classroom tradition around lost teeth. Each time a student loses a tooth, the letter and worksheet together make the moment feel significant. See the free printables page for the full classroom resource.",
@@ -887,6 +892,67 @@ const ToothFairyLetter = () => {
             </div>
           </div>
         </div>
+
+        {/* ── First letter / how to answer ─────────────────────── */}
+        <section className="py-16 md:py-20 bg-background border-b border-border">
+          <div className="container px-6 max-w-2xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6 leading-tight">
+              Writing your child's first Tooth Fairy letter
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                A first tooth is a once-in-a-lifetime moment, so the first Tooth Fairy letter
+                is worth a little extra care. It's the one most likely to be kept, tucked into
+                a memory box, and read again years later. You don't need fancy words - you need
+                the moment to feel true.
+              </p>
+              <p>
+                Start by thanking your child for their very first tooth and telling them it's a
+                day worth remembering. Then say what you've quietly noticed: a real quality
+                that's been growing in them. Maybe it was the bravery of wiggling the tooth
+                themselves, the patience of waiting for it to come loose, or the kindness they
+                showed someone that week. Naming one true quality is what turns a sweet note
+                into something they'll feel.
+              </p>
+              <p>
+                The{" "}
+                <Link
+                  to="/tooth-fairy-letter"
+                  className="text-primary font-medium hover:underline"
+                >
+                  printable template above
+                </Link>{" "}
+                is made for exactly this. The blanks let you write their name, the quality you
+                saw growing, and the small thing the Tooth Fairy did with its magic - so a first
+                letter feels personal without you having to start from a blank page.
+              </p>
+            </div>
+
+            <h3 className="font-display text-xl font-semibold text-foreground mt-10 mb-3">
+              What to say when your child asks if the Tooth Fairy is real
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              A letter like this also gives you a gentle way into the bigger question when it
+              comes. The qualities the Tooth Fairy notices - courage, kindness, patience,
+              creativity - are real whether or not your child still pictures a winged fairy, and
+              that's a comforting truth to lean on. For the actual words to use in that moment,
+              see{" "}
+              <Link
+                to="/what-to-say-when-child-asks-if-tooth-fairy-is-real"
+                className="text-primary font-medium hover:underline"
+              >
+                what to say when your child asks if the Tooth Fairy is real
+              </Link>{" "}
+              and our honest answer to{" "}
+              <Link
+                to="/is-the-tooth-fairy-real"
+                className="text-primary font-medium hover:underline"
+              >
+                is the Tooth Fairy real?
+              </Link>
+            </p>
+          </div>
+        </section>
 
         {/* ── FAQ ──────────────────────────────────────────────── */}
         <section className="py-16 md:py-20 bg-secondary/20 border-b border-border">
