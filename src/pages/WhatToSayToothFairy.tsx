@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 import { trackFAQOpen, trackButtonClick } from "@/lib/analytics";
 
 const faqs = [
@@ -42,6 +43,52 @@ const faqs = [
 const WhatToSayToothFairy = () => {
   return (
     <>
+      <PageSeo
+        title="What to Say When Your Child Asks If the Tooth Fairy Is Real | Wiggly Tooth Workshop"
+        description="A gentle, honest answer for when your child asks if the Tooth Fairy is real, without breaking the magic or making growing up feel like a loss. Scripts for every age."
+        canonical="https://wigglytoothworkshop.com/what-to-say-when-child-asks-if-tooth-fairy-is-real"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://wigglytoothworkshop.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "What to Say When Your Child Asks If the Tooth Fairy Is Real",
+                  item: "https://wigglytoothworkshop.com/what-to-say-when-child-asks-if-tooth-fairy-is-real",
+                },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline: "What to Say When Your Child Asks If the Tooth Fairy Is Real",
+              url: "https://wigglytoothworkshop.com/what-to-say-when-child-asks-if-tooth-fairy-is-real",
+              author: { "@type": "Organization", name: "Wiggly Tooth Workshop" },
+              publisher: {
+                "@type": "Organization",
+                name: "Wiggly Tooth Workshop",
+                url: "https://wigglytoothworkshop.com/",
+              },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+              })),
+            },
+          ],
+        }}
+      />
 
       <div className="min-h-screen bg-background">
         <NavBar />

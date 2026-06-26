@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 
 const categories = [
   {
@@ -174,6 +175,52 @@ const allFaqs = categories.flatMap((c) => c.faqs);
 const ToothFairyFAQ = () => {
   return (
     <>
+      <PageSeo
+        title="Tooth Fairy FAQ: Every Question Answered | Wiggly Tooth Workshop"
+        description="The Tooth Fairy FAQ: every question children and parents ask, answered honestly and with the magic intact. Why she takes teeth, what she does with them, and more."
+        canonical="https://wigglytoothworkshop.com/tooth-fairy-faq"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://wigglytoothworkshop.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Tooth Fairy FAQ",
+                  item: "https://wigglytoothworkshop.com/tooth-fairy-faq",
+                },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline: "Tooth Fairy FAQ",
+              url: "https://wigglytoothworkshop.com/tooth-fairy-faq",
+              author: { "@type": "Organization", name: "Wiggly Tooth Workshop" },
+              publisher: {
+                "@type": "Organization",
+                name: "Wiggly Tooth Workshop",
+                url: "https://wigglytoothworkshop.com/",
+              },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: allFaqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+              })),
+            },
+          ],
+        }}
+      />
 
       <div className="min-h-screen bg-background">
         <NavBar />

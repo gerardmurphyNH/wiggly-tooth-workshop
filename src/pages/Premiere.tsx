@@ -3,6 +3,7 @@ import { ArrowLeft, MapPin, Calendar, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 import { YOUTUBE_VIDEO_URL } from "@/lib/config";
 import { trackCTAClick, trackEvent } from "@/lib/analytics";
 import premiereScreening from "@/assets/premiere-screening.jpg";
@@ -13,6 +14,13 @@ import moviePoster from "@/assets/movie-poster.jpg";
 const Premiere = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSeo
+        title="The Tooth Fairy's Magical Mission - World Premiere Recap | Wiggly Tooth Workshop"
+        description="Recap of the world premiere of The Tooth Fairy's Magical Mission at TLC Studios in Dedham, MA, with a live FaceTime visit from Peter H. Reynolds."
+        canonical="https://wigglytoothworkshop.com/tooth-fairy-film-premiere"
+        image="https://wigglytoothworkshop.com/og-image.png"
+      />
+
       {/* Structured data — event recap */}
       <script
         type="application/ld+json"

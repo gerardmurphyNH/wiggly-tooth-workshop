@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { CONTACT_EMAIL } from "@/lib/config";
+import PageSeo from "@/components/PageSeo";
 
 const Terms = () => {
   return (
     <main className="min-h-screen bg-background">
+      <PageSeo
+        title="Terms of Use | Wiggly Tooth Workshop"
+        description="Terms of use for the Wiggly Tooth Workshop website, including how free downloadable printables may be used and our intellectual property notice."
+        canonical="https://wigglytoothworkshop.com/terms"
+      />
       <div className="container px-6 py-12 max-w-2xl mx-auto">
         <Link
           to="/"

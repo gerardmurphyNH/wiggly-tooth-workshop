@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { CONTACT_EMAIL } from "@/lib/config";
+import PageSeo from "@/components/PageSeo";
 
 const Privacy = () => {
   return (
     <main className="min-h-screen bg-background">
+      <PageSeo
+        title="Privacy Policy | Wiggly Tooth Workshop"
+        description="How Wiggly Tooth Workshop collects, stores, and uses the information you share when you join our mailing list. We never sell or share your data."
+        canonical="https://wigglytoothworkshop.com/privacy"
+      />
       <div className="container px-6 py-12 max-w-2xl mx-auto">
         <Link
           to="/"

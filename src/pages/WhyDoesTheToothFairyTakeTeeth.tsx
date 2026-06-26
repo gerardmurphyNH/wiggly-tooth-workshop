@@ -337,6 +337,37 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
               </p>
             </div>
           </section>
+
+          {/* Related pages */}
+          <section className="py-12 md:py-16 bg-background">
+            <div className="container px-6 max-w-2xl mx-auto">
+              <h2 className="font-display text-lg font-semibold text-foreground mb-4">
+                More from the Workshop
+              </h2>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/what-does-the-tooth-fairy-do-with-teeth" className="text-sm text-primary hover:underline">
+                    What does the Tooth Fairy do with teeth? →
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/why-does-the-tooth-fairy-leave-money" className="text-sm text-primary hover:underline">
+                    Why does the Tooth Fairy leave money? →
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/is-the-tooth-fairy-real" className="text-sm text-primary hover:underline">
+                    Is the Tooth Fairy real? →
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/watch" className="text-sm text-primary hover:underline">
+                    Watch the short film →
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </section>
         </main>
         <Footer />
       </div>

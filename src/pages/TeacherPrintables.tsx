@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/accordion";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 import {
   trackTeacherWorksheetDownload,
   trackTeacherGuideDownload,
@@ -293,6 +294,96 @@ const TeacherSignup = () => {
 const TeacherPrintables = () => {
   return (
     <>
+      <PageSeo
+        title="Tooth Fairy Printables & Worksheets for Classrooms | Wiggly Tooth Workshop"
+        description="Free Tooth Fairy printables, a worksheet, and classroom activities for grades 1-2. SEL reflection worksheet, coloring page, and a low-prep teacher guide. No sign-up required."
+        canonical="https://wigglytoothworkshop.com/tooth-fairy-printables"
+        image="https://wigglytoothworkshop.com/images/tooth-fairy-worksheet-preview.jpg"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Wiggly Tooth Workshop",
+                  item: "https://wigglytoothworkshop.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Tooth Fairy Printables",
+                  item: "https://wigglytoothworkshop.com/tooth-fairy-printables",
+                },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline:
+                "Free Tooth Fairy Worksheets, Printables & Classroom Activities",
+              description:
+                "Three free Tooth Fairy printables for grades 1-2: an SEL reflection worksheet, a coloring page, and a low-prep teacher guide, built around the idea that every tooth holds something the child has been growing.",
+              about: [
+                "tooth fairy printables",
+                "tooth fairy worksheet",
+                "tooth fairy classroom activities",
+              ],
+              image:
+                "https://wigglytoothworkshop.com/images/tooth-fairy-worksheet-preview.jpg",
+              author: { "@type": "Organization", name: "Wiggly Tooth Workshop" },
+              publisher: {
+                "@type": "Organization",
+                name: "Wiggly Tooth Workshop",
+                url: "https://wigglytoothworkshop.com/",
+              },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://wigglytoothworkshop.com/tooth-fairy-printables",
+              },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            },
+            {
+              "@type": "ImageObject",
+              name: "Tooth Fairy Worksheet (SEL reflection activity for grades 1-2)",
+              description:
+                "Printable tooth fairy worksheet for grades 1 and 2, an SEL reflection activity where children name the qualities they have been growing like bravery and kindness.",
+              contentUrl:
+                "https://wigglytoothworkshop.com/images/tooth-fairy-worksheet-preview.jpg",
+              url: "https://wigglytoothworkshop.com/images/tooth-fairy-worksheet-preview.jpg",
+            },
+            {
+              "@type": "ImageObject",
+              name: "Printable Tooth Fairy Coloring Page",
+              description:
+                "Printable tooth fairy coloring page showing the Tooth Fairy in her workshop, with a jar for children to label with a quality they are growing.",
+              contentUrl:
+                "https://wigglytoothworkshop.com/images/printable-tooth-fairy-coloring-page.jpg",
+              url: "https://wigglytoothworkshop.com/images/printable-tooth-fairy-coloring-page.jpg",
+            },
+            {
+              "@type": "ImageObject",
+              name: "Tooth Fairy Teacher Guide (low-prep SEL lesson plan)",
+              description:
+                "Tooth fairy teacher guide, a two-page low-prep SEL lesson plan for grades 1 and 2 with discussion prompts and social-emotional learning goals.",
+              contentUrl:
+                "https://wigglytoothworkshop.com/images/tooth-fairy-teacher-guide-preview.jpg",
+              url: "https://wigglytoothworkshop.com/images/tooth-fairy-teacher-guide-preview.jpg",
+            },
+          ],
+        }}
+      />
 
       <div className="min-h-screen bg-background">
         <NavBar />

@@ -3,6 +3,7 @@ import { ArrowRight, Palette, FileText, ArrowLeft, Sparkles, GraduationCap, Awar
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 import { YOUTUBE_CHANNEL_URL } from "@/lib/config";
 import { trackCTAClick } from "@/lib/analytics";
 
@@ -48,6 +49,50 @@ const Printables = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSeo
+        title="Free Tooth Fairy Printables for Kids & Classrooms | Wiggly Tooth Workshop"
+        description="Free Tooth Fairy printables for kids, parents, and classrooms: a keepsake certificate, coloring page, letter template, and SEL worksheets. Download straight from the Workshop."
+        canonical="https://wigglytoothworkshop.com/printables"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Wiggly Tooth Workshop",
+                  item: "https://wigglytoothworkshop.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Printables",
+                  item: "https://wigglytoothworkshop.com/printables",
+                },
+              ],
+            },
+            {
+              "@type": "CollectionPage",
+              name: "Tooth Fairy Printables",
+              headline: "Tooth Fairy Printables",
+              description:
+                "Free Tooth Fairy printables for kids, parents, and classrooms, including a keepsake certificate, coloring page, letter template, and teacher worksheets.",
+              about: "free tooth fairy printables",
+              publisher: {
+                "@type": "Organization",
+                name: "Wiggly Tooth Workshop",
+                url: "https://wigglytoothworkshop.com/",
+              },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://wigglytoothworkshop.com/printables",
+              },
+            },
+          ],
+        }}
+      />
       <NavBar />
       <main className="container px-6 py-16 max-w-3xl mx-auto">
         <Link

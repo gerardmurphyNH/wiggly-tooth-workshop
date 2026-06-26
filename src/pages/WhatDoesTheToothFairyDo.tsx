@@ -227,8 +227,18 @@ const WhatDoesTheToothFairyDo = () => {
               </Link>
             </li>
             <li>
+              <Link to="/why-does-the-tooth-fairy-leave-money" className="text-sm text-primary hover:underline">
+                Why does the Tooth Fairy leave money? →
+              </Link>
+            </li>
+            <li>
               <Link to="/how-much-does-the-tooth-fairy-leave" className="text-sm text-primary hover:underline">
                 How much does the Tooth Fairy leave? →
+              </Link>
+            </li>
+            <li>
+              <Link to="/watch" className="text-sm text-primary hover:underline">
+                Watch the short film →
               </Link>
             </li>
             <li>

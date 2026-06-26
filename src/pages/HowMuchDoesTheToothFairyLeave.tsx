@@ -227,13 +227,18 @@ const HowMuchDoesTheToothFairyLeave = () => {
           </h3>
           <ul className="space-y-2">
             <li>
-              <Link to="/is-the-tooth-fairy-real" className="text-sm text-primary hover:underline">
-                Is the Tooth Fairy real? →
+              <Link to="/why-does-the-tooth-fairy-leave-money" className="text-sm text-primary hover:underline">
+                Why does the Tooth Fairy leave money? →
               </Link>
             </li>
             <li>
               <Link to="/what-does-the-tooth-fairy-do-with-teeth" className="text-sm text-primary hover:underline">
                 What does the Tooth Fairy do with teeth? →
+              </Link>
+            </li>
+            <li>
+              <Link to="/is-the-tooth-fairy-real" className="text-sm text-primary hover:underline">
+                Is the Tooth Fairy real? →
               </Link>
             </li>
             <li>

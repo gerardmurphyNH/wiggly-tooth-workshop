@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 
 const faqs = [
   {
@@ -41,6 +42,52 @@ const faqs = [
 const ToothFairyStoryExplained = () => {
   return (
     <>
+      <PageSeo
+        title="The Tooth Fairy Story, Explained: Where the Tradition Comes From | Wiggly Tooth Workshop"
+        description="The Tooth Fairy story explained: where the tradition began, how it took shape across cultures and centuries, and what losing a tooth has always really meant."
+        canonical="https://wigglytoothworkshop.com/tooth-fairy-story-explained"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://wigglytoothworkshop.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "The Tooth Fairy Story, Explained",
+                  item: "https://wigglytoothworkshop.com/tooth-fairy-story-explained",
+                },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline: "The Tooth Fairy Story, Explained",
+              url: "https://wigglytoothworkshop.com/tooth-fairy-story-explained",
+              author: { "@type": "Organization", name: "Wiggly Tooth Workshop" },
+              publisher: {
+                "@type": "Organization",
+                name: "Wiggly Tooth Workshop",
+                url: "https://wigglytoothworkshop.com/",
+              },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+              })),
+            },
+          ],
+        }}
+      />
 
       <div className="min-h-screen bg-background">
         <NavBar />

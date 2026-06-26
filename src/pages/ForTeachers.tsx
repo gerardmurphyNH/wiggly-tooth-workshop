@@ -3,12 +3,61 @@ import { GraduationCap, ArrowLeft, Sparkles, Download, BookOpen, MessageSquare }
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 import { YOUTUBE_CHANNEL_URL } from "@/lib/config";
 import { trackCTAClick } from "@/lib/analytics";
 
 const ForTeachers = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSeo
+        title="Tooth Fairy Classroom Activities & Lesson Plan | Wiggly Tooth Workshop"
+        description="Free Tooth Fairy classroom activities, a lesson plan, and discussion questions for grades K-5. Use the short film to open conversations about character and virtues."
+        canonical="https://wigglytoothworkshop.com/for-teachers"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Wiggly Tooth Workshop",
+                  item: "https://wigglytoothworkshop.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "For Teachers",
+                  item: "https://wigglytoothworkshop.com/for-teachers",
+                },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline: "Tooth Fairy Classroom Activities & Lesson Plan",
+              description:
+                "Free Tooth Fairy classroom activities, a lesson plan, and discussion questions for grades K-5, built around the short film The Tooth Fairy's Magical Mission.",
+              about: [
+                "tooth fairy classroom activities",
+                "tooth fairy lesson plan",
+                "tooth fairy discussion questions",
+              ],
+              author: { "@type": "Organization", name: "Wiggly Tooth Workshop" },
+              publisher: {
+                "@type": "Organization",
+                name: "Wiggly Tooth Workshop",
+                url: "https://wigglytoothworkshop.com/",
+              },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://wigglytoothworkshop.com/for-teachers",
+              },
+            },
+          ],
+        }}
+      />
       <NavBar />
       <main className="container px-6 py-16 max-w-3xl mx-auto">
         <Link

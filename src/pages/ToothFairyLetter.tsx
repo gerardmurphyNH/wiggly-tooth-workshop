@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/accordion";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 import {
   trackToothFairyLetterPdfDownload,
   trackToothFairyLetterImageDownload,
@@ -374,6 +375,13 @@ const structuredData = {
 const ToothFairyLetter = () => {
   return (
     <>
+      <PageSeo
+        title="Free Printable Tooth Fairy Letter Template | Wiggly Tooth Workshop"
+        description="A free printable tooth fairy letter template with fill-in blanks. Perfect for a first tooth fairy letter - print at home, no email required."
+        canonical="https://wigglytoothworkshop.com/tooth-fairy-letter"
+        image="https://wigglytoothworkshop.com/downloads/tooth-fairy-letter-template.jpg"
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

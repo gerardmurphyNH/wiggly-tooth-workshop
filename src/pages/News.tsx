@@ -3,6 +3,7 @@ import { ArrowUpRight, Calendar, Film, BookOpen, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 import { YOUTUBE_VIDEO_URL } from "@/lib/config";
 import { trackCTAClick } from "@/lib/analytics";
 
@@ -56,6 +57,50 @@ const newsItems = [
 const News = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSeo
+        title="Wiggly Tooth Workshop News & Updates | Wiggly Tooth Workshop"
+        description="The latest Wiggly Tooth Workshop news: the world premiere of The Tooth Fairy's Magical Mission, behind-the-scenes stories, community events, and project updates."
+        canonical="https://wigglytoothworkshop.com/news"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Wiggly Tooth Workshop",
+                  item: "https://wigglytoothworkshop.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "News",
+                  item: "https://wigglytoothworkshop.com/news",
+                },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline: "News from the Workshop",
+              description:
+                "Updates, behind-the-scenes stories, and community events from the world of CeCe, Arlo, and the Wiggly Tooth Workshop.",
+              about: "Wiggly Tooth Workshop news",
+              author: { "@type": "Organization", name: "Wiggly Tooth Workshop" },
+              publisher: {
+                "@type": "Organization",
+                name: "Wiggly Tooth Workshop",
+                url: "https://wigglytoothworkshop.com/",
+              },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://wigglytoothworkshop.com/news",
+              },
+            },
+          ],
+        }}
+      />
       <NavBar />
 
       <main>

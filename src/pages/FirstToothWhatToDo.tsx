@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
 
 const steps = [
   {
@@ -69,6 +70,52 @@ const faqs = [
 const FirstToothWhatToDo = () => {
   return (
     <>
+      <PageSeo
+        title="First Loose Tooth: What to Do When Your Child Loses Their First Baby Tooth | Wiggly Tooth Workshop"
+        description="Your child lost their first baby tooth. Here is what to do right now, how to keep the tooth safe for the Tooth Fairy, and how to answer the questions that follow."
+        canonical="https://wigglytoothworkshop.com/first-tooth-what-to-do"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://wigglytoothworkshop.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Your Child's First Lost Tooth",
+                  item: "https://wigglytoothworkshop.com/first-tooth-what-to-do",
+                },
+              ],
+            },
+            {
+              "@type": "Article",
+              headline: "Your Child's First Lost Tooth: What Happens Next",
+              url: "https://wigglytoothworkshop.com/first-tooth-what-to-do",
+              author: { "@type": "Organization", name: "Wiggly Tooth Workshop" },
+              publisher: {
+                "@type": "Organization",
+                name: "Wiggly Tooth Workshop",
+                url: "https://wigglytoothworkshop.com/",
+              },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+              })),
+            },
+          ],
+        }}
+      />
 
       <div className="min-h-screen bg-background">
         <NavBar />
