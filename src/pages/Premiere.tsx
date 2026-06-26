@@ -1,33 +1,58 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, MapPin, Clock, Calendar, Sparkles, Star } from "lucide-react";
+import { ArrowLeft, MapPin, Calendar, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import { trackEvent, trackCTAClick } from "@/lib/analytics";
-
-const RSVP_URL = "https://events.humanitix.com/tooth-fairy-film-premiere";
-
-const RsvpButton = ({ location }: { location: string }) => (
-  <a
-    href={RSVP_URL}
-    target="_blank"
-    rel="noopener noreferrer"
-    onClick={() => trackEvent("rsvp_click", { location })}
-    className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-primary text-primary-foreground font-display font-semibold text-base hover:bg-primary/90 transition-colors shadow-glow"
-  >
-    RSVP for the Free Event
-  </a>
-);
+import { YOUTUBE_VIDEO_URL } from "@/lib/config";
+import { trackCTAClick, trackEvent } from "@/lib/analytics";
+import premiereScreening from "@/assets/premiere-screening.jpg";
+import premiereReynolds from "@/assets/premiere-reynolds.jpg";
+import premiereThumbsup from "@/assets/premiere-thumbsup.jpg";
+import moviePoster from "@/assets/movie-poster.jpg";
 
 const Premiere = () => {
   return (
     <div className="min-h-screen bg-background">
+      {/* Structured data — event recap */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Event",
+            name: "The Tooth Fairy's Magical Mission — World Premiere",
+            startDate: "2026-06-07T14:00",
+            eventStatus: "https://schema.org/EventScheduled",
+            eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+            location: {
+              "@type": "Place",
+              name: "TLC Studios",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "390 Washington Street",
+                addressLocality: "Dedham",
+                addressRegion: "MA",
+                postalCode: "02026",
+                addressCountry: "US",
+              },
+            },
+            image: ["https://wigglytoothworkshop.com/og-image.png"],
+            description:
+              "Over 100 people joined the world premiere of The Tooth Fairy's Magical Mission at TLC Studios in Dedham, Massachusetts, including a live FaceTime visit from illustrator Peter H. Reynolds.",
+            organizer: {
+              "@type": "Organization",
+              name: "Wiggly Tooth Workshop",
+              url: "https://wigglytoothworkshop.com/",
+            },
+          }),
+        }}
+      />
+
       <NavBar />
 
       <main>
         {/* Hero */}
         <section className="relative py-20 md:py-28 night-sky-section overflow-hidden">
-          {/* Stars */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(20)].map((_, i) => (
               <div
@@ -52,171 +77,165 @@ const Premiere = () => {
             </Link>
 
             <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/20 px-3 py-1 rounded-full mb-6">
-              World Premiere
+              Event Recap
             </span>
 
             <h1 className="font-display text-4xl md:text-5xl font-bold text-starlight mb-6 leading-tight">
               The Tooth Fairy's Magical Mission
+              <br />
+              <span className="text-primary">Premiered in Dedham</span>
             </h1>
 
             <p className="text-starlight/75 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-              Join us in Dedham for the world premiere of{" "}
-              <em>The Tooth Fairy's Magical Mission</em>, a short animated film
-              about curiosity, growing up, and what the Tooth Fairy really does
-              with children's lost teeth.
+              On Sunday, June 7, more than 100 friends, families, and curious
+              kids joined us at TLC Studios in Dedham Square for the world
+              premiere of <em>The Tooth Fairy's Magical Mission</em>. Here's how
+              it went.
             </p>
 
-            {/* Event detail pills */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center text-sm">
               <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-starlight/10 border border-starlight/20 text-starlight/80">
                 <Calendar className="w-4 h-4 text-primary" />
-                Sunday, June 7, 2026
-              </div>
-              <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-starlight/10 border border-starlight/20 text-starlight/80">
-                <Clock className="w-4 h-4 text-primary" />
-                2:00 PM
+                June 7, 2026
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-starlight/10 border border-starlight/20 text-starlight/80">
                 <MapPin className="w-4 h-4 text-primary" />
-                Dedham, MA
+                TLC Studios · Dedham, MA
               </div>
             </div>
-
-            <RsvpButton location="hero" />
           </div>
         </section>
 
-        {/* Location card */}
-        <section className="py-12 bg-secondary/30 border-b border-border">
-          <div className="container px-6 max-w-xl mx-auto">
-            <div className="magical-card text-center">
-              <h2 className="font-display text-lg font-semibold text-foreground mb-3">
-                The Tooth Fairy's Magical Mission — World Premiere
-              </h2>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Sunday, June 7, 2026 · 2:00 PM
-                <br />
-                TLC Studios
-                <br />
-                390 Washington Street
-                <br />
-                Dedham, MA 02026
-              </p>
-              <p className="mt-4 text-xs text-primary font-medium">
-                Free admission · All ages welcome
-              </p>
-            </div>
+        {/* Lead photo */}
+        <section className="py-12 md:py-16 bg-background">
+          <div className="container px-6 max-w-3xl mx-auto">
+            <figure>
+              <img
+                src={premiereScreening}
+                alt="A full house at TLC Studios in Dedham watching the world premiere of The Tooth Fairy's Magical Mission, with families seated on orange rugs and chairs in front of the film's title screen"
+                width={1400}
+                height={1050}
+                loading="lazy"
+                className="w-full rounded-2xl shadow-magical"
+              />
+              <figcaption className="text-center text-sm text-muted-foreground mt-3">
+                A full house at TLC Studios for the first-ever screening.
+              </figcaption>
+            </figure>
           </div>
         </section>
 
-        {/* Supporting copy */}
-        <section className="py-16 md:py-20 bg-background">
+        {/* Recap copy */}
+        <section className="pb-4 bg-background">
           <div className="container px-6 max-w-2xl mx-auto">
-            <p className="text-foreground text-base leading-relaxed text-center mb-16">
-              Families are invited to a free community celebration at TLC
-              Studios in Dedham Square. The event will include a screening of
-              the short film, behind-the-scenes stories about how it was made,
-              family-friendly activities for young children, and a chance to
-              learn more about CeCe, Arlo, and the Wiggly Tooth Workshop.
+            <p className="text-foreground text-lg leading-relaxed mb-6">
+              We showed the film for the very first time, then opened the floor
+              to questions from the curious kids in the room - the same kind of
+              questions that started this whole project.
             </p>
 
-            {/* What the film is about */}
-            <div className="mb-14">
+            {/* Reynolds highlight */}
+            <div className="my-10">
               <div className="flex items-center gap-3 mb-5">
                 <Star className="w-5 h-5 text-primary flex-shrink-0" />
                 <h2 className="font-display text-2xl font-bold text-foreground">
-                  What the film is about
+                  A live visit from Peter H. Reynolds
                 </h2>
               </div>
-              <div className="space-y-4 text-foreground leading-relaxed pl-8">
-                <p>
-                  <em>The Tooth Fairy's Magical Mission</em> follows Arlo, a
-                  curious boy who loses a tooth and asks the question many
-                  children wonder about: what does the Tooth Fairy actually do
-                  with my tooth — and why?
-                </p>
-                <p>
-                  That question leads to a late-night adventure with CeCe, the
-                  Tooth Fairy. Arlo discovers that children's teeth hold special
-                  qualities that grow over time — courage, kindness, patience,
-                  creativity, friendship, perseverance, and wonder. CeCe gathers
-                  those qualities and uses them to help keep the world balanced
-                  in small but meaningful ways.
-                </p>
-              </div>
-            </div>
-
-            {/* What to expect */}
-            <div className="mb-14">
-              <div className="flex items-center gap-3 mb-5">
-                <Sparkles className="w-5 h-5 text-primary flex-shrink-0" />
-                <h2 className="font-display text-2xl font-bold text-foreground">
-                  What to expect
-                </h2>
-              </div>
-              <ul className="space-y-3 pl-8">
-                {[
-                  "A screening of The Tooth Fairy's Magical Mission",
-                  "Behind-the-scenes stories from the creators",
-                  "Family-friendly activities for children",
-                  "A chance to meet Peter H. Reynolds and Paul Reynolds",
-                  "A first look at the ToothSafe, CeCe's clever invention for keeping lost teeth safe",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-foreground">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    </div>
-                    <span className="leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* ToothSafe section */}
-            <div className="magical-card mb-14">
-              <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
-                From CeCe's Workshop
-              </span>
-              <h2 className="font-display text-2xl font-bold text-foreground mb-3">
-                Meet the ToothSafe
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                No one wants to lose a tooth — and then really lose it. The
-                ToothSafe is a playful invention from CeCe's workshop designed
-                to keep a child's lost tooth safe for the Tooth Fairy's visit.
-                At the premiere, you'll get your first look at where the story
-                goes next.
+              <figure className="mb-5">
+                <img
+                  src={premiereReynolds}
+                  alt="Illustrator Peter H. Reynolds joining the premiere live via FaceTime on the big screen, drawing CeCe the Tooth Fairy while the audience watches"
+                  width={1000}
+                  height={1333}
+                  loading="lazy"
+                  className="w-full max-w-md mx-auto rounded-2xl shadow-magical"
+                />
+                <figcaption className="text-center text-sm text-muted-foreground mt-3">
+                  Peter H. Reynolds drawing CeCe live, from his studio to ours.
+                </figcaption>
+              </figure>
+              <p className="text-foreground text-lg leading-relaxed">
+                One of the highlights of the afternoon was illustrator Peter H.
+                Reynolds joining us live via FaceTime - drawing CeCe right in
+                front of everyone and sharing the creative process behind how he
+                brought her to life.
               </p>
             </div>
 
-            {/* RSVP CTA */}
-            <div className="text-center">
-              <p className="text-sm text-muted-foreground mb-5">
-                Free admission. No ticket required — just let us know you're coming.
-              </p>
-              <RsvpButton location="bottom" />
-            </div>
+            {/* Smile wall */}
+            <p className="text-foreground text-lg leading-relaxed mb-10">
+              Kids also added to a smile wall, coloring teeth with the virtues
+              they carry - bravery, kindness, creativity, and all the quiet good
+              things growing inside them.
+            </p>
           </div>
         </section>
 
-        {/* Can't make it CTA */}
-        <section className="py-16 bg-secondary/30">
-          <div className="container px-6 max-w-xl mx-auto">
-            <div className="magical-card text-center">
-              <Sparkles className="w-6 h-6 text-primary mx-auto mb-3" />
-              <h2 className="font-display text-lg font-semibold text-foreground mb-2">
-                Can't make the event?
-              </h2>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-                Join the Workshop to watch the short film, download free
-                printables, and follow future CeCe and Arlo adventures.
-              </p>
-              <Button variant="magical" size="sm" asChild>
-                <a href="/#signup" onClick={() => trackCTAClick("premiere_page")}>
-                  <Sparkles className="w-3.5 h-3.5" />
-                  Join the Workshop
-                </a>
-              </Button>
+        {/* Photo pair */}
+        <section className="pb-12 md:pb-16 bg-background">
+          <div className="container px-6 max-w-3xl mx-auto">
+            <figure>
+              <img
+                src={premiereThumbsup}
+                alt="A young fan and the film's creator smiling in front of the The Tooth Fairy's Magical Mission title screen at the Dedham premiere"
+                width={1400}
+                height={1050}
+                loading="lazy"
+                className="w-full rounded-2xl shadow-magical"
+              />
+              <figcaption className="text-center text-sm text-muted-foreground mt-3">
+                Celebrating with the youngest members of the Workshop.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        {/* Poster + watch CTA */}
+        <section className="py-16 md:py-20 bg-secondary/30">
+          <div className="container px-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              <div className="order-2 md:order-1">
+                <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
+                  Missed the premiere?
+                </span>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Watch the film anytime
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  <em>The Tooth Fairy's Magical Mission</em> is now on YouTube,
+                  free to watch. Discover what the Tooth Fairy really does with
+                  the teeth she collects.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button variant="magical" asChild>
+                    <a
+                      href={YOUTUBE_VIDEO_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackEvent("social_click", { platform: "youtube", location: "premiere_recap" })}
+                    >
+                      <Sparkles className="w-4 h-4" />
+                      Watch the film
+                    </a>
+                  </Button>
+                  <Button variant="workshop" asChild>
+                    <a href="/#signup" onClick={() => trackCTAClick("premiere_recap")}>
+                      Join the Workshop
+                    </a>
+                  </Button>
+                </div>
+              </div>
+              <figure className="order-1 md:order-2">
+                <img
+                  src={moviePoster}
+                  alt="Official movie poster for The Tooth Fairy's Magical Mission, an animated short film from Wiggly Tooth Workshop and FableVision, with the tagline 'The magic under your pillow can help change the world.'"
+                  width={1184}
+                  height={1482}
+                  loading="lazy"
+                  className="w-full max-w-xs mx-auto rounded-2xl shadow-magical"
+                />
+              </figure>
             </div>
           </div>
         </section>

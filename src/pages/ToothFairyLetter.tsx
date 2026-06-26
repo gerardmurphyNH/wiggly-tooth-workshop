@@ -304,9 +304,75 @@ const LetterSignup = () => {
   );
 };
 
+// Structured data for SEO / Google Images
+const PAGE_URL = "https://wigglytoothworkshop.com/tooth-fairy-letter";
+const LETTER_IMAGE_URL =
+  "https://wigglytoothworkshop.com/downloads/tooth-fairy-letter-template.jpg";
+const PUBLISHER_URL = "https://wigglytoothworkshop.com/";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: PUBLISHER_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Tooth Fairy Letter Template",
+          item: PAGE_URL,
+        },
+      ],
+    },
+    {
+      "@type": "Article",
+      headline: "Free Printable Tooth Fairy Letter Template",
+      description:
+        "A free printable Tooth Fairy letter template with fill-in blanks for a child's name and the special quality found inside their lost tooth. Available as a PDF for printing or an image to save and share.",
+      image: LETTER_IMAGE_URL,
+      url: PAGE_URL,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": PAGE_URL,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Wiggly Tooth Workshop",
+        url: PUBLISHER_URL,
+      },
+      author: {
+        "@type": "Organization",
+        name: "Wiggly Tooth Workshop",
+        url: PUBLISHER_URL,
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
+  ],
+};
+
 const ToothFairyLetter = () => {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
 
       <div className="min-h-screen bg-background">
         <NavBar />
@@ -401,6 +467,27 @@ const ToothFairyLetter = () => {
         {/* ── Download area ────────────────────────────────────── */}
         <section className="py-14 md:py-16 bg-background border-b border-border">
           <div className="container px-6 max-w-2xl mx-auto text-center space-y-4">
+            {/* Visual preview of the printable letter template */}
+            <figure className="max-w-sm mx-auto mb-2">
+              <a
+                href="/downloads/tooth-fairy-letter-template.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-2xl overflow-hidden shadow-magical border border-primary/20 transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                <img
+                  src="/downloads/tooth-fairy-letter-template.jpg"
+                  width={1530}
+                  height={1980}
+                  loading="lazy"
+                  alt="Free printable Tooth Fairy letter template — a 'From the Tooth Fairy' note with fill-in blanks for a child's name and the special quality found inside their lost tooth"
+                  className="w-full h-auto"
+                />
+              </a>
+              <figcaption className="text-xs text-muted-foreground mt-3">
+                Preview of the printable Tooth Fairy letter template
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed">
               Download the free Tooth Fairy letter template, print it at home, and personalise
               it before placing it under your child's pillow. Available as a PDF (best for

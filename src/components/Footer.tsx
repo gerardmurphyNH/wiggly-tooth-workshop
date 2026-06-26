@@ -123,13 +123,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="/downloads/coloring-page.pdf"
-                  download="tooth-fairy-coloring-page.pdf"
+                <Link
+                  to="/coloring-page"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   Coloring page (free)
-                </a>
+                </Link>
               </li>
               <li>
                 <Link

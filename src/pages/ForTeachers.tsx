@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { YOUTUBE_CHANNEL_URL } from "@/lib/config";
-import { trackColoringPageDownload, trackCTAClick } from "@/lib/analytics";
+import { trackCTAClick } from "@/lib/analytics";
 
 const ForTeachers = () => {
   return (
@@ -145,14 +145,10 @@ const ForTeachers = () => {
                 Great for a quiet activity or art integration. Free for classroom use.
               </p>
               <Button variant="magical" size="sm" asChild>
-                <a
-                  href="/downloads/coloring-page.pdf"
-                  download="tooth-fairy-coloring-page.pdf"
-                  onClick={trackColoringPageDownload}
-                >
+                <Link to="/coloring-page">
                   <Download className="w-3.5 h-3.5" />
-                  Download (free)
-                </a>
+                  Get the coloring page
+                </Link>
               </Button>
             </div>
             <div className="magical-card flex flex-col gap-3">

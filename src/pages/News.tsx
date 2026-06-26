@@ -6,22 +6,21 @@ import Footer from "@/components/Footer";
 import { YOUTUBE_VIDEO_URL } from "@/lib/config";
 import { trackCTAClick } from "@/lib/analytics";
 
-const PREMIERE_URL = "https://events.humanitix.com/tooth-fairy-film-premiere";
 const REYNOLDS_URL = "https://www.reynoldstlc.org/blog/elevating-the-tooth-fairy-story-to-a-sense-of-mission";
 
 const newsItems = [
   {
     id: "premiere",
-    tag: "Upcoming Event",
+    tag: "Event Recap",
     tagColor: "bg-primary/10 text-primary",
     icon: Calendar,
     date: "June 7, 2026",
-    title: "World Premiere in Dedham",
+    title: "Our World Premiere in Dedham",
     description:
-      "Families are invited to the world premiere of The Tooth Fairy's Magical Mission at TLC Studios in Dedham Square on Sunday, June 7, 2026.",
-    cta: "RSVP for the event",
-    href: PREMIERE_URL,
-    internal: false,
+      "Over 100 people joined the world premiere of The Tooth Fairy's Magical Mission at TLC Studios in Dedham - with a live FaceTime visit from Peter H. Reynolds. See how it went.",
+    cta: "Read the recap",
+    href: "/tooth-fairy-film-premiere",
+    internal: true,
     featured: true,
   },
   {
@@ -123,24 +122,14 @@ const News = () => {
                   {item.description}
                 </p>
 
-                {item.id === "premiere" ? (
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 transition-colors"
-                    >
-                      {item.cta}
-                      <ArrowUpRight className="w-4 h-4" />
-                    </a>
-                    <Link
-                      to="/tooth-fairy-film-premiere"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-starlight/20 text-starlight/80 hover:text-starlight hover:border-starlight/40 font-medium text-sm transition-colors"
-                    >
-                      Event details
-                    </Link>
-                  </div>
+                {item.internal ? (
+                  <Link
+                    to={item.href}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 transition-colors"
+                  >
+                    {item.cta}
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
                 ) : (
                   <a
                     href={item.href}

@@ -60,7 +60,7 @@ const MeetCharactersSection = () => {
           </a>
         </div>
 
-        {/* World Premiere callout */}
+        {/* World Premiere recap callout */}
         <div className="max-w-xl mx-auto mt-10">
           <Link
             to="/tooth-fairy-film-premiere"
@@ -72,13 +72,13 @@ const MeetCharactersSection = () => {
             </div>
             <div className="text-center sm:text-left flex-1">
               <p className="text-xs font-semibold uppercase tracking-wide text-primary mb-0.5">
-                World Premiere · June 7, 2026 · Dedham, MA
+                Event Recap · Dedham, MA
               </p>
               <p className="text-sm text-starlight/80 group-hover:text-starlight transition-colors">
-                Join us for the world premiere at TLC Studios — free, all ages welcome.
+                Over 100 people joined our world premiere at TLC Studios. See how it went.
               </p>
             </div>
-            <span className="text-primary text-sm font-medium flex-shrink-0">RSVP →</span>
+            <span className="text-primary text-sm font-medium flex-shrink-0">Read →</span>
           </Link>
         </div>
       </div>

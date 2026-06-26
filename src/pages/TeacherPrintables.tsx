@@ -126,45 +126,58 @@ const faqs = [
   },
 ];
 
-// Preview image with graceful fallback when image file doesn't exist yet
-// Add preview images to public/images/:
-//   tooth-fairy-worksheet-preview.jpg
-//   printable-tooth-fairy-coloring-page.jpg
-//   tooth-fairy-teacher-guide-preview.jpg
+// Clickable preview image — opens the actual PDF in a new tab. Falls back to an
+// icon tile if the preview image is missing.
 const PreviewImage = ({
   src,
   alt,
   icon: Icon,
   bg,
+  href,
+  onClick,
 }: {
   src: string;
   alt: string;
   icon: LucideIcon;
   bg: string;
+  href: string;
+  onClick?: () => void;
 }) => {
   const [hasError, setHasError] = useState(false);
 
   return (
-    <div
-      className={`relative rounded-2xl overflow-hidden ${bg} aspect-[3/4] flex items-center justify-center shadow-sm`}
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={onClick}
+      aria-label={`Open ${alt}`}
+      className={`group relative block rounded-2xl overflow-hidden ${bg} aspect-[3/4] shadow-sm hover:shadow-magical transition-all hover:-translate-y-0.5`}
     >
       {!hasError ? (
-        <img
-          src={src}
-          alt={alt}
-          className="w-full h-full object-cover"
-          onError={() => setHasError(true)}
-          loading="lazy"
-        />
+        <>
+          <img
+            src={src}
+            alt={alt}
+            className="w-full h-full object-cover"
+            onError={() => setHasError(true)}
+            loading="lazy"
+          />
+          <span className="absolute bottom-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-night-sky/80 text-starlight text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
+            <Download className="w-3 h-3" />
+            Open PDF
+          </span>
+        </>
       ) : (
-        <div className="flex flex-col items-center justify-center gap-4 p-8 text-center">
-          <Icon className="w-16 h-16 text-muted-foreground/20" />
-          <span className="text-xs text-muted-foreground/40 uppercase tracking-widest font-medium">
-            Preview
+        <div className="flex flex-col items-center justify-center gap-4 p-8 text-center h-full">
+          <Icon className="w-16 h-16 text-muted-foreground/30" />
+          <span className="inline-flex items-center gap-1.5 text-sm text-primary font-medium">
+            <Download className="w-4 h-4" />
+            Open PDF
           </span>
         </div>
       )}
-    </div>
+    </a>
   );
 };
 
@@ -449,6 +462,8 @@ const TeacherPrintables = () => {
                   alt="Tooth fairy SEL worksheet for grades 1 and 2, a printable reflection activity where children identify qualities they have been growing like bravery and kindness"
                   icon={FileText}
                   bg="bg-primary/5"
+                  href="/downloads/tooth-fairy-worksheet.pdf"
+                  onClick={trackTeacherWorksheetDownload}
                 />
                 <div>
                   <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
@@ -545,6 +560,8 @@ const TeacherPrintables = () => {
                     alt="Printable tooth fairy coloring page showing the Tooth Fairy in her workshop, with a jar for children to label with a quality they are growing"
                     icon={Palette}
                     bg="bg-secondary"
+                    href="/downloads/tooth-fairy-coloring-page.pdf"
+                    onClick={trackTeacherColoringDownload}
                   />
                 </div>
               </div>
@@ -563,6 +580,8 @@ const TeacherPrintables = () => {
                   alt="Tooth fairy teacher guide, a two-page low-prep SEL lesson plan for grades 1 and 2 with discussion prompts and social-emotional learning goals"
                   icon={BookOpen}
                   bg="bg-accent/10"
+                  href="/downloads/tooth-fairy-teacher-guide.pdf"
+                  onClick={trackTeacherGuideDownload}
                 />
                 <div>
                   <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
@@ -840,7 +859,7 @@ const TeacherPrintables = () => {
             </h2>
             <p className="text-starlight/70 mb-8 leading-relaxed text-sm">
               These printables are one part of a larger world being built at the Wiggly Tooth Workshop.
-              An animated short film, a children's book, and a keepsake box. All coming Summer 2026,
+              The animated short film is now on YouTube, with a children's book and a keepsake box on the way,
               all built around the same idea. Children are growing something real. It deserves to be noticed.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -870,7 +889,7 @@ const TeacherPrintables = () => {
               </Button>
             </div>
             <p className="mt-6 text-xs text-starlight/40">
-              Animated short film in development in collaboration with Peter H. Reynolds and FableVision
+              An animated short film in collaboration with Peter H. Reynolds and FableVision
               Studios.
             </p>
           </div>

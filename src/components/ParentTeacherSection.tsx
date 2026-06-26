@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Download, BookOpen, GraduationCap, HelpCircle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackColoringPageDownload, trackCTAClick } from "@/lib/analytics";
+import { trackCTAClick } from "@/lib/analytics";
 
 const parentLinks = [
   {
@@ -124,21 +124,16 @@ const ParentTeacherSection = () => {
               ))}
             </ul>
 
-            {/* Coloring page quick download */}
+            {/* Coloring page quick link */}
             <Button
               variant="workshop"
               size="sm"
               asChild
             >
-              <a
-                href="/downloads/coloring-page.pdf"
-                download="tooth-fairy-coloring-page.pdf"
-                onClick={trackColoringPageDownload}
-                className="inline-flex items-center gap-2"
-              >
+              <Link to="/coloring-page" className="inline-flex items-center gap-2">
                 <Download className="w-3.5 h-3.5" />
-                Download coloring page (free)
-              </a>
+                Get the coloring page (free)
+              </Link>
             </Button>
           </div>
         </div>

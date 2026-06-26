@@ -1,6 +1,6 @@
-import { Download } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackColoringPageDownload } from "@/lib/analytics";
 
 const KidsColoringSection = () => {
   return (
@@ -16,17 +16,13 @@ const KidsColoringSection = () => {
             in any way you like.
           </p>
           <Button variant="magical" size="lg" asChild>
-            <a
-              href="/downloads/coloring-page.pdf"
-              download="tooth-fairy-coloring-page.pdf"
-              onClick={trackColoringPageDownload}
-            >
-              <Download className="w-4 h-4" />
-              Download the coloring page
-            </a>
+            <Link to="/coloring-page">
+              <Palette className="w-4 h-4" />
+              Get the coloring page
+            </Link>
           </Button>
           <p className="mt-3 text-xs text-muted-foreground">
-            Free to print. No signup needed.
+            Free to print. PDF or JPG. No signup needed.
           </p>
         </div>
       </div>

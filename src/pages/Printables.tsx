@@ -1,31 +1,35 @@
 import { Link } from "react-router-dom";
-import { Download, Palette, FileText, ArrowLeft, Sparkles } from "lucide-react";
+import { ArrowRight, Palette, FileText, ArrowLeft, Sparkles, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { YOUTUBE_CHANNEL_URL } from "@/lib/config";
-import { trackColoringPageDownload, trackCTAClick } from "@/lib/analytics";
+import { trackCTAClick } from "@/lib/analytics";
 
 const printables = [
   {
     id: "coloring-page",
     title: "Tooth Fairy Coloring Page",
-    description: "A hand-illustrated coloring page featuring the Tooth Fairy on her nightly mission. Perfect for ages 4–8.",
+    description: "A printable coloring page of the Tooth Fairy flying through a starry night sky. Free PDF or JPG. Perfect for ages 3–10.",
     icon: Palette,
-    href: "/downloads/coloring-page.pdf",
-    download: "tooth-fairy-coloring-page.pdf",
-    label: "Download coloring page",
-    onDownload: trackColoringPageDownload,
+    to: "/coloring-page",
+    label: "Preview & download",
   },
   {
     id: "letter",
     title: "Tooth Fairy Letter Template",
-    description: "A printable letter from the Tooth Fairy for your child — personalize with their name, tooth number, and virtue.",
+    description: "A printable letter from the Tooth Fairy for your child — personalize with their name and the quality found in their tooth.",
     icon: FileText,
-    href: "/tooth-fairy-letter",
-    download: null,
+    to: "/tooth-fairy-letter",
     label: "Get the letter template",
-    onDownload: () => {},
+  },
+  {
+    id: "teacher",
+    title: "Teacher Worksheets & Activities",
+    description: "Free SEL worksheets, a coloring page, and a low-prep lesson plan for grades 1–2. Download individually or as a bundle.",
+    icon: GraduationCap,
+    to: "/tooth-fairy-printables",
+    label: "See classroom printables",
   },
 ];
 
@@ -85,22 +89,12 @@ const Printables = () => {
                 <h2 className="font-display font-semibold text-foreground mb-1">{item.title}</h2>
                 <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
               </div>
-              {item.href ? (
-                <Button variant="magical" size="sm" asChild>
-                  <a
-                    href={item.href}
-                    download={item.download}
-                    onClick={item.onDownload}
-                  >
-                    <Download className="w-3.5 h-3.5" />
-                    {item.label}
-                  </a>
-                </Button>
-              ) : (
-                <Button variant="workshop" size="sm" disabled>
+              <Button variant="magical" size="sm" asChild>
+                <Link to={item.to}>
                   {item.label}
-                </Button>
-              )}
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </Button>
             </div>
           ))}
         </div>
