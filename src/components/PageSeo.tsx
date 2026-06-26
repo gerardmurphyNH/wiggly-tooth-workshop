@@ -7,6 +7,8 @@ interface PageSeoProps {
   description?: string;
   /** Canonical URL */
   canonical?: string;
+  /** Absolute URL for og:image / twitter:image */
+  image?: string;
   /** JSON-LD structured data object (or array) */
   jsonLd?: unknown;
 }
@@ -19,7 +21,7 @@ interface PageSeoProps {
  * DOM. Replaces the per-page <Helmet> blocks that were lost when react-helmet-async
  * was removed — without adding a dependency.
  */
-const PageSeo = ({ title, description, canonical, jsonLd }: PageSeoProps) => {
+const PageSeo = ({ title, description, canonical, image, jsonLd }: PageSeoProps) => {
   useEffect(() => {
     const prevTitle = document.title;
     if (title) document.title = title;
@@ -46,12 +48,17 @@ const PageSeo = ({ title, description, canonical, jsonLd }: PageSeoProps) => {
       setMeta('link[rel="canonical"]', "rel", "canonical", canonical);
       setMeta('meta[property="og:url"]', "property", "og:url", canonical);
     }
+    if (image) {
+      setMeta('meta[property="og:image"]', "property", "og:image", image);
+      setMeta('meta[name="twitter:image"]', "name", "twitter:image", image);
+      setMeta('meta[name="twitter:card"]', "name", "twitter:card", "summary_large_image");
+    }
 
     return () => {
       // Restore the global title on unmount so navigation doesn't leak stale titles
       document.title = prevTitle;
     };
-  }, [title, description, canonical]);
+  }, [title, description, canonical, image]);
 
   if (!jsonLd) return null;
   return (

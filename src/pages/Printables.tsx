@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Palette, FileText, ArrowLeft, Sparkles, GraduationCap } from "lucide-react";
+import { ArrowRight, Palette, FileText, ArrowLeft, Sparkles, GraduationCap, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
@@ -7,6 +7,14 @@ import { YOUTUBE_CHANNEL_URL } from "@/lib/config";
 import { trackCTAClick } from "@/lib/analytics";
 
 const printables = [
+  {
+    id: "certificate",
+    title: "First Tooth Keepsake Certificate",
+    description: "A printable Tooth Fairy certificate she leaves behind after a first lost tooth — naming the special quality she found inside. A keepsake worth saving.",
+    icon: Award,
+    to: "/first-tooth-tradition",
+    label: "Start the tradition",
+  },
   {
     id: "coloring-page",
     title: "Tooth Fairy Coloring Page",

@@ -132,6 +132,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/first-tooth-tradition"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  First tooth tradition &amp; certificate
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/tooth-fairy-letter"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
