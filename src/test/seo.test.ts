@@ -1,0 +1,237 @@
+import { describe, it, expect } from "vitest";
+import fs from "node:fs";
+import path from "node:path";
+
+/**
+ * SEO / AEO regression guard.
+ *
+ * These tests statically validate the SEO invariants this site has broken
+ * before: pages missing per-page <PageSeo> (so they share the global title),
+ * duplicate titles, internal links pointing at routes that don't exist,
+ * download/image links pointing at files that don't exist, and the sitemap
+ * drifting out of sync with the real routes.
+ *
+ * They read source files directly (no rendering needed), so they're fast and
+ * deterministic. If one fails, the message names the offending page.
+ */
+
+const ROOT = process.cwd();
+const PAGES_DIR = path.join(ROOT, "src/pages");
+const SRC_DIR = path.join(ROOT, "src");
+const PUBLIC_DIR = path.join(ROOT, "public");
+
+// Pages that intentionally rely on the global <title> from index.html or are
+// not indexable, and therefore don't need a per-page PageSeo title.
+const TITLE_EXEMPT = new Set(["Index", "NotFound"]);
+// Routes that don't belong in the sitemap.
+const SITEMAP_EXEMPT = new Set<string>([]);
+
+// ---- helpers ---------------------------------------------------------------
+
+function read(file: string): string {
+  return fs.readFileSync(file, "utf8");
+}
+
+function allTsxFiles(dir: string): string[] {
+  const out: string[] = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      if (entry.name === "test") continue; // don't scan the tests themselves
+      out.push(...allTsxFiles(full));
+    } else if (/\.tsx?$/.test(entry.name) && !/\.(test|spec)\.tsx?$/.test(entry.name)) {
+      out.push(full);
+    }
+  }
+  return out;
+}
+
+// route path -> component name, parsed from App.tsx
+function parseRoutes(): Record<string, string> {
+  const app = read(path.join(SRC_DIR, "App.tsx"));
+  const routes: Record<string, string> = {};
+  const re = /<Route\s+path="([^"]+)"\s+element=\{<(\w+)\s*\/>\}/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(app))) {
+    routes[m[1]] = m[2];
+  }
+  return routes;
+}
+
+// Extract the <PageSeo ... /> block from a file (or null if none)
+function pageSeoBlock(src: string): string | null {
+  const start = src.indexOf("<PageSeo");
+  if (start === -1) return null;
+  const end = src.indexOf("/>", start);
+  if (end === -1) return null;
+  return src.slice(start, end + 2);
+}
+
+function attr(block: string, name: string): string | null {
+  const m = block.match(new RegExp(`${name}="([^"]*)"`));
+  return m ? m[1] : null;
+}
+
+// Resolve a prop that may be a string literal (name="...") or a const
+// expression (name={IDENT}, where `const IDENT = "..."` is defined in `src`).
+function resolveAttr(block: string, src: string, name: string): string | null {
+  const lit = attr(block, name);
+  if (lit) return lit;
+  const expr = block.match(new RegExp(`${name}=\\{(\\w+)\\}`));
+  if (expr) {
+    const cm = src.match(new RegExp(`const ${expr[1]}\\s*=\\s*"([^"]*)"`));
+    if (cm) return cm[1];
+  }
+  return null;
+}
+
+const routes = parseRoutes();
+const indexableRoutes = Object.entries(routes).filter(([p]) => p !== "*");
+
+// ---- tests -----------------------------------------------------------------
+
+describe("routes", () => {
+  it("App.tsx defines routes and a catch-all", () => {
+    expect(Object.keys(routes).length).toBeGreaterThan(15);
+    expect(routes["*"]).toBe("NotFound");
+    expect(routes["/"]).toBeTruthy();
+  });
+
+  it("every routed page component file exists", () => {
+    for (const [p, comp] of Object.entries(routes)) {
+      const file = path.join(PAGES_DIR, `${comp}.tsx`);
+      expect(fs.existsSync(file), `Missing page file for route ${p}: ${comp}.tsx`).toBe(true);
+    }
+  });
+});
+
+describe("per-page SEO", () => {
+  it("every indexable page renders <PageSeo>", () => {
+    for (const [p, comp] of indexableRoutes) {
+      if (comp === "NotFound") continue;
+      const src = read(path.join(PAGES_DIR, `${comp}.tsx`));
+      expect(src.includes("<PageSeo"), `Route ${p} (${comp}) is missing <PageSeo>`).toBe(true);
+    }
+  });
+
+  it("every page (except homepage) sets a non-empty title + canonical", () => {
+    for (const [p, comp] of indexableRoutes) {
+      if (TITLE_EXEMPT.has(comp)) continue;
+      const src = read(path.join(PAGES_DIR, `${comp}.tsx`));
+      const block = pageSeoBlock(src);
+      expect(block, `Route ${p} (${comp}) has no parseable PageSeo block`).toBeTruthy();
+      const title = resolveAttr(block!, src, "title");
+      const canonical = resolveAttr(block!, src, "canonical");
+      expect(title && title.length > 5, `Route ${p} (${comp}) has no PageSeo title`).toBe(true);
+      expect(
+        canonical && canonical.startsWith("https://wigglytoothworkshop.com"),
+        `Route ${p} (${comp}) has no/invalid canonical`,
+      ).toBe(true);
+    }
+  });
+
+  it("page titles are unique (no two pages share a <title>)", () => {
+    const seen = new Map<string, string>();
+    for (const [, comp] of indexableRoutes) {
+      if (TITLE_EXEMPT.has(comp)) continue;
+      const src = read(path.join(PAGES_DIR, `${comp}.tsx`));
+      const block = pageSeoBlock(src);
+      const title = block && resolveAttr(block, src, "title");
+      if (!title) continue;
+      expect(seen.has(title), `Duplicate title "${title}" on ${comp} and ${seen.get(title)}`).toBe(false);
+      seen.set(title, comp);
+    }
+  });
+
+  it("answer/content pages include FAQPage structured data", () => {
+    // Pages whose whole purpose is answering a question should expose FAQPage.
+    const mustHaveFaq = [
+      "ToothFairyFAQ",
+      "IsToothFairyReal",
+      "WhyDoesTheToothFairyLeaveMoney",
+      "FirstToothTradition",
+    ];
+    for (const comp of mustHaveFaq) {
+      const src = read(path.join(PAGES_DIR, `${comp}.tsx`));
+      expect(src.includes("FAQPage"), `${comp} should include FAQPage structured data`).toBe(true);
+    }
+  });
+});
+
+describe("internal links", () => {
+  const files = allTsxFiles(SRC_DIR);
+  // Collect candidate internal paths from string literals across all source.
+  const ROUTE_LIKE = /"(\/[a-z0-9-]*(?:\/[a-z0-9-]+)*)"/g;
+
+  it("every internal route link points to a defined route", () => {
+    const valid = new Set(Object.keys(routes));
+    const offenders: string[] = [];
+    for (const file of files) {
+      const src = read(file);
+      let m: RegExpExecArray | null;
+      ROUTE_LIKE.lastIndex = 0;
+      while ((m = ROUTE_LIKE.exec(src))) {
+        const p = m[1];
+        if (p === "/") continue;
+        if (p.startsWith("/downloads/") || p.startsWith("/images/") || p.startsWith("/assets/")) continue;
+        if (!valid.has(p)) offenders.push(`${path.relative(ROOT, file)} -> ${p}`);
+      }
+    }
+    expect(offenders, `Internal links to undefined routes:\n${offenders.join("\n")}`).toEqual([]);
+  });
+
+  it("every referenced /downloads and /images asset exists in public/", () => {
+    const ASSET = /"(\/(?:downloads|images)\/[^"]+?\.[a-z0-9]+)"/g;
+    const offenders: string[] = [];
+    for (const file of files) {
+      const src = read(file);
+      let m: RegExpExecArray | null;
+      ASSET.lastIndex = 0;
+      while ((m = ASSET.exec(src))) {
+        const rel = m[1].replace(/^\//, "");
+        if (!fs.existsSync(path.join(PUBLIC_DIR, rel))) {
+          offenders.push(`${path.relative(ROOT, file)} -> ${m[1]}`);
+        }
+      }
+    }
+    expect(offenders, `Links to missing public files:\n${offenders.join("\n")}`).toEqual([]);
+  });
+});
+
+describe("images", () => {
+  it("every <img> has alt text", () => {
+    const offenders: string[] = [];
+    for (const file of allTsxFiles(SRC_DIR)) {
+      const src = read(file);
+      const imgs = src.match(/<img[\s\S]*?\/>/g) || [];
+      for (const tag of imgs) {
+        if (!/\salt=/.test(tag)) offenders.push(`${path.relative(ROOT, file)}: ${tag.slice(0, 60)}...`);
+      }
+    }
+    expect(offenders, `<img> without alt:\n${offenders.join("\n")}`).toEqual([]);
+  });
+});
+
+describe("sitemap.xml", () => {
+  const xml = read(path.join(PUBLIC_DIR, "sitemap.xml"));
+  const locs = [...xml.matchAll(/<loc>https:\/\/wigglytoothworkshop\.com(\/[^<]*)<\/loc>/g)].map(
+    (m) => (m[1] === "/" ? "/" : m[1].replace(/\/$/, "")),
+  );
+
+  it("contains every indexable route", () => {
+    const missing = indexableRoutes
+      .map(([p]) => p)
+      .filter((p) => !SITEMAP_EXEMPT.has(p) && !locs.includes(p));
+    expect(missing, `Routes missing from sitemap:\n${missing.join("\n")}`).toEqual([]);
+  });
+
+  it("has no stale entries (every <loc> maps to a real route)", () => {
+    const valid = new Set(Object.keys(routes));
+    const stale = locs.filter((p) => p !== "/" && !valid.has(p));
+    expect(stale, `Stale sitemap entries (no matching route):\n${stale.join("\n")}`).toEqual([]);
+  });
+
+  it("uses the wigglytoothworkshop.com domain (not tooth-safe.com)", () => {
+    expect(xml.includes("tooth-safe.com")).toBe(false);
+  });
+});
