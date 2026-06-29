@@ -362,6 +362,11 @@ const TeacherPrintables = () => {
               contentUrl:
                 "https://wigglytoothworkshop.com/images/tooth-fairy-worksheet-preview.jpg",
               url: "https://wigglytoothworkshop.com/images/tooth-fairy-worksheet-preview.jpg",
+              creditText: "Wiggly Tooth Workshop",
+              creator: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: "https://wigglytoothworkshop.com/" },
+              copyrightNotice: "© 2026 Wiggly Tooth Workshop. Illustrations by Peter H. Reynolds.",
+              license: "https://wigglytoothworkshop.com/tooth-fairy-printables",
+              acquireLicensePage: "https://wigglytoothworkshop.com/terms",
             },
             {
               "@type": "ImageObject",
@@ -371,6 +376,11 @@ const TeacherPrintables = () => {
               contentUrl:
                 "https://wigglytoothworkshop.com/images/printable-tooth-fairy-coloring-page.jpg",
               url: "https://wigglytoothworkshop.com/images/printable-tooth-fairy-coloring-page.jpg",
+              creditText: "Wiggly Tooth Workshop",
+              creator: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: "https://wigglytoothworkshop.com/" },
+              copyrightNotice: "© 2026 Wiggly Tooth Workshop. Illustrations by Peter H. Reynolds.",
+              license: "https://wigglytoothworkshop.com/tooth-fairy-printables",
+              acquireLicensePage: "https://wigglytoothworkshop.com/terms",
             },
             {
               "@type": "ImageObject",
@@ -380,6 +390,11 @@ const TeacherPrintables = () => {
               contentUrl:
                 "https://wigglytoothworkshop.com/images/tooth-fairy-teacher-guide-preview.jpg",
               url: "https://wigglytoothworkshop.com/images/tooth-fairy-teacher-guide-preview.jpg",
+              creditText: "Wiggly Tooth Workshop",
+              creator: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: "https://wigglytoothworkshop.com/" },
+              copyrightNotice: "© 2026 Wiggly Tooth Workshop. Illustrations by Peter H. Reynolds.",
+              license: "https://wigglytoothworkshop.com/tooth-fairy-printables",
+              acquireLicensePage: "https://wigglytoothworkshop.com/terms",
             },
           ],
         }}

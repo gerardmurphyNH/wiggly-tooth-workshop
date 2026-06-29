@@ -7,7 +7,7 @@ export const GOOGLE_SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycb
 export const GA_MEASUREMENT_ID = "G-8M7LNF6VW7";
 
 // Contact email for fallback
-export const CONTACT_EMAIL = "hello@tooth-safe.com";
+export const CONTACT_EMAIL = "hello@wigglytoothworkshop.com";
 
 // YouTube video ID for the short film embed
 export const YOUTUBE_VIDEO_ID = "9d0wilzzhnw";

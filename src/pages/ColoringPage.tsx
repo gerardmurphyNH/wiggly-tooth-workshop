@@ -74,7 +74,10 @@ const ColoringPage = () => {
               name: "Free Printable Tooth Fairy Coloring Page",
               description: PREVIEW_ALT,
               creditText: "Wiggly Tooth Workshop",
+              creator: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: SITE_URL },
+              copyrightNotice: "© 2026 Wiggly Tooth Workshop. Illustrations by Peter H. Reynolds.",
               license: PAGE_URL,
+              acquireLicensePage: "https://wigglytoothworkshop.com/terms",
             },
             {
               "@type": "FAQPage",

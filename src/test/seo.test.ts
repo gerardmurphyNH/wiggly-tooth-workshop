@@ -199,6 +199,23 @@ describe("internal links", () => {
 });
 
 describe("images", () => {
+  it("every ImageObject has creator, copyrightNotice, and acquireLicensePage", () => {
+    // Google Search Console flags ImageObject items missing these fields.
+    const offenders: string[] = [];
+    for (const file of allTsxFiles(PAGES_DIR)) {
+      const src = read(file);
+      const imageObjects = (src.match(/"@type":\s*"ImageObject"/g) || []).length;
+      if (!imageObjects) continue;
+      for (const field of ["creator", "copyrightNotice", "acquireLicensePage"]) {
+        const count = (src.match(new RegExp(`${field}:`, "g")) || []).length;
+        if (count < imageObjects) {
+          offenders.push(`${path.relative(ROOT, file)}: ${imageObjects} ImageObject(s) but ${count} "${field}"`);
+        }
+      }
+    }
+    expect(offenders, `ImageObject missing required metadata:\n${offenders.join("\n")}`).toEqual([]);
+  });
+
   it("every <img> has alt text", () => {
     const offenders: string[] = [];
     for (const file of allTsxFiles(SRC_DIR)) {
