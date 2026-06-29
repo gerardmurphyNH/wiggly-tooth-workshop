@@ -139,17 +139,6 @@ const FirstToothTradition = () => {
               license: PAGE_URL,
             },
             {
-              "@type": "VideoObject",
-              name: "The Tooth Fairy's Magical Mission",
-              description:
-                "An animated short film about a curious boy who discovers what the Tooth Fairy really does with the teeth she collects - and learns that every lost tooth carries something worth keeping.",
-              thumbnailUrl: [`https://i.ytimg.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`],
-              uploadDate: "2026-06-07",
-              contentUrl: YOUTUBE_VIDEO_URL,
-              embedUrl: `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}`,
-              publisher: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: SITE_URL },
-            },
-            {
               "@type": "FAQPage",
               mainEntity: faqs.map((f) => ({
                 "@type": "Question",

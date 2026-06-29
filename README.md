@@ -2,7 +2,7 @@
 
 Marketing website for the animated short film and children's book project.
 
-**Live Site:** https://tooth-safe.com
+**Live Site:** https://wigglytoothworkshop.com
 
 ## Tech Stack
 
@@ -33,7 +33,7 @@ Pushes to `main` automatically deploy to GitHub Pages via GitHub Actions.
 ### First-Time GitHub Pages Setup
 
 1. **Enable Pages:** Repo Settings → Pages → Source: "GitHub Actions"
-2. **Custom Domain:** Add `tooth-safe.com`, enable "Enforce HTTPS"
+2. **Custom Domain:** Add `wigglytoothworkshop.com`, enable "Enforce HTTPS"
 3. **DNS Records (Squarespace Domains):**
 
    | Type | Host | Value |

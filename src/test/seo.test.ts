@@ -235,3 +235,30 @@ describe("sitemap.xml", () => {
     expect(xml.includes("tooth-safe.com")).toBe(false);
   });
 });
+
+describe("stale domain (tooth-safe.com)", () => {
+  // The site moved from tooth-safe.com to wigglytoothworkshop.com. The old
+  // domain leaking into a URL (canonical, og:url, or a YouTube embed `origin=`)
+  // confuses Google's crawler — this happened on the homepage video embed.
+  // Flag any tooth-safe.com used as a URL; allow it only inside an email (@...).
+  it("no tooth-safe.com URL appears in shipped source", () => {
+    const targets = [
+      path.join(ROOT, "index.html"),
+      path.join(PUBLIC_DIR, "sitemap.xml"),
+      path.join(PUBLIC_DIR, "robots.txt"),
+      ...allTsxFiles(SRC_DIR),
+    ].filter((f) => fs.existsSync(f));
+
+    const offenders: string[] = [];
+    for (const file of targets) {
+      const src = read(file);
+      const re = /(.)tooth-safe\.com/g;
+      let m: RegExpExecArray | null;
+      while ((m = re.exec(src))) {
+        if (m[1] === "@") continue; // an email address is allowed
+        offenders.push(`${path.relative(ROOT, file)}: ...${m[1]}tooth-safe.com`);
+      }
+    }
+    expect(offenders, `Stale tooth-safe.com URL references:\n${offenders.join("\n")}`).toEqual([]);
+  });
+});

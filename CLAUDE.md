@@ -6,7 +6,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 This is a **marketing website** for "The Tooth Fairy's Magical Mission" - an animated short film and children's book project. The site is designed to capture email signups, provide information about the project, and engage visitors with an interactive virtue quiz.
 
-**Live URL:** https://tooth-safe.com
+**Live URL:** https://wigglytoothworkshop.com
 
 ### Tech Stack
 
@@ -140,7 +140,7 @@ Push to `main` triggers `.github/workflows/deploy.yml` which:
    - Source: "GitHub Actions"
 
 2. **Set Custom Domain:**
-   - Add `tooth-safe.com` in Pages settings
+   - Add `wigglytoothworkshop.com` in Pages settings
    - Check "Enforce HTTPS"
 
 3. **DNS Configuration (Squarespace Domains):**
