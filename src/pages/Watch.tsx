@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
@@ -10,12 +16,35 @@ import { trackCTAClick, trackEvent } from "@/lib/analytics";
 const PAGE_URL = "https://wigglytoothworkshop.com/watch";
 const SITE_URL = "https://wigglytoothworkshop.com/";
 
+const faqs = [
+  {
+    question: "Is there a new Tooth Fairy movie?",
+    answer:
+      "Yes - The Tooth Fairy's Secret Workshop is a new animated short film about the Tooth Fairy, made in collaboration with Peter H. Reynolds and FableVision Studios. It's not the 2010 live-action comedy; it's an original animated story for kids and families, free to watch on YouTube.",
+  },
+  {
+    question: "Where can I watch an animated Tooth Fairy film for kids?",
+    answer:
+      "You can watch The Tooth Fairy's Secret Workshop right here on this page or on YouTube, free. It's a short animated film (a few minutes long) made for children and families - a gentle, magical story about what the Tooth Fairy really does with the teeth she collects.",
+  },
+  {
+    question: "How long is the film, and is it free?",
+    answer:
+      "It's a short film - a few minutes long - and completely free to watch, with no sign-up required. Press play above or open it on YouTube.",
+  },
+  {
+    question: "What is The Tooth Fairy's Secret Workshop about?",
+    answer:
+      "A curious boy named Arlo sets out to discover what the Tooth Fairy actually does with lost teeth. He learns that every tooth holds a quality a child grew - courage, kindness, patience, creativity - and the Tooth Fairy uses those qualities to quietly help the world.",
+  },
+];
+
 const Watch = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSeo
-        title="Watch The Tooth Fairy's Secret Workshop | Wiggly Tooth Workshop"
-        description="Watch The Tooth Fairy's Secret Workshop, a short animated film about what the Tooth Fairy really does with the teeth she collects. Free to watch."
+        title="Watch The Tooth Fairy's Secret Workshop - Animated Short Film | Wiggly Tooth Workshop"
+        description="Watch The Tooth Fairy's Secret Workshop, a new animated tooth fairy short film for kids - free, no sign-up. Discover what the Tooth Fairy really does with lost teeth."
         canonical={PAGE_URL}
         image={`https://i.ytimg.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`}
         jsonLd={{
@@ -38,6 +67,14 @@ const Watch = () => {
               contentUrl: YOUTUBE_VIDEO_URL,
               embedUrl: `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}`,
               publisher: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: SITE_URL },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
             },
           ],
         }}
@@ -137,8 +174,33 @@ const Watch = () => {
           </div>
         </section>
 
-        {/* Explore */}
+        {/* FAQ */}
         <section className="py-14 md:py-20 bg-secondary/30">
+          <div className="container px-6 max-w-2xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+              Questions about the film
+            </h2>
+            <Accordion type="single" collapsible className="space-y-3">
+              {faqs.map((faq, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`item-${i}`}
+                  className="magical-card border-0 data-[state=open]:shadow-magical transition-shadow"
+                >
+                  <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:text-primary transition-colors hover:no-underline px-0">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pt-2">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
+        {/* Explore */}
+        <section className="py-14 md:py-20 bg-background">
           <div className="container px-6 max-w-3xl mx-auto">
             <h2 className="font-display text-xl font-bold text-foreground mb-6 text-center">
               After you watch
