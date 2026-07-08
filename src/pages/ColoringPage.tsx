@@ -47,6 +47,16 @@ const faqs = [
     answer:
       "The artwork comes from the world of The Tooth Fairy's Magical Mission, the animated short film created in collaboration with Peter H. Reynolds and FableVision Studios.",
   },
+  {
+    question: "Is this a printable coloring sheet I can print at home?",
+    answer:
+      "Yes. It's a printable Tooth Fairy coloring sheet designed to print at home on standard letter or A4 paper. Download the PDF for the cleanest print, or the JPG if you'd rather print an image or color it on a tablet.",
+  },
+  {
+    question: "Are there more Tooth Fairy coloring pages and pictures to color?",
+    answer:
+      "This is our first free Tooth Fairy coloring page, with more Tooth Fairy pictures and printables added over time. Join the Workshop and we'll let you know when new coloring pages are ready.",
+  },
 ];
 
 const ColoringPage = () => {

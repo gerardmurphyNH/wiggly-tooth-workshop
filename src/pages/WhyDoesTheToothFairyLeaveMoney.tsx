@@ -48,8 +48,8 @@ const WhyDoesTheToothFairyLeaveMoney = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSeo
-        title="Why Does the Tooth Fairy Leave Money? | Wiggly Tooth Workshop"
-        description="Why does the Tooth Fairy leave money? It isn't a payment for the tooth - it's a thank-you for the quality the child grew inside it. Here's what the gift really means."
+        title="Why Does the Tooth Fairy Leave Money? The Real Meaning | Wiggly Tooth Workshop"
+        description="Why does the Tooth Fairy leave money? It isn't payment for the tooth - it's a thank-you for what your child grew inside it. Discover what the gift really means."
         canonical={PAGE_URL}
         jsonLd={{
           "@context": "https://schema.org",

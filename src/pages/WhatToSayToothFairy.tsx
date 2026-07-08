@@ -44,8 +44,8 @@ const WhatToSayToothFairy = () => {
   return (
     <>
       <PageSeo
-        title="What to Say When Your Child Asks If the Tooth Fairy Is Real | Wiggly Tooth Workshop"
-        description="A gentle, honest answer for when your child asks if the Tooth Fairy is real, without breaking the magic or making growing up feel like a loss. Scripts for every age."
+        title="What to Say When a Child Asks If the Tooth Fairy Is Real | Wiggly Tooth Workshop"
+        description="What do you say when your child asks if the Tooth Fairy is real? Gentle, honest scripts by age that answer the question without making growing up feel like a loss."
         canonical="https://wigglytoothworkshop.com/what-to-say-when-child-asks-if-tooth-fairy-is-real"
         jsonLd={{
           "@context": "https://schema.org",

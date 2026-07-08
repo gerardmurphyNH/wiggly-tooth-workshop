@@ -43,8 +43,8 @@ const ToothFairyStoryExplained = () => {
   return (
     <>
       <PageSeo
-        title="The Tooth Fairy Story, Explained: Where the Tradition Comes From | Wiggly Tooth Workshop"
-        description="The Tooth Fairy story explained: where the tradition began, how it took shape across cultures and centuries, and what losing a tooth has always really meant."
+        title="The Tooth Fairy Story Explained: Origins and Real Meaning | Wiggly Tooth Workshop"
+        description="The Tooth Fairy story explained: where the tradition began, how it spread across cultures and centuries, and what losing a tooth has always really meant."
         canonical="https://wigglytoothworkshop.com/tooth-fairy-story-explained"
         jsonLd={{
           "@context": "https://schema.org",
