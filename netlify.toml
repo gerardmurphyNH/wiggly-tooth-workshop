@@ -2,6 +2,19 @@
   command = "npm run build"
   publish = "dist"
 
+# Coloring page files were renamed to keyword-rich filenames — 301 the old URLs.
+[[redirects]]
+  from = "/downloads/coloring-page.pdf"
+  to = "/downloads/free-tooth-fairy-coloring-page.pdf"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/downloads/coloring-page.jpg"
+  to = "/downloads/free-tooth-fairy-coloring-page.jpg"
+  status = 301
+  force = true
+
 # SPA redirect — send all routes to index.html so React Router handles them.
 # Without this, direct links to /news, /is-the-tooth-fairy-real etc. return 404.
 [[redirects]]

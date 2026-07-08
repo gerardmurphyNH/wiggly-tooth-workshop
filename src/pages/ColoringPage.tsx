@@ -14,10 +14,10 @@ import PageSeo from "@/components/PageSeo";
 
 const PAGE_URL = "https://wigglytoothworkshop.com/coloring-page";
 const SITE_URL = "https://wigglytoothworkshop.com/";
-const CERT_ABS = "https://wigglytoothworkshop.com/downloads/coloring-page.jpg";
-const PREVIEW_IMG = "/downloads/coloring-page.jpg";
-const PDF_URL = "/downloads/coloring-page.pdf";
-const JPG_URL = "/downloads/coloring-page.jpg";
+const CERT_ABS = "https://wigglytoothworkshop.com/downloads/free-tooth-fairy-coloring-page.jpg";
+const PREVIEW_IMG = "/downloads/free-tooth-fairy-coloring-page.jpg";
+const PDF_URL = "/downloads/free-tooth-fairy-coloring-page.pdf";
+const JPG_URL = "/downloads/free-tooth-fairy-coloring-page.jpg";
 const PREVIEW_ALT =
   "Free printable Tooth Fairy coloring page showing CeCe the Tooth Fairy flying through a starry night sky with clouds and her cloud-top workshop, from The Tooth Fairy's Magical Mission";
 

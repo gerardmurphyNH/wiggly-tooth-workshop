@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
-import { YOUTUBE_CHANNEL_URL } from "@/lib/config";
+import FilmEmbed from "@/components/FilmEmbed";
 import { trackCTAClick } from "@/lib/analytics";
 
 const ForTeachers = () => {
@@ -80,24 +80,13 @@ const ForTeachers = () => {
           virtues, and the small ways children make the world better.
         </p>
 
-        {/* Film CTA */}
-        <div className="mb-10 p-6 rounded-2xl night-sky-section text-center relative overflow-hidden rounded-2xl">
-          <div className="relative z-10">
-            <Sparkles className="w-6 h-6 text-primary mx-auto mb-3" />
-            <p className="font-display font-semibold text-starlight mb-2">
-              Start with the short film
-            </p>
-            <p className="text-starlight/70 text-sm mb-4 max-w-md mx-auto">
-              Watch <em>The Tooth Fairy's Magical Mission</em> as a class, then use the
-              discussion prompts below to explore themes of courage, kindness, creativity,
-              and patience.
-            </p>
-            <Button variant="hero" size="sm" asChild>
-              <a href={YOUTUBE_CHANNEL_URL} target="_blank" rel="noopener noreferrer">
-                Watch on YouTube (free)
-              </a>
-            </Button>
-          </div>
+        {/* Film embed */}
+        <div className="mb-10">
+          <FilmEmbed
+            location="for_teachers"
+            heading="Start with the short film"
+            blurb="Watch The Tooth Fairy's Magical Mission as a class, then use the discussion prompts below."
+          />
         </div>
 
         {/* Discussion prompts */}

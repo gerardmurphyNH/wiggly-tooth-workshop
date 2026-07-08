@@ -10,6 +10,7 @@ import {
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
+import FilmEmbed from "@/components/FilmEmbed";
 
 const faqs = [
   {
@@ -153,6 +154,14 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
               </div>
             </div>
           </section>
+
+          {/* Film embed */}
+          <FilmEmbed
+            location="why_tf_takes_teeth"
+            heading="Watch the short film"
+            blurb="See the reason the Tooth Fairy collects teeth come to life in The Tooth Fairy's Magical Mission."
+            bg="bg-background"
+          />
 
           {/* Main Content */}
           <section className="py-12 md:py-16 bg-background">

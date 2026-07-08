@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
-import { YOUTUBE_CHANNEL_URL } from "@/lib/config";
+import FilmEmbed from "@/components/FilmEmbed";
 import { trackCTAClick } from "@/lib/analytics";
 
 const PAGE_URL = "https://wigglytoothworkshop.com/for-parents";
@@ -103,21 +103,13 @@ const ForParents = () => {
           meaningful — and a little more magical.
         </p>
 
-        {/* Film CTA */}
-        <div className="mb-10 p-6 rounded-2xl bg-secondary/50 border border-border text-center">
-          <Sparkles className="w-6 h-6 text-primary mx-auto mb-3" />
-          <p className="font-display font-semibold text-foreground mb-2">
-            Watch the short film with your child
-          </p>
-          <p className="text-muted-foreground text-sm mb-4">
-            <em>The Tooth Fairy's Magical Mission</em> is a great conversation starter.
-            Watch it together, then talk about what virtue might be in their tooth.
-          </p>
-          <Button variant="magical" size="sm" asChild>
-            <a href={YOUTUBE_CHANNEL_URL} target="_blank" rel="noopener noreferrer">
-              Watch on YouTube (free)
-            </a>
-          </Button>
+        {/* Film embed */}
+        <div className="mb-10">
+          <FilmEmbed
+            location="for_parents"
+            heading="Watch the short film with your child"
+            blurb="The Tooth Fairy's Magical Mission is a wonderful conversation starter - watch it together, then talk about what quality might be growing in their tooth."
+          />
         </div>
 
         {/* Quick links */}

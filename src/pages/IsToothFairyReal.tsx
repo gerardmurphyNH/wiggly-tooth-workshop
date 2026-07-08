@@ -10,6 +10,7 @@ import {
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
+import FilmEmbed from "@/components/FilmEmbed";
 import VirtueQuizSection from "@/components/VirtueQuizSection";
 import { YOUTUBE_VIDEO_URL } from "@/lib/config";
 import { trackCTAClick, trackEvent } from "@/lib/analytics";
@@ -32,6 +33,11 @@ const faqs = [
     question: "Why doesn't the Tooth Fairy let anyone see her?",
     answer:
       "Partly because she works better unseen, and partly because the mystery is part of how the tradition works. A visitor who leaves something in the night is wondrous; a visitor you can watch is just a person. Most important things - courage, kindness, the wind - work quietly. The Tooth Fairy fits right in.",
+  },
+  {
+    question: "Is the Tooth Fairy real, or is it your parents?",
+    answer:
+      "It's the question every child eventually asks - and the honest answer is: both can be true. Parents help. They always have, slipping the coin under the pillow on the nights the Tooth Fairy can't make it. But the part that isn't pretend is what the tradition is really about: the courage, kindness, and wonder a child grows are real, and they really do matter. Parents are the Tooth Fairy's helpers, not her replacement. The magic is in what your child is becoming.",
   },
   {
     question: "What do I tell my child when they ask if the Tooth Fairy is real?",
@@ -497,6 +503,14 @@ const IsToothFairyReal = () => {
             </Accordion>
           </div>
         </section>
+
+        {/* ── Film embed ── */}
+        <FilmEmbed
+          location="is_tf_real"
+          heading="Watch the short film"
+          blurb="The Tooth Fairy's Magical Mission brings this whole idea to life - free to watch."
+          bg="bg-background"
+        />
 
         {/* ── Continue exploring ── */}
         <section className="py-20 md:py-28 bg-background">

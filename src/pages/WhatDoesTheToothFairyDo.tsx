@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
+import FilmEmbed from "@/components/FilmEmbed";
 import { YOUTUBE_CHANNEL_URL } from "@/lib/config";
 import { trackCTAClick } from "@/lib/analytics";
 
@@ -131,7 +132,11 @@ const WhatDoesTheToothFairyDo = () => {
           she does with it is more meaningful than most people realize.
         </p>
 
-        <FilmCTA />
+        <FilmEmbed
+          location="what_does_tf_do"
+          heading="See what she really does"
+          blurb="The short film follows a boy who discovers exactly what the Tooth Fairy does with the teeth she collects."
+        />
 
         <div className="space-y-6">
           <h2 className="font-display text-2xl font-bold text-foreground">

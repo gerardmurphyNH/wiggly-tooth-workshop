@@ -26,7 +26,7 @@ const DownloadSection = () => {
           </p>
           <Button variant="magical" size="lg" asChild>
             <a
-              href="/downloads/coloring-page.pdf"
+              href="/downloads/free-tooth-fairy-coloring-page.pdf"
               download="tooth-fairy-coloring-page.pdf"
               onClick={handleDownload}
             >

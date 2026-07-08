@@ -12,7 +12,7 @@ const YouTubeIcon = () => (
 );
 
 const navLinks = [
-  { label: "Watch the Film", href: "#film" },
+  { label: "Watch the Film", href: "/watch" },
   { label: "Explore the World", href: "#world" },
   { label: "For Parents", href: "/for-parents" },
   { label: "For Teachers", href: "/for-teachers" },
@@ -27,13 +27,17 @@ const NavBar = () => {
 
   const handleAnchorClick = (href: string) => {
     setMobileOpen(false);
-    if (href.startsWith("#") && isHome) {
+    if (!href.startsWith("#")) return;
+    if (isHome) {
       const el = document.getElementById(href.slice(1));
       if (el) {
         const offset = 72;
         const top = el.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: "smooth" });
       }
+    } else {
+      // Off the homepage — navigate to the homepage section
+      window.location.href = `/${href}`;
     }
   };
 
