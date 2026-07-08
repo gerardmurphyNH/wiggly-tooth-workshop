@@ -28,14 +28,14 @@ const faqs = [
       "No one invented her; she grew from a tradition that many cultures developed independently. The modern version of the Tooth Fairy story was shaped over generations of parents answering the same question every child eventually asks: what happens to my tooth now?",
   },
   {
-    question: "What is The Tooth Fairy's Magical Mission?",
+    question: "What is The Tooth Fairy's Secret Workshop?",
     answer:
       "It's an animated short film and children's book from the Wiggly Tooth Workshop, developed in collaboration with Peter H. Reynolds and FableVision Studios. The story follows Arlo and CeCe as they discover what really happens to lost teeth and what goes on inside the Tooth Fairy's workshop. Coming Summer 2026.",
   },
   {
     question: "Who are Arlo and CeCe?",
     answer:
-      "Arlo and CeCe are the two young characters at the heart of The Tooth Fairy's Magical Mission. They're curious, imaginative kids who discover what really happens to lost teeth, and what goes on inside the workshop when nobody is watching. They're the kind of characters who ask the questions every kid wonders about, and aren't afraid to follow the answer wherever it leads.",
+      "Arlo and CeCe are the two young characters at the heart of The Tooth Fairy's Secret Workshop. They're curious, imaginative kids who discover what really happens to lost teeth, and what goes on inside the workshop when nobody is watching. They're the kind of characters who ask the questions every kid wonders about, and aren't afraid to follow the answer wherever it leads.",
   },
 ];
 
@@ -240,7 +240,7 @@ const ToothFairyStoryExplained = () => {
                     <em> why does she take the teeth?</em>
                   </p>
                   <p>
-                    In the world of <em>The Tooth Fairy's Magical Mission</em>,
+                    In the world of <em>The Tooth Fairy's Secret Workshop</em>,
                     every lost tooth holds a good quality (bravery, kindness, creativity, or patience)
                     grown during years of childhood. The Tooth Fairy collects them not
                     to hoard them, but to carefully lift them out and use them to help fix the
@@ -336,9 +336,9 @@ const ToothFairyStoryExplained = () => {
                 See it for yourself
               </h2>
               <p className="text-starlight/70 mb-8 leading-relaxed">
-                <em>The Tooth Fairy's Magical Mission</em> is an animated short film in development
-                with Peter H. Reynolds and FableVision Studios. Join the Workshop to get early
-                access, behind-the-scenes updates, and launch news.
+                <em>The Tooth Fairy's Secret Workshop</em> is an animated short film made
+                with Peter H. Reynolds and FableVision Studios, now free to watch on YouTube.
+                Join the Workshop for behind-the-scenes updates and what's coming next.
               </p>
               <Button variant="hero" size="lg" asChild>
                 <a href="/#signup">

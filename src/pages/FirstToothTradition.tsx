@@ -382,7 +382,7 @@ const FirstToothTradition = () => {
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1&iv_load_policy=3&color=white&origin=https://wigglytoothworkshop.com`}
-                title="The Tooth Fairy's Magical Mission — Short Film by Wiggly Tooth Workshop"
+                title="The Tooth Fairy's Secret Workshop — Short Film by Wiggly Tooth Workshop"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 loading="lazy"
@@ -397,7 +397,7 @@ const FirstToothTradition = () => {
                 onClick={() => trackEvent("social_click", { platform: "youtube", location: "first_tooth_watch" })}
                 className="font-medium text-primary hover:text-primary/80 underline underline-offset-4"
               >
-                The Tooth Fairy's Magical Mission
+                The Tooth Fairy's Secret Workshop
               </a>{" "}
               with your child.
             </p>

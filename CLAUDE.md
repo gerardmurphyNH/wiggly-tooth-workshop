@@ -4,7 +4,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 ## Project Overview
 
-This is a **marketing website** for "The Tooth Fairy's Magical Mission" - an animated short film and children's book project. The site is designed to capture email signups, provide information about the project, and engage visitors with an interactive virtue quiz.
+This is a **marketing website** for "The Tooth Fairy's Secret Workshop" - an animated short film and children's book project. The site is designed to capture email signups, provide information about the project, and engage visitors with an interactive virtue quiz.
 
 **Live URL:** https://wigglytoothworkshop.com
 

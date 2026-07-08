@@ -314,7 +314,7 @@ const FirstToothWhatToDo = () => {
                 The full story is coming
               </h2>
               <p className="text-starlight/70 mb-8 leading-relaxed">
-                <em>The Tooth Fairy's Magical Mission</em> is an animated short film and children's
+                <em>The Tooth Fairy's Secret Workshop</em> is an animated short film and children's
                 book that answers every question your child will ever ask about the Tooth Fairy,
                 in the most magical way possible. Coming Summer 2026.
               </p>

@@ -19,7 +19,7 @@ const PREVIEW_IMG = "/downloads/free-tooth-fairy-coloring-page.jpg";
 const PDF_URL = "/downloads/free-tooth-fairy-coloring-page.pdf";
 const JPG_URL = "/downloads/free-tooth-fairy-coloring-page.jpg";
 const PREVIEW_ALT =
-  "Free printable Tooth Fairy coloring page showing CeCe the Tooth Fairy flying through a starry night sky with clouds and her cloud-top workshop, from The Tooth Fairy's Magical Mission";
+  "Free printable Tooth Fairy coloring page showing CeCe the Tooth Fairy flying through a starry night sky with clouds and her cloud-top workshop, from The Tooth Fairy's Secret Workshop";
 
 const faqs = [
   {
@@ -45,7 +45,7 @@ const faqs = [
   {
     question: "Who illustrated the coloring page?",
     answer:
-      "The artwork comes from the world of The Tooth Fairy's Magical Mission, the animated short film created in collaboration with Peter H. Reynolds and FableVision Studios.",
+      "The artwork comes from the world of The Tooth Fairy's Secret Workshop, the animated short film created in collaboration with Peter H. Reynolds and FableVision Studios.",
   },
   {
     question: "Is this a printable coloring sheet I can print at home?",
@@ -195,7 +195,7 @@ const ColoringPage = () => {
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 This free Tooth Fairy coloring page features CeCe, the Tooth
-                Fairy from <em>The Tooth Fairy's Magical Mission</em>, flying
+                Fairy from <em>The Tooth Fairy's Secret Workshop</em>, flying
                 through a starry sky on her nightly rounds, with her cloud-top
                 workshop floating in the distance. It's designed for children
                 ages 3 to 10 and makes a calm, imaginative activity for home or

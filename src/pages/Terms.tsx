@@ -34,7 +34,7 @@ const Terms = () => {
               About This Site
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              This is an informational website for "The Tooth Fairy's Magical Mission"
+              This is an informational website for "The Tooth Fairy's Secret Workshop"
               project, operated by Wiggly Tooth Workshop. The content on this site is
               provided for informational purposes only.
             </p>

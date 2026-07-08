@@ -15,8 +15,8 @@ const Premiere = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSeo
-        title="The Tooth Fairy's Magical Mission - World Premiere Recap | Wiggly Tooth Workshop"
-        description="Recap of the world premiere of The Tooth Fairy's Magical Mission at TLC Studios in Dedham, MA, with a live FaceTime visit from Peter H. Reynolds."
+        title="The Tooth Fairy's Secret Workshop - World Premiere Recap | Wiggly Tooth Workshop"
+        description="Recap of the world premiere of The Tooth Fairy's Secret Workshop at TLC Studios in Dedham, MA, with a live FaceTime visit from Peter H. Reynolds."
         canonical="https://wigglytoothworkshop.com/tooth-fairy-film-premiere"
         image="https://wigglytoothworkshop.com/og-image.png"
       />
@@ -28,7 +28,7 @@ const Premiere = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Event",
-            name: "The Tooth Fairy's Magical Mission — World Premiere",
+            name: "The Tooth Fairy's Secret Workshop — World Premiere",
             startDate: "2026-06-07T14:00",
             eventStatus: "https://schema.org/EventScheduled",
             eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
@@ -46,7 +46,7 @@ const Premiere = () => {
             },
             image: ["https://wigglytoothworkshop.com/og-image.png"],
             description:
-              "Over 100 people joined the world premiere of The Tooth Fairy's Magical Mission at TLC Studios in Dedham, Massachusetts, including a live FaceTime visit from illustrator Peter H. Reynolds.",
+              "Over 100 people joined the world premiere of The Tooth Fairy's Secret Workshop at TLC Studios in Dedham, Massachusetts, including a live FaceTime visit from illustrator Peter H. Reynolds.",
             organizer: {
               "@type": "Organization",
               name: "Wiggly Tooth Workshop",
@@ -89,7 +89,7 @@ const Premiere = () => {
             </span>
 
             <h1 className="font-display text-4xl md:text-5xl font-bold text-starlight mb-6 leading-tight">
-              The Tooth Fairy's Magical Mission
+              The Tooth Fairy's Secret Workshop
               <br />
               <span className="text-primary">Premiered in Dedham</span>
             </h1>
@@ -97,7 +97,7 @@ const Premiere = () => {
             <p className="text-starlight/75 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
               On Sunday, June 7, more than 100 friends, families, and curious
               kids joined us at TLC Studios in Dedham Square for the world
-              premiere of <em>The Tooth Fairy's Magical Mission</em>. Here's how
+              premiere of <em>The Tooth Fairy's Secret Workshop</em>. Here's how
               it went.
             </p>
 
@@ -120,7 +120,7 @@ const Premiere = () => {
             <figure>
               <img
                 src={premiereScreening}
-                alt="A full house at TLC Studios in Dedham watching the world premiere of The Tooth Fairy's Magical Mission, with families seated on orange rugs and chairs in front of the film's title screen"
+                alt="A full house at TLC Studios in Dedham watching the world premiere of The Tooth Fairy's Secret Workshop, with families seated on orange rugs and chairs in front of the film's title screen"
                 width={1400}
                 height={1050}
                 loading="lazy"
@@ -190,7 +190,7 @@ const Premiere = () => {
             <figure>
               <img
                 src={premiereThumbsup}
-                alt="Gerard Murphy and Andreas Branigan, the voice of Arlo, together after the premiere of The Tooth Fairy's Magical Mission in Dedham"
+                alt="Gerard Murphy and Andreas Branigan, the voice of Arlo, together after the premiere of The Tooth Fairy's Secret Workshop in Dedham"
                 width={1400}
                 height={1050}
                 loading="lazy"
@@ -216,7 +216,7 @@ const Premiere = () => {
                   Watch the film anytime
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  <em>The Tooth Fairy's Magical Mission</em> is now on YouTube,
+                  <em>The Tooth Fairy's Secret Workshop</em> is now on YouTube,
                   free to watch. Discover what the Tooth Fairy really does with
                   the teeth she collects.
                 </p>
@@ -242,7 +242,7 @@ const Premiere = () => {
               <figure className="order-1 md:order-2">
                 <img
                   src={moviePoster}
-                  alt="Official movie poster for The Tooth Fairy's Magical Mission, an animated short film from Wiggly Tooth Workshop and FableVision, with the tagline 'The magic under your pillow can help change the world.'"
+                  alt="Official movie poster for The Tooth Fairy's Secret Workshop, an animated short film from Wiggly Tooth Workshop and FableVision, with the tagline 'The magic under your pillow can help change the world.'"
                   width={1184}
                   height={1482}
                   loading="lazy"

@@ -178,7 +178,7 @@ const WhyDoesTheToothFairyLeaveMoney = () => {
             See where the tooth really goes
           </p>
           <p className="text-muted-foreground text-sm mb-4">
-            Watch <em>The Tooth Fairy's Magical Mission</em> - a short film about
+            Watch <em>The Tooth Fairy's Secret Workshop</em> - a short film about
             what the Tooth Fairy does with the teeth she collects, and why she
             leaves something behind.
           </p>

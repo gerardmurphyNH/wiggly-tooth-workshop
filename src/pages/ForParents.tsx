@@ -108,7 +108,7 @@ const ForParents = () => {
           <FilmEmbed
             location="for_parents"
             heading="Watch the short film with your child"
-            blurb="The Tooth Fairy's Magical Mission is a wonderful conversation starter - watch it together, then talk about what quality might be growing in their tooth."
+            blurb="The Tooth Fairy's Secret Workshop is a wonderful conversation starter - watch it together, then talk about what quality might be growing in their tooth."
           />
         </div>
 

@@ -120,7 +120,7 @@ export const trackCTAClick = (location: string): void => {
 export const trackVideoPlay = (videoId: string): void => {
   trackEvent("video_start", {
     video_id: videoId,
-    video_title: "The Tooth Fairy's Magical Mission",
+    video_title: "The Tooth Fairy's Secret Workshop",
   });
 };
 
@@ -134,7 +134,7 @@ export const trackVideoProgress = (videoId: string, percent: number): void => {
 export const trackVideoComplete = (videoId: string): void => {
   trackEvent("video_complete", {
     video_id: videoId,
-    video_title: "The Tooth Fairy's Magical Mission",
+    video_title: "The Tooth Fairy's Secret Workshop",
   });
 };
 

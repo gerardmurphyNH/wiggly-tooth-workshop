@@ -37,7 +37,7 @@ const FilmCTA = () => (
       Want to see this idea come to life?
     </p>
     <p className="text-muted-foreground text-sm mb-4">
-      Watch <em>The Tooth Fairy's Magical Mission</em> — a short film about what the Tooth Fairy
+      Watch <em>The Tooth Fairy's Secret Workshop</em> — a short film about what the Tooth Fairy
       really does with the teeth she collects.
     </p>
     <div className="flex flex-col sm:flex-row gap-3 justify-center">

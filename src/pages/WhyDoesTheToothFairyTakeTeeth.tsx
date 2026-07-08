@@ -159,7 +159,7 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
           <FilmEmbed
             location="why_tf_takes_teeth"
             heading="Watch the short film"
-            blurb="See the reason the Tooth Fairy collects teeth come to life in The Tooth Fairy's Magical Mission."
+            blurb="See the reason the Tooth Fairy collects teeth come to life in The Tooth Fairy's Secret Workshop."
             bg="bg-background"
           />
 
@@ -331,7 +331,7 @@ const WhyDoesTheToothFairyTakeTeeth = () => {
                 The full story is coming
               </h2>
               <p className="text-starlight/70 mb-8 leading-relaxed">
-                <em>The Tooth Fairy's Magical Mission</em> is an animated short film that follows
+                <em>The Tooth Fairy's Secret Workshop</em> is an animated short film that follows
                 Arlo and CeCe as they discover exactly why the Tooth Fairy takes teeth, and what
                 she does with them. Coming Summer 2026.
               </p>

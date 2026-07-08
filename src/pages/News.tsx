@@ -18,7 +18,7 @@ const newsItems = [
     date: "June 7, 2026",
     title: "Our World Premiere in Dedham",
     description:
-      "Over 100 people joined the world premiere of The Tooth Fairy's Magical Mission at TLC Studios in Dedham - with a live FaceTime visit from Peter H. Reynolds. See how it went.",
+      "Over 100 people joined the world premiere of The Tooth Fairy's Secret Workshop at TLC Studios in Dedham - with a live FaceTime visit from Peter H. Reynolds. See how it went.",
     cta: "Read the recap",
     href: "/tooth-fairy-film-premiere",
     internal: true,
@@ -32,7 +32,7 @@ const newsItems = [
     date: "2026",
     title: "Elevating the Tooth Fairy Story to a Sense of Mission",
     description:
-      "The Reynolds Center shares the story behind The Tooth Fairy's Magical Mission and how the project grew from one simple question: what does the Tooth Fairy actually do with the teeth?",
+      "The Reynolds Center shares the story behind The Tooth Fairy's Secret Workshop and how the project grew from one simple question: what does the Tooth Fairy actually do with the teeth?",
     cta: "Read the story",
     href: REYNOLDS_URL,
     internal: false,
@@ -46,7 +46,7 @@ const newsItems = [
     date: "2026",
     title: "The Short Film Arrives on YouTube",
     description:
-      "Watch The Tooth Fairy's Magical Mission and discover what the Tooth Fairy really does with children's lost teeth.",
+      "Watch The Tooth Fairy's Secret Workshop and discover what the Tooth Fairy really does with children's lost teeth.",
     cta: "Watch the film",
     href: YOUTUBE_VIDEO_URL,
     internal: false,
@@ -59,7 +59,7 @@ const News = () => {
     <div className="min-h-screen bg-background">
       <PageSeo
         title="Wiggly Tooth Workshop News & Updates | Wiggly Tooth Workshop"
-        description="The latest Wiggly Tooth Workshop news: the world premiere of The Tooth Fairy's Magical Mission, behind-the-scenes stories, community events, and project updates."
+        description="The latest Wiggly Tooth Workshop news: the world premiere of The Tooth Fairy's Secret Workshop, behind-the-scenes stories, community events, and project updates."
         canonical="https://wigglytoothworkshop.com/news"
         jsonLd={{
           "@context": "https://schema.org",

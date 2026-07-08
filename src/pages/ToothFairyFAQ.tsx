@@ -148,15 +148,15 @@ const categories = [
       {
         question: "Who are Arlo and CeCe?",
         answer:
-          "Arlo and CeCe are the two young characters at the heart of The Tooth Fairy's Magical Mission. They're curious, imaginative kids who discover what really happens to lost teeth, and what goes on inside the workshop when nobody is watching. They're the kind of characters who ask the questions every kid wonders about, and aren't afraid to follow the answer wherever it leads.",
+          "Arlo and CeCe are the two young characters at the heart of The Tooth Fairy's Secret Workshop. They're curious, imaginative kids who discover what really happens to lost teeth, and what goes on inside the workshop when nobody is watching. They're the kind of characters who ask the questions every kid wonders about, and aren't afraid to follow the answer wherever it leads.",
       },
       {
         question: "What is the Wiggly Tooth Workshop?",
         answer:
-          "The Wiggly Tooth Workshop is the creative studio behind The Tooth Fairy's Magical Mission: an animated short film, children's book, and ToothSafe product all built around the same story world. It's being developed in collaboration with Peter H. Reynolds and FableVision Studios.",
+          "The Wiggly Tooth Workshop is the creative studio behind The Tooth Fairy's Secret Workshop: an animated short film, children's book, and ToothSafe product all built around the same story world. It's being developed in collaboration with Peter H. Reynolds and FableVision Studios.",
       },
       {
-        question: "When does The Tooth Fairy's Magical Mission come out?",
+        question: "When does The Tooth Fairy's Secret Workshop come out?",
         answer:
           "The animated short film is in production and scheduled for Summer 2026. The children's book and ToothSafe product will follow. Join the Workshop mailing list at wigglytoothworkshop.com to get early access and launch updates.",
       },
@@ -346,7 +346,7 @@ const ToothFairyFAQ = () => {
                 Still have questions?
               </h2>
               <p className="text-starlight/70 mb-8 leading-relaxed">
-                <em>The Tooth Fairy's Magical Mission</em> answers them all, in the most
+                <em>The Tooth Fairy's Secret Workshop</em> answers them all, in the most
                 magical way possible. An animated short film and children's book coming
                 Summer 2026 from the Wiggly Tooth Workshop.
               </p>

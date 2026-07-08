@@ -508,7 +508,7 @@ const IsToothFairyReal = () => {
         <FilmEmbed
           location="is_tf_real"
           heading="Watch the short film"
-          blurb="The Tooth Fairy's Magical Mission brings this whole idea to life - free to watch."
+          blurb="The Tooth Fairy's Secret Workshop brings this whole idea to life - free to watch."
           bg="bg-background"
         />
 

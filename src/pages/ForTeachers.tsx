@@ -38,7 +38,7 @@ const ForTeachers = () => {
               "@type": "Article",
               headline: "Tooth Fairy Classroom Activities & Lesson Plan",
               description:
-                "Free Tooth Fairy classroom activities, a lesson plan, and discussion questions for grades K-5, built around the short film The Tooth Fairy's Magical Mission.",
+                "Free Tooth Fairy classroom activities, a lesson plan, and discussion questions for grades K-5, built around the short film The Tooth Fairy's Secret Workshop.",
               about: [
                 "tooth fairy classroom activities",
                 "tooth fairy lesson plan",
@@ -76,7 +76,7 @@ const ForTeachers = () => {
           For Teachers &amp; Classrooms
         </h1>
         <p className="text-muted-foreground text-lg leading-relaxed mb-12">
-          Use <em>The Tooth Fairy's Magical Mission</em> to open conversations about character,
+          Use <em>The Tooth Fairy's Secret Workshop</em> to open conversations about character,
           virtues, and the small ways children make the world better.
         </p>
 
@@ -85,7 +85,7 @@ const ForTeachers = () => {
           <FilmEmbed
             location="for_teachers"
             heading="Start with the short film"
-            blurb="Watch The Tooth Fairy's Magical Mission as a class, then use the discussion prompts below."
+            blurb="Watch The Tooth Fairy's Secret Workshop as a class, then use the discussion prompts below."
           />
         </div>
 

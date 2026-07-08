@@ -132,7 +132,7 @@ const HeroSection = () => {
         {/* YouTube embed */}
         <div className="max-w-3xl mx-auto mb-10">
           <p className="text-xs font-medium text-starlight/60 uppercase tracking-widest mb-3">
-            The Tooth Fairy's Magical Mission
+            The Tooth Fairy's Secret Workshop
           </p>
           {isPlaceholderVideo ? (
             <div className="relative w-full rounded-2xl overflow-hidden shadow-magical bg-[hsl(244_45%_15%)] border border-starlight/20 aspect-video flex flex-col items-center justify-center gap-4">
@@ -153,7 +153,7 @@ const HeroSection = () => {
                   ref={iframeRef}
                   className="absolute inset-0 w-full h-full"
                   src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1&iv_load_policy=3&color=white&enablejsapi=1&origin=https://wigglytoothworkshop.com`}
-                  title="The Tooth Fairy's Magical Mission — Short Film by Wiggly Tooth Workshop"
+                  title="The Tooth Fairy's Secret Workshop — Short Film by Wiggly Tooth Workshop"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   loading="lazy"

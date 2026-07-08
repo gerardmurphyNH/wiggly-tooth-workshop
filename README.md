@@ -1,4 +1,4 @@
-# The Tooth Fairy's Magical Mission
+# The Tooth Fairy's Secret Workshop
 
 Marketing website for the animated short film and children's book project.
 

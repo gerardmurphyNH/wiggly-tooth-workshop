@@ -121,7 +121,7 @@ const Printables = () => {
             Watch the short film first
           </p>
           <p className="text-muted-foreground text-sm mb-4">
-            <em>The Tooth Fairy's Magical Mission</em> is a great complement to these printables —
+            <em>The Tooth Fairy's Secret Workshop</em> is a great complement to these printables —
             especially for classroom use.
           </p>
           <Button variant="magical" size="sm" asChild>

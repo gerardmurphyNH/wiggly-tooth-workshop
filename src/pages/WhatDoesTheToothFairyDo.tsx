@@ -38,7 +38,7 @@ const FilmCTA = () => (
       Want to see this idea come to life?
     </p>
     <p className="text-muted-foreground text-sm mb-4">
-      Watch <em>The Tooth Fairy's Magical Mission</em> — the short film that answers this very question.
+      Watch <em>The Tooth Fairy's Secret Workshop</em> — the short film that answers this very question.
     </p>
     <div className="flex flex-col sm:flex-row gap-3 justify-center">
       <Button variant="magical" size="sm" asChild>

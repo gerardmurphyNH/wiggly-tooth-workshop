@@ -14,8 +14,8 @@ const Watch = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSeo
-        title="Watch The Tooth Fairy's Magical Mission | Wiggly Tooth Workshop"
-        description="Watch The Tooth Fairy's Magical Mission, a short animated film about what the Tooth Fairy really does with the teeth she collects. Free to watch."
+        title="Watch The Tooth Fairy's Secret Workshop | Wiggly Tooth Workshop"
+        description="Watch The Tooth Fairy's Secret Workshop, a short animated film about what the Tooth Fairy really does with the teeth she collects. Free to watch."
         canonical={PAGE_URL}
         image={`https://i.ytimg.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`}
         jsonLd={{
@@ -30,7 +30,7 @@ const Watch = () => {
             },
             {
               "@type": "VideoObject",
-              name: "The Tooth Fairy's Magical Mission",
+              name: "The Tooth Fairy's Secret Workshop",
               description:
                 "An animated short film about a curious boy named Arlo who sets out to discover what the Tooth Fairy really does with the teeth she collects - and learns that every lost tooth carries something worth keeping. Created in collaboration with Peter H. Reynolds and FableVision Studios.",
               thumbnailUrl: [`https://i.ytimg.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`],
@@ -71,7 +71,7 @@ const Watch = () => {
             </Link>
 
             <h1 className="font-display text-3xl md:text-4xl font-bold text-starlight mb-3 text-center">
-              Watch <span className="text-primary">The Tooth Fairy's Magical Mission</span>
+              Watch <span className="text-primary">The Tooth Fairy's Secret Workshop</span>
             </h1>
             <p className="text-starlight/70 text-center mb-8 max-w-xl mx-auto">
               A short animated film about what the Tooth Fairy really does with
@@ -86,7 +86,7 @@ const Watch = () => {
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1&iv_load_policy=3&color=white&origin=https://wigglytoothworkshop.com`}
-                title="The Tooth Fairy's Magical Mission — Short Film by Wiggly Tooth Workshop"
+                title="The Tooth Fairy's Secret Workshop — Short Film by Wiggly Tooth Workshop"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
@@ -102,7 +102,7 @@ const Watch = () => {
             </h2>
             <div className="space-y-4 text-foreground/80 text-lg leading-relaxed">
               <p>
-                <em>The Tooth Fairy's Magical Mission</em> follows Arlo, a curious
+                <em>The Tooth Fairy's Secret Workshop</em> follows Arlo, a curious
                 boy who loses a tooth and asks the question many children wonder
                 about: what does the Tooth Fairy actually do with my tooth - and
                 why?

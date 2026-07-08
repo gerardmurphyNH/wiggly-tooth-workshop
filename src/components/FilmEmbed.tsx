@@ -41,7 +41,7 @@ const FilmEmbed = ({
         <iframe
           className="absolute inset-0 w-full h-full"
           src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1&iv_load_policy=3&color=white&origin=https://wigglytoothworkshop.com`}
-          title="The Tooth Fairy's Magical Mission - Short Film by Wiggly Tooth Workshop"
+          title="The Tooth Fairy's Secret Workshop - Short Film by Wiggly Tooth Workshop"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
           loading="lazy"

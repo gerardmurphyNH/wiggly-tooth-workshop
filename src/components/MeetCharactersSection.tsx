@@ -36,7 +36,7 @@ const MeetCharactersSection = () => {
             >
               <img
                 src={img}
-                alt={`Scene from The Tooth Fairy's Magical Mission — film ${index + 1}`}
+                alt={`Scene from The Tooth Fairy's Secret Workshop — film ${index + 1}`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-night-sky/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -56,7 +56,7 @@ const MeetCharactersSection = () => {
             onClick={() => trackEvent("social_click", { platform: "youtube", location: "characters_section" })}
             className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
           >
-            Watch The Tooth Fairy's Magical Mission on YouTube →
+            Watch The Tooth Fairy's Secret Workshop on YouTube →
           </a>
         </div>
 
