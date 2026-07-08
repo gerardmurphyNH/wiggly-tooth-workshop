@@ -67,8 +67,8 @@ const IsToothFairyReal = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSeo
-        title="Is the Tooth Fairy Real? | Wiggly Tooth Workshop"
-        description="Is the Tooth Fairy real? Yes - she just works in ways most people never see. Discover what she really does with the teeth she collects, and why every lost tooth matters."
+        title="Is the Tooth Fairy Real? Yes, and Here's Why | Wiggly Tooth Workshop"
+        description="Is the Tooth Fairy real? Yes. She works quietly at night, collecting the qualities children grow inside their lost teeth. The honest, magical answer for kids and parents."
         canonical={PAGE_URL}
         jsonLd={{
           "@context": "https://schema.org",

@@ -201,6 +201,16 @@ const faqs = [
     answer:
       "Yes. Teachers can use the letter idea alongside the free Tooth Fairy worksheet and teacher guide to create a small classroom tradition around lost teeth. Each time a student loses a tooth, the letter and worksheet together make the moment feel significant. See the free printables page for the full classroom resource.",
   },
+  {
+    question: "Is this a letter from the Tooth Fairy?",
+    answer:
+      "Yes. It's written in the Tooth Fairy's own voice and meant to be left behind for your child to find in the morning - a message from her about the tooth they lost and the special quality she found inside it. You fill in the blanks so the note speaks directly to your child.",
+  },
+  {
+    question: "Can I use this as a Tooth Fairy goodbye letter?",
+    answer:
+      "Yes. Some families write a Tooth Fairy goodbye letter when a child is ready to move on from the tradition - a warm final note that thanks them for every tooth and celebrates how much they've grown. Fill the blanks with the qualities you've watched grow over the years, and let the last line be a gentle send-off.",
+  },
 ];
 
 // Inline signup — same pattern as TeacherPrintables, different source
@@ -376,8 +386,8 @@ const ToothFairyLetter = () => {
   return (
     <>
       <PageSeo
-        title="Free Printable Tooth Fairy Letter Template | Wiggly Tooth Workshop"
-        description="A free printable tooth fairy letter template with fill-in blanks. Perfect for a first tooth fairy letter - print at home, no email required."
+        title="Free Printable Tooth Fairy Letter (PDF Template) | Wiggly Tooth Workshop"
+        description="Free printable Tooth Fairy letter your child will treasure. Download the PDF template, fill in the blanks in seconds, and print at home. No email, no cost."
         canonical="https://wigglytoothworkshop.com/tooth-fairy-letter"
         image="https://wigglytoothworkshop.com/downloads/tooth-fairy-letter-template.jpg"
       />
