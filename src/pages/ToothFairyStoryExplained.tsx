@@ -48,6 +48,16 @@ const faqs = [
     answer:
       "In many cultures the tooth-taker is a mouse rather than a fairy. One old reason is the wish that a child's new tooth would grow in as strong and sharp as a rodent's. Whatever the character, the ritual is the same: the lost tooth is collected, and something is left behind to mark the moment.",
   },
+  {
+    question: "Who created Ratoncito Pérez?",
+    answer:
+      "The Spanish priest and author Luis Coloma created Ratoncito Pérez in 1894, in a story written to comfort the young King Alfonso XIII of Spain, who had just lost a milk tooth. The little tooth mouse went on to become the Spanish and Latin American counterpart of the Tooth Fairy.",
+  },
+  {
+    question: "When did the Tooth Fairy get her name?",
+    answer:
+      "The Tooth Fairy appears in print as early as a 1908 Chicago Daily Tribune column, but the name was cemented in 1927, when children's playwright Esther Watkins Arnold published a short playlet called The Tooth Fairy. No single person invented her - she grew out of much older customs around lost teeth.",
+  },
 ];
 
 const ToothFairyStoryExplained = () => {
@@ -213,20 +223,27 @@ const ToothFairyStoryExplained = () => {
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     The Tooth Fairy as we know her in the English-speaking world began to take
-                    her modern form in the early 20th century. A 1908 Chicago Tribune article
-                    is one of the earliest printed references, describing the Tooth Fairy as
-                    a good fairy who takes a child's tooth and leaves money in exchange.
+                    her modern form in the early 20th century. One of the earliest printed
+                    references appeared in the <em>Chicago Daily Tribune</em> on September 27,
+                    1908 - a household-hints column by Lillian Brown suggesting parents use a
+                    "tooth fairy" who leaves a small gift to coax children through losing a
+                    tooth. The fact that it was offered as a handy tip suggests the idea was
+                    already familiar.
                   </p>
                   <p>
-                    No single author created her. She grew out of the same tradition that gave
-                    us Santa Claus and the Easter Bunny, the human instinct to explain ordinary
-                    events with extraordinary characters, especially when explaining those events
-                    to children who are asking very reasonable questions.
+                    The name itself was cemented a couple of decades later. In 1927, the
+                    children's playwright Esther Watkins Arnold published an eight-page playlet
+                    for young actors called <em>The Tooth Fairy</em>, giving the elf-like
+                    character a stage and a name. No single author truly invented her, though -
+                    she grew out of the same instinct that gave us Santa Claus and the Easter
+                    Bunny: explaining an ordinary event with an extraordinary character, for
+                    children asking very reasonable questions.
                   </p>
                   <p>
-                    Over the following decades, the tradition spread and grew. By the time most
-                    grandparents today were children, the Tooth Fairy was already part of the story
-                    a figure everyone seemed to know, even if no one quite agreed on the details.
+                    Over the following decades the tradition spread and grew. By the time most
+                    grandparents today were children, the Tooth Fairy was already part of the
+                    story - a figure everyone seemed to know, even if no one quite agreed on the
+                    details.
                   </p>
                 </div>
               </div>
@@ -245,22 +262,55 @@ const ToothFairyStoryExplained = () => {
                     In Spain and much of Latin America, a small mouse named
                     <em> Ratoncito Pérez</em> (also called El Ratón de los Dientes,
                     "the tooth mouse") slips in to collect the tooth and leave a
-                    coin or gift. France and parts of Belgium have their own version,
-                    <em> La Petite Souris</em>, the little mouse. The mouse shows up
-                    again and again across cultures - one old idea being that a child's
-                    new tooth might grow in as strong and sharp as a rodent's.
+                    coin or gift. He has a surprisingly precise origin: the priest
+                    and author Luis Coloma invented him in 1894 in a story written to
+                    comfort the boy-king Alfonso XIII of Spain, who had just lost a
+                    milk tooth at age eight. France and parts of Belgium have their
+                    own mouse, <em> La Petite Souris</em>, and Afrikaans families in
+                    South Africa leave the tooth in a slipper for the
+                    <em> Tandmuis</em>. The mouse shows up again and again - one old
+                    idea being that a child's new tooth might grow in as strong and
+                    sharp as a rodent's.
                   </p>
                   <p>
-                    Elsewhere the ritual is about where the tooth goes. In many parts
-                    of Asia and the Middle East, children throw a lower tooth up onto
-                    the roof and an upper tooth down toward the ground, so the new
-                    tooth grows in the right direction - sometimes with a wish, or a
-                    request to a bird or a mouse to bring a better one.
+                    Elsewhere, the ritual is about where the tooth goes. In Japan,
+                    children throw a lower tooth straight up and an upper tooth down,
+                    so each new tooth grows in toward the old one and comes in
+                    straight. In Korea, teeth are tossed onto the roof, often with a
+                    little song to a magpie for good luck. In parts of the Middle
+                    East there's a much older custom of throwing the tooth toward the
+                    sun. And in Mali, a lost tooth goes into a chicken coop in the
+                    hope of finding a hen the next morning.
                   </p>
                   <p>
                     Different characters, different rituals - but the same instinct
                     underneath, everywhere: a lost tooth matters, and the moment
                     deserves to be marked.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  What Does the Tooth Fairy Look Like?
+                </h2>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    There's no single, official picture of the Tooth Fairy - which
+                    is part of her charm. In a well-known 1984 study, the researcher
+                    Rosemary Wells found that about 74% of people imagined the Tooth
+                    Fairy as female, while the rest pictured her as either gender or
+                    as neither.
+                  </p>
+                  <p>
+                    And the <em>form</em> people imagine varies wildly: a winged
+                    pixie, a tiny ballerina, a mouse, a dragon, even a flying dentist.
+                    That's the beauty of a folk figure with no fixed author - every
+                    family, and every child, gets to picture her their own way. In
+                    the Wiggly Tooth Workshop story, she's CeCe: a small, clever
+                    tinkerer with goggles and a tool belt. That's simply our version
+                    of a character the whole world has been imagining for a very long
+                    time.
                   </p>
                 </div>
               </div>
