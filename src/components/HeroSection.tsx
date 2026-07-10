@@ -131,7 +131,7 @@ const HeroSection = () => {
 
         {/* YouTube embed */}
         <div className="max-w-3xl mx-auto mb-10">
-          <p className="text-xs font-medium text-starlight/60 uppercase tracking-widest mb-3">
+          <p className="text-xs font-medium text-starlight/80 uppercase tracking-widest mb-3">
             The Tooth Fairy's Secret Workshop
           </p>
           {isPlaceholderVideo ? (
@@ -139,7 +139,7 @@ const HeroSection = () => {
               <PlayCircle className="w-20 h-20 text-primary opacity-60" />
               <div className="text-center px-6">
                 <p className="text-starlight font-display font-semibold text-lg mb-1">The short film</p>
-                <p className="text-starlight/50 text-sm">Replace YOUTUBE_VIDEO_ID in src/lib/config.ts to go live</p>
+                <p className="text-starlight/70 text-sm">Replace YOUTUBE_VIDEO_ID in src/lib/config.ts to go live</p>
               </div>
             </div>
           ) : (
@@ -161,7 +161,7 @@ const HeroSection = () => {
               </div>
               {/* Enjoyed the film? Like + Subscribe nudge */}
               <div className="flex items-center justify-center gap-3 mt-3 flex-wrap">
-                <span className="text-xs text-starlight/50">Enjoyed the film?</span>
+                <span className="text-xs text-starlight/70">Enjoyed the film?</span>
                 <a
                   href={YOUTUBE_VIDEO_URL}
                   target="_blank"
@@ -217,7 +217,7 @@ const HeroSection = () => {
 
         {/* Social follow */}
         <div className="border-t border-starlight/15 pt-8 max-w-lg mx-auto">
-          <p className="text-xs font-medium text-starlight/50 mb-3">Follow the Workshop</p>
+          <p className="text-xs font-medium text-starlight/70 mb-3">Follow the Workshop</p>
           <div className="flex gap-3 justify-center flex-wrap">
             <a
               href={YOUTUBE_SUBSCRIBE_URL}

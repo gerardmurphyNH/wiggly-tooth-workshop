@@ -419,7 +419,7 @@ const TeacherPrintables = () => {
             <div className="flex flex-col items-center gap-4 mb-8">
               <Link
                 to="/"
-                className="inline-flex items-center gap-2 text-starlight/60 hover:text-starlight transition-colors text-sm"
+                className="inline-flex items-center gap-2 text-starlight/80 hover:text-starlight transition-colors text-sm"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Back to Wiggly Tooth Workshop
@@ -435,7 +435,7 @@ const TeacherPrintables = () => {
             <p className="text-lg text-starlight/80 mb-3 leading-relaxed">
               Three free resources for grades 1 and 2. Built around one simple idea: every tooth holds something the child has been growing.
             </p>
-            <p className="text-starlight/60 mb-10 text-sm">
+            <p className="text-starlight/80 mb-10 text-sm">
               Designed to support social-emotional learning (SEL) while keeping the magic of losing a tooth alive.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -461,7 +461,7 @@ const TeacherPrintables = () => {
                 View all resources
               </Button>
             </div>
-            <p className="mt-4 text-xs text-starlight/40">
+            <p className="mt-4 text-xs text-starlight/60">
               Free for classroom and personal use · Print as many copies as you need
             </p>
           </div>
@@ -994,7 +994,7 @@ const TeacherPrintables = () => {
                 </Link>
               </Button>
             </div>
-            <p className="mt-6 text-xs text-starlight/40">
+            <p className="mt-6 text-xs text-starlight/60">
               An animated short film in collaboration with Peter H. Reynolds and FableVision
               Studios.
             </p>

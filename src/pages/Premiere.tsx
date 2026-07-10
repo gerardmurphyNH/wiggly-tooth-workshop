@@ -78,7 +78,7 @@ const Premiere = () => {
           <div className="container relative z-10 px-6 max-w-3xl mx-auto text-center">
             <Link
               to="/news"
-              className="inline-flex items-center gap-2 text-sm text-starlight/60 hover:text-starlight/90 transition-colors mb-10"
+              className="inline-flex items-center gap-2 text-sm text-starlight/80 hover:text-starlight/90 transition-colors mb-10"
             >
               <ArrowLeft className="w-4 h-4" />
               News from the Workshop

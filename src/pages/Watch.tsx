@@ -101,7 +101,7 @@ const Watch = () => {
           <div className="container px-6 relative z-10 max-w-3xl mx-auto">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-starlight/50 hover:text-starlight/80 transition-colors text-sm mb-8"
+              className="inline-flex items-center gap-2 text-starlight/70 hover:text-starlight/80 transition-colors text-sm mb-8"
             >
               <ArrowLeft className="w-4 h-4" />
               Wiggly Tooth Workshop

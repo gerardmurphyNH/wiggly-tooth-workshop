@@ -10,6 +10,7 @@ import {
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
+import FilmEmbed from "@/components/FilmEmbed";
 
 const faqs = [
   {
@@ -30,12 +31,22 @@ const faqs = [
   {
     question: "What is The Tooth Fairy's Secret Workshop?",
     answer:
-      "It's an animated short film and children's book from the Wiggly Tooth Workshop, developed in collaboration with Peter H. Reynolds and FableVision Studios. The story follows Arlo and CeCe as they discover what really happens to lost teeth and what goes on inside the Tooth Fairy's workshop. Coming Summer 2026.",
+      "It's an animated short film from the Wiggly Tooth Workshop, made in collaboration with Peter H. Reynolds and FableVision Studios. The story follows a curious boy named Arlo who discovers what really happens to lost teeth and what goes on inside the Tooth Fairy's workshop. The short film is free to watch on YouTube now.",
   },
   {
     question: "Who are Arlo and CeCe?",
     answer:
-      "Arlo and CeCe are the two young characters at the heart of The Tooth Fairy's Secret Workshop. They're curious, imaginative kids who discover what really happens to lost teeth, and what goes on inside the workshop when nobody is watching. They're the kind of characters who ask the questions every kid wonders about, and aren't afraid to follow the answer wherever it leads.",
+      "Arlo is a curious boy who sets out to learn what the Tooth Fairy really does with his lost tooth. CeCe is the Tooth Fairy he meets on a late-night adventure - the one whose workshop, and whose secret, the story follows. Together they discover what really happens to every tooth that came before.",
+  },
+  {
+    question: "What is Ratoncito Pérez?",
+    answer:
+      "Ratoncito Pérez - also called El Ratón de los Dientes, 'the tooth mouse' - is the Spanish and Latin American version of the Tooth Fairy. Instead of a winged fairy, a small mouse collects the tooth left under the pillow and leaves a coin or little gift behind. France and Belgium have a similar mouse, La Petite Souris.",
+  },
+  {
+    question: "Why is the Tooth Fairy a mouse in some countries?",
+    answer:
+      "In many cultures the tooth-taker is a mouse rather than a fairy. One old reason is the wish that a child's new tooth would grow in as strong and sharp as a rodent's. Whatever the character, the ritual is the same: the lost tooth is collected, and something is left behind to mark the moment.",
   },
 ];
 
@@ -111,7 +122,7 @@ const ToothFairyStoryExplained = () => {
               <div className="flex flex-col items-center gap-4 mb-8">
                 <Link
                   to="/"
-                  className="inline-flex items-center gap-2 text-starlight/60 hover:text-starlight transition-colors text-sm"
+                  className="inline-flex items-center gap-2 text-starlight/80 hover:text-starlight transition-colors text-sm"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   Back to Wiggly Tooth Workshop
@@ -148,6 +159,14 @@ const ToothFairyStoryExplained = () => {
               </div>
             </div>
           </section>
+
+          {/* Film embed (prominent) */}
+          <FilmEmbed
+            location="tooth_fairy_story"
+            heading="Watch the story come to life"
+            blurb="The Tooth Fairy's Secret Workshop is a short animated film that tells the story in a few magical minutes - free to watch."
+            bg="bg-background"
+          />
 
           {/* Main Content */}
           <section className="py-12 md:py-16 bg-background">
@@ -202,6 +221,40 @@ const ToothFairyStoryExplained = () => {
                     Over the following decades, the tradition spread and grew. By the time most
                     grandparents today were children, the Tooth Fairy was already part of the story
                     a figure everyone seemed to know, even if no one quite agreed on the details.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Tooth Fairy Traditions Around the World
+                </h2>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    In much of the English-speaking world it's a winged fairy who
+                    visits at night. But travel a little and the visitor changes
+                    shape - most often into a mouse.
+                  </p>
+                  <p>
+                    In Spain and much of Latin America, a small mouse named
+                    <em> Ratoncito Pérez</em> (also called El Ratón de los Dientes,
+                    "the tooth mouse") slips in to collect the tooth and leave a
+                    coin or gift. France and parts of Belgium have their own version,
+                    <em> La Petite Souris</em>, the little mouse. The mouse shows up
+                    again and again across cultures - one old idea being that a child's
+                    new tooth might grow in as strong and sharp as a rodent's.
+                  </p>
+                  <p>
+                    Elsewhere the ritual is about where the tooth goes. In many parts
+                    of Asia and the Middle East, children throw a lower tooth up onto
+                    the roof and an upper tooth down toward the ground, so the new
+                    tooth grows in the right direction - sometimes with a wish, or a
+                    request to a bird or a mouse to bring a better one.
+                  </p>
+                  <p>
+                    Different characters, different rituals - but the same instinct
+                    underneath, everywhere: a lost tooth matters, and the moment
+                    deserves to be marked.
                   </p>
                 </div>
               </div>
@@ -346,7 +399,7 @@ const ToothFairyStoryExplained = () => {
                   Join the Workshop for updates
                 </a>
               </Button>
-              <p className="mt-4 text-xs text-starlight/50">
+              <p className="mt-4 text-xs text-starlight/70">
                 Free · No spam · Unsubscribe anytime
               </p>
             </div>

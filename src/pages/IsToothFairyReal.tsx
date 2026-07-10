@@ -140,7 +140,7 @@ const IsToothFairyReal = () => {
           <div className="container px-6 relative z-10 max-w-3xl mx-auto text-center">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-starlight/50 hover:text-starlight/80 transition-colors text-sm mb-12"
+              className="inline-flex items-center gap-2 text-starlight/70 hover:text-starlight/80 transition-colors text-sm mb-12"
             >
               <ArrowLeft className="w-4 h-4" />
               Wiggly Tooth Workshop
@@ -156,7 +156,7 @@ const IsToothFairyReal = () => {
               <span className="text-primary">Real?</span>
             </h1>
 
-            <p className="text-starlight/60 text-lg md:text-xl leading-relaxed max-w-xl mx-auto">
+            <p className="text-starlight/80 text-lg md:text-xl leading-relaxed max-w-xl mx-auto">
               There's a real answer. It's more interesting than you've been told.
             </p>
           </div>
@@ -219,6 +219,14 @@ const IsToothFairyReal = () => {
             </div>
           </div>
         </section>
+
+        {/* ── Film embed (prominent) ── */}
+        <FilmEmbed
+          location="is_tf_real"
+          heading="See the real story of the Tooth Fairy"
+          blurb="Watch The Tooth Fairy's Secret Workshop - the short film that shows what she really does with the teeth she collects, and why she is real. Free to watch."
+          bg="bg-background"
+        />
 
         {/* ── What if teeth hold more ── */}
         <section className="py-20 md:py-28 bg-secondary/30">
@@ -479,7 +487,7 @@ const IsToothFairyReal = () => {
               </blockquote>
             </figure>
 
-            <p className="text-center text-starlight/60 text-lg">
+            <p className="text-center text-starlight/80 text-lg">
               So - is she real?
               <br />
               Look at what children bring into the world every day.
@@ -513,14 +521,6 @@ const IsToothFairyReal = () => {
             </Accordion>
           </div>
         </section>
-
-        {/* ── Film embed ── */}
-        <FilmEmbed
-          location="is_tf_real"
-          heading="Watch the short film"
-          blurb="The Tooth Fairy's Secret Workshop brings this whole idea to life - free to watch."
-          bg="bg-background"
-        />
 
         {/* ── Continue exploring ── */}
         <section className="py-20 md:py-28 bg-background">
@@ -563,7 +563,7 @@ const IsToothFairyReal = () => {
               <p className="font-display font-semibold text-starlight group-hover:text-primary transition-colors mb-1">
                 Watch the Animated Short Film
               </p>
-              <p className="text-sm text-starlight/60">
+              <p className="text-sm text-starlight/80">
                 See the Tooth Fairy's world come to life - free on YouTube.
               </p>
             </a>

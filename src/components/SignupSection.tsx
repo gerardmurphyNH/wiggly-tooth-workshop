@@ -129,7 +129,7 @@ const SignupSection = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-starlight mb-4">
             Join the Workshop
           </h2>
-          <p className="text-starlight/60 text-sm mb-4">Workshop members receive:</p>
+          <p className="text-starlight/80 text-sm mb-4">Workshop members receive:</p>
           <ul className="text-left max-w-xs mx-auto mb-8 space-y-2.5">
             {[
               "New CeCe and Arlo stories as they're made",
@@ -167,7 +167,7 @@ const SignupSection = () => {
                   onFocus={handleFormInteraction}
                   required
                   aria-label="Email address"
-                  className="h-14 px-6 rounded-full bg-starlight/10 border-starlight/30 text-starlight placeholder:text-starlight/40 focus:border-primary focus:ring-primary"
+                  className="h-14 px-6 rounded-full bg-starlight/10 border-starlight/30 text-starlight placeholder:text-starlight/60 focus:border-primary focus:ring-primary"
                 />
                 <Input
                   type="text"
@@ -176,7 +176,7 @@ const SignupSection = () => {
                   onChange={(e) => setFirstName(e.target.value)}
                   onFocus={handleFormInteraction}
                   aria-label="First name (optional)"
-                  className="h-14 px-6 rounded-full bg-starlight/10 border-starlight/30 text-starlight placeholder:text-starlight/40 focus:border-primary focus:ring-primary"
+                  className="h-14 px-6 rounded-full bg-starlight/10 border-starlight/30 text-starlight placeholder:text-starlight/60 focus:border-primary focus:ring-primary"
                 />
                 {/* Honeypot field - hidden from users, visible to bots */}
                 <input
@@ -223,7 +223,7 @@ const SignupSection = () => {
               </Button>
 
               {!isEndpointConfigured && (
-                <p className="mt-4 text-xs text-starlight/50">
+                <p className="mt-4 text-xs text-starlight/70">
                   Or email us directly at{" "}
                   <a
                     href={`mailto:${CONTACT_EMAIL}?subject=Join the Workshop`}
@@ -236,7 +236,7 @@ const SignupSection = () => {
             </form>
           )}
 
-          <p className="mt-6 text-xs text-starlight/50">
+          <p className="mt-6 text-xs text-starlight/70">
             We respect your privacy. Unsubscribe anytime.
           </p>
         </div>

@@ -112,7 +112,7 @@ const WhatToSayToothFairy = () => {
               <div className="flex flex-col items-center gap-4 mb-8">
                 <Link
                   to="/is-the-tooth-fairy-real"
-                  className="inline-flex items-center gap-2 text-starlight/60 hover:text-starlight transition-colors text-sm"
+                  className="inline-flex items-center gap-2 text-starlight/80 hover:text-starlight transition-colors text-sm"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   Is the Tooth Fairy Real?
@@ -445,7 +445,7 @@ const WhatToSayToothFairy = () => {
                   Join the Workshop — it's free
                 </a>
               </Button>
-              <p className="mt-4 text-xs text-starlight/50">
+              <p className="mt-4 text-xs text-starlight/70">
                 No spam · Unsubscribe anytime
               </p>
             </div>

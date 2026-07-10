@@ -416,7 +416,7 @@ const ToothFairyLetter = () => {
             <div className="flex flex-col items-center gap-4 mb-8">
               <Link
                 to="/"
-                className="inline-flex items-center gap-2 text-starlight/60 hover:text-starlight transition-colors text-sm"
+                className="inline-flex items-center gap-2 text-starlight/80 hover:text-starlight transition-colors text-sm"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Back to Wiggly Tooth Workshop
@@ -481,7 +481,7 @@ const ToothFairyLetter = () => {
                 </a>
               </Button>
             </div>
-            <p className="mt-4 text-xs text-starlight/40">
+            <p className="mt-4 text-xs text-starlight/60">
               Free printable · No email required · Print at home
             </p>
           </div>
@@ -1106,7 +1106,7 @@ const ToothFairyLetter = () => {
                 </Link>
               </Button>
             </div>
-            <p className="mt-6 text-xs text-starlight/40">
+            <p className="mt-6 text-xs text-starlight/60">
               Part of the world being built at Wiggly Tooth Workshop — animated short film,
               children's book, and ToothSafe. Coming Summer 2026.
             </p>

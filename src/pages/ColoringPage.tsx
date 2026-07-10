@@ -121,7 +121,7 @@ const ColoringPage = () => {
           <div className="container px-6 relative z-10 max-w-5xl mx-auto">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-starlight/60 hover:text-starlight transition-colors text-sm mb-10"
+              className="inline-flex items-center gap-2 text-starlight/80 hover:text-starlight transition-colors text-sm mb-10"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Wiggly Tooth Workshop
@@ -178,7 +178,7 @@ const ColoringPage = () => {
                     </a>
                   </Button>
                 </div>
-                <p className="mt-4 text-xs text-starlight/50">
+                <p className="mt-4 text-xs text-starlight/70">
                   Free for personal &amp; classroom use · No sign-up required
                 </p>
               </div>

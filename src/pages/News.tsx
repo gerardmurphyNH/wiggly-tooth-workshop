@@ -144,7 +144,7 @@ const News = () => {
                   </span>
                   <span
                     className={`text-xs ${
-                      item.featured ? "text-starlight/50" : "text-muted-foreground"
+                      item.featured ? "text-starlight/70" : "text-muted-foreground"
                     }`}
                   >
                     {item.date}
