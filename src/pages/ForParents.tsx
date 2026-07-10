@@ -77,7 +77,7 @@ const ForParents = () => {
     <div className="min-h-screen bg-background">
       <PageSeo
         title="For Parents: How to Answer Questions About the Tooth Fairy | Wiggly Tooth Workshop"
-        description="How to answer when your child asks about the Tooth Fairy - gentle, honest guidance for parents on the questions kids ask and the moment doubt begins, without losing the magic."
+        description="Gentle guidance for parents on how to answer when your child asks about the Tooth Fairy, plus meaningful Tooth Fairy ideas to make each lost tooth matter."
         canonical={PAGE_URL}
         jsonLd={forParentsJsonLd}
       />
@@ -221,6 +221,95 @@ const ForParents = () => {
               is the Tooth Fairy real?
             </Link>
           </p>
+        </section>
+
+        {/* Tooth Fairy ideas */}
+        <section className="mb-12">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-5 leading-tight">
+            Meaningful Tooth Fairy Ideas
+          </h2>
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            The best Tooth Fairy ideas aren't really about the money or the props -
+            they're about making a lost tooth <em>mean</em> something. In this
+            story, every tooth holds a real quality the child grew, so the most
+            meaningful thing you can do is help them notice it, and wonder together
+            about the good it will do out in the world.
+          </p>
+          <ol className="space-y-4">
+            {[
+              {
+                title: "Name the quality in the tooth",
+                body: "At bedtime, talk about one good thing they've been growing - a moment of courage, a kindness, a stretch of patience - and tell them that's what their tooth quietly carries.",
+              },
+              {
+                title: "Ask what good their tooth will do",
+                body: "\"What do you think your tooth will help with, out in the world?\" It turns a routine night into a real, gentle conversation about character and wonder.",
+              },
+              {
+                title: "Leave a note in the Tooth Fairy's voice",
+                body: (
+                  <>
+                    Use the free{" "}
+                    <Link to="/tooth-fairy-letter" className="text-primary font-medium hover:underline">
+                      Tooth Fairy letter template
+                    </Link>{" "}
+                    to name the quality she found and what she did with it.
+                  </>
+                ),
+              },
+              {
+                title: "Make the first one a keepsake",
+                body: (
+                  <>
+                    Mark the very first lost tooth with the{" "}
+                    <Link to="/first-tooth-tradition" className="text-primary font-medium hover:underline">
+                      first tooth keepsake certificate
+                    </Link>{" "}
+                    - a small record of who your child was becoming.
+                  </>
+                ),
+              },
+              {
+                title: "Keep a record over time",
+                body: "Note the quality for each lost tooth. By the last one, you'll have a little portrait of the child they grew into, tooth by tooth.",
+              },
+              {
+                title: "Make the gift meaningful, not big",
+                body: (
+                  <>
+                    A single special coin, chosen with care, lands better than a
+                    larger amount left in silence -{" "}
+                    <Link to="/why-does-the-tooth-fairy-leave-money" className="text-primary font-medium hover:underline">
+                      here's what the gift really means
+                    </Link>
+                    .
+                  </>
+                ),
+              },
+              {
+                title: "Watch the story together",
+                body: (
+                  <>
+                    The short film sparks the whole idea in a few minutes -{" "}
+                    <Link to="/watch" className="text-primary font-medium hover:underline">
+                      watch it together
+                    </Link>{" "}
+                    and let the conversation follow.
+                  </>
+                ),
+              },
+            ].map((idea, i) => (
+              <li key={i} className="flex items-start gap-4">
+                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold flex items-center justify-center mt-0.5">
+                  {i + 1}
+                </span>
+                <div>
+                  <p className="font-display font-semibold text-foreground">{idea.title}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-0.5">{idea.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </section>
 
         {/* Workshop CTA */}

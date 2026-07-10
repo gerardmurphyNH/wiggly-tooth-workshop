@@ -35,6 +35,16 @@ const faqs = [
       "Partly because she works better unseen, and partly because the mystery is part of how the tradition works. A visitor who leaves something in the night is wondrous; a visitor you can watch is just a person. Most important things - courage, kindness, the wind - work quietly. The Tooth Fairy fits right in.",
   },
   {
+    question: "Is the Tooth Fairy a girl or a boy?",
+    answer:
+      "Either - and both. There isn't just one Tooth Fairy; there are many, all over the world, working quietly to keep things in balance. Some are girls, some are boys. The one at the heart of our story is named CeCe, but she's only one of many. So there's no single right answer: the Tooth Fairy who visits your house might be a she, a he, or simply the idea of someone who notices the good a child is growing.",
+  },
+  {
+    question: "What is the Tooth Fairy's name?",
+    answer:
+      "The Tooth Fairy in our story is named CeCe. But she's one of many tooth fairies who help keep the world in balance - each with their own name, their own corner of the world, and their own children whose teeth they look after. CeCe is simply the one whose story we get to follow.",
+  },
+  {
     question: "Is the Tooth Fairy real, or is it your parents?",
     answer:
       "It's the question every child eventually asks - and the honest answer is: both can be true. Parents help. They always have, slipping the coin under the pillow on the nights the Tooth Fairy can't make it. But the part that isn't pretend is what the tradition is really about: the courage, kindness, and wonder a child grows are real, and they really do matter. Parents are the Tooth Fairy's helpers, not her replacement. The magic is in what your child is becoming.",
