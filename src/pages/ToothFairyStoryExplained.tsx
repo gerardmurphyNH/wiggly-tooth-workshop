@@ -156,6 +156,12 @@ const ToothFairyStoryExplained = () => {
                   The Tooth Fairy is the answer to the question every child eventually asks:
                   <em> what happens to my tooth now?</em> And that question is as old as childhood itself.
                 </p>
+                <p className="mt-4 text-sm text-muted-foreground">
+                  Looking for a story to read instead of the history?{" "}
+                  <Link to="/tooth-fairy-story" className="text-primary font-medium hover:underline">
+                    Read the Tooth Fairy story →
+                  </Link>
+                </p>
               </div>
             </div>
           </section>

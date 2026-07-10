@@ -20,6 +20,7 @@ import Premiere from "./pages/Premiere";
 import ColoringPage from "./pages/ColoringPage";
 import WhyDoesTheToothFairyTakeTeeth from "./pages/WhyDoesTheToothFairyTakeTeeth";
 import ToothFairyStoryExplained from "./pages/ToothFairyStoryExplained";
+import ToothFairyStory from "./pages/ToothFairyStory";
 import FirstToothWhatToDo from "./pages/FirstToothWhatToDo";
 import ToothFairyFAQ from "./pages/ToothFairyFAQ";
 import TeacherPrintables from "./pages/TeacherPrintables";
@@ -54,6 +55,7 @@ const App = () => (
             <Route path="/coloring-page" element={<ColoringPage />} />
             <Route path="/why-does-the-tooth-fairy-take-teeth" element={<WhyDoesTheToothFairyTakeTeeth />} />
             <Route path="/tooth-fairy-story-explained" element={<ToothFairyStoryExplained />} />
+            <Route path="/tooth-fairy-story" element={<ToothFairyStory />} />
             <Route path="/first-tooth-what-to-do" element={<FirstToothWhatToDo />} />
             <Route path="/tooth-fairy-faq" element={<ToothFairyFAQ />} />
             <Route path="/tooth-fairy-printables" element={<TeacherPrintables />} />

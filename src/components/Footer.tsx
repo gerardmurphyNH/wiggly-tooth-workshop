@@ -105,6 +105,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/tooth-fairy-story"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  The Tooth Fairy story
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/tooth-fairy-story-explained"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
