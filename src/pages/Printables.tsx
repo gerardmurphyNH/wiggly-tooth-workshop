@@ -51,7 +51,7 @@ const Printables = () => {
     <div className="min-h-screen bg-background">
       <PageSeo
         title="Free Tooth Fairy Printables for Kids & Classrooms | Wiggly Tooth Workshop"
-        description="Free Tooth Fairy printables for kids, parents, and classrooms: a keepsake certificate, coloring page, letter template, and SEL worksheets. Download straight from the Workshop."
+        description="Free Tooth Fairy printables for kids, parents, and classrooms: a keepsake certificate, coloring page, letter template, and worksheets. All free."
         canonical="https://wigglytoothworkshop.com/printables"
         jsonLd={{
           "@context": "https://schema.org",

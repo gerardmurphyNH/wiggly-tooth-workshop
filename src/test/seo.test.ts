@@ -130,6 +130,21 @@ describe("per-page SEO", () => {
     }
   });
 
+  it("meta descriptions stay within SERP-friendly length (50-165 chars)", () => {
+    const offenders: string[] = [];
+    for (const [p, comp] of indexableRoutes) {
+      if (TITLE_EXEMPT.has(comp)) continue;
+      const src = read(path.join(PAGES_DIR, `${comp}.tsx`));
+      const block = pageSeoBlock(src);
+      const desc = block && resolveAttr(block, src, "description");
+      if (!desc) continue;
+      if (desc.length < 50 || desc.length > 165) {
+        offenders.push(`${p} (${comp}): ${desc.length} chars`);
+      }
+    }
+    expect(offenders, `Descriptions outside 50-165 chars:\n${offenders.join("\n")}`).toEqual([]);
+  });
+
   it("page titles are unique (no two pages share a <title>)", () => {
     const seen = new Map<string, string>();
     for (const [, comp] of indexableRoutes) {

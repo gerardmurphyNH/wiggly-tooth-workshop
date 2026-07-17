@@ -29,14 +29,34 @@ const MeetCharactersSection = () => {
 
         {/* Film image gallery */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-          {[filmScene1, filmScene2, filmScene3, workshopScene].map((img, index) => (
+          {[
+            {
+              img: filmScene1,
+              alt: "Arlo writing his letter to the Tooth Fairy - 'Dear Tooth Fairy, what will you do with my tooth, and why?' - a scene from The Tooth Fairy's Secret Workshop",
+            },
+            {
+              img: filmScene2,
+              alt: "Arlo flying through the starry night sky beside CeCe the Tooth Fairy, a scene from the animated short film The Tooth Fairy's Secret Workshop",
+            },
+            {
+              img: filmScene3,
+              alt: "CeCe the Tooth Fairy showing Arlo a glowing tooth inside her workshop lined with jars of teeth, from The Tooth Fairy's Secret Workshop",
+            },
+            {
+              img: workshopScene,
+              alt: "CeCe the Tooth Fairy at her workshop gadget preparing a thank-you for a collected tooth, from The Tooth Fairy's Secret Workshop",
+            },
+          ].map(({ img, alt }, index) => (
             <div
               key={index}
               className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-card group"
             >
               <img
                 src={img}
-                alt={`Scene from The Tooth Fairy's Secret Workshop — film ${index + 1}`}
+                alt={alt}
+                width={679}
+                height={410}
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-night-sky/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -58,6 +78,12 @@ const MeetCharactersSection = () => {
           >
             Watch The Tooth Fairy's Secret Workshop on YouTube →
           </a>
+          <p className="text-sm text-muted-foreground">
+            Prefer to read it?{" "}
+            <Link to="/tooth-fairy-story" className="text-primary font-medium hover:underline">
+              Read the Tooth Fairy story
+            </Link>
+          </p>
         </div>
 
         {/* World Premiere recap callout */}

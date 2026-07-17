@@ -9,6 +9,8 @@ interface PageSeoProps {
   canonical?: string;
   /** Absolute URL for og:image / twitter:image */
   image?: string;
+  /** Keep this page out of search indexes (e.g. the 404 page) */
+  noindex?: boolean;
   /** JSON-LD structured data object (or array) */
   jsonLd?: unknown;
 }
@@ -21,7 +23,7 @@ interface PageSeoProps {
  * DOM. Replaces the per-page <Helmet> blocks that were lost when react-helmet-async
  * was removed — without adding a dependency.
  */
-const PageSeo = ({ title, description, canonical, image, jsonLd }: PageSeoProps) => {
+const PageSeo = ({ title, description, canonical, image, noindex, jsonLd }: PageSeoProps) => {
   useEffect(() => {
     const prevTitle = document.title;
     if (title) document.title = title;
@@ -53,12 +55,19 @@ const PageSeo = ({ title, description, canonical, image, jsonLd }: PageSeoProps)
       setMeta('meta[name="twitter:image"]', "name", "twitter:image", image);
       setMeta('meta[name="twitter:card"]', "name", "twitter:card", "summary_large_image");
     }
+    if (noindex) {
+      setMeta('meta[name="robots"]', "name", "robots", "noindex, nofollow");
+    }
 
     return () => {
       // Restore the global title on unmount so navigation doesn't leak stale titles
       document.title = prevTitle;
+      // Restore indexability when leaving a noindex page (SPA navigation)
+      if (noindex) {
+        setMeta('meta[name="robots"]', "name", "robots", "index, follow");
+      }
     };
-  }, [title, description, canonical, image]);
+  }, [title, description, canonical, image, noindex]);
 
   if (!jsonLd) return null;
   return (

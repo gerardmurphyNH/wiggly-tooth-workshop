@@ -68,9 +68,9 @@ const exploreLinks = [
     desc: "The reason behind a tradition older than anyone remembers.",
   },
   {
-    to: "/tooth-fairy-story-explained",
-    label: "The Tooth Fairy Story, Explained",
-    desc: "The full mythology, from beginning to present.",
+    to: "/tooth-fairy-story",
+    label: "Read the Tooth Fairy Story",
+    desc: "The tale of Arlo, CeCe, and the workshop above the clouds.",
   },
   {
     to: "/tooth-fairy-faq",
@@ -84,7 +84,7 @@ const IsToothFairyReal = () => {
     <div className="min-h-screen bg-background">
       <PageSeo
         title="Is the Tooth Fairy Real? Yes, and Here's Why | Wiggly Tooth Workshop"
-        description="Is the Tooth Fairy real? Yes. She works quietly at night, collecting the qualities children grow inside their lost teeth. The honest, magical answer for kids and parents."
+        description="Is the Tooth Fairy real? Yes. She works quietly at night, collecting the qualities children grow inside their lost teeth. The honest, magical answer."
         canonical={PAGE_URL}
         jsonLd={{
           "@context": "https://schema.org",
