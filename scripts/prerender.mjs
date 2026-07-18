@@ -107,9 +107,12 @@ for (const [route, comp] of Object.entries(routes)) {
     canonical: resolveAttr(block, src, "canonical") || `https://wigglytoothworkshop.com${route}`,
     image: resolveAttr(block, src, "image"),
   };
-  const outDir = path.join(DIST, route.replace(/^\//, ""));
-  fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(path.join(outDir, "index.html"), applyMeta(indexHtml, meta));
+  // Write a FLAT file (route.html), not a directory (route/index.html).
+  // A directory makes Netlify 301 /route -> /route/ while our canonicals say
+  // /route (no slash) - Google flagged that canonical->redirect ping-pong as a
+  // "Redirect error". Netlify serves /route straight from route.html with a
+  // clean 200, so the served URL matches the canonical exactly.
+  fs.writeFileSync(path.join(DIST, `${route.replace(/^\//, "")}.html`), applyMeta(indexHtml, meta));
   count++;
 }
 
