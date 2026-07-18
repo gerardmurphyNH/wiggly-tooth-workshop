@@ -67,6 +67,11 @@ const Watch = () => {
               contentUrl: YOUTUBE_VIDEO_URL,
               embedUrl: `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}`,
               publisher: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: SITE_URL },
+              // Entity anchors — ties this film to its Wikidata + TMDB records
+              sameAs: [
+                "https://www.wikidata.org/wiki/Q140607725",
+                "https://www.themoviedb.org/movie/1733539-the-tooth-fairy-s-secret-workshop",
+              ],
             },
             {
               "@type": "FAQPage",
