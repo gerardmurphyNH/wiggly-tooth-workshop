@@ -23,8 +23,9 @@ import {
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
-import { YOUTUBE_VIDEO_ID, YOUTUBE_VIDEO_URL } from "@/lib/config";
+import { YOUTUBE_VIDEO_URL } from "@/lib/config";
 import { trackEvent } from "@/lib/analytics";
+import LiteYouTube from "@/components/LiteYouTube";
 import certificate from "@/assets/first-tooth-certificate.jpg";
 
 const PAGE_URL = "https://wigglytoothworkshop.com/first-tooth-tradition";
@@ -375,19 +376,11 @@ const FirstToothTradition = () => {
               </p>
             </div>
 
-            <div
-              className="relative w-full rounded-2xl overflow-hidden shadow-magical mb-6"
-              style={{ paddingBottom: "56.25%" }}
-            >
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1&iv_load_policy=3&color=white&origin=https://wigglytoothworkshop.com`}
-                title="The Tooth Fairy's Secret Workshop — Short Film by Wiggly Tooth Workshop"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                loading="lazy"
-              />
-            </div>
+            <LiteYouTube
+              title="The Tooth Fairy's Secret Workshop — Short Film by Wiggly Tooth Workshop"
+              onActivate={() => trackEvent("video_play", { location: "first_tooth" })}
+              className="mb-6"
+            />
             <p className="text-center text-muted-foreground">
               Watch{" "}
               <a

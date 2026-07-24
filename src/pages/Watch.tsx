@@ -58,6 +58,47 @@ const Watch = () => {
               ],
             },
             {
+              "@type": "Movie",
+              "@id": `${PAGE_URL}#film`,
+              name: "The Tooth Fairy's Secret Workshop",
+              alternateName: "The Tooth Fairy's Magical Mission",
+              description:
+                "An animated short film about a curious boy named Arlo who sets out to discover what the Tooth Fairy really does with the teeth she collects - and learns that every lost tooth carries something worth keeping. Created in collaboration with Peter H. Reynolds and FableVision Studios.",
+              image: `https://i.ytimg.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`,
+              url: PAGE_URL,
+              datePublished: "2026-06-07",
+              genre: ["Children's film", "Animation", "Fantasy"],
+              inLanguage: "en",
+              countryOfOrigin: { "@type": "Country", name: "United States" },
+              author: { "@type": "Person", name: "Gerard Murphy" },
+              creator: {
+                "@type": "Person",
+                name: "Peter H. Reynolds",
+                sameAs: [
+                  "https://www.wikidata.org/wiki/Q7174456",
+                  "https://www.peterhreynolds.com/",
+                ],
+              },
+              actor: [
+                { "@type": "Person", name: "Andreas Branigan" },
+                { "@type": "Person", name: "Danielle Famble" },
+              ],
+              productionCompany: {
+                "@type": "Organization",
+                name: "FableVision",
+                url: "https://www.fablevisionstudios.com/",
+                sameAs: "https://www.wikidata.org/wiki/Q5427921",
+              },
+              publisher: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: SITE_URL },
+              // Entity anchors — ties the film to its authoritative external records
+              sameAs: [
+                "https://www.wikidata.org/wiki/Q140607725",
+                "https://www.themoviedb.org/movie/1733539-the-tooth-fairy-s-secret-workshop",
+                "https://www.imdb.com/title/tt43689600/",
+                "https://www.fablevisionstudios.com/portfolio/the-tooth-fairys-secret-workshop",
+              ],
+            },
+            {
               "@type": "VideoObject",
               name: "The Tooth Fairy's Secret Workshop",
               description:
@@ -67,10 +108,13 @@ const Watch = () => {
               contentUrl: YOUTUBE_VIDEO_URL,
               embedUrl: `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}`,
               publisher: { "@type": "Organization", name: "Wiggly Tooth Workshop", url: SITE_URL },
-              // Entity anchors — ties this film to its Wikidata + TMDB records
+              // The video records the same work as the Movie entity above
+              mainEntity: { "@id": `${PAGE_URL}#film` },
               sameAs: [
                 "https://www.wikidata.org/wiki/Q140607725",
                 "https://www.themoviedb.org/movie/1733539-the-tooth-fairy-s-secret-workshop",
+                "https://www.imdb.com/title/tt43689600/",
+                "https://www.fablevisionstudios.com/portfolio/the-tooth-fairys-secret-workshop",
               ],
             },
             {

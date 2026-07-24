@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Sparkles, PlayCircle, ThumbsUp } from "lucide-react";
-import { YOUTUBE_VIDEO_ID, YOUTUBE_CHANNEL_URL, YOUTUBE_SUBSCRIBE_URL, YOUTUBE_VIDEO_URL } from "@/lib/config";
-import { trackCTAClick, trackEvent, trackVideoPlay, trackVideoProgress, trackVideoComplete } from "@/lib/analytics";
+import { YOUTUBE_VIDEO_ID, YOUTUBE_SUBSCRIBE_URL, YOUTUBE_VIDEO_URL } from "@/lib/config";
+import { trackCTAClick, trackEvent } from "@/lib/analytics";
+import LiteYouTube from "@/components/LiteYouTube";
 
 const InstagramIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -27,63 +27,6 @@ const YouTubeIcon = () => (
 const isPlaceholderVideo = !YOUTUBE_VIDEO_ID || YOUTUBE_VIDEO_ID === "REPLACE_WITH_FINAL_VIDEO_ID";
 
 const HeroSection = () => {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  const playerRef = useRef<ReturnType<typeof window.YT.Player> | null>(null);
-  const milestoneTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const trackedMilestonesRef = useRef(new Set<number>());
-
-  useEffect(() => {
-    if (isPlaceholderVideo) return;
-
-    const initPlayer = () => {
-      if (!iframeRef.current || !window.YT?.Player) return;
-      playerRef.current = new window.YT.Player(iframeRef.current, {
-        events: {
-          onStateChange: (event) => {
-            const { PLAYING, PAUSED, ENDED, BUFFERING } = window.YT.PlayerState;
-            if (event.data === PLAYING) {
-              trackVideoPlay(YOUTUBE_VIDEO_ID);
-              // Poll every 5 s to hit 25 / 50 / 75 % milestones
-              if (milestoneTimerRef.current) clearInterval(milestoneTimerRef.current);
-              milestoneTimerRef.current = setInterval(() => {
-                const p = playerRef.current;
-                if (!p?.getCurrentTime || !p?.getDuration) return;
-                const pct = Math.round((p.getCurrentTime() / p.getDuration()) * 100);
-                for (const m of [25, 50, 75] as const) {
-                  if (pct >= m && !trackedMilestonesRef.current.has(m)) {
-                    trackedMilestonesRef.current.add(m);
-                    trackVideoProgress(YOUTUBE_VIDEO_ID, m);
-                  }
-                }
-              }, 5000);
-            } else if (event.data === ENDED) {
-              trackVideoComplete(YOUTUBE_VIDEO_ID);
-              if (milestoneTimerRef.current) clearInterval(milestoneTimerRef.current);
-            } else if (event.data === PAUSED || event.data === BUFFERING) {
-              if (milestoneTimerRef.current) clearInterval(milestoneTimerRef.current);
-            }
-          },
-        },
-      });
-    };
-
-    // Load YT IFrame API script once; handle both "already loaded" and "not yet loaded"
-    if (window.YT?.Player) {
-      initPlayer();
-    } else {
-      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
-        const script = document.createElement("script");
-        script.src = "https://www.youtube.com/iframe_api";
-        document.head.appendChild(script);
-      }
-      window.onYouTubeIframeAPIReady = initPlayer;
-    }
-
-    return () => {
-      if (milestoneTimerRef.current) clearInterval(milestoneTimerRef.current);
-    };
-  }, []);
-
   const scrollToSignup = () => {
     trackCTAClick("hero");
     document.getElementById("signup")?.scrollIntoView({ behavior: "smooth" });
@@ -144,21 +87,13 @@ const HeroSection = () => {
             </div>
           ) : (
             <>
-              {/* 16:9 responsive embed — uses youtube-nocookie.com (privacy-enhanced, reduces ad
-                  targeting), rel=0 (no unrelated channels in end screen), iv_load_policy=3
-                  (disables annotations/cards), modestbranding=1 (minimal YouTube chrome),
-                  color=white (progress bar), origin for referrer security */}
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-magical" style={{ paddingBottom: "56.25%" }}>
-                <iframe
-                  ref={iframeRef}
-                  className="absolute inset-0 w-full h-full"
-                  src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1&iv_load_policy=3&color=white&enablejsapi=1&origin=https://wigglytoothworkshop.com`}
-                  title="The Tooth Fairy's Secret Workshop — Short Film by Wiggly Tooth Workshop"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  loading="lazy"
-                />
-              </div>
+              {/* Click-to-load facade (see LiteYouTube): no iframe until the viewer
+                  clicks, so the homepage isn't crawled as a video watch page and
+                  loads faster. track=true wires GA play/progress/complete. */}
+              <LiteYouTube
+                title="The Tooth Fairy's Secret Workshop — Short Film by Wiggly Tooth Workshop"
+                track
+              />
               {/* Enjoyed the film? Like + Subscribe nudge */}
               <div className="flex items-center justify-center gap-3 mt-3 flex-wrap">
                 <span className="text-xs text-starlight/70">Enjoyed the film?</span>
